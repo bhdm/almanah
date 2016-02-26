@@ -1,0 +1,30 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_category_list') }}">Категории</a> <span class="divider"></span></li>
+        <li class="active">Изменение<span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $("#category_title").syncTranslit({
+                destination: "category_slug",
+                caseStyle: "lower",
+                urlSeparator: "_"
+            });
+        });
+    </script>
+{% endblock %}

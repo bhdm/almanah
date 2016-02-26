@@ -1,0 +1,32 @@
+<div id="loginRegisterModal" class="modal in" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Вход в личный кабинет </h4>
+            </div>
+            <form class="form-horizontal" method="post" action="{{ path('fos_user_security_check') }}">
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="inputEmail" class="col-sm-2 control-label">Email</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputEmail" placeholder="Email" required name="_username">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword" class="col-sm-2 control-label">Пароль</label>
+                        <div class="col-sm-10">
+                            <input type="password" class="form-control" id="inputPassword" placeholder="******" required name="_password">
+                        </div>
+                    </div>
+                    {{ render(controller('AppBundle:Auth:csrfToken')) }}
+                    <div class="modal-footer">
+                        <a href="{{ path('fos_user_registration_register') }}" style="padding-right: 30px">Зарегистрироваться</a>
+                        <button class="btn btn-primary" onclick="login();" type="submit">Войти</button>
+                        <button type="cancel" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

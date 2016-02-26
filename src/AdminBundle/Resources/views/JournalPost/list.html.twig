@@ -1,0 +1,40 @@
+{#{% extends "AdminBundle::layout.html.twig" %}#}
+
+
+{#{% block frame %}#}
+
+    <div class="well">
+        <div style="float: right">
+            <a href="{{ path('admin_journalpost_add',{'journalId' : journal.id }) }}"><button class="btn btn-default">Добавить</button></a>
+        </div>
+        <table class="table">
+            <tr>
+                <th>№</th>
+                <th>Название статьи</th>
+                <th class="setting">Инструменты</th>
+            </tr>
+            {% for item in pagination %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.title }}</td>
+                    <td class="setting">
+                        {% spaceless %}
+                        <a href="{{ path('admin_journalpost_edit',{'journalId' : journal.id, 'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </a>
+                            &nbsp;
+                            &nbsp;
+                        <a href="{{ path('admin_journalpost_remove',{'journalId' : journal.id, 'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </a>
+                        {% endspaceless %}
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+{#{% endblock %}#}

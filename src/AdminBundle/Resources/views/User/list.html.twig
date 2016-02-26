@@ -1,0 +1,49 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li class="active"><a href="{{ path('admin_user_list') }}">Пользователи</a> <span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}м
+    <div class="well">
+        <table class="table">
+            <tr>
+                <th>№</th>
+                <th>E-mail</th>
+                <th></th>
+                <th>Статус</th>
+                <th class="setting">Инструменты</th>
+            </tr>
+            {% for item in pagination %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item }}</td>
+                    <td></td>
+                    <td>{{ item.enabled == 1 ? 'Активен' : '' }}</td>
+                    <td class="setting">
+                        {% spaceless %}
+                        <a href="{{ path('admin_user_edit',{'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </a>
+                            &nbsp;
+                            &nbsp;
+                        <a href="{{ path('admin_user_remove',{'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </a>
+                        {% endspaceless %}
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,83 @@
+<html>
+<head>
+    {% block javascripts %}
+        <script src="{{ asset('bundles/admin/js/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ asset('bundles/admin/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('bundles/admin/ckeditor/ckeditor.js') }}"></script>
+        <script src="{{ asset('bundles/admin/translit/jquery.synctranslit.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/bootstrap-multiselect/dist/js/bootstrap-multiselect.js') }}"></script>
+        <script>
+            $(document).ready(function() {
+                $('.multiselect').multiselect({
+                    maxHeight: 300,
+//                            numberDisplayed: 5,
+                    includeSelectAllOption: true
+                });
+            });
+        </script>
+
+    {% endblock %}
+
+    {% block stylesheets %}
+        <link href="{{ asset('bundles/admin/css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ asset('bundles/admin/css/bootstrap-theme.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/vendor/bootstrap-multiselect/dist/css/bootstrap-multiselect.css') }}" rel="stylesheet">
+
+        <link href="{{ asset('bundles/admin/css/common.css') }}" rel="stylesheet">
+        <style>
+            .setting{
+                text-align: right;
+            }
+        </style>
+    {% endblock %}
+</head>
+<body>
+{% block frame %}
+    <header>
+        <nav class="navbar navbar-inverse" role="navigation">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">ПАНЕЛЬ <span class="text-danger">[ АДМИНИСТРАТОР ]</span></a>
+                </div>
+                <div class="navbar-right">
+                    <div class="collapse navbar-collapse">
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <ul class="nav navbar-nav">
+                                <li><a href="{{ path('homepage') }}" target="_blank">На сайт</a></li>
+                                <li><a href="{{ path('fos_user_security_logout') }}">Выйти</a></li>
+                            </ul>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        {% block alert %}{% endblock %}
+        {#<div class="alert alert-success" role="alert"></div>#}
+        {#<div class="alert alert-info" role="alert"></div>#}
+        {#<div class="alert alert-warning" role="alert"></div>#}
+        {#<div class="alert alert-danger" role="alert"></div>#}
+
+        <div class="row">
+            <div class="col-md-3">
+                {% block menu %}
+                    {% include 'AdminBundle::menu.html.twig' %}
+                {% endblock %}
+            </div>
+            <div class="col-md-9">
+                {% block breadcrumb %}
+                    <ul class="breadcrumb well">
+                        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+                    </ul>
+                {% endblock %}
+                {% block content %}
+
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+    {% block body %}{% endblock %}
+{% endblock %}
+</body>
+</html>

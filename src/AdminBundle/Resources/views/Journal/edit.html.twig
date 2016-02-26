@@ -1,0 +1,37 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_journal_list') }}">Журналы</a> <span class="divider"></span></li>
+        <li class="active">Изменение<span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        {% if item.preview.path is defined %}
+            <div class="text-right">
+            <img src="{{ item.preview.path }}" style="max-width: 200px; display: inline-block" class="thumbnail">
+            </div>
+        {% endif %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+
+    {{ render(controller('AdminBundle:JournalPost:list',{'journalId': item.id })) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $("#journal_title").syncTranslit({
+                destination: "journal_slug",
+                caseStyle: "lower",
+                urlSeparator: "_"
+            });
+        });
+    </script>
+{% endblock %}

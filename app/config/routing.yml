@@ -1,0 +1,23 @@
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+fos_user_profile_edit:
+    path: '/profile/edit'
+    defaults: {_controller : AppBundle:Auth:edit}
+
+
+page:
+    path:      /{url}
+    defaults:  { _controller: AppBundle:Publication:page }

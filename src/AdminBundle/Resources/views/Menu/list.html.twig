@@ -1,0 +1,73 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li class="active"><a href="{{ path('admin_menu_list') }}">Меню</a> <span class="divider"></span></li>
+        <div style="float: right">
+            <a href="{{ path('admin_menu_add') }}">Добавить</a> <span class="divider"></span>
+        </div>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        <table class="table">
+            <tr>
+                <th>№</th>
+                <th>Заголовок</th>
+                <th></th>
+                <th>Статус</th>
+                <th class="setting">Инструменты</th>
+            </tr>
+            {% for item in items %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.title }}</td>
+                    <td></td>
+                    <td>{{ item.enabled == 1 ? 'Активна' : 'Не активна' }}</td>
+                    <td class="setting">
+                        {% spaceless %}
+                        <a href="{{ path('admin_menu_edit',{'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </a>
+                            &nbsp;
+                            &nbsp;
+                        <a href="{{ path('admin_menu_remove',{'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </a>
+                        {% endspaceless %}
+                    </td>
+                </tr>
+                {% for children in item.children %}
+                    <tr>
+                        <td>{{ children.id }}</td>
+                        <td style="padding-left: 50px">{{ children.title }}</td>
+                        <td></td>
+                        <td>{{ children.enabled == 1 ? 'Активна' : 'Не активна' }}</td>
+                        <td class="setting">
+                            {% spaceless %}
+                                <a href="{{ path('admin_menu_edit',{'id' : children.id}) }}">
+                                    <button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-pencil"></span>
+                                    </button>
+                                </a>
+                                &nbsp;
+                                &nbsp;
+                                <a href="{{ path('admin_menu_remove',{'id' : children.id}) }}">
+                                    <button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-remove"></span>
+                                    </button>
+                                </a>
+                            {% endspaceless %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            {% endfor%}
+        </table>
+    </div>
+{% endblock %}

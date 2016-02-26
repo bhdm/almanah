@@ -1,0 +1,47 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_course_list') }}">Курсы</a> <span class="divider"></span></li>
+        <li class="active">Изменение<span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        {% if item.type == 'VIDEO' %}
+            <div style="margin: 40px 20px">
+                <div class="player" id="videoplayer1"></div>
+            </div>
+            <script src="{{ asset('bundles/app/js/uppod-0.5.40.js') }}"></script>
+            <script>
+                $(document).ready(function () {
+                    var link = '{{ base_url~item.file.path }}';
+                    console.log(link);
+                    {#var poster = '{{ base_url~'/upload/video/'~module.image.path }}';#}
+                    this.player = new Uppod({m:"video",uid:"videoplayer1",file:link});
+                });
+            </script>
+        {% endif %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+    {% if item.type == 'TEST' %}
+        {{ render(controller('AdminBundle:CourseModuleTest:list',{'courseId' : item.course.id, 'moduleId' : item.id })) }}
+    {% endif %}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $("#course_title").syncTranslit({
+                destination: "course_slug",
+                caseStyle: "lower",
+                urlSeparator: "_"
+            });
+        });
+    </script>
+{% endblock %}

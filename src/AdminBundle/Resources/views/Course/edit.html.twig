@@ -1,0 +1,38 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_course_list') }}">Курсы</a> <span class="divider"></span></li>
+        <li class="active">Изменение<span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        {% if item.image.path is defined %}
+            <div class="text-right">
+            <img src="{{ item.image.path }}" style="max-width: 200px; display: inline-block" class="thumbnail">
+            </div>
+        {% endif %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+
+    {{ render(controller('AdminBundle:CourseModule:list',{'courseId': item.id })) }}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function(){
+            $("#course_title").syncTranslit({
+                destination: "course_slug",
+                caseStyle: "lower",
+                urlSeparator: "_"
+            });
+        });
+    </script>
+{% endblock %}

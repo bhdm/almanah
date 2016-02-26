@@ -1,0 +1,32 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        .frame{
+            border: none;
+            width: 100%;
+            overflow: scroll;
+            min-height: 400px;
+        }
+    </style>
+{% endblock %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_testquestion_list') }}">Тестирование</a> <span class="divider"></span></li>
+        <li class="active">Изменение вопроса<span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        <form method="POST">
+            {{ form_widget(form) }}
+        </form>
+    </div>
+    <div class="well">
+        <iframe src="{{ path('admin_testanswer_list',{'questionId' : id}) }}" class="frame"></iframe>
+    </div>
+{% endblock %}

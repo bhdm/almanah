@@ -1,0 +1,33 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+	<div class="greenLine"></div>
+	<div class="container forget-password">
+		<div class="row">
+			<div class="col-sm-offset-5 col-sm-3">
+				<div class="registration" style="margin-top: 20px;">
+					<div class="box-login">
+			            <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request form-horizontal">
+			              <div class="lost-field-box">
+			                <div class="form-group">
+			                  <label>Введите ваш Email</label>
+			                  <input type="email" class="form-control" id="" placeholder="Введите ваш Email" name="username" required="required">
+
+			                  {% if invalid_username is defined %}
+								  <p class="error">
+                                      Email %username% не существует.
+								  </p>
+							  {% endif %}
+			                </div>
+			                <div class="text-right">
+			                  <button type="submit" class="btn btn-primary">Востановить</button>
+			                </div>
+			              </div>
+			            </form>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock fos_user_content %}

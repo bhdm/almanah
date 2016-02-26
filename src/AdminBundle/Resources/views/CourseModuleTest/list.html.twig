@@ -1,0 +1,181 @@
+{#{% extends '@Admin/layout.html.twig' %}#}
+
+{#{% block frame %}#}
+    <div class="well">
+        <h2>Вопросы и ответы</h2>
+        <form method="POST" action="{{ path('admin_course_module_test_save',{ 'courseId' : module.course.id , 'moduleId' : module.id}) }}" id="form_test">
+            <div class="quest_box">
+                {% for quest in questions %}
+                    <div id="Qquest_{{ quest.id }}" class="quest_item">
+                        <div class="admin-div-cell"><b>Вопрос:</b></div>
+                        <div class="row form-group">
+                            <div class="col-xs-11">
+                                <input type="text" class="form-control" value="{{ quest.body }}"  name="quest[{{ quest.id }}]">
+                            </div>
+                            <div class="col-xs-1">
+                                <button class="btn btn-danger" title="Удалить вопрос" onclick="deleteQuest({{ quest.id }})">-</button>
+                            </div>
+                        </div>
+                        <div class="admin-div-row">
+                            <div class="admin-div-cell" id="answer_box_{{ quest.id }}">
+                                {% if quest.answers is not empty %}
+                                    {% for answ in quest.answers %}
+                                        <div id='Qanswer_{{ answ.id }}'>
+                                            <div class="row form-group">
+                                                <div class="col-xs-1 col-xs-offset-2">
+                                                    <input type='checkbox' name='answerTrue[{{ quest.id }}][{{ answ.id }}]' {% if answ.correct %} checked='checked' {% endif %} >
+                                                </div>
+                                                <div class="col-xs-8">
+                                                    <input  name='answer[{{ quest.id }}][{{ answ.id }}]' type='text'  value='{{ answ.title }}' class="form-control"/>
+                                                </div>
+                                                <div class="col-xs-1">
+                                                    <button class="btn btn-danger minus" title="Удалить вариант ответа" onclick="deleteAnswer({{ answ.id }})">-</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <br style="clear: both;"/>
+                        </div>
+
+                        <div class="admin-div-row">
+                            <div class="admin-div-cell" style="width: 190px; text-align: right; padding-top: 8px"></div>
+                            <div class="admin-div-cell" style="width: 339px">
+                                <a href="#" idQ='{{ quest.id }}' class="addAnswer" >Добавить ответ</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </form>
+        <br style="clear: both">
+        <br style="clear: both">
+
+        <div style="text-align: right; width: 568px">
+            <input type="button" value="ДОБАВИТЬ ВОПРОС" class="btn btn-default" id="addQuest" style="margin-right:20px"/>
+            <input type="button" value="СОХРАНИТЬ ТЕСТ" class="btn btn-primary" id="test_submit"/>
+        </div>
+    </div>
+{#{% endblock %}#}
+{##}
+{#{% block javascripts %}#}
+    {#{{ parent() }}#}
+    <script>
+        $(document).ready(function () {
+            {# код проверки заполненности вопросов галочками #}
+            $('#test_submit').click(function(e) {
+                var isCorrect = $('input[type="checkbox"]').length > 0;
+                $('.error').remove();
+
+                $('.quest_item').each(function(index) {
+                    var $this = $(this);
+                    var c = $this.find(':checked').length;
+                    if (c == 0) {
+                        isCorrect = false;
+                        $this.append('<div class="error">' +
+                                'Надо отметить галочкой хотя бы один вариант ответа (правильный)</div>');
+                    }
+                });
+
+                if (isCorrect) {
+                    $('#form_test').submit();
+                }
+
+                return false;
+            });
+
+
+            {#
+                var countQuest = {% if module is defined %}{{ quest.id }}{% else %}1{% endif %};
+                var countAnsw = {% if module is defined %}{{ answ.id }}{% else %}1{% endif %};
+            #}
+            var countQuest = 9999;
+            var countAnsw = 9999;
+            function clickBtnAsw() {
+                var questId = $(this).attr('idQ');
+                var answerValue = $('#answer_' + questId).val();
+                $('#answer_' + questId).val('');
+                var checked;
+
+                if ($('#answerIsTrue_' + questId).is(':checked'))
+                    checked = "checked='checked'";
+                else
+                    checked = "";
+
+                var input = "" +
+                        "<div id='Qanswer_" + countAnsw + "'>" +
+                        "<div class='row form-group'>"+
+                        "<div class='col-xs-1 col-xs-offset-2'>"+
+                        "<input type='checkbox' name='answerTrue[" + questId + "][" + countAnsw + "]' " + checked + " >"+
+                        '</div>'+
+                        "<div class='col-xs-8'>"+
+                        "<input name='answer[" + questId + "][" + countAnsw + "]' type='text' value='' class=\"form-control\" />" +
+                        '</div>'+
+                        "<div class='col-xs-1'>"+
+                        "<button class='btn btn-danger minus' title=\"Удалить вариант ответа\" onclick='deleteAnswer(" + countAnsw + ")'>-</button>"+
+                        '</div>'+
+                        '</div>'+
+                        '</div>';
+
+                $('#answer_box_' + questId).append(input);
+                countAnsw++;
+                return false;
+            }
+
+
+            $('.addAnswer').bind("click", clickBtnAsw);
+
+
+            $('#addQuest').click(function() {
+                countQuest++;
+
+                var templateDiv = "" +
+                        "<div id=\"Qquest_" + countQuest + "\" class='quest_item'>" +
+                        "<div class=\"admin-div-row\">" +
+                        "<div class=\"admin-div-cell\"><b>Вопрос</b></div>" +
+                        "<div class=\"row form-group\">" +
+                        "<div class=\"col-xs-11\">" +
+                        "<input type=\"text\" class=\"form-control admin-quest\" value=\"\" name=\"quest[" + countQuest + "]\" class=\"admin-quest\" >" +
+                        "</div>" +
+                        "<div class=\"col-xs-1\">" +
+                        '<button class="btn btn-danger" title="Удалить вопрос" onclick="deleteQuest(' + countQuest + ')">-</button>'+
+                        "</div>" +
+                        "</div>" +
+                        "</div>" +
+                        "<div class=\"admin-div-row\">" +
+                        "<div class=\"admin-div-cell\" \" id=\"answer_box_" + countQuest + "\"></div>" +
+                        "</div>" +
+                        "<div class=\"admin-div-row\">" +
+                        "<div class=\"admin-div-cell\">" +
+                        "</div>" +
+                        "<div class=\"admin-div-cell\">" +
+                        "<a href='#' idQ='"+countQuest+"' class='addAnswer' >Добавить ответ</a>" +
+                        "</div>" +
+                        "<br style=\"clear: both;\"/>" +
+                        "</div>";
+
+                $('.quest_box').append(templateDiv);
+
+
+                $('.addAnswer').unbind("click", clickBtnAsw);
+                $('.addAnswer').bind("click", clickBtnAsw);
+
+
+                //$('#test_submit').unbind("click",clickSbmt);
+                //$('#test_submit').bind("click",clickSbmt);
+
+            })
+
+            function deleteAnswer(id) {
+                $('#Qanswer_' + id).remove();
+            }
+
+            function deleteQuest(id) {
+                $('#Qquest_' + id).remove();
+            }
+
+            $('.admin-input').tooltip();
+        });
+    </script>
+{#{% endblock %}#}

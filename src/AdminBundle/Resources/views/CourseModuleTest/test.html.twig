@@ -1,0 +1,336 @@
+{% extends 'LearningMainBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" type="text/css"
+          href="{{ asset('bundles/learningmain/jquery-ui/jquery-ui-1.10.3.custom.min.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/learningmain/jquery-chosen/chosen.min.css') }}"/>
+    {% if theme == 'roh' %}
+        <style>
+            /*input[type=text]{
+                width: 305px;
+            }*/
+            #content .admin-answer {
+                width: 300px;
+            }
+            #content .admin-quest {
+                width: 406px;
+            }
+            #content .admin-answer-in {
+                width: 300px;
+                margin-left: 5px;
+            }
+            .addAnswer {
+                cursor: pointer;
+                width:  20px;
+            }
+            .admin-div-cell div{
+                position: relative;
+            }
+            .minus {
+                margin-bottom: -6px;
+                display:       inline-block;
+                margin-left:   4px;
+                cursor:        pointer;
+                width:         20px;
+            }
+            .delete {
+
+                display:       inline-block;
+                position:       absolute;
+                top:            6px;
+                margin-left:   -7px;
+                cursor:        pointer;
+                width:         20px;
+            }
+            .error {
+                color: #d00;
+                padding-left: 120px;
+                margin-bottom: 10px;
+            }
+            .admin-div-row{
+                clear: both;
+                overflow: hidden;
+                position: relative;
+            }
+        </style>
+    {% else %}
+        <style>
+            /*input[type=text]{
+                width: 305px;
+            }*/
+            #content .admin-answer {
+                width: 305px;
+            }
+            #content .admin-quest {
+                width: 406px;
+            }
+            #content .admin-answer-in {
+                width: 305px;
+            }
+            .addAnswer {
+                cursor: pointer;
+                width:  20px;
+            }
+            .minus {
+                margin-bottom: -6px;
+                display:       inline-block;
+                margin-left:   4px;
+                cursor:        pointer;
+                width:         20px;
+            }
+            .delete {
+                display:       inline-block;
+                position:       absolute;
+                top:            6px;
+                margin-left:   -7px;
+                cursor:        pointer;
+                width:         20px;
+            }
+            .error {
+                color: #d00;
+                padding-left: 120px;
+                margin-bottom: 10px;
+            }
+            .admin-div-row{
+                clear: both;
+                overflow: hidden;
+                position: relative;
+            }
+        </style>
+    {% endif %}
+{% endblock %}
+
+{% block main %}
+    <h2 class="breadcrumbs">
+        {% if is_granted('ROLE_CURATOR') %}
+            <a href="{{ path('admin_course_lists', {'cathedra':course.cathedra.id}) }}">{{ course.cathedra }}</a> »
+        {% endif %}
+        <a href="{{ path('admin_course_edit', {'courseId':course.id}) }}">{{ course.title }}</a> »
+        {% if module is defined %}
+            редактирование теста
+        {% else %}
+            добавление теста
+        {% endif %}
+    </h2>
+
+    <form method="POST" id="form_test">
+        <div class="admin-div-row">
+            <div class="admin-div-cell" style="width: 90px"><b>Заголовок:</b></div>
+            <div class="admin-div-cell">
+                <input type="text" class="admin-input" value="{% if module is defined %}{{ module.title }}{% endif %}"
+                       name="title" style="width: 406px;">
+            </div>
+            <br style="clear: both;"/>
+        </div>
+        {# ----------------------- #}
+        <div class="admin-div-row">
+            <div class="admin-div-cell" style="width: 90px"><b>Макс. ошибок:</b></div>
+            <div class="admin-div-cell">
+                <input type="text" class="admin-input"
+                       title="Максимальное кол-во неправильных ответов для успешного прохождения теста"
+                       value="{% if module is defined %}{{ module.wrong }}{% endif %}" name="wrong"
+                       style="width: 406px;">
+            </div>
+            <br style="clear: both;"/>
+        </div>
+        <div class="admin-div-row">
+            <div class="admin-div-cell" style="width: 90px"><b>Время прохождения:</b></div>
+            <div class="admin-div-cell">
+                <input type="text" class="admin-input"
+                       title="время для успешного прохождения теста"
+                       value="{% if module is defined %}{{ module.timeToLearn }}{% endif %}" name="timeToLearn"
+                       style="width: 406px;">
+            </div>
+            <br style="clear: both;"/>
+        </div>
+        {# ----------------------- #}
+        <div class="admin-div-row">
+            <div class="admin-div-cell" style="width: 200px">Описание материала:</div>
+            <div class="admin-div-cell" style="width: 585px">
+                <textarea id="editor" name="text">{% if module is defined %}{{ module.text }}{% endif %}</textarea>
+            </div>
+        </div>
+        {# ----------------------- #}
+        <div class="quest_box">
+            {% if module is defined %}
+                {% for quest in module.questions %}
+                    <div id="Qquest_{{ quest.id }}" class="quest_item">
+                        <div class="admin-div-row">
+                            <div class="admin-div-cell" style="width: 90px"><b>Вопрос:</b></div>
+                            <div class="admin-div-cell">
+                                <input type="text" class="admin-input admin-quest" value="{{ quest.title }}"
+                                       name="quest[{{ quest.id }}]">
+                            </div>
+                            <img class='delete' src="{{ asset('bundles/learningmain/images/icons/delete.png') }}"
+                                 title="Удалить вопрос" onclick="deleteQuest({{ quest.id }})">
+                        </div>
+                        <div class="admin-div-row">
+                            <div class="admin-div-cell" style="padding-left: 180px;" id="answer_box_{{ quest.id }}">
+                                {% if quest.answers is not empty %}
+                                    {% for answ in quest.answers %}
+                                        <div style="padding: 3px 0; width: 415px;" id='Qanswer_{{ answ.id }}'>
+                                            <input type='checkbox'
+                                                   name='answerTrue[{{ quest.id }}][{{ answ.id }}]' {% if answ.correct %} checked='checked' {% endif %} >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                                                    name='answer[{{ quest.id }}][{{ answ.id }}]' type='text'
+                                                    value='{{ answ.text }}' class="admin-answer"/><img class='minus'
+                                                                                                       src="{{ asset('bundles/learningmain/images/icons/minus.png') }}"
+                                                                                                       title="Удалить вариант ответа"
+                                                                                                       onclick="deleteAnswer({{ answ.id }})">
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                            </div>
+                            <br style="clear: both;"/>
+                        </div>
+
+                        <div class="admin-div-row">
+                            <div class="admin-div-cell" style="width: 190px; text-align: right; padding-top: 8px"></div>
+                            <div class="admin-div-cell" style="width: 339px">
+                                <a href="#" idQ='{{ quest.id }}' class="addAnswer" >Добавить ответ</a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+        </div>
+        <br style="clear: both">
+        <br style="clear: both">
+
+        <div style="text-align: right; width: 568px">
+            <input type="button" value="ДОБАВИТЬ ВОПРОС" class="btn-red" id="addQuest" style="margin-right:20px"/>
+            <input type="button" value="СОХРАНИТЬ ТЕСТ" class="btn-red" id="test_submit"/>
+        </div>
+
+    </form>
+
+
+    {# тут много велосипедного JS #}
+
+    <script>
+        {# код проверки заполненности вопросов галочками #}
+        $('#test_submit').click(function(e) {
+            var isCorrect = $('input[type="checkbox"]').length > 0;
+            $('.error').remove();
+
+            $('.quest_item').each(function(index) {
+                var $this = $(this);
+                var c = $this.find(':checked').length;
+                if (c == 0) {
+                    isCorrect = false;
+                    $this.append('<div class="error">' +
+                            'Надо отметить галочкой хотя бы один вариант ответа (правильный)</div>');
+                }
+            });
+
+            if (isCorrect) {
+                $('#form_test').submit();
+            }
+
+            return false;
+        });
+
+
+        {#
+            var countQuest = {% if module is defined %}{{ quest.id }}{% else %}1{% endif %};
+            var countAnsw = {% if module is defined %}{{ answ.id }}{% else %}1{% endif %};
+        #}
+        var countQuest = 9999;
+        var countAnsw = 9999;
+        function clickBtnAsw() {
+            var questId = $(this).attr('idQ');
+            var answerValue = $('#answer_' + questId).val();
+            $('#answer_' + questId).val('');
+            var checked;
+
+            if ($('#answerIsTrue_' + questId).is(':checked'))
+                checked = "checked='checked'";
+            else
+                checked = "";
+
+            var input = "<div  style=\"padding: 3px 0; width: 415px;\" id='Qanswer_" + countAnsw + "'><input type='checkbox' name='answerTrue[" + questId + "][" + countAnsw + "]' " + checked + " >";
+            input += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            input += "<input name='answer[" + questId + "][" + countAnsw + "]' type='text' value='' class=\"admin-answer\" /><img class='minus' src=\"{{ asset('bundles/learningmain/images/icons/minus.png') }}\" title=\"Удалить вариант ответа\" onclick='deleteAnswer(" + countAnsw + ")'>";
+            $('#answer_box_' + questId).append(input + '</div>');
+            countAnsw++;
+            return false;
+        }
+
+
+        $('.addAnswer').bind("click", clickBtnAsw);
+
+
+        $('#addQuest').click(function() {
+            countQuest++;
+
+            var templateDiv = "<div id=\"Qquest_" + countQuest + "\" class='quest_item'>" +
+                    "<div class=\"admin-div-row\">" +
+                    "<div class=\"admin-div-cell\" style=\"width: 90px\"><b>Вопрос</b></div>" +
+                    "<div class=\"admin-div-cell\">" +
+                    "<input type=\"text\" class=\"admin-input admin-quest\" value=\"\" name=\"quest[" + countQuest + "]\" class=\"admin-quest\" >" +
+                    "</div><img class='delete' src=\"{{ asset('bundles/learningmain/images/icons/delete.png') }}\" title=\"Удалить вопрос\" onclick=\"deleteQuest(" + countQuest + ")\">" +
+                    "</div>" +
+//				"<br />" +
+                    "<div class=\"admin-div-row\">" +
+                    "<div class=\"admin-div-cell\" style=\"padding-left: 180px;\" id=\"answer_box_" + countQuest + "\"></div>" +
+                    "</div>" +
+//				"<br />" +
+                    "<div class=\"admin-div-row\">" +
+                    "<div class=\"admin-div-cell\" style=\"width: 190px; text-align: right; padding-top: 8px\">" +
+                    "</div>" +
+                    "<div class=\"admin-div-cell\" style=\"width: 339px;\">" +
+                    "<a href='#' idQ='"+countQuest+"' class='addAnswer' >Добавить ответ</a>" +
+                    "</div>" +
+                    "<br style=\"clear: both;\"/>" +
+                    "</div>";
+
+            $('.quest_box').append(templateDiv);
+
+
+            $('.addAnswer').unbind("click", clickBtnAsw);
+            $('.addAnswer').bind("click", clickBtnAsw);
+
+
+            //$('#test_submit').unbind("click",clickSbmt);
+            //$('#test_submit').bind("click",clickSbmt);
+
+        })
+
+        function deleteAnswer(id) {
+            $('#Qanswer_' + id).remove();
+        }
+
+        function deleteQuest(id) {
+            $('#Qquest_' + id).remove();
+        }
+
+        $('.admin-input').tooltip();
+    </script>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript"
+            src="{{ asset('bundles/learningmain/jquery-chosen/chosen.jquery.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('bundles/learningmain/ckeditor/ckeditor.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('bundles/learningmain/jquery-ui/jquery-ui-1.10.3.custom.min.js') }}"></script>
+    <script type="text/javascript"
+            src="{{ asset('bundles/learningmain/javascripts/ensure.js') }}"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('select').chosen({disable_search: true});
+
+            CKEDITOR.replace('editor', {
+                uiColor: '#C1E4E4', //цвет рамки
+                toolbar: 'Basic', //функциональность редактора, Basic-минимум, Full-максимум
+                width: 560
+            });
+        });
+    </script>
+{% endblock %}

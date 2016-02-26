@@ -1,0 +1,42 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+
+	{% if invalid_username is defined %}
+		<div class="alert alert-danger alert-dismissible" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			{#{{ 'resetting.request.invalid_username'|trans({'%username%': invalid_username}) }}#}
+		</div>
+	{% endif %}
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-offset-3 col-sm-6">
+				<div class="registration" style="margin-top: 20px;">
+					<div class="box-login">
+						<div class="lost-field-box">
+							<h2>Забыл пароль</h2>
+
+				            {#<form action="{{ path('fos_user_resetting_reset', {'token': token}) }}" {{ form_enctype(form) }} method="POST" class="fos_user_resetting_reset">#}
+                            {{ form_start(form) }}
+								<div class="form-group">
+					                <label for="" class="text-uppercase text-bold">Создайте пароль<span class="impot">*</span></label>
+					                {{ form_widget(form.plainPassword.first, {"attr": {"class": 'form-control', "placeholder":  'Введите пароль'  }}) }}
+					                {{ form_errors(form.plainPassword.first) }}
+					            </div>
+					            <div class="form-group">
+					              	{{ form_widget(form.plainPassword.second, {"attr": {"class": 'form-control', "placeholder":  'Повторите пароль'  }}) }}
+					                {{ form_errors(form.plainPassword.second) }}
+					            </div>
+								<div class="btnLine">
+									<input class="button button-blue" type="submit" value="Изменить" />
+								</div>
+							{#</form>#}
+                            {{ form_end(form) }}
+						</div>
+			        </div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+{% endblock fos_user_content %}

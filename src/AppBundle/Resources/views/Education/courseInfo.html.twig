@@ -1,0 +1,88 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-xs-4">{% if course.image.path is defined %}
+                <br />
+                <img src="{{ course.image.path }}" class="thumbnail" style="width: 100%">
+                <div class="course-info">
+                    {% if course.specialties | length > 0 %}
+                        <div class="course-params">
+                            <b>Специальность: </b>
+                            {% for specialty in course.specialties %}
+                                <a class="sublink" href="#">
+                                {{ specialty.title }}
+                                </a>{{ specialty != course.specialties | last ? ',' : '' }}
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                    {% if course.author != null %}
+                        <div class="course-params">
+                            <b>Автор: </b>
+                            {{ course.author }}
+                        </div>
+                    {% endif %}
+
+                    {% if course.amountHour != 0 %}
+                        <div class="course-params" >
+                            <b>Время прохождения: </b>
+                            {{ course.amountHour }} ч.
+                        </div>
+                    {% endif %}
+                    <br />
+                    {% if course.price != 0 %}
+                        <div class="course-params course-price">
+                            <b>Стоимость: </b>
+                            {{ course.price }} руб.
+                        </div>
+                    {% endif %}
+                </div>
+                <br />
+                {% if statusCourse == 'NEW' %}
+                    <button class="btn btn-primary enrolment" style="width: 100%">Записаться</button>
+                {% elseif statusCourse == 'PROGRESS' %}
+                    <a href="{{ path('course_passing',{'recordBookId' : recordBook.id}) }}"><button class="btn btn-primary" style="width: 100%">Перейти в обучение</button></a>
+                {% elseif statusCourse == 'PASSED' %}
+
+                {% endif %}
+            {% endif %}
+        </div>
+        <div class="col-xs-8">
+            <h1 class="blue-text">{{ course.title }}</h1>
+            <div>{{ course.body | raw }}</div>
+        </div>
+    </div>
+    <br />
+    <h1 class="blue-text">Модули курса</h1>
+    <br />
+    {% for module in course.modules %}
+        <div class="well row" style="margin-left: 50px">
+            <div class="col-xs-1" style="padding-top: 10px">
+                {% if module.type == 'TEXT' %}
+                    <span class="glyphicon glyphicon-align-justify blue-icon" style="font-size: 24px"></span>
+                {% elseif module.type == 'VIDEO' %}
+                    <span class="glyphicon glyphicon-question-sign blue-icon" style="font-size: 24px"></span>
+                {% elseif module.type == 'TEST' %}
+                    <span class="glyphicon glyphicon-facetime-video blue-icon" style="font-size: 24px"></span>
+                {% endif %}
+            </div>
+            <div class="col-xs-1" style="vertical-align: middle">
+                {% if module.type == 'text' %}
+                    Тектовый модуль
+                {% elseif module.type == 'video' %}
+                    Видео модуль
+                {% elseif module.type == 'test' %}
+                    Тестирование
+                {% endif %}
+            </div>
+            <div class="col-xs-6">
+                <b style="font-size: 16px">{{ module.title }}</b>
+                <div class="">{{ module.description }}</div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+{% block modal %}
+    {{ include('@App/Modal/enrolmentCourse.html.twig') }}
+{% endblock %}

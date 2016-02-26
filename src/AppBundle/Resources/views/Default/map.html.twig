@@ -1,0 +1,59 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/js/jqvmap/data/jquery.vmap.sampledata.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/jqvmap/jquery.vmap.js') }}"></script>
+    <script src="{{ asset('bundles/app/js/jqvmap/maps/jquery.vmap.world.js') }}"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $('#vmap').vectorMap({
+                map: 'world_en',
+                backgroundColor: null,
+                color: '#ffffff',
+                hoverOpacity: 0.7,
+                selectedColor: '#666666',
+                enableZoom: true,
+                showTooltip: true,
+                values: sample_data,
+                scaleColors: ['#C8EEFF', '#006491'],
+                normalizeFunction: 'polynomial',
+
+//                onLabelShow: function(event, label, code){
+//                    var theValJson = { id: code };
+//                    $.ajax({
+//                        url: '/organizations_info',
+//                        type: "POST",
+//                        cache: false,
+//                        data: theValJson,
+//                        success: function(data) {
+//                            label.text(data);
+//                        },
+//                        error: function (){
+//                            console.log("something is went wrong - country tooltip is not loaded");
+//                        }
+//                    });
+//                }
+
+            });
+
+            var json_country = "{\"ab\":\"#CEDEFD\",\"au\":\"#CEDEFD\",\"at\":\"#CEDEFD\",\"az\":\"#CEDEFD\",\"al\":\"#CEDEFD\",\"dz\":\"#CEDEFD\",\"as\":\"#CEDEFD\",\"ai\":\"#CEDEFD\",\"ao\":\"#CEDEFD\",\"ad\":\"#CEDEFD\",\"aq\":\"#CEDEFD\",\"ag\":\"#CEDEFD\",\"ar\":\"#CEDEFD\",\"am\":\"#2E8AE6\",\"aw\":\"#CEDEFD\",\"af\":\"#CEDEFD\",\"bs\":\"#CEDEFD\",\"bd\":\"#CEDEFD\",\"bb\":\"#CEDEFD\",\"bh\":\"#CEDEFD\",\"by\":\"#2E8AE6\",\"bz\":\"#CEDEFD\",\"be\":\"#CEDEFD\",\"bj\":\"#CEDEFD\",\"bm\":\"#CEDEFD\",\"bg\":\"#CEDEFD\",\"bo\":\"#CEDEFD\",\"bq\":\"#CEDEFD\",\"ba\":\"#CEDEFD\",\"bw\":\"#CEDEFD\",\"br\":\"#CEDEFD\",\"io\":\"#CEDEFD\",\"bn\":\"#CEDEFD\",\"bf\":\"#CEDEFD\",\"bi\":\"#CEDEFD\",\"bt\":\"#CEDEFD\",\"vu\":\"#CEDEFD\",\"hu\":\"#CEDEFD\",\"ve\":\"#CEDEFD\",\"vg\":\"#CEDEFD\",\"vi\":\"#CEDEFD\",\"vn\":\"#CEDEFD\",\"ga\":\"#CEDEFD\",\"ht\":\"#CEDEFD\",\"gy\":\"#CEDEFD\",\"gm\":\"#CEDEFD\",\"gh\":\"#CEDEFD\",\"gp\":\"#CEDEFD\",\"gt\":\"#CEDEFD\",\"gn\":\"#CEDEFD\",\"gw\":\"#CEDEFD\",\"de\":\"#CEDEFD\",\"gg\":\"#CEDEFD\",\"gi\":\"#CEDEFD\",\"hn\":\"#CEDEFD\",\"hk\":\"#CEDEFD\",\"gd\":\"#CEDEFD\",\"gl\":\"#CEDEFD\",\"gr\":\"#CEDEFD\",\"ge\":\"#CEDEFD\",\"gu\":\"#CEDEFD\",\"dk\":\"#CEDEFD\",\"je\":\"#CEDEFD\",\"dj\":\"#CEDEFD\",\"dm\":\"#CEDEFD\",\"do\":\"#CEDEFD\",\"eg\":\"#CEDEFD\",\"zm\":\"#CEDEFD\",\"eh\":\"#CEDEFD\",\"zw\":\"#CEDEFD\",\"il\":\"#CEDEFD\",\"in\":\"#CEDEFD\",\"id\":\"#CEDEFD\",\"jo\":\"#CEDEFD\",\"iq\":\"#CEDEFD\",\"ir\":\"#CEDEFD\",\"ie\":\"#CEDEFD\",\"is\":\"#CEDEFD\",\"es\":\"#CEDEFD\",\"it\":\"#CEDEFD\",\"ye\":\"#CEDEFD\",\"cv\":\"#CEDEFD\",\"kz\":\"#2E8AE6\",\"kh\":\"#CEDEFD\",\"cm\":\"#CEDEFD\",\"ca\":\"#CEDEFD\",\"qa\":\"#CEDEFD\",\"ke\":\"#CEDEFD\",\"cy\":\"#CEDEFD\",\"kg\":\"#2E8AE6\",\"ki\":\"#CEDEFD\",\"cn\":\"#CEDEFD\",\"cc\":\"#CEDEFD\",\"co\":\"#CEDEFD\",\"km\":\"#CEDEFD\",\"cg\":\"#CEDEFD\",\"cd\":\"#CEDEFD\",\"kp\":\"#CEDEFD\",\"kr\":\"#CEDEFD\",\"cr\":\"#CEDEFD\",\"ci\":\"#CEDEFD\",\"cu\":\"#CEDEFD\",\"kw\":\"#CEDEFD\",\"cw\":\"#CEDEFD\",\"la\":\"#CEDEFD\",\"lv\":\"#CEDEFD\",\"ls\":\"#CEDEFD\",\"lb\":\"#CEDEFD\",\"ly\":\"#CEDEFD\",\"lr\":\"#CEDEFD\",\"li\":\"#CEDEFD\",\"lt\":\"#CEDEFD\",\"lu\":\"#CEDEFD\",\"mu\":\"#CEDEFD\",\"mr\":\"#CEDEFD\",\"mg\":\"#CEDEFD\",\"yt\":\"#CEDEFD\",\"mo\":\"#CEDEFD\",\"mw\":\"#CEDEFD\",\"my\":\"#CEDEFD\",\"ml\":\"#CEDEFD\",\"um\":\"#CEDEFD\",\"mv\":\"#CEDEFD\",\"mt\":\"#CEDEFD\",\"ma\":\"#CEDEFD\",\"mq\":\"#CEDEFD\",\"mh\":\"#CEDEFD\",\"mx\":\"#CEDEFD\",\"fm\":\"#CEDEFD\",\"mz\":\"#CEDEFD\",\"md\":\"#2E8AE6\",\"mc\":\"#CEDEFD\",\"mn\":\"#2E8AE6\",\"ms\":\"#CEDEFD\",\"mm\":\"#99CCFF\",\"na\":\"#CEDEFD\",\"nr\":\"#CEDEFD\",\"np\":\"#CEDEFD\",\"ne\":\"#CEDEFD\",\"ng\":\"#CEDEFD\",\"nl\":\"#CEDEFD\",\"ni\":\"#CEDEFD\",\"nu\":\"#CEDEFD\",\"nz\":\"#CEDEFD\",\"nc\":\"#CEDEFD\",\"no\":\"#CEDEFD\",\"ae\":\"#CEDEFD\",\"om\":\"#CEDEFD\",\"bv\":\"#CEDEFD\",\"im\":\"#CEDEFD\",\"nf\":\"#CEDEFD\",\"cx\":\"#CEDEFD\",\"hm\":\"#CEDEFD\",\"ky\":\"#CEDEFD\",\"ck\":\"#CEDEFD\",\"tc\":\"#CEDEFD\",\"pk\":\"#CEDEFD\",\"pw\":\"#CEDEFD\",\"ps\":\"#CEDEFD\",\"pa\":\"#CEDEFD\",\"va\":\"#CEDEFD\",\"pg\":\"#CEDEFD\",\"py\":\"#CEDEFD\",\"pe\":\"#CEDEFD\",\"pn\":\"#CEDEFD\",\"pl\":\"#CEDEFD\",\"pt\":\"#CEDEFD\",\"pr\":\"#CEDEFD\",\"mk\":\"#CEDEFD\",\"re\":\"#CEDEFD\",\"ru\":\"#2E8AE6\",\"rw\":\"#CEDEFD\",\"ro\":\"#CEDEFD\",\"ws\":\"#CEDEFD\",\"sm\":\"#CEDEFD\",\"st\":\"#CEDEFD\",\"sa\":\"#CEDEFD\",\"sz\":\"#CEDEFD\",\"sh\":\"#CEDEFD\",\"mp\":\"#CEDEFD\",\"bl\":\"#CEDEFD\",\"mf\":\"#CEDEFD\",\"sn\":\"#CEDEFD\",\"vc\":\"#CEDEFD\",\"lc\":\"#CEDEFD\",\"kn\":\"#CEDEFD\",\"pm\":\"#CEDEFD\",\"rs\":\"#CEDEFD\",\"sc\":\"#CEDEFD\",\"sg\":\"#CEDEFD\",\"sx\":\"#CEDEFD\",\"sy\":\"#CEDEFD\",\"sk\":\"#CEDEFD\",\"si\":\"#CEDEFD\",\"gb\":\"#CEDEFD\",\"us\":\"#CEDEFD\",\"sb\":\"#CEDEFD\",\"so\":\"#CEDEFD\",\"sd\":\"#CEDEFD\",\"sr\":\"#CEDEFD\",\"sl\":\"#CEDEFD\",\"tj\":\"#2E8AE6\",\"th\":\"#CEDEFD\",\"tw\":\"#CEDEFD\",\"tz\":\"#CEDEFD\",\"tl\":\"#CEDEFD\",\"tg\":\"#CEDEFD\",\"tk\":\"#CEDEFD\",\"to\":\"#CEDEFD\",\"tt\":\"#CEDEFD\",\"tv\":\"#CEDEFD\",\"tn\":\"#CEDEFD\",\"tm\":\"#CEDEFD\",\"tr\":\"#2E8AE6\",\"ug\":\"#CEDEFD\",\"uz\":\"#2E8AE6\",\"ua\":\"#CEDEFD\",\"wf\":\"#CEDEFD\",\"uy\":\"#CEDEFD\",\"fo\":\"#CEDEFD\",\"fj\":\"#CEDEFD\",\"ph\":\"#CEDEFD\",\"fi\":\"#CEDEFD\",\"fk\":\"#CEDEFD\",\"fr\":\"#CEDEFD\",\"gf\":\"#CEDEFD\",\"pf\":\"#CEDEFD\",\"tf\":\"#CEDEFD\",\"hr\":\"#CEDEFD\",\"cf\":\"#CEDEFD\",\"td\":\"#CEDEFD\",\"me\":\"#CEDEFD\",\"cz\":\"#CEDEFD\",\"cl\":\"#CEDEFD\",\"ch\":\"#CEDEFD\",\"se\":\"#CEDEFD\",\"sj\":\"#CEDEFD\",\"lk\":\"#CEDEFD\",\"ec\":\"#CEDEFD\",\"gq\":\"#CEDEFD\",\"ax\":\"#CEDEFD\",\"sv\":\"#CEDEFD\",\"er\":\"#CEDEFD\",\"ee\":\"#CEDEFD\",\"et\":\"#CEDEFD\",\"za\":\"#CEDEFD\",\"gs\":\"#CEDEFD\",\"os\":\"#CEDEFD\",\"ss\":\"#CEDEFD\",\"jm\":\"#CEDEFD\",\"jp\":\"#CEDEFD\"}"
+
+            json_country = $.parseJSON( json_country );
+            $('#vmap').vectorMap('set', 'colors', json_country);
+
+//            $('#vmap').vectorMap({ map: 'world_en' });
+        })
+    </script>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {#<link rel="stylesheet" href="vmap"/>#}
+{% endblock %}
+{% block fullContent %}
+    <h1 class="blue-text">Карта сообществ</h1>
+    <div id="vmap" style="width: 100%; height: 600px;"></div>
+{% endblock %}

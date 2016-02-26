@@ -1,0 +1,47 @@
+{#{% extends "AdminBundle::layout.html.twig" %}#}
+
+
+{#{% block frame %}#}
+
+    <div class="well">
+        <div style="float: right">
+            <a href="{{ path('admin_course_module_add',{'courseId' : course.id }) }}"><button class="btn btn-default">Добавить</button></a>
+        </div>
+        <h3>Модули курса</h3>
+        <table class="table">
+            <tr>
+                <th>№</th>
+                <th>Название модуля</th>
+                <th>Тип</th>
+                <th></th>
+                <th>Статус</th>
+                <th class="setting">Инструменты</th>
+            </tr>
+            {% for item in modules %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.type }}</td>
+                    <td></td>
+                    <td>{{ item.enabled }}</td>
+                    <td class="setting">
+                        {% spaceless %}
+                        <a href="{{ path('admin_course_module_edit',{'courseId' : course.id, 'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </a>
+                            &nbsp;
+                            &nbsp;
+                        <a href="{{ path('admin_course_module_remove',{'courseId' : course.id, 'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </a>
+                        {% endspaceless %}
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+{#{% endblock %}#}

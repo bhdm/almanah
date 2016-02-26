@@ -1,0 +1,74 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets "@AppBundle/Resources/public/less/comments.less" %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
+    <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="col-xs-4" style="padding-left: 0">
+        {{ render(controller("AppBundle:Widget:calendar" )) }}
+    </div>
+    <div class="col-xs-8" style="padding-right: 0">
+        <div>
+            {% if publication.preview.path is defined  %}
+                <img src="{{ publication.preview.path }}" style="max-width: 250px; float: left; margin: 0 20px 10px 10px" class="img-thumbnail">
+            {% endif %}
+            <h1 class="blue-text">{{ publication.title }}</h1>
+            <div>
+                {{ publication.anons | raw }}
+                {{ publication.body | raw }}
+                {% if publication.video.path is defined %}
+                    <div style="text-align: center">
+                        <video controls style="width: 640px; height: 420px;">
+                            <source src="{{ publication.video.path }}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                {% endif %}
+            </div>
+
+            <div class="row row-params">
+                <div class="col-xs-4" style="padding-top: 5px;">
+                    {#<span style="font-size: 12px">Расказать друзьям&nbsp;&nbsp;</span>#}
+                    <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
+                    <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
+                    <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter="" style="text-align: left; "></div>
+                </div>
+                <div class="col-xs-5">
+                    {% if publication.specialties | length > 0 %}
+                        <b>Специальности:</b>
+                        {% set ss = '' %}
+                        {% for s in publication.specialties  %}
+                            {% set ss = ss~s.title %}
+                            {% if s != publication.specialties | last %}
+                                {% set ss = ss~', ' %}
+                            {% endif %}
+                        {% endfor %}
+                        <span title="{{ ss }}">
+                            {{ ss }}
+                        </span>
+                    {% endif %}
+                </div>
+                <div class="col-xs-3 text-right">
+                    <div style="padding-top: 10px; padding-bottom: 6px">
+                        <span class="glyphicon glyphicon-calendar"></span> {{ publication.created | date('d.m.Y') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        {% if publication.isAllowCommentary == true %}
+            {% include '@App/Publication/comments.html.twig'  with {'comments': publication.comments, 'id' : publication.id, 'type': 'publication' } %}
+        {% endif %}
+    </div>
+{% endblock %}

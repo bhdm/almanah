@@ -1,0 +1,31 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
+    <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="col-xs-4" style="padding-left: 0">
+        {{ render(controller("AppBundle:Widget:calendar" )) }}
+    </div>
+    <div class="col-xs-8" style="padding-right: 0">
+        <h1 class="blue-text">Журналы</h1>
+        <div class="row">
+            {% for j in journals %}
+                <div class="col-md-6 col-md-4">
+                    <div class="thumbnail">
+                        <a href="{{ path('journal',{'journalId' : j.id }) }}">
+                            <img src="{{ j.photo.path }}" alt="{{ j.title }}">
+                            <div class="caption text-center">
+                                <h3 style="font-size: 16px">{{ j.title }}</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

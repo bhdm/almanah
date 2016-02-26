@@ -1,0 +1,86 @@
+<div style="overflow:hidden;">
+    <br />
+    <div class="form-group">
+        <div class="claendar-tabs">
+            <div class="claendar-tab active" data-value="EAT">ЕАТ</div>
+            <div class="claendar-tab"  data-value="Partner">Партнеры</div>
+            <input type="hidden" id="calendar-owner" value="EAT">
+        </div>
+        <div id="calendar">
+            <div id="calendar-widget"></div>
+            <div id="calendar-list" class="thumbnail">
+                <ul class="events-list">
+                    {% for e in events %}
+                        <li><span>{{ e.start | date('d.m.Y') }}</span>&nbsp;&nbsp;<a href="{{ path('event',{'url' : e.id}) }}">{{ e.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#calendar-widget').datetimepicker({
+                inline: true,
+                sideBySide: true,
+                format: "MM/dd/YYYY"
+            });
+
+            function monthEvents(year, month){
+                $.ajax({
+                    url: Routing.generate('api_get_events_month'),
+                    method: 'POST',
+                    data: {'month': month, 'year' : year, 'owner': $('#calendar-owner').val() },
+                    success: function(json){
+                        $.each( json.dates, function(date, key) {
+                            $('.day[data-day="'+date+'"]').addClass('isEvent');
+                        });
+                    }
+                });
+            }
+
+            var year = null;
+            var month = null;
+            monthEvents(year, month);
+
+            $("#calendar-widget").on("dp.update", function (e) {
+                var year = e.viewDate.year();
+                var month = (e.viewDate.month()+1);
+                monthEvents(year, month);
+            });
+
+            $("#calendar-widget").on("dp.change", function (e) {
+                var selectDate = e.date.year()+'-'+(e.date.month()+1)+'-'+e.date.date();
+                $.ajax({
+                    url: Routing.generate('api_get_events'),
+                    method: 'POST',
+                    data: {'date': selectDate, 'owner': $('#calendar-owner').val() },
+                    success: function(json){
+                        var list = $('#calendar-list');
+                        list.html('');
+                        list.append('<ul class="events-list"></lu>');
+                        list = list.children('ul');
+                        for (var  i = 0; i<json.events.length; i++){
+                            var title = json.events[i].title;
+                            var href = Routing.generate('event',{'url' : json.events[i].id })
+                            console.log(ee=json.events[i]);
+                            var fullDate = json.events[i].start.date.split(' ')[0];
+                            fullDate = fullDate.split('-');
+                            var date = fullDate[2]+'.'+fullDate[1]+'.'+fullDate[0];
+                            list.append('<li><span>'+date+'</span>&nbsp;&nbsp;<a href="'+href+'">'+title+'</a></li>');
+                        }
+                    }
+                });
+
+                var year = e.date.year();
+                var month = (e.date.month()+1);
+                monthEvents(year, month)
+            });
+
+            $('.claendar-tab').click(function () {
+                $('.claendar-tab').removeClass('active');
+                $(this).addClass('active');
+            })
+        });
+    </script>
+</div>
+{#<img src="{{ asset('bundles/app/images/calendar.png') }}" style="width: 100%">#}

@@ -1,0 +1,35 @@
+@color-blue: #337AB7;
+@color-white: #FFFFFF;
+
+@uppercase: uppercase;
+
+.navbar-nav{
+  background: @color-blue;
+  li {
+    a{
+        color: #FFFFFF;
+      font-size: 12px;
+      &:active, &:focus{
+          background: none !important;
+      }
+    }
+
+  }
+}
+.navbar{
+  border: 0;
+}
+nav .navbar-nav li:not(:last-child){
+  border-right: 1px solid #88BADD;
+}
+nav .navbar-nav li:nth-child(6){
+  border: 0 !important;
+}
+.nomenu{
+  border: 0 !important;
+}
+//nav{
+//  box-shadow: none;
+//  -moz-box-shadow: none;
+//  -webkit-box-shadow: none;
+//}

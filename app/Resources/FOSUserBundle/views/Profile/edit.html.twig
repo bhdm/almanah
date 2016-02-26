@@ -1,0 +1,114 @@
+{% extends '@FOSUser/fos_layout.html.twig' %}
+
+
+{% block styles %}
+  {{ parent() }}
+
+{% endblock %}
+
+{% block javascripts %}
+  {{ parent() }}
+{% endblock %}
+
+{% block fos_user_content %}
+  <link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/jquery-ui.css') }}">
+  <link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/theme.css') }}">
+  <script src="{{ asset('assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+  <script>
+    $(document).ready(function () {
+      $( ".university" ).autocomplete({
+        source: function( request, response ) {
+          $.ajax({
+            url: Routing.generate('get_university'),
+            dataType: "json",
+            data: {
+              title: request.term
+            },
+            success: function( data ) {
+              response( data );
+            }
+          });
+        },
+        minLength: 3,
+        select: function( event, ui ) {
+          $( ".university").val(ui.item);
+        },
+        open: function() {
+          $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+        },
+        close: function() {
+          $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+        }
+      });
+
+      $( ".city" ).autocomplete({
+        source: function( request, response ) {
+          $.ajax({
+            url: Routing.generate('get_city'),
+            dataType: "json",
+            data: {
+              title: request.term
+            },
+            success: function( data ) {
+              response( data );
+            }
+          });
+        },
+        minLength: 3,
+        select: function( event, ui ) {
+          $( ".city").val(ui.item);
+        },
+        open: function() {
+          $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+        },
+        close: function() {
+          $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+        }
+      });
+
+
+    });
+  </script>
+
+  <div class="panel-tab-body">
+    <div class="account-content">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
+          {{ form_errors(form) }}
+          <div class="edit-title text-uppercase">Профиль</div>
+          {{ form_start(form, {'action': path('fos_user_profile_edit'), 'attr': {'id': 'registration_form'}}) }}
+          {#{{ form_widget(form.) }}#}
+          {{ form_row(form.username) }}
+          {{ form_row(form.email) }}
+          {{ form_row(form.lastName) }}
+          {{ form_row(form.firstName) }}
+          {{ form_row(form.surName) }}
+          {{ form_row(form.birthDate) }}
+          {{ form_row(form.sex) }}
+          {{ form_row(form.phone) }}
+          <hr />
+          {{ form_row(form.country) }}
+          {{ form_row(form.city) }}
+          <hr />
+          <div class="edit-title text-uppercase">Информация об образовании</div>
+          {{ form_row(form.university) }}
+          {{ form_row(form.specialty) }}
+          {{ form_row(form.academicDegree) }}
+          {{ form_row(form.certificate) }}
+          <div class="edit-title text-uppercase">Информация о работе</div>
+          {{ form_row(form.workPlace) }}
+          {{ form_row(form.workTypeOrganization) }}
+          {{ form_row(form.workPlaceTitle) }}
+          {{ form_row(form.workPost) }}
+          <div class="row">
+            <div class="col-sm-9 col-sm-offset-3 registration-submit-button text-right">
+              <button type="submit" class="btn btn-primary">Сохранить данные</button>
+            </div>
+          </div>
+
+          {{ form_widget(form._token) }}
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

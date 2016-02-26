@@ -1,0 +1,55 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
+    <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="col-xs-4" style="padding-left: 0">
+        {{ render(controller("AppBundle:Widget:calendar" )) }}
+    </div>
+    <div class="col-xs-8" style="padding-right: 0">
+        <div class="col-xs-4">
+            <br />
+            <img src="{{ journal.photo.path }}"  class="img-thumbnail"/>
+        </div>
+        <div class="col-xs-8">
+            <h1 class="blue-text">{{ journal.title }}</h1>
+            <div class="row">
+                <label class="col-xs-5">Ключевые слова:</label>
+                <div class="col-xs-7">{{ journal.keywords }}</div>
+            </div>
+            <div class="row">
+                <label class="col-xs-5">Страницы:</label>
+                <div class="col-xs-7">{{ journal.pages }}</div>
+            </div>
+            <div class="row">
+                <label class="col-xs-5">год / месяц:</label>
+                <div class="col-xs-7">{{ journal.year }} {{ journal.month }}</div>
+            </div>
+            <div class="row">
+                <label class="col-xs-5">Том:</label>
+                <div class="col-xs-7">{{ journal.tom }}</div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12"><p>{{ journal.description | raw }}</p></div>
+            </div>
+        </div>
+
+        <h3 class="blue-text">Статьи журнала</h3>
+        {% for post in journal.posts %}
+            <div class="row">
+                <div class="caption" style="font-size: 16px"><a href="#">{{ post.title }}</a></div>
+                <div class="params">
+                    <b>Авторы:</b> {{ post.author }}<br />
+                    <b>Описание:</b> {{ post.description | raw }}<br />
+                    <b>Ключевые слова:</b> {{ post.keywords }}
+                </div>
+            </div>
+            <hr />
+        {% endfor %}
+    </div>
+{% endblock %}

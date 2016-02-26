@@ -1,0 +1,44 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li class="active"><a href="{{ path('admin_teststatistic_list') }}">Статистика теста</a> <span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        <h4>Всего ответило: <span class="label label-default">{{ count }}</span></h4>
+        <h4>Средний балл: <span class="label label-default">{{ avg }}</span></h4>
+        <table class="table">
+            <tr>
+                <th>№</th>
+                <th>Кол-во баллов</th>
+                <th>Дата</th>
+                <th></th>
+                <th class="setting">Инструменты</th>
+            </tr>
+            {% for item in pagination %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.balls }}</td>
+                    <td>{{ item.created |date('d.m.Y') }}</td>
+                    <td></td>
+                    <td class="setting">
+                        {% spaceless %}
+                        <a href="{{ path('admin_teststatistic_remove',{'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </a>
+                        {% endspaceless %}
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+{% endblock %}

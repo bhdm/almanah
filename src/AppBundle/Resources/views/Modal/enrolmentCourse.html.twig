@@ -1,0 +1,17 @@
+<div id="enrolmentModal" class="modal in" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Получение доступа к курсу</h4>
+            </div>
+                <p class="modal-course-title">
+                Подтвердите пожалуйста регистрацию на курс: <br />"<b>{{ course.title }}</b>"
+                </p>
+            <div class="modal-footer">
+                <a href="{{ path('enrolment',{'courseId' : course.id}) }}"><button class="btn btn-primary" type="submit">Получить доступ</button></a>
+                <button type="cancel" class="btn btn-danger" data-dismiss="modal">Отмена</button>
+            </div>
+        </div>
+    </div>
+</div>

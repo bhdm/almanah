@@ -1,0 +1,257 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li class="active"><a href="{{ path('admin_stats_list') }}">Статистика</a> <span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        <h2>Просмотр карты</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table">
+                    <tr>
+                        <th>Город</th>
+                        <th>Кол-во</th>
+                    </tr>
+                    {% for m in map  %}
+                        <tr>
+                            <td>{{ m.city }}</td>
+                            <td>{{ m.amount }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <div class="chart" id="chart1"></div>
+            </div>
+        </div>
+        <h2>Прохождение теста после 10 сентября</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table">
+                    <tr>
+                        <th>Город</th>
+                        <th>Кол-во</th>
+                    </tr>
+                    {% for m in test2  %}
+                        <tr>
+                            <td>{{ m.city }}</td>
+                            <td>{{ m.amount }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <div class="chart" id="chart2"></div>
+            </div>
+        </div>
+        <h2>Прохождение теста</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table">
+                    <tr>
+                        <th>Город</th>
+                        <th>Кол-во</th>
+                    </tr>
+                    {% for m in test  %}
+                        <tr>
+                            <td>{{ m.city }}</td>
+                            <td>{{ m.amount }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <div class="chart" id="chart2"></div>
+            </div>
+        </div>
+        <h2>Скачивание документа</h2>
+        <div class="row">
+            <div class="col-sm-6">
+                <table class="table">
+                    <tr>
+                        <th>Город</th>
+                        <th>Кол-во</th>
+                    </tr>
+                    {% for m in doc  %}
+                        <tr>
+                            <td>{{ m.city }}</td>
+                            <td>{{ m.amount }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+            <div class="col-sm-6">
+                <div class="chart" id="chart3"></div>
+            </div>
+        </div>
+        <button type="button" id="pdfbtn" class="btn btn-primary">Печать</button>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        @media print {
+            .nav, .navbar, .navtitle, .breadcrumb, #pdfbtn{
+                display: none;
+            }
+        }
+        .chart{
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {#<script src="{{ asset('bundles/admin/jsPDF/jspdf.js') }}"></script>#}
+    {#<script src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.from_html.js') }}"></script>#}
+    {#<script src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.split_text_to_size.js') }}"></script>#}
+    {#<script src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.standard_fonts_metrics.js') }}"></script>#}
+    {#<script type="text/javascript" src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.addimage.js') }}"></script>#}
+    {#<script type="text/javascript" src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.sillysvgrenderer.js') }}"></script>#}
+    {#<script type="text/javascript" src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.split_text_to_size.js') }}"></script>#}
+    {#<script type="text/javascript" src="{{ asset('bundles/admin/jsPDF/jspdf.plugin.standard_fonts_metrics.js') }}"></script>#}
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Город');
+            data.addColumn('number', 'Кол-во');
+            data.addRows([
+                {% for m in map %}
+                ['{{ m.city }}', {{ m.amount }}],
+                {% endfor%}
+            ]);
+
+            var options = {'title':'Кол-во пользователей зашедших на карту',
+                'width':300,
+                'height':300,
+                'legend':'right',
+                'is3D':true
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart1'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Город');
+            data.addColumn('number', 'Кол-во');
+            data.addRows([
+                {% for m in test %}
+                ['{{ m.city }}', {{ m.amount }}],
+                {% endfor%}
+            ]);
+
+            var options = {'title':'Кол-во пользователей прошедших тест',
+                'width':300,
+                'height':300,
+                'legend':'right',
+                'is3D':true
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Город');
+            data.addColumn('number', 'Кол-во');
+            data.addRows([
+                {% for m in test2 %}
+                ['{{ m.city }}', {{ m.amount }}],
+                {% endfor%}
+            ]);
+
+            var options = {'title':'Кол-во пользователей прошедших тест после 10 сентября',
+                'width':300,
+                'height':300,
+                'legend':'right',
+                'is3D':true
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart2'));
+            chart.draw(data, options);
+        }
+    </script>
+    <script type="text/javascript">
+
+        google.load('visualization', '1.0', {'packages':['corechart']});
+        google.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+            var data = new google.visualization.DataTable();
+            data.addColumn('string', 'Город');
+            data.addColumn('number', 'Кол-во');
+            data.addRows([
+                {% for m in doc %}
+                ['{{ m.city }}', {{ m.amount }}],
+                {% endfor%}
+            ]);
+
+            var options = {'title':'Кол-во пользователей скачавших направление',
+                'width':300,
+                'height':300,
+                'legend':'right',
+                'is3D':true
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('chart3'));
+            chart.draw(data, options);
+        }
+    </script>
+
+    <script>
+        $(document).ready(function(){
+           $('#pdfbtn').click(function(){
+               window.print() ;
+//               var doc = new jsPDF();
+//               var elementHandler = {
+//                   'nav': function (element, renderer) {
+//                       return true;
+//                   },
+//                   'navbar': function (element, renderer) {
+//                       return true;
+//                   }
+//               };
+//               var source = window.document.getElementsByTagName("container")[0];
+//               doc.fromHTML(
+//                       source,
+//                       15,
+//                       15,
+//                       {
+//                           'width': 180,'elementHandlers': elementHandler
+//                       });
+//
+//               doc.output("dataurlnewwindow");
+           });
+        });
+    </script>
+{% endblock %}

@@ -1,0 +1,75 @@
+.block-comments .detailBox {
+  border: 1px solid #bbb;
+}
+.block-comments .titleBox {
+  background-color: #fdfdfd;
+  padding: 10px;
+}
+.block-comments .titleBox label {
+  color: #444;
+  margin: 0;
+  display: inline-block;
+}
+.block-comments .commentBox {
+  padding: 10px;
+  border-top: 1px dotted #bbb;
+}
+.block-comments .commentBox .form-group:first-child,
+.block-comments .actionBox .form-group:first-child {
+  width: 80%;
+}
+.block-comments .commentBox .form-group:nth-child(2),
+.block-comments .actionBox .form-group:nth-child(2) {
+  width: 18%;
+}
+.block-comments .actionBox .form-group * {
+  width: 100%;
+}
+.block-comments .taskDescription {
+  margin-top: 10px;
+}
+.block-comments .commentList {
+  padding: 0;
+  list-style: none;
+  max-height: 200px;
+  overflow: auto;
+}
+.block-comments .commentList li {
+  margin: 0;
+  margin-top: 10px;
+}
+.block-comments .commentList li > div {
+  display: table-cell;
+}
+.block-comments .commenterImage {
+  width: 50px;
+  margin-right: 5px;
+  height: 100%;
+  float: left;
+}
+.block-comments .commenterImage img {
+  width: 100%;
+  border-radius: 50%;
+}
+.block-comments .commentText p {
+  margin: 0;
+}
+.block-comments .sub-text {
+  color: #aaa;
+  font-family: verdana;
+  font-size: 11px;
+}
+.block-comments .actionBox {
+  border-top: 1px dotted #bbb;
+  padding: 10px;
+}
+.block-comments .commenterImage {
+  margin-right: 20px;
+}
+.block-comments .commentText {
+  padding-top: 5px;
+}
+.block-comments .commentOwner {
+  color: #337Ab7;
+  font-weight: bold;
+}

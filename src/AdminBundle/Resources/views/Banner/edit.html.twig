@@ -1,0 +1,22 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_banner_list') }}">Баннеры</a> <span class="divider"></span></li>
+        <li class="active">Изменение<span class="divider"></span></li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        {% if item.file.path is defined %}
+            <div style="position: absolute; left: 30px;">
+                <img src="{{ item.file.path }}" style="max-width: 120px; display: inline-block" class="thumbnail" />
+            </div>
+        {% endif %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

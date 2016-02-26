@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    {% block javascript %}
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+        <script src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+        <script src="{{ asset('assets/vendor/chosen/chosen.jquery.min.js') }}"></script>
+
+        <script src="{{ asset('assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js') }}"></script>
+
+        <script src="{{ asset('assets/vendor/hinclude/hinclude.js') }}"></script>
+
+        <script src="{{ asset('bundles/app/js/main.js') }}"></script>
+
+    {% endblock %}
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/vendor/reset-css/reset.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap/dist/css/bootstrap.css') }}">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="{{ asset('assets/vendor/owl.carousel/dist/assets/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/vendor/chosen/chosen.min.css') }}">
+
+        <link rel="stylesheet" href="{{ asset('bundles/app/css/checkbox.css') }}">
+        {% stylesheets "@AppBundle/Resources/public/less/common.less" %}
+        <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />
+        {% endstylesheets %}
+
+        {% if app.request.attributes.get('_route') != 'homepage' %}
+            <link rel="stylesheet" href="{{ asset('bundles/app/less/menu.css') }}">
+            {#{% stylesheets "@AppBundle/Resources/public/less/menu.less" %}#}
+            {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />#}
+            {#{% endstylesheets %}#}
+        {% endif %}
+
+    {% endblock %}
+</head>
+<body>
+<div class="body">
+    <div class="container-fluid">
+        <header>
+            <div class="row">
+                <div class="col-xs-3">
+                    <div style="width: 250px">
+                        <a href="{{ path('homepage') }}">
+                            <img src="{{ asset('bundles/app/images/logo3.png') }}" id="logo" style=" float: left">
+                            <div style="display: inline-block; width: 100px; text-decoration: none; float: left; font-size: 12px; padding-top: 5px;"><div style="text-decoration: none;"><br />
+                                    Евразийская Ассоциация Терапевтов</div></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-xs-offset-1 col-xs-5 text-right">
+                    <form class="navbar-form navbar-right" role="search" action="{{ path('search') }}">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="search" placeholder="Введите запрос поиска" name="search">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Найти</button>
+                    </form>
+                </div>
+                <div class="col-xs-3">
+                    {% if app.user != null %}
+                        <div class="navbar-form navbar-right">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                    {{ app.user.lastName~' '~app.user.firstName }}
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-top" aria-labelledby="dropdownMenu1">
+                                    {% if is_granted('ROLE_ADMIN') %}
+                                        <li><a href="{{ path('admin_main') }}">В админ панель</a></li>
+                                    {% endif %}
+                                    <li><a href="{{ path('fos_user_profile_edit') }}">В профиль</a></li>
+                                    <li><a href="{{ path('record_book') }}">Зачетка</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="{{ path('fos_user_security_logout') }}">Выйти</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% else %}
+                        <div class="navbar-form navbar-right">
+                            <button class="btn btn-primary" id="login">Вход</button>
+                        </div>
+                        <div class="register-btn">
+                            <a href="{{ path('fos_user_registration_register') }}">Регистрация</a>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </header>
+        {% if app.request.attributes.get('_route') == 'homepage' %}
+            <div class="slider ">
+                {% include "@App/Widget/carusel.html.twig" %}
+            </div>
+        {% endif %}
+        {{ render(controller("AppBundle:Default:generateMenu" )) }}
+        <div class="content">
+            {% block fullContent %}
+                <div class="row">
+                    <div class="col-xs-9">
+                        {% block content %}{% endblock %}
+                    </div>
+                    <div class="col-xs-3 text-right">
+                        {{ render(controller("AppBundle:Widget:banner" )) }}
+                    </div>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+    <footer>
+        <div class="row footer1">
+            <div class="col-xs-offset-1 col-xs-5" style="border-right: 1px solid #1080c8 ">
+                <div class="social text-center">
+                    <div>Мы в соц сетях</div>
+                    <br />
+                    <div>
+                        <a target="_blank" href="https://vk.com/public73072501"><img src="{{ asset('bundles/app/images/icons/vk.png') }}" class="social-icon"></a>
+                        <a target="_blank" href="https://www.facebook.com/euat.org/"><img src="{{ asset('bundles/app/images/icons/fb.png') }}" class="social-icon"></a>
+                        <a target="_blank" href="https://twitter.com/EuatInfo"><img src="{{ asset('bundles/app/images/icons/tw.png') }}" class="social-icon"></a>
+                        <a target="_blank" href="https://www.youtube.com/channel/UCgS0JAUqUpDojH6rIDXGfZA"><img src="{{ asset('bundles/app/images/icons/gp.png') }}" class="social-icon"></a>
+                        <a target="_blank" href="http://ok.ru/group/57034519412770"><img src="{{ asset('bundles/app/images/icons/od.png') }}" class="social-icon"></a>
+                    </div>
+                </div>
+                <div class="contacts row">
+                    <br /><br />
+                    <div class="col-xs-offset-1 col-xs-2">
+                        <img src="{{ asset('bundles/app/images/icons/email.png') }}" class="contact-icon" style="margin-top: 10px">
+                    </div>
+                    <div class="col-xs-9">
+                        <div><strong>Наши контакты</strong></div>
+                        <div>
+                            Адрес: <span class="blue-text">129085, Россия, Москва, Звездный бульвар, д. 21, стр. 1</span><br />
+                            Телефон: <span class="blue-text">+7 (977) 612-26-957</span><br />
+                            Телефон: <span class="blue-text">+7 (929) 986-69-80</span><br />
+                            Эл.почта: <span class="blue-text"><a href="mailto:office@euat.ru">office@euat.ru</a></span><br />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6" style="padding-left: 65px">
+                <div style="margin-left: 65px"> Дополнительно</div>
+                <br />
+                <div>
+                    <ul class="footer-other">
+                        <li>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}"><img src="{{ asset('bundles/app/images/icons/ph.png') }}" class="other-icon"> Контакты</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('page',{'url' : 'eula'}) }}"><img src="{{ asset('bundles/app/images/icons/ur.png') }}" class="other-icon"> Юридиеская информация</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('page',{'url' : 'smi'}) }}"><img src="{{ asset('bundles/app/images/icons/ur.png') }}" class="other-icon"> Информация для сми</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('partners') }}"><img src="{{ asset('bundles/app/images/icons/ar.png') }}" class="other-icon"> Партнеры</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="row footer2">
+            <div class="col-xs-2 col-xs-offset-1 text-right">
+                <img src="{{ asset('bundles/app/images/logo2.png') }}">
+            </div>
+            <div class="col-xs-9">
+                <br />
+                Все права защищены © Евразийская Ассоциация терапевтов 2014 г. 1.5.25<br />
+                Зарегистрировано в Министерстве Связи и Массовых Коммуникаций как СМИ. Регистрационный №89384928 от 12.01.2014 г.
+            </div>
+        </div>
+    </footer>
+</div>
+{% block modal %}{% endblock %}
+{% include "@App/Modal/login.html.twig" %}
+{% include "@App/counter.html.twig" %}
+</body>
+</html>

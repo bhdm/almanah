@@ -1,0 +1,44 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
+    <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+{% endblock %}
+
+{% block content %}
+    <div class="col-xs-4" style="padding-left: 0">
+        {{ render(controller("AppBundle:Widget:calendar" )) }}
+    </div>
+    <div class="col-xs-8" style="padding-right: 0">
+        {% if type == null %}
+            <h1 class="blue-text">События</h1>
+        {% elseif type == 'congress' %}
+            <h1 class="blue-text">Конгрессы и Съезды</h1>
+        {% elseif type == 'school' %}
+            <h1 class="blue-text">Школы</h1>
+        {% elseif type == 'partner' %}
+            <h1 class="blue-text">Партнерские события</h1>
+        {% endif %}
+        <div>
+            {% for p in events %}
+                <div class="new-item">
+                <span style="padding-right: 20px; color: #888">
+                    <span class="glyphicon glyphicon-calendar"></span>
+                    {{ p.start | date('d.m.Y') }}{{ p.end != null ? ' - '~p.end | date('d.m.Y') : '' }}
+                </span>
+                    <a href="{{ path('event', {'url' : p.id }) }}"><span class="new-item-title">{{ p.title }}</span></a>
+                    <div class="new-item-anons">
+                        {{ p.body | anons | raw }}
+                        {% if p.category != null %}
+                            <div style="color: #555">
+                                {{ p.category.title }}
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

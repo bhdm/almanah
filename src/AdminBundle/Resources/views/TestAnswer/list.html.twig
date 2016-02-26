@@ -1,0 +1,50 @@
+{% extends "AdminBundle::mini_layout.html.twig" %}
+
+
+{% block content %}
+    <div class="">
+        <ul class="breadcrumb">
+            <div style="float: right">
+                <a href="{{ path('admin_testanswer_add',{'questionId' : questionId}) }}">Добавить вопрос</a> <span class="divider"></span>
+            </div>
+        </ul>
+        <table class="table">
+            <tr>
+                <th>№</th>
+                <th>Вариант ответа</th>
+                <th>Правильный</th>
+                <th></th>
+                <th>Статус</th>
+                <th class="setting">Инструменты</th>
+            </tr>
+            {% for item in pagination %}
+                <tr>
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.istrue == 1 ? 'Правильный'  : '' }}</td>
+                    <td></td>
+                    <td>{{ item.enabledStr }}</td>
+                    <td class="setting">
+                        {% spaceless %}
+                        <a href="{{ path('admin_testanswer_edit',{'id' : item.id }) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                        </a>
+                            &nbsp;
+                            &nbsp;
+                        <a href="{{ path('admin_testanswer_remove',{'id' : item.id}) }}">
+                            <button type="button" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </button>
+                        </a>
+                        {% endspaceless %}
+                    </td>
+                </tr>
+            {% endfor%}
+        </table>
+        <div class="navigation">
+            {{ knp_pagination_render(pagination) }}
+        </div>
+    </div>
+{% endblock %}
