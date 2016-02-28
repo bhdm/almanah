@@ -47,7 +47,6 @@ h1.blue-text {
   background: #FFFFFF;
 }
 .slider {
-  height: 400px;
   overflow: hidden;
   margin-left: -15px;
   margin-right: -15px;
@@ -176,9 +175,15 @@ nav .navbar-nav li:hover a {
   vertical-align: middle;
 }
 .title {
-  color: #337AB7;
-  font-weight: bold;
+  border-bottom: 1px solid #383838;
+  color: #fc113c;
   font-size: 16px;
+  margin-bottom: 20px;
+}
+.title div {
+  border-bottom: 2px solid #383838;
+  display: inline-block;
+  padding: 5px 10px;
 }
 .new-item {
   padding-bottom: 10px;
@@ -213,7 +218,7 @@ nav .navbar-nav li:hover a {
   color: #FFFFFF;
 }
 .day.today {
-  background: #337AB7;
+  background: #fc113c;
   color: #FFFFFF;
 }
 .claendar-tabs {
@@ -326,7 +331,7 @@ footer {
   display: inline-block;
 }
 .owl-dots .owl-dot.active {
-  background: #337AB7;
+  background: #fc113c;
 }
 .chosen-container {
   font-size: 14px;
@@ -348,12 +353,6 @@ footer {
 }
 div:hover > .editor {
   display: block;
-}
-.owl-item {
-  height: 500px;
-}
-.owl-item .item img {
-  height: 500px;
 }
 table.table-vertical-middle tr td {
   vertical-align: middle;
@@ -422,7 +421,7 @@ th.picker-switch {
 }
 .test-question {
   font-size: 17px;
-  color: #337AB7;
+  color: #fc113c;
   font-weight: bold;
 }
 .test-answer {
@@ -462,4 +461,33 @@ th.picker-switch {
 }
 .jqvmap-zoomout {
   top: 0px;
+}
+.index-item {
+  padding-bottom: 15px;
+}
+.item-title {
+  font-weight: bold;
+  font-size: 15px;
+  color: #383838;
+}
+.item-anons {
+  font-size: 13px;
+}
+.item-param {
+  color: #fc113c;
+  font-size: 13px;
+}
+.calendar {
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 1px dashed #383838;
+}
+.calendar .date {
+  font-weight: bold;
+  color: #fc113c;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.calendar .annotate {
+  text-align: center;
 }

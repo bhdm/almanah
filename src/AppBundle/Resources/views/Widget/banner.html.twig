@@ -1,4 +1,8 @@
-{% if banner %}
-    <br />
-    <a href="{{ banner.url }}"><img src="{{ banner.file.path }}" style="width: 240px" title="{{ banner.title }}" alt="{{ banner.title }}"></a>
-{% endif %}
+{#{% if banner %}#}
+    {#<br />#}
+    {#<a href="{{ banner.url }}"><img src="{{ banner.file.path }}" style="width: 240px" title="{{ banner.title }}" alt="{{ banner.title }}"></a>#}
+{#{% endif %}#}
+<br />
+<div class="text-right">
+    <a href="http://mail.ru" target="_blank"><img src="{{ asset('bundles/app/images/banner.png') }}"></a>
+</div>

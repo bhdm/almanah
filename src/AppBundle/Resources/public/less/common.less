@@ -13,7 +13,7 @@
     font-style: normal;
 }
 
-@color-blue: #337AB7;
+@color-red: #337AB7;
 @color-red: #fc113c;
 @color-white: #FFFFFF;
 @color-black: #383838;
@@ -64,7 +64,7 @@ h1.blue-text{
     background: #FFFFFF;
 }
 .slider{
-    height: 400px;
+    //max-height: 400px;
     overflow: hidden;
     margin-left: -15px;
     margin-right: -15px;
@@ -214,9 +214,15 @@ nav .navbar-nav li:hover{
     vertical-align: middle;
 }
 .title{
-    color: @color-blue;
-    font-weight: bold;
+    border-bottom: 1px solid @color-black;
+    color: @color-red;
     font-size: 16px;
+    margin-bottom: 20px;
+    div{
+        border-bottom: 2px solid @color-black;
+        display: inline-block;
+        padding: 5px 10px;
+    }
 }
 .new-item{
     padding-bottom: 10px;
@@ -243,14 +249,14 @@ nav .navbar-nav li:hover{
 .day.isEvent{
     background: rgba(136, 191, 225, 0.34);
     border: 1px solid #FFF;
-    //color: @color-blue;
+    //color: @color-red;
 }
 .day.active{
     background: #CCC;
     color: @color-white;
 }
 .day.today{
-    background: @color-blue;
+    background: @color-red;
     color: @color-white;
 }
 // /////////////////
@@ -358,7 +364,7 @@ footer{
     text-align: center;
     .owl-dot{
         &.active{
-            background: @color-blue;
+            background: @color-red;
         }
         margin: 0px 5px;
         width: 10px;
@@ -393,10 +399,10 @@ div:hover>.editor{
 }
 
 .owl-item {
-    height: 500px;
+    //height: 500px;
     .item{
         img{
-            height: 500px;
+            //height: 500px;
         }
     }
 }
@@ -470,7 +476,7 @@ th.prev, th.next, th.picker-switch{
 }
 .test-question{
     font-size: 17px;
-    color: @color-blue;
+    color: @color-red;
     font-weight: bold;
 }
 .test-answer{
@@ -510,4 +516,33 @@ th.prev, th.next, th.picker-switch{
 }
 .jqvmap-zoomout{
     top: 0px;
+}
+.index-item{
+    padding-bottom: 15px;
+}
+.item-title{
+    font-weight: bold;
+    font-size: 15px;
+    color: @color-black
+}
+.item-anons{
+    font-size: 13px;
+}
+.item-param{
+    color: @color-red;
+    font-size: 13px;
+}
+.calendar{
+    .date{
+        font-weight: bold;
+        color: @color-red;
+        text-align: center;
+        padding-bottom: 5px;
+    }
+    .annotate{
+        text-align: center;
+    }
+    padding-bottom: 10px;
+    padding-top: 10px;
+    border-bottom: 1px dashed @color-black;
 }

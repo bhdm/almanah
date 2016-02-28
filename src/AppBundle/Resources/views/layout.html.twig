@@ -30,12 +30,12 @@
         <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />
         {% endstylesheets %}
 
-        {% if app.request.attributes.get('_route') != 'homepage' %}
-            <link rel="stylesheet" href="{{ asset('bundles/app/less/menu.css') }}">
+        {#{% if app.request.attributes.get('_route') != 'homepage' %}#}
+            {#<link rel="stylesheet" href="{{ asset('bundles/app/less/menu.css') }}">#}
             {#{% stylesheets "@AppBundle/Resources/public/less/menu.less" %}#}
             {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />#}
             {#{% endstylesheets %}#}
-        {% endif %}
+        {#{% endif %}#}
 
     {% endblock %}
 </head>
@@ -96,7 +96,7 @@
         {% endif %}
         {{ render(controller("AppBundle:Default:generateMenu" )) }}
         <div class="content">
-            {% block fullContent %}
+            {% block content %}
                 {#<div class="row">#}
                     {#<div class="col-xs-9">#}
                         {#{% block content %}{% endblock %}#}
