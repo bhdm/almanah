@@ -47,18 +47,16 @@
                 <div class="col-xs-3">
                     <div style="width: 250px">
                         <a href="{{ path('homepage') }}">
-                            <img src="{{ asset('bundles/app/images/logo3.png') }}" id="logo" style=" float: left">
-                            <div style="display: inline-block; width: 100px; text-decoration: none; float: left; font-size: 12px; padding-top: 5px;"><div style="text-decoration: none;"><br />
-                                    Евразийская Ассоциация Терапевтов</div></div>
+                            <img src="{{ asset('bundles/app/images/logo.png') }}" id="logo" style=" float: left">
                         </a>
                     </div>
                 </div>
-                <div class="col-xs-offset-1 col-xs-5 text-right">
+                <div class="col-xs-6 text-right">
                     <form class="navbar-form navbar-right" role="search" action="{{ path('search') }}">
                         <div class="form-group">
-                            <input type="text" class="form-control" id="search" placeholder="Введите запрос поиска" name="search">
+                            <input type="text" class="form-control" id="search" placeholder="Поиск событий" name="search">
                         </div>
-                        <button type="submit" class="btn btn-primary">Найти</button>
+                        <button type="submit" class="btn btn-primary" style="margin-left: -4px;">Найти</button>
                     </form>
                 </div>
                 <div class="col-xs-3">
@@ -85,7 +83,7 @@
                             <button class="btn btn-primary" id="login">Вход</button>
                         </div>
                         <div class="register-btn">
-                            <a href="{{ path('fos_user_registration_register') }}">Регистрация</a>
+                            {#<a href="{{ path('fos_user_registration_register') }}">Регистрация</a>#}
                         </div>
                     {% endif %}
                 </div>
@@ -99,76 +97,68 @@
         {{ render(controller("AppBundle:Default:generateMenu" )) }}
         <div class="content">
             {% block fullContent %}
-                <div class="row">
-                    <div class="col-xs-9">
-                        {% block content %}{% endblock %}
-                    </div>
-                    <div class="col-xs-3 text-right">
-                        {{ render(controller("AppBundle:Widget:banner" )) }}
-                    </div>
-                </div>
+                {#<div class="row">#}
+                    {#<div class="col-xs-9">#}
+                        {#{% block content %}{% endblock %}#}
+                    {#</div>#}
+                    {#<div class="col-xs-3 text-right">#}
+                        {#{{ render(controller("AppBundle:Widget:banner" )) }}#}
+                    {#</div>#}
+                {#</div>#}
             {% endblock %}
         </div>
     </div>
     <footer>
         <div class="row footer1">
-            <div class="col-xs-offset-1 col-xs-5" style="border-right: 1px solid #1080c8 ">
+            <div class="col-xs-offset-1 col-xs-5" style="border-right: 1px solid #fc113c ">
                 <div class="social text-center">
-                    <div>Мы в соц сетях</div>
+                    <br />
                     <br />
                     <div>
-                        <a target="_blank" href="https://vk.com/public73072501"><img src="{{ asset('bundles/app/images/icons/vk.png') }}" class="social-icon"></a>
-                        <a target="_blank" href="https://www.facebook.com/euat.org/"><img src="{{ asset('bundles/app/images/icons/fb.png') }}" class="social-icon"></a>
-                        <a target="_blank" href="https://twitter.com/EuatInfo"><img src="{{ asset('bundles/app/images/icons/tw.png') }}" class="social-icon"></a>
-                        <a target="_blank" href="https://www.youtube.com/channel/UCgS0JAUqUpDojH6rIDXGfZA"><img src="{{ asset('bundles/app/images/icons/gp.png') }}" class="social-icon"></a>
-                        <a target="_blank" href="http://ok.ru/group/57034519412770"><img src="{{ asset('bundles/app/images/icons/od.png') }}" class="social-icon"></a>
+                        {#<a target="_blank" href="https://vk.com/public73072501"><img src="{{ asset('bundles/app/images/icons/vk.png') }}" class="social-icon"></a>#}
+                        {#<a target="_blank" href="https://www.facebook.com/euat.org/"><img src="{{ asset('bundles/app/images/icons/fb.png') }}" class="social-icon"></a>#}
+                        {#<a target="_blank" href="https://twitter.com/EuatInfo"><img src="{{ asset('bundles/app/images/icons/tw.png') }}" class="social-icon"></a>#}
+                        {#<a target="_blank" href="https://www.youtube.com/channel/UCgS0JAUqUpDojH6rIDXGfZA"><img src="{{ asset('bundles/app/images/icons/gp.png') }}" class="social-icon"></a>#}
+                        {#<a target="_blank" href="http://ok.ru/group/57034519412770"><img src="{{ asset('bundles/app/images/icons/od.png') }}" class="social-icon"></a>#}
+                        <img src="{{ asset('bundles/app/images/icons/icons.png') }}">
                     </div>
                 </div>
                 <div class="contacts row">
                     <br /><br />
                     <div class="col-xs-offset-1 col-xs-2">
-                        <img src="{{ asset('bundles/app/images/icons/email.png') }}" class="contact-icon" style="margin-top: 10px">
+                        <img src="{{ asset('bundles/app/images/icons/geo.png') }}" class="contact-icon" style="margin-top: -8px;">
                     </div>
                     <div class="col-xs-9">
-                        <div><strong>Наши контакты</strong></div>
-                        <div>
-                            Адрес: <span class="blue-text">129085, Россия, Москва, Звездный бульвар, д. 21, стр. 1</span><br />
-                            Телефон: <span class="blue-text">+7 (977) 612-26-957</span><br />
-                            Телефон: <span class="blue-text">+7 (929) 986-69-80</span><br />
-                            Эл.почта: <span class="blue-text"><a href="mailto:office@euat.ru">office@euat.ru</a></span><br />
+                        <div class="text-uppercase" style="color: #7e7878">
+                            Москва, ул. Радищевская, 16,7 <br />
+                             ТЕЛ.: +7 495 789 34 67
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-xs-6" style="padding-left: 65px">
-                <div style="margin-left: 65px"> Дополнительно</div>
-                <br />
                 <div>
                     <ul class="footer-other">
                         <li>
-                            <a href="{{ path('page',{'url' : 'contacts'}) }}"><img src="{{ asset('bundles/app/images/icons/ph.png') }}" class="other-icon"> Контакты</a>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}">О НАС</a>
                         </li>
                         <li>
-                            <a href="{{ path('page',{'url' : 'eula'}) }}"><img src="{{ asset('bundles/app/images/icons/ur.png') }}" class="other-icon"> Юридиеская информация</a>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}">ПОЛИТИКА РЕДАКЦИИ</a>
                         </li>
                         <li>
-                            <a href="{{ path('page',{'url' : 'smi'}) }}"><img src="{{ asset('bundles/app/images/icons/ur.png') }}" class="other-icon"> Информация для сми</a>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}">ПОЛЬЗОВАТЕЛЬСКОЕ СОГЛАШЕНИЕ</a>
                         </li>
                         <li>
-                            <a href="{{ path('partners') }}"><img src="{{ asset('bundles/app/images/icons/ar.png') }}" class="other-icon"> Партнеры</a>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}">ПАРТНЕРЫ</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}">КОНТАКТЫ</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('page',{'url' : 'contacts'}) }}">ОБРАТНАЯ СВЯЗЬ</a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
-        <div class="row footer2">
-            <div class="col-xs-2 col-xs-offset-1 text-right">
-                <img src="{{ asset('bundles/app/images/logo2.png') }}">
-            </div>
-            <div class="col-xs-9">
-                <br />
-                Все права защищены © Евразийская Ассоциация терапевтов 2014 г. 1.5.25<br />
-                Зарегистрировано в Министерстве Связи и Массовых Коммуникаций как СМИ. Регистрационный №89384928 от 12.01.2014 г.
             </div>
         </div>
     </footer>
