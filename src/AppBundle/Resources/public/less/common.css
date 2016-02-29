@@ -491,3 +491,55 @@ th.picker-switch {
 .calendar .annotate {
   text-align: center;
 }
+.event-carusel {
+  overflow: hidden;
+}
+.event-carusel .item {
+  float: left;
+  width: 25%;
+}
+.event-carusel .item div {
+  padding: 0 5px;
+  text-align: right;
+}
+.event-carusel .item div img {
+  width: 90%;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+}
+.event-carusel .item div img:hover {
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  -moz-filter: grayscale(0%);
+  cursor: pointer;
+}
+.event-carusel .item div .event-date {
+  width: 64px;
+  height: 64px;
+  padding-top: 15px;
+  background: #fc113c;
+  border-radius: 50%;
+  margin-top: -80px;
+  margin-left: 10px;
+  z-index: 50;
+  position: absolute;
+  color: #FFF;
+  text-align: center;
+}
+.event-carusel-pages {
+  text-align: center;
+}
+.event-carusel-pages div {
+  width: 40px;
+  height: 15px;
+  background: #c6c6c6;
+  display: inline-block;
+  margin: 20px 5px;
+}
+.event-carusel-pages div.active {
+  background: #7a7a7a;
+}
+.radio .required:after {
+  content: '';
+}

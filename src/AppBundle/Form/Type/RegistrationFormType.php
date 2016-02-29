@@ -6,6 +6,7 @@ use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\RadioType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -20,13 +21,19 @@ class RegistrationFormType extends AbstractType
         $builder->add('firstName', null, ['label' => 'Имя']);
         $builder->add('surName', null, ['label' => 'Отчество']);
         $builder->add('birthDate', null, ['label' => 'Дата рождения','years' => range(2000,1920)]);
-        $builder->add('sex', ChoiceType::class, array(
+
+        $builder->add('status', ChoiceType::class, array(
             'choices' => array(
-                'Мужской' => 'M',
-                'Женский' => 'W'
+                'практикующий врач' => 'практикующий врач',
+                'студент' => 'студент',
+                'медицинский представитель' => 'медицинский представитель',
+                'не практикующий врач' => 'не практикующий врач',
+                'не врач' => 'не врач'
             ),
+            'expanded' => true,
+            'multiple' => false,
             'required'    => true,
-            'label' => 'Пол'
+            'label' => 'Статус'
         ));
         $builder->add('phone', null, ['label' => 'Телефон', 'attr' => ['class' => 'phone']]);
         $builder->add('plainPassword', RepeatedType::class, array(
@@ -38,14 +45,7 @@ class RegistrationFormType extends AbstractType
             'second_options' => array('label' => 'Повторите пароль'),
         ));
 
-        $builder->add('university', TextType::class, [
-            'label' => 'Университет',
-            'data_class' => null,
-            'attr' => [
-                'class' => 'university',
-                'data-placeholder' => 'Выберите университет'
-            ]
-        ]);
+
         $builder->add('specialty', null, [
             'label' => 'Специальность',
             'required' => true,
@@ -55,6 +55,11 @@ class RegistrationFormType extends AbstractType
                 'data-placeholder' => 'Выберите специальность'
             ]
         ]);
+
+//        $builder->add('workPlace', null, ['label' => 'Место работы']);
+//        $builder->add('certificateNumber', null, ['label' => 'Номер сертификата']);
+//        $builder->add('diplomNumber', null, ['label' => 'Номер диплома']);
+
 //        $builder->add('university', null, ['label' => 'Университет', 'attr' => ['class' => 'university', 'data-placeholder' => 'Выберите университет']]);
     }
 

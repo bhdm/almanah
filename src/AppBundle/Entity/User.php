@@ -49,6 +49,13 @@ class User extends BaseUser
     protected $surName;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="status", type="string")
+     */
+    protected $status;
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="birthDate", type="date")
@@ -58,7 +65,7 @@ class User extends BaseUser
     /**
      * @var string
      *
-     * @ORM\Column(name="sex", type="string")
+     * @ORM\Column(name="sex", type="string", nullable=true)
      */
     protected $sex;
 
@@ -144,6 +151,16 @@ class User extends BaseUser
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="owner")
      */
     private $comments;
+
+    /**
+     * @ORM\Column(name="certificateNumber", type="string", nullable=true)
+     */
+    private $certificateNumber;
+
+    /**
+     * @ORM\Column(name="diplomNumber", type="string", nullable=true)
+     */
+    private $diplomNumber;
 
 
     public function __construct()
@@ -465,6 +482,71 @@ class User extends BaseUser
     {
         $this->courses = $courses;
     }
+
+    /**
+     * @return Comment
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param Comment $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCertificateNumber()
+    {
+        return $this->certificateNumber;
+    }
+
+    /**
+     * @param mixed $certificateNumber
+     */
+    public function setCertificateNumber($certificateNumber)
+    {
+        $this->certificateNumber = $certificateNumber;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDiplomNumber()
+    {
+        return $this->diplomNumber;
+    }
+
+    /**
+     * @param mixed $diplomNumber
+     */
+    public function setDiplomNumber($diplomNumber)
+    {
+        $this->diplomNumber = $diplomNumber;
+    }
+
+    /**
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+
+    /**
+     * @param string $status
+     */
+    public function setStatus($status)
+    {
+        $this->status = $status;
+    }
+
 
 
 

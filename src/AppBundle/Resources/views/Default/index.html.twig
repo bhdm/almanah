@@ -6,6 +6,19 @@
     <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
 {% endblock %}
 {% block content %}
+
+    <div class="event-carusel">
+        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
+        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
+        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
+        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
+    </div>
+    <div class="event-carusel-pages">
+        <div class="active"></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="title"><div>НОВОСТИ</div></div>
         {% for i in 1..5 %}
