@@ -15,20 +15,14 @@ class DefaultController extends Controller
      */
     public function indexAction(Request $request)
     {
-        $categoryVideo = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => 'video']);
-        $categoryEducation = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => 'Education']);
-        $categoryNews = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => 'new']);
 
-        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['category' => $categoryNews]);
-        $videos = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['category' => $categoryVideo]);
-        $educations = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['category' => $categoryEducation]);
-
-        $carusel = $this->getDoctrine()->getRepository('AppBundle:Slidebar')->findBy([],['id' => 'DESC']);
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC'], 5);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true],['start' => 'DESC'], 5);
+        $importants =  $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true, 'important' => true ],['start' => 'DESC'], 5);
         return [
             'publications' => $publications,
-            'videos' => $videos,
-            'educations' => $educations,
-            'carusel' => $carusel
+            'events' => $events,
+            'importants' => $importants
         ];
 
     }

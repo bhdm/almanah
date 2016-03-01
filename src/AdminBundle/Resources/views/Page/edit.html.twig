@@ -10,9 +10,9 @@
 
 {% block content %}
     <div class="well">
-        <form method="POST">
-            {{ form_widget(form) }}
-        </form>
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
     </div>
 {% endblock %}
 

@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -22,40 +23,25 @@ class EventType extends AbstractType
     {
         $builder
             ->add('title', null, [ 'label' => 'Название'])
-            ->add('type', ChoiceType::class, array(
+            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
+            ->add('important', ChoiceType::class, array(
                 'choices' => array(
-                    'Конгрессы и Съезды' => 'CONGRESS',
-                    'Школы' => 'SCHOOL',
-                    'Партнерcкое' => 'PARTNER'
-                ),
-                'required'    => true,
-                'label' => 'Тип мероприятия'
-            ))
-            ->add('allowCommentary', ChoiceType::class, array(
-                'choices' => array(
-                    'Запретить' => false,
-                    'Разрешить' => true,
+                    'Обычная' => false,
+                    'Важнаая' => true,
                 ),
                 'required'    => false,
-                'label' => 'Комментарии'
+                'label' => 'Важность'
             ))
             ->add('specialties', null, [ 'label' => 'Специальности', 'attr' => ['class' => 'multiselect']])
-//            ->add('owner', ChoiceType::class, array(
-//                'choices' => array(
-//                    'EAT' => 'EAT',
-//                    'Партнеры' => 'Partner'
-//                ),
-//                'required'    => true,
-//                'label' => 'Состояние'
-//            ))
+            ->add('category', null, [ 'label' => 'Категория'])
+
             ->add('city', null, [ 'label' => 'Город'])
             ->add('adrs', null, [ 'label' => 'Адрес'])
             ->add('start', DateType::class, [ 'label' => 'Дата начала'])
-            ->add('time', TimeType::class, [ 'label' => 'Время начала'])
             ->add('end',  DateType::class, [ 'label' => 'Дата окончания'])
-            ->add('partner', null, [ 'label' => 'Партнеры'])
+
             ->add('contacts', TextareaType::class, [ 'label' => 'Контакная информация'])
-            ->add('slug', null, [ 'label' => 'URI'])
+            ->add('anons', null, [ 'label' => 'Анонс' ])
             ->add('body', null, [ 'label' => 'Контент', 'attr' => ['class' => 'ckeditor']])
             ->add('enabled', ChoiceType::class, array(
                 'choices' => array(

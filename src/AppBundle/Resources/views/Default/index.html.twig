@@ -21,32 +21,32 @@
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="title"><div>НОВОСТИ</div></div>
-        {% for i in 1..5 %}
-        <div class="index-item">
-            <div class="item-title">Пример интересной новости с большим заголовком</div>
-            <div class="item-anons">
-                Оппозиционный сирийский Высший комитет по переговорам направил в ООН письмо, в котором обвинил сирийские войска и российские ВКС в нарушении перемирия в Сирии
+        {% for p in publications %}
+            <div class="index-item">
+                <div class="item-title">{{ p.title }}</div>
+                <div class="item-anons">
+                    {{ p.anons }}
+                </div>
+                <div class="item-param">
+                    {{ p.created | date('d.m.Y') }}
+                </div>
             </div>
-            <div class="item-param">
-                25.03.2016
-            </div>
-        </div>
         {% endfor %}
     </div>
     <div class="col-xs-12 col-sm-6 col-md-5">
         <div class="title"><div>МЕРОПРИЯТИЯ</div></div>
-        {% for i in 1..5 %}
+        {% for e in events %}
             <div class="index-item row">
                 <div class="col-xs-4">
-                    <img src="{{ asset('bundles/app/images/ex1.png') }}" class="img-thumbnail">
+                    <img src="{{ e.preview.path }}" class="img-thumbnail">
                 </div>
                 <div class="col-xs-8">
-                    <div class="item-title">Пример интересной новости с большим заголовком</div>
+                    <div class="item-title">{{ e.title }}</div>
                     <div class="item-anons">
-                        Оппозиционный сирийский Высший комитет по переговорам направил в ООН письмо, в котором обвинил...
+                        {{ e.anons }}
                     </div>
                     <div class="item-param">
-                        25.03.2016
+                        {{ e.start | date('d.m.Y') }}
                     </div>
                 </div>
             </div>
@@ -56,26 +56,17 @@
 
 
     <div class="hidden-sm col-md-3">
-        <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
-
-        <div class="calendar">
-            <div class="date">17 февраля 2016</div>
-            <div class="annotate">
-                день памяти Миланова Николая Олеговича
-            </div>
-        </div>
-        <div class="calendar">
-            <div class="date">17 февраля 2016</div>
-            <div class="annotate">
-                день памяти Миланова Николая Олеговича
-            </div>
-        </div>
-        <div class="calendar">
-            <div class="date">17 февраля 2016</div>
-            <div class="annotate">
-                день памяти Миланова Николая Олеговича
-            </div>
-        </div>
+        {% if importants | length > 0 %}
+            <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
+            {% for i in importants %}
+                <div class="calendar">
+                    <div class="date">{{ i.start | date('d.m.Y') }}</div>
+                    <div class="annotate">
+                        {{ i.title }}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
         {{ render(controller("AppBundle:Widget:banner" )) }}
     </div>
 {% endblock %}

@@ -50,8 +50,8 @@ class PublicationController extends Controller{
         if ($request->getMethod() == 'POST'){
             if ($formData->isValid()){
                 $item = $formData->getData();
-                $file = $item->getPreview();
 
+                $file = $item->getPreview();
                 if ($file){
                     $filename = time(). '.'.$file->guessExtension();
                     $file->move(
@@ -61,15 +61,6 @@ class PublicationController extends Controller{
                     $item->setPreview(['path' => '/upload/publication/'.$filename ]);
                 }
 
-                $file = $item->getVideo();
-                if ($file) {
-                    $filename = time() . '.' . $file->guessExtension();
-                    $file->move(
-                        __DIR__ . '/../../../web/upload/video/',
-                        $filename
-                    );
-                    $item->setVideo(['path' => '/upload/video/' . $filename]);
-                }
                 $em->persist($item);
                 $em->flush();
                 $em->refresh($item);
@@ -90,13 +81,13 @@ class PublicationController extends Controller{
         $form = $this->createForm(PublicationType::class, $item);
         $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
         $oldFile = $item->getPreview();
-        $oldFile2 = $item->getVideo();
 
         $formData = $form->handleRequest($request);
 
         if ($request->getMethod() == 'POST'){
             if ($formData->isValid()){
                 $item = $formData->getData();
+
                 $file = $item->getPreview();
                 if ($file == null){
                     $item->setPreview($oldFile);
@@ -107,18 +98,6 @@ class PublicationController extends Controller{
                         $filename
                     );
                     $item->setPreview(['path' => '/upload/publication/'.$filename ]);
-                }
-
-                $file = $item->getVideo();
-                if ($file == null){
-                    $item->setVideo($oldFile2);
-                }else{
-                    $filename = time(). '.'.$file->guessExtension();
-                    $file->move(
-                        __DIR__.'/../../../web/upload/video/',
-                        $filename
-                    );
-                    $item->setVideo(['path' => '/upload/video/'.$filename ]);
                 }
 
                 $em->flush($item);

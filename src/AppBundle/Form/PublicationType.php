@@ -23,20 +23,8 @@ class PublicationType extends AbstractType
         $builder
             ->add('title', TextType::class, [ 'label' => 'Название'])
             ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
-            ->add('video', FileType::class, [ 'label' => 'Видео', 'data_class' => null, 'required' => false])
-            ->add('category', null, [ 'label' => 'Категория'])
+//            ->add('category', null, [ 'label' => 'Категория'])
             ->add('specialties', null, [ 'label' => 'Специальности', 'attr' => ['class' => 'multiselect']])
-
-            ->add('allowCommentary', ChoiceType::class, array(
-                'choices' => array(
-                    'Запретить' => false,
-                    'Разрешить' => true,
-                ),
-                'required'    => false,
-                'label' => 'Комментарии'
-            ))
-
-            ->add('slug', TextType::class, [ 'label' => 'URI'])
             ->add('anons', TextareaType::class, [ 'label' => 'Анонс', 'required' => false])
             ->add('body', TextareaType::class, [ 'label' => 'Контент', 'attr' => ['class' => 'ckeditor']])
             ->add('source', TextType::class, [ 'label' => 'Источник', 'required' => false])

@@ -29,12 +29,6 @@ class Publication
      */
     private $title;
 
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="slug", type="string", length=255, unique=true)
-     */
-    private $slug;
 
 
     /**
@@ -68,13 +62,6 @@ class Publication
     private $preview;
 
     /**
-     * @var array
-     *
-     * @ORM\Column(name="video", type="array")
-     */
-    private $video;
-
-    /**
      * @var boolean
      *
      * @ORM\Column(name="enabled", type="boolean", nullable=true)
@@ -100,18 +87,6 @@ class Publication
      */
     private $specialties;
 
-    /**
-     * @var Comment
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="publication")
-     */
-    private $comments;
-
-    /**
-     * @var boolean
-     * @ORM\Column(name="allowCommentary", type="boolean", nullable=true)
-     */
-    private $allowCommentary;
-
 
     public function __construct()
     {
@@ -119,7 +94,6 @@ class Publication
         $this->enabled = true;
         $this->created = new \DateTime();
         $this->preview = array();
-        $this->video = array();
         $this->specialties = new ArrayCollection();
         $this->comments = new ArrayCollection();
 
@@ -157,30 +131,6 @@ class Publication
     public function getTitle()
     {
         return $this->title;
-    }
-
-    /**
-     * Set slug
-     *
-     * @param string $slug
-     *
-     * @return Publication
-     */
-    public function setSlug($slug)
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    /**
-     * Get slug
-     *
-     * @return string
-     */
-    public function getSlug()
-    {
-        return $this->slug;
     }
 
     /**
@@ -288,38 +238,6 @@ class Publication
     }
 
     /**
-     * @return Comment
-     */
-    public function getComments()
-    {
-        return $this->comments;
-    }
-
-    /**
-     * @param Comment $comments
-     */
-    public function setComments($comments)
-    {
-        $this->comments = $comments;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isAllowCommentary()
-    {
-        return $this->allowCommentary;
-    }
-
-    /**
-     * @param boolean $allowCommentary
-     */
-    public function setAllowCommentary($allowCommentary)
-    {
-        $this->allowCommentary = $allowCommentary;
-    }
-
-    /**
      * @return string
      */
     public function getSource()
@@ -350,24 +268,6 @@ class Publication
     {
         $this->anons = $anons;
     }
-
-    /**
-     * @return array
-     */
-    public function getVideo()
-    {
-        return $this->video;
-    }
-
-    /**
-     * @param array $video
-     */
-    public function setVideo($video)
-    {
-        $this->video = $video;
-    }
-
-
 
 }
 

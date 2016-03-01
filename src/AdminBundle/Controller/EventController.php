@@ -50,6 +50,17 @@ class EventController extends Controller{
         if ($request->getMethod() == 'POST'){
             if ($formData->isValid()){
                 $item = $formData->getData();
+
+                $file = $item->getPreview();
+                if ($file){
+                    $filename = time(). '.'.$file->guessExtension();
+                    $file->move(
+                        __DIR__.'/../../../web/upload/event/',
+                        $filename
+                    );
+                    $item->setPreview(['path' => '/upload/event/'.$filename ]);
+                }
+
                 $em->persist($item);
                 $em->flush();
                 $em->refresh($item);
@@ -67,6 +78,8 @@ class EventController extends Controller{
     public function editAction(Request $request, $id){
         $em = $this->getDoctrine()->getManager();
         $item = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->findOneById($id);
+        $oldFile = $item->getPreview();
+
         $form = $this->createForm(EventType::class, $item);
         $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
         $formData = $form->handleRequest($request);
@@ -74,6 +87,19 @@ class EventController extends Controller{
         if ($request->getMethod() == 'POST'){
             if ($formData->isValid()){
                 $item = $formData->getData();
+
+                $file = $item->getPreview();
+                if ($file == null){
+                    $item->setPreview($oldFile);
+                }else{
+                    $filename = time(). '.'.$file->guessExtension();
+                    $file->move(
+                        __DIR__.'/../../../web/upload/event/',
+                        $filename
+                    );
+                    $item->setPreview(['path' => '/upload/event/'.$filename ]);
+                }
+
                 $em->flush($item);
                 $em->refresh($item);
                 return $this->redirect($this->generateUrl('admin_event_list'));

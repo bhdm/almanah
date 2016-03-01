@@ -8,19 +8,8 @@
 {% endblock %}
 
 {% block content %}
-    <div class="col-xs-4" style="padding-left: 0">
-        {{ render(controller("AppBundle:Widget:calendar" )) }}
-    </div>
-    <div class="col-xs-8" style="padding-right: 0">
-        {% if type == null %}
-            <h1 class="blue-text">События</h1>
-        {% elseif type == 'congress' %}
-            <h1 class="blue-text">Конгрессы и Съезды</h1>
-        {% elseif type == 'school' %}
-            <h1 class="blue-text">Школы</h1>
-        {% elseif type == 'partner' %}
-            <h1 class="blue-text">Партнерские события</h1>
-        {% endif %}
+    <div class="col-lg-offset-1 col-lg-10" style="padding-right: 0">
+        <div class="title"><div>{{ category }}</div></div>
         <div>
             {% for p in events %}
                 <div class="new-item">
@@ -31,11 +20,6 @@
                     <a href="{{ path('event', {'url' : p.id }) }}"><span class="new-item-title">{{ p.title }}</span></a>
                     <div class="new-item-anons">
                         {{ p.body | anons | raw }}
-                        {% if p.category != null %}
-                            <div style="color: #555">
-                                {{ p.category.title }}
-                            </div>
-                        {% endif %}
                     </div>
                 </div>
             {% endfor %}

@@ -12,27 +12,27 @@
 
     <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ path('homepage') }}">КОНФЕРЕНЦИИ</a></li>
+            <li class="active"><a href="">КОНФЕРЕНЦИИ</a></li>
             <li>
-                <a href="#">Об организации</a>
+                <a href="{{ path('page',{'url' : 'about'}) }}">Об организации</a>
                 {#<div class="submenu">#}
                     {#<ul class="submenu-items">#}
                         {#<li><a href="">Цели и задачи</a></li>#}
                     {#</ul>#}
                 {#</div>#}
             </li>
-            <li><a href="">РОССИЙСКИЕ МЕРОПРИЯТИЯ</a></li>
+            <li><a href="{{ path('events',{'url': 'russian-events'}) }}">РОССИЙСКИЕ МЕРОПРИЯТИЯ</a></li>
             <li>
-                <a href="#">ЗАГРАНИЧНЫЕ МЕРОПРИЯТИЯ</a>
+                <a href="{{ path('events',{'url': 'foreign-events'}) }}">ЗАГРАНИЧНЫЕ МЕРОПРИЯТИЯ</a>
             </li>
             <li>
-                <a href="#">КУРСЫ ФПДО</a>
+                <a href="{{ path('events',{'url': 'fpdo-courses'}) }}">КУРСЫ ФПДО</a>
             </li>
             <li>
-                <a href="#">ОНЛАЙН ОБУЧЕНИЕ</a>
+                <a href="{{ path('events',{'url': 'online-courses'}) }}">ОНЛАЙН ОБУЧЕНИЕ</a>
             </li>
             <li>
-                <a href="#">СТАЖИРОВКИ</a>
+                <a href="{{ path('events',{'url': 'internships'}) }}">СТАЖИРОВКИ</a>
             </li>
         </ul>
     </div><!-- /.navbar-collapse -->

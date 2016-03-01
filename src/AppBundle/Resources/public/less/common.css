@@ -21,6 +21,9 @@ a {
   cursor: pointer !important;
   color: #fc113c;
 }
+a:hover {
+  color: #9b0d27;
+}
 .btn-primary {
   background: #383838;
   border: 1px solid #050505;
@@ -30,13 +33,13 @@ h1.blue-text {
   font-family: 'HelveticaNeue-Light';
 }
 .blue-text {
-  color: #0e66a2;
+  color: #fc113c;
 }
 .red {
   color: #CC0000;
 }
 .blue-icon {
-  color: #0e66a2;
+  color: #fc113c;
 }
 .body {
   overflow-x: hidden;
@@ -188,7 +191,6 @@ nav .navbar-nav li:hover a {
 .new-item {
   padding-bottom: 10px;
   padding-top: 20px;
-  border-bottom: 1px dashed darkgray;
 }
 .new-item-title {
   font-size: 17px;

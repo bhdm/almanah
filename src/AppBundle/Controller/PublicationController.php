@@ -44,17 +44,15 @@ class PublicationController extends Controller
     }
 
     /**
-     * @Route("events/{type}", name="events", defaults={"type" = null})
+     * @Route("events/{url}", name="events")
      * @Template("AppBundle:Publication:eventList.html.twig")
      */
-    public function eventListAction(Request $request, $type)
+    public function eventListAction(Request $request, $url)
     {
-        if ($type === null){
-            $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true],['start' => 'DESC']);
-        }else{
-            $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true, 'type' => $type],['start' => 'DESC']);
-        }
-        return ['events' => $events, 'type' => $type];
+        $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true, 'category' => $category],['start' => 'DESC']);
+
+        return ['events' => $events, 'category' => $category];
     }
 
 

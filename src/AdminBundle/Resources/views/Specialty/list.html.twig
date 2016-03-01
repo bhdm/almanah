@@ -17,7 +17,6 @@
                 <th>№</th>
                 <th>Заголовок</th>
                 <th></th>
-                <th>Язык</th>
                 <th class="setting">Инструменты</th>
             </tr>
             {% for item in pagination %}
@@ -25,7 +24,6 @@
                     <td>{{ item.id }}</td>
                     <td>{{ item.title }}</td>
                     <td></td>
-                    <td>{{ item.lang }}</td>
                     <td class="setting">
                         {% spaceless %}
                         <a href="{{ path('admin_specialty_edit',{'id' : item.id}) }}">
