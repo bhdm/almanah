@@ -1,8 +1,10 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
 {% block content %}
-    <h1>{{ page.title }}</h1>
-    <div>
-        {{ page.body | raw }}
+    <div class="col-lg-offset-1 col-lg-10 text-uppercase" style="padding-right: 0">
+        <div class="title"><div>{{ page.title }}</div></div>
+        <div>
+            {{ page.body | raw }}
+        </div>
     </div>
 {% endblock %}

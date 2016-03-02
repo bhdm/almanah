@@ -6,7 +6,11 @@ use AppBundle\Entity\Comment;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\Request;
 
 class PublicationController extends Controller
@@ -51,8 +55,21 @@ class PublicationController extends Controller
     {
         $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true, 'category' => $category],['start' => 'DESC']);
+//        $specialt/ies = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findAll();
 
-        return ['events' => $events, 'category' => $category];
+        $form = $this->createFormBuilder()
+            ->add('start', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar'],'required' => false])
+            ->add('end', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar'],'required' => false])
+            ->add('specialty', EntityType::class, [
+                'label' => '',
+                'class' => 'AppBundle\Entity\Specialty',
+                'required' => false
+            ])
+            ->add('search', TextType::class, ['label' => '', 'required' => false])
+            ->add('submit', SubmitType::class, ['label' => 'Отправить', 'attr' => ['class' => 'btn-primary']])
+            ->getForm();
+        $form->handleRequest($request);
+        return ['events' => $events, 'category' => $category, 'form' => $form->createView()];
     }
 
 

@@ -13,7 +13,6 @@
     font-style: normal;
 }
 
-@color-red: #337AB7;
 @color-red: #fc113c;
 @color-white: #FFFFFF;
 @color-black: #383838;
@@ -38,7 +37,11 @@ a{
 .btn-primary{
     background: #383838;
     border: 1px solid darken(#383838,20%);
+    &:hover{
+        background: #2a2a2a;
+    }
 }
+
 
 //.blue-text{
 //    color: #0166ff;
@@ -81,6 +84,12 @@ h1.blue-text{
 }
 .form-control{
     border-radius: 0;
+}
+.form-control:focus{
+    border-color: rgba(252, 17, 60, 0.57);
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(252, 17, 60, .6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(252, 17, 60, .6);
 }
 .header>div{
     height: 100%;
@@ -255,10 +264,10 @@ nav .navbar-nav li:hover{
     //color: @color-red;
 }
 .day.active{
-    background: #CCC;
+    background: #333 !important;
     color: @color-white;
 }
-.day.today{
+.day.today, .day.today>*{
     background: @color-red;
     color: @color-white;
 }
@@ -277,7 +286,7 @@ nav .navbar-nav li:hover{
         border: 1px solid #BDDAEB;
     }
     .active{
-        background: #88BADD;
+        background: #CCC;
     }
 }
 #calendar-widget{
@@ -439,7 +448,7 @@ table.table-th-bold tr th{
     }
 }
 .edit-title{
-    color: #337AB7;
+    color: @color-red;
     font-size: 16px;
     padding: 10px;
 }
@@ -502,7 +511,7 @@ th.prev, th.next, th.picker-switch{
 }
 
 .jqvmap-zoomin, .jqvmap-zoomout {
-    background: #0088cc;
+    background: #CCC;
     border-radius: 2px;
     color: white;
     height: 20px;

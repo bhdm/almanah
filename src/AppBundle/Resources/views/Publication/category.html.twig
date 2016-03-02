@@ -1,7 +1,7 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
 {% block content %}
-    <h1>{{ category.title }}</h1>
+    <div class="title"><div>{{ category.title }}</div></div>
     <div>
         {% for p in publications %}
             <div class="new-item">
