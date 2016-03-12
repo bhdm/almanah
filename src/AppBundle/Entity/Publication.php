@@ -87,15 +87,20 @@ class Publication
      */
     private $specialties;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="is_digest", type="boolean", nullable=true)
+     */
+    private $digest;
 
     public function __construct()
     {
-        $this->allowCommentary = true;
         $this->enabled = true;
         $this->created = new \DateTime();
         $this->preview = array();
         $this->specialties = new ArrayCollection();
-        $this->comments = new ArrayCollection();
+        $this->digest = false;
 
     }
 
@@ -268,6 +273,23 @@ class Publication
     {
         $this->anons = $anons;
     }
+
+    /**
+     * @return boolean
+     */
+    public function isDigest()
+    {
+        return $this->digest;
+    }
+
+    /**
+     * @param boolean $digest
+     */
+    public function setDigest($digest)
+    {
+        $this->digest = $digest;
+    }
+
 
 }
 

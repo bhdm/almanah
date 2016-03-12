@@ -84,22 +84,22 @@
           {{ form_row(form.firstName) }}
           {{ form_row(form.surName) }}
           {{ form_row(form.birthDate) }}
-          {{ form_row(form.sex) }}
           {{ form_row(form.phone) }}
-          <hr />
-          {{ form_row(form.country) }}
-          {{ form_row(form.city) }}
-          <hr />
-          <div class="edit-title text-uppercase">Информация об образовании</div>
-          {{ form_row(form.university) }}
+          {#<hr />#}
+          {#{{ form_row(form.country) }}#}
+          {#{{ form_row(form.city) }}#}
+          {#<hr />#}
+          {#<div class="edit-title text-uppercase">Информация об образовании</div>#}
+          {#{{ form_row(form.university) }}#}
+          {{ form_row(form.status) }}
           {{ form_row(form.specialty) }}
-          {{ form_row(form.academicDegree) }}
-          {{ form_row(form.certificate) }}
-          <div class="edit-title text-uppercase">Информация о работе</div>
-          {{ form_row(form.workPlace) }}
-          {{ form_row(form.workTypeOrganization) }}
-          {{ form_row(form.workPlaceTitle) }}
-          {{ form_row(form.workPost) }}
+          {#{{ form_row(form.academicDegree) }}#}
+          {#{{ form_row(form.certificate) }}#}
+          {#<div class="edit-title text-uppercase">Информация о работе</div>#}
+          {#{{ form_row(form.workPlace) }}#}
+          {#{{ form_row(form.workTypeOrganization) }}#}
+          {#{{ form_row(form.workPlaceTitle) }}#}
+          {#{{ form_row(form.workPost) }}#}
           <div class="row">
             <div class="col-sm-9 col-sm-offset-3 registration-submit-button text-right">
               <button type="submit" class="btn btn-primary">Сохранить данные</button>

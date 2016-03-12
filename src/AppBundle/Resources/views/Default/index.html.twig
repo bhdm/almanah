@@ -60,8 +60,9 @@
             <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
             {% for i in importants %}
                 <div class="calendar">
-                    <div class="date">{{ i.start | date('d.m.Y') }}</div>
+                    <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
                     <div class="annotate">
+                        {#{{ i.type }}<br />#}
                         {{ i.title }}
                     </div>
                 </div>

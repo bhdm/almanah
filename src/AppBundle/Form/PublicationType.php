@@ -36,7 +36,15 @@ class PublicationType extends AbstractType
                 ),
                 'required'    => true,
                 'label' => 'Состояние'
-            ));
+            ))
+            ->add('digest', ChoiceType::class, array(
+                'choices' => array(
+                    'Рассылать' => true,
+                    'Не рассылать' => false
+                ),
+                'required'    => true,
+                'label' => 'Рассылка'
+            ))
         ;
     }
 

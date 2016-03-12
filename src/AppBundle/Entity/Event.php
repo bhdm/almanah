@@ -121,12 +121,20 @@ class Event
      */
     private $important;
 
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="isMain", type="boolean", nullable=true)
+     */
+    private $main;
+
     public function __construct()
     {
         $this->preview = array();
         $this->important = false;
         $this->specialties = new ArrayCollection();
         $this->enabled = true;
+        $this->main = true;
         $this->created = new \DateTime();
     }
 
@@ -431,7 +439,21 @@ class Event
         $this->preview = $preview;
     }
 
+    /**
+     * @return boolean
+     */
+    public function isMain()
+    {
+        return $this->main;
+    }
 
+    /**
+     * @param boolean $main
+     */
+    public function setMain($main)
+    {
+        $this->main = $main;
+    }
 }
 
 

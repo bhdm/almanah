@@ -54,7 +54,7 @@ class PublicationController extends Controller
     public function eventListAction(Request $request, $url)
     {
         $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true, 'category' => $category],['start' => 'DESC']);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->searchEvents($category, $request->query->get('form'));
 //        $specialt/ies = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findAll();
 
         $form = $this->createFormBuilder()

@@ -31,7 +31,7 @@ class BannerType extends AbstractType
             ->add('start', DateTimeType::class, [ 'label' => 'Дата начала'])
             ->add('end', DateTimeType::class, [ 'label' => 'Дата окончания'])
             ->add('url', null, ['label' => 'Ссылка'])
-            ->add('amountShow', null, ['label' => 'КОличество показов'])
+            ->add('amountShow', null, ['label' => 'Количество показов'])
         ;
     }
     

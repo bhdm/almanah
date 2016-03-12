@@ -70,4 +70,34 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         return $result;
     }
 
+    public function searchEvents($category, $params){
+        $qb = $this->createQueryBuilder('c')
+            ->select('c');
+
+        $qb->where("c.category = :category");
+        $qb->setParameter(':category', $category->getId());
+
+        if ( $params != null ){
+            if (isset($params['start']) && $params['start'] != null){
+                $qb->andWhere("c.start = :start");
+                $qb->setParameter(':start', $params['start']);
+            }
+            if (isset($params['end']) && $params['end'] != null){
+                $qb->andWhere("c.end = :end");
+                $qb->setParameter(':end', $params['end']);
+            }
+            if (isset($params['specialty']) && $params['specialty'] != null){
+                $qb->leftJoin('c.specialties', 's');
+                $qb->andWhere("s.id = :specialty");
+                $qb->setParameter(':specialty', $params['specialty']);
+            }
+            if (isset($params['search']) && $params['search'] != null){
+                $qb->andWhere("c.title LIKE '%:search%'");
+                $qb->orWhere("c.body LIKE '%:search%'");
+                $qb->setParameter(':search', $params['search']);
+            }
+        }
+
+        return $qb->getQuery()->getResult();
+    }
 }
