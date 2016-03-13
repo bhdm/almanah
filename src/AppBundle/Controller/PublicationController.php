@@ -86,6 +86,16 @@ class PublicationController extends Controller
 
 
     /**
+     * @Route("news", name="news")
+     * @Template("AppBundle:Publication:news.html.twig")
+     */
+    public function newsAction(){
+        $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
+
+        return ['news' => $news];
+    }
+
+    /**
      * @param Request $request
      * @return array
      * @Route("/comment-add/{id}/{type}", name="comment_add", requirements={"type" = "publication|event|course"})

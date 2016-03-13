@@ -10,6 +10,11 @@
 
 {% block content %}
     <div class="well">
+        {% if item.preview.path is defined %}
+            <div class="text-right">
+                <img src="{{ item.preview.path }}" style="max-width: 200px; display: inline-block" class="thumbnail">
+            </div>
+        {% endif %}
         {{ form_start(form) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}

@@ -90,7 +90,7 @@
         </header>
         {% if app.request.attributes.get('_route') == 'homepage' %}
             <div class="slider ">
-                {% include "@App/Widget/carusel.html.twig" %}
+                {{ render(controller("AppBundle:Default:carusel" )) }}
             </div>
         {% endif %}
         {{ render(controller("AppBundle:Default:generateMenu" )) }}

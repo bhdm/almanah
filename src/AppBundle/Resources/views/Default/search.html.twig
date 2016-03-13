@@ -2,8 +2,8 @@
 
 {% block content %}
     <h1 class="blue-text">Поиск по запросу : <i>{{ search }}</i></h1>
-    {% if events | length  == 0 and publications | length == 0 and courses | length == 0 %}
-        <div style="font-size:16px ">По вашему запросу ничего не найдено</div>
+    {% if events | length  == 0 %}
+        <div class="alert ">По вашему запросу ничего не найдено</div>
     {% endif %}
     <div>
         {% for p in events %}

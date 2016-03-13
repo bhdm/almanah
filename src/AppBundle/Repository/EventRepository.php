@@ -74,8 +74,10 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('c')
             ->select('c');
 
-        $qb->where("c.category = :category");
-        $qb->setParameter(':category', $category->getId());
+        if ($category){
+            $qb->where("c.category = :category");
+            $qb->setParameter(':category', $category->getId());
+        }
 
         if ( $params != null ){
             if (isset($params['start']) && $params['start'] != null){

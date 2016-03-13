@@ -105,7 +105,7 @@ class EventController extends Controller{
                 return $this->redirect($this->generateUrl('admin_event_list'));
             }
         }
-        return array('form' => $form->createView());
+        return array('item' => $item, 'form' => $form->createView());
     }
 
     /**

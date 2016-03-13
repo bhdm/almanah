@@ -8,22 +8,26 @@
 {% block content %}
 
     <div class="event-carusel">
-        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
-        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
-        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
-        <div class="item"><div><img src="{{ asset('bundles/app/images/sl-1.jpg') }}" title="Тут некий текст"><div class="event-date">25<br />Марта</div></div></div>
+        {% for carusel in carusels %}
+            <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
+        {% endfor %}
     </div>
+
     <div class="event-carusel-pages">
-        <div class="active"></div>
-        <div></div>
-        <div></div>
-        <div></div>
+        {% if carusels | length > 4 %}
+            <div class="active"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        {% else %}
+            <br />
+        {% endif %}
     </div>
     <div class="col-xs-12 col-sm-6 col-md-4">
         <div class="title"><div>НОВОСТИ</div></div>
         {% for p in publications %}
             <div class="index-item">
-                <div class="item-title">{{ p.title }}</div>
+                <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
                 <div class="item-anons">
                     {{ p.anons }}
                 </div>
@@ -32,6 +36,9 @@
                 </div>
             </div>
         {% endfor %}
+        <div class="text-right">
+            <a href="{{ path('news') }}"><b>Читать все</b></a>
+        </div>
     </div>
     <div class="col-xs-12 col-sm-6 col-md-5">
         <div class="title"><div>МЕРОПРИЯТИЯ</div></div>
@@ -41,7 +48,11 @@
                     <img src="{{ e.preview.path }}" class="img-thumbnail">
                 </div>
                 <div class="col-xs-8">
-                    <div class="item-title">{{ e.title }}</div>
+                    <div class="item-title">
+                        <a href="{{ path('event',{'url' : e.id }) }}" style="color: #222">
+                        {{ e.title }}
+                        </a>
+                    </div>
                     <div class="item-anons">
                         {{ e.anons }}
                     </div>
