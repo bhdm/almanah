@@ -75,7 +75,7 @@
       <div class="row">
         <div class="col-xs-12 col-sm-6">
           {{ form_errors(form) }}
-          <div class="edit-title text-uppercase">Профиль</div>
+          <div class="title text-uppercase"><div>Профиль</div></div>
           {{ form_start(form, {'action': path('fos_user_profile_edit'), 'attr': {'id': 'registration_form'}}) }}
           {#{{ form_widget(form.) }}#}
           {{ form_row(form.username) }}

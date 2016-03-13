@@ -12,15 +12,16 @@
 
     <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ path('events',{'url': 'conference'}) }}">КОНФЕРЕНЦИИ</a></li>
-            <li>
-                <a href="{{ path('page',{'url' : 'about'}) }}">Об организации</a>
+            <li class="active"><a href="{{ path('news') }}">НОВОСТИ</a></li>
+            {#<li class=""><a href="{{ path('events',{'url': 'conference'}) }}">КОНФЕРЕНЦИИ</a></li>#}
+            {#<li>#}
+                {#<a href="{{ path('page',{'url' : 'about'}) }}">Об организации</a>#}
                 {#<div class="submenu">#}
                     {#<ul class="submenu-items">#}
                         {#<li><a href="">Цели и задачи</a></li>#}
                     {#</ul>#}
                 {#</div>#}
-            </li>
+            {#</li>#}
             <li><a href="{{ path('events',{'url': 'russian-events'}) }}">РОССИЙСКИЕ МЕРОПРИЯТИЯ</a></li>
             <li>
                 <a href="{{ path('events',{'url': 'foreign-events'}) }}">ЗАГРАНИЧНЫЕ МЕРОПРИЯТИЯ</a>

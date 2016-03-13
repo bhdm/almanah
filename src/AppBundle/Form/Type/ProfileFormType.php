@@ -33,7 +33,8 @@ class ProfileFormType extends AbstractType
             'attr' => [
                 'class' => 'specialty',
                 'data-placeholder' => 'Выберите специальность'
-            ]
+            ],
+            'required' => true
         ]);
         $builder->add('status', ChoiceType::class, array(
             'choices' => array(

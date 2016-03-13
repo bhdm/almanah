@@ -14,14 +14,12 @@
     <div class="well">
         <table class="table">
             <tr>
-                <th>Картинка</th>
                 <th>№</th>
                 <th>Заголовок</th>
                 <th class="setting">Инструменты</th>
             </tr>
             {% for item in pagination %}
                 <tr>
-                    <td><img src="{{ item.image.path }}" style="max-width: 100px;" class="thumbnail"></td>
                     <td>{{ item.id }}</td>
                     <td>{{ item.title }}</td>
                     <td class="setting">
