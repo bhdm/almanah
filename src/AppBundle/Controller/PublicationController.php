@@ -3,6 +3,8 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Comment;
+use AppBundle\Entity\Event;
+use AppBundle\Form\EventUserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -123,5 +125,46 @@ class PublicationController extends Controller
         $referer = $request->headers->get('referer');
         return $this->redirect($referer);
     }
+
+    /**
+     * @Route("/event-add", name="event_add")
+     * @Template("")
+     */
+    public function eventAddAction(Request $request){
+        $em = $this->getDoctrine()->getManager();
+        $item = new Event();
+        $form = $this->createForm(EventUserType::class, $item);
+        $form->add('submit', SubmitType::class, ['label' => 'Отправить заявку', 'attr' => ['class' => 'btn-primary']]);
+        $formData = $form->handleRequest($request);
+
+        if ($request->getMethod() == 'POST'){
+            if ($formData->isValid()){
+                $item = $formData->getData();
+
+                $file = $item->getPreview();
+                if ($file){
+                    $filename = time(). '.'.$file->guessExtension();
+                    $file->move(
+                        __DIR__.'/../../../web/upload/event/',
+                        $filename
+                    );
+                    $item->setPreview(['path' => '/upload/event/'.$filename ]);
+                }
+                $item->setEnabled(false);
+                $em->persist($item);
+                $em->flush();
+                $em->refresh($item);
+
+                $this->addFlash(
+                    'notice',
+                    'Ваша заявка на добавление события отправлена и будер расмотрена в ближайшее время'
+                );
+
+                return $this->redirect($this->generateUrl('homepage'));
+            }
+        }
+        return array('form' => $form->createView());
+    }
+
 
 }
