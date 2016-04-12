@@ -12,10 +12,14 @@
   font-weight: normal;
   font-style: normal;
 }
+html {
+  height: 100%;
+}
 body {
   text-align: center;
   font-family: 'HelveticaNeue-Light';
   background: #EEEEEE;
+  min-height: 100%;
 }
 a {
   cursor: pointer !important;
@@ -51,6 +55,10 @@ h1.blue-text {
   margin: 0 auto;
   text-align: left;
   background: #FFFFFF;
+  height: 100%;
+  padding-bottom: 250px;
+  position: relative;
+  display: inline-block;
 }
 .slider {
   overflow: hidden;
@@ -254,6 +262,10 @@ nav .navbar-nav li:hover a {
 }
 footer {
   margin-top: 30px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .footer1 {
   background: #242424;
@@ -554,4 +566,10 @@ th.picker-switch {
 }
 .radio .required:after {
   content: '';
+}
+.btn.btn-default.dropdown-toggle {
+  border: 0;
+}
+.btn.btn-default.dropdown-toggle:hover {
+  background: none;
 }

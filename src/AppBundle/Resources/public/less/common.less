@@ -18,11 +18,14 @@
 @color-black: #383838;
 
 @uppercase: uppercase;
-
+html{
+    height: 100%;
+}
 body{
     text-align: center;
     font-family: 'HelveticaNeue-Light';
     background: #EEEEEE;
+    min-height: 100%;
 
 }
 a{
@@ -68,6 +71,10 @@ h1.blue-text{
     margin: 0 auto;
     text-align: left;
     background: #FFFFFF;
+    height: 100%;
+    padding-bottom: 250px;
+    position: relative;
+    display: inline-block;
 }
 .slider{
     //max-height: 400px;
@@ -294,6 +301,10 @@ nav .navbar-nav li:hover{
 }
 footer{
     margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 .footer1{
     background: #242424;
@@ -610,4 +621,10 @@ th.prev, th.next, th.picker-switch{
 }
 .radio .required:after{
     content: '';
+}
+.btn.btn-default.dropdown-toggle{
+    border: 0;
+}
+.btn.btn-default.dropdown-toggle:hover{
+    background: none;
 }
