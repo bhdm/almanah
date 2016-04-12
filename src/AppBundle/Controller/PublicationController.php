@@ -70,7 +70,7 @@ class PublicationController extends Controller
 
             ])
             ->add('search', TextType::class, ['label' => '', 'required' => false])
-            ->add('submit', SubmitType::class, ['label' => 'Отправить', 'attr' => ['class' => 'btn-primary']])
+            ->add('submit', SubmitType::class, ['label' => 'Фильтровать', 'attr' => ['class' => 'btn-primary']])
             ->getForm();
         $form->handleRequest($request);
         return ['events' => $events, 'category' => $category, 'form' => $form->createView()];
