@@ -10,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
@@ -71,8 +72,12 @@ class PublicationController extends Controller
             ])
             ->add('search', TextType::class, ['label' => '', 'required' => false])
             ->add('submit', SubmitType::class, ['label' => 'Фильтровать', 'attr' => ['class' => 'btn-primary']])
+//            ->add('button', ButtonType::class, ['label' => 'Добавить событие', 'attr' => ['class' => 'btn-primary']])
             ->getForm();
         $form->handleRequest($request);
+        /**
+         * @TODO 
+         */
         return ['events' => $events, 'category' => $category, 'form' => $form->createView()];
     }
 
