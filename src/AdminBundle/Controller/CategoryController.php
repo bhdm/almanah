@@ -28,7 +28,7 @@ class CategoryController extends Controller{
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $items,
-            $request->query->get('category', 1),
+            $request->query->get('page', 1),
             20
         );
 

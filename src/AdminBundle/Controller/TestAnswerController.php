@@ -29,7 +29,7 @@ class TestAnswerController extends Controller{
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $items,
-            $this->get('request')->query->get('testanswer', 1),
+            $this->get('request')->query->get('page', 1),
             20
         );
 

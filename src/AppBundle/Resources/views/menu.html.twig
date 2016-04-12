@@ -12,7 +12,7 @@
 
     <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav">
-            <li class="active"><a href="{{ path('news') }}">НОВОСТИ</a></li>
+            <li {{ app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} ><a href="{{ path('news') }}">НОВОСТИ</a></li>
             {#<li class=""><a href="{{ path('events',{'url': 'conference'}) }}">КОНФЕРЕНЦИИ</a></li>#}
             {#<li>#}
                 {#<a href="{{ path('page',{'url' : 'about'}) }}">Об организации</a>#}
@@ -22,17 +22,17 @@
                     {#</ul>#}
                 {#</div>#}
             {#</li>#}
-            <li><a href="{{ path('events',{'url': 'russian-events'}) }}">РОССИЙСКИЕ МЕРОПРИЯТИЯ</a></li>
-            <li>
+            <li {{ app.request.pathInfo == '/events/russian-events' ? 'class="active"' : ''}} ><a href="{{ path('events',{'url': 'russian-events'}) }}">РОССИЙСКИЕ МЕРОПРИЯТИЯ</a></li>
+            <li {{ app.request.pathInfo == '/events/foreign-events' ? 'class="active"' : ''}} >
                 <a href="{{ path('events',{'url': 'foreign-events'}) }}">ЗАГРАНИЧНЫЕ МЕРОПРИЯТИЯ</a>
             </li>
-            <li>
+            <li {{ app.request.pathInfo == '/events/fpdo-courses' ? 'class="active"' : ''}} >
                 <a href="{{ path('events',{'url': 'fpdo-courses'}) }}">КУРСЫ ФПДО</a>
             </li>
-            <li>
+            <li {{ app.request.pathInfo == '/events/online-courses' ? 'class="active"' : ''}} >
                 <a href="{{ path('events',{'url': 'online-courses'}) }}">ОНЛАЙН ОБУЧЕНИЕ</a>
             </li>
-            <li>
+            <li {{ app.request.pathInfo == '/events/internships' ? 'class="active"' : ''}} >
                 <a href="{{ path('events',{'url': 'internships'}) }}">СТАЖИРОВКИ</a>
             </li>
         </ul>

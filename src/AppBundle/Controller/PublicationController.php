@@ -65,7 +65,9 @@ class PublicationController extends Controller
             ->add('specialty', EntityType::class, [
                 'label' => '',
                 'class' => 'AppBundle\Entity\Specialty',
-                'required' => false
+                'required' => false,
+                'placeholder' => 'Специальность',
+
             ])
             ->add('search', TextType::class, ['label' => '', 'required' => false])
             ->add('submit', SubmitType::class, ['label' => 'Отправить', 'attr' => ['class' => 'btn-primary']])

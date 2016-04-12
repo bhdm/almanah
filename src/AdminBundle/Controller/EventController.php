@@ -28,7 +28,7 @@ class EventController extends Controller{
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $items,
-            $request->query->get('event', 1),
+            $request->query->get('page', 1),
             20
         );
 
