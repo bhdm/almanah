@@ -76,7 +76,7 @@ class PublicationController extends Controller
             ->getForm();
         $form->handleRequest($request);
         /**
-         * @TODO 
+         * @TODO event@medalmanah.ru
          */
         return ['events' => $events, 'category' => $category, 'form' => $form->createView()];
     }
