@@ -26,6 +26,8 @@ body{
     font-family: 'HelveticaNeue-Light';
     background: #EEEEEE;
     min-height: 100%;
+    margin: 0;
+    overflow-x: hidden;
 
 }
 a{
@@ -44,6 +46,15 @@ a{
         background: #2a2a2a;
     }
 }
+.btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary{
+    background: #383838;
+    border: 1px solid darken(#383838,20%);
+}
+.btn-primary:active:hover, .btn-primary.active:hover, .open > .dropdown-toggle.btn-primary:hover, .btn-primary:active:focus, .btn-primary.active:focus, .open > .dropdown-toggle.btn-primary:focus, .btn-primary:active.focus, .btn-primary.active.focus, .open > .dropdown-toggle.btn-primary.focus{
+    background: #383838;
+    border: 1px solid darken(#383838,20%);
+}
+
 
 
 //.blue-text{
@@ -302,6 +313,7 @@ nav .navbar-nav li:hover{
 }
 footer{
     margin-top: 30px;
+    padding: 0;
     position: absolute;
     bottom: 0;
     left: 0;

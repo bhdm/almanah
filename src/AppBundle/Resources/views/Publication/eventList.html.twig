@@ -18,6 +18,11 @@
 {% block stylesheets %}
     {{ parent() }}
     <link rel="stylesheet" href="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}" />
+    <style>
+        #form_start, #form_end{
+            width: 130px;
+        }
+    </style>
 {% endblock %}
 
 {% block content %}
@@ -35,9 +40,9 @@
                 <div class="form-group">
                     {{ form_widget(form.specialty) }}
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="width: 325px;">
                     {{ form_widget(form.submit) }}
-                    <a href="{{ path('event_add') }}" style="padding-left: 50px;">Добавить событие</a>
+                    <a href="{{ path('event_add') }}" style="padding-left: 35px;">Добавить событие</a>
                 </div>
             </form>
         </div>

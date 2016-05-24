@@ -25,7 +25,7 @@
                     <td>{{ item.id }}</td>
                     <td>{{ item.title }}</td>
                     <td></td>
-                    <td>{{ item.enabled }}</td>
+                    <td>{{ item.enabled ? 'Активна' :  'Заблокирована' }}</td>
                     <td class="setting">
                         {% spaceless %}
                         <a href="{{ path('admin_publication_edit',{'id' : item.id}) }}">
