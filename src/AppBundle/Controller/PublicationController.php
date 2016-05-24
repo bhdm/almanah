@@ -19,7 +19,7 @@ use Symfony\Component\HttpFoundation\Request;
 class PublicationController extends Controller
 {
     /**
-     * @Route("publications/{url}", name="publications")
+     * @Route("/new/{url}", name="publications")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function indexAction(Request $request, $url)

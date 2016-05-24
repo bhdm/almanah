@@ -18,10 +18,10 @@
     <div class="row">
         <div class="col-xs-8 col-xs-offset-1" style="padding-right: 0">
             <div>
+                <div class="title"><div>{{ publication.title }}</div></div>
                 {% if publication.preview.path is defined  %}
                     <img src="{{ publication.preview.path }}" style="max-width: 250px; float: left; margin: 0 20px 10px 10px" class="img-thumbnail">
                 {% endif %}
-                <h1 class="blue-text">{{ publication.title }}</h1>
                 <div>
                     {{ publication.anons | raw }}
                     {{ publication.body | raw }}
