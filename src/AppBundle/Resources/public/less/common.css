@@ -55,6 +55,11 @@ a:hover {
   background: #383838;
   border: 1px solid #050505;
 }
+.btn-primary:focus,
+.btn-primary.focus {
+  background: #383838;
+  border: 1px solid #050505;
+}
 h1.blue-text {
   font-size: 22px;
   font-family: 'HelveticaNeue-Light';
