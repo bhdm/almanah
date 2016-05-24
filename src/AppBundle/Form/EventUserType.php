@@ -26,7 +26,6 @@ class EventUserType extends AbstractType
             ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
 
             ->add('specialties', null, [ 'label' => 'Специальности', 'attr' => ['class' => 'multiselect']])
-            ->add('category', null, [ 'label' => 'Категория'])
 
             ->add('city', null, [ 'label' => 'Город'])
             ->add('adrs', null, [ 'label' => 'Адрес'])
