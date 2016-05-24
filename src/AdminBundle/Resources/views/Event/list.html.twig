@@ -29,7 +29,7 @@
                         {{ item.start | date('d.m.Y') }} - {{ item.end | date('d.m.Y') }}
                     </td>
                     <td></td>
-                    <td>{{ item.enabled }}</td>
+                    <td>{{ item.enabled == 1 ? 'Активен' : '' }}</td>
                     <td class="setting">
                         {% spaceless %}
                         <a href="{{ path('admin_event_edit',{'id' : item.id}) }}">

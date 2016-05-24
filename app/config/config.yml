@@ -98,9 +98,10 @@ fos_user:
 
 
 knp_paginator:
-    page_range: 20                      # default page range used in pagination control
+    page_range: 10                      # default page range used in pagination control
     default_options:
         page_name: page                # page query parameter name
     template:
-        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig     # sliding pagination controls template
+        pagination: AdminBundle::pagination.html.twig     # sliding pagination controls template
+#        pagination: KnpPaginatorBundle:Pagination:twitter_bootstrap_v3_pagination.html.twig     # sliding pagination controls template
         sortable: KnpPaginatorBundle:Pagination:sortable_link.html.twig # sort link template
