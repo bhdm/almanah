@@ -6,81 +6,82 @@
     <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
 {% endblock %}
 {% block content %}
-
-    <div class="event-carusel">
-        {% for carusel in carusels %}
-            <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
-        {% endfor %}
-    </div>
-
-    <div class="event-carusel-pages">
-        {% if carusels | length > 4 %}
-            <div class="active"></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        {% else %}
-            <br />
-        {% endif %}
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-4">
-        <div class="title"><div>НОВОСТИ</div></div>
-        {% for p in publications %}
-            <div class="index-item">
-                <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
-                <div class="item-anons">
-                    {{ p.anons }}
-                </div>
-                <div class="item-param">
-                    {{ p.created | date('d.m.Y') }}
-                </div>
-            </div>
-        {% endfor %}
-        <div class="text-right">
-            <a href="{{ path('news') }}"><b>Читать все</b></a>
-        </div>
-    </div>
-    <div class="col-xs-12 col-sm-6 col-md-5">
-        <div class="title"><div>МЕРОПРИЯТИЯ</div></div>
-        {% for e in events %}
-            <div class="index-item row">
-                <div class="col-xs-4">
-                    <img src="{{ e.preview.path }}" class="img-thumbnail">
-                </div>
-                <div class="col-xs-8">
-                    <div class="item-title">
-                        <a href="{{ path('event',{'url' : e.id }) }}" style="color: #222">
-                        {{ e.title }}
-                        </a>
-                    </div>
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="title"><div>НОВОСТИ</div></div>
+            {% for p in publications %}
+                <div class="index-item">
+                    <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
                     <div class="item-anons">
-                        {{ e.anons }}
+                        {{ p.anons }}
                     </div>
                     <div class="item-param">
-                        {{ e.start | date('d.m.Y') }}
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-
-
-
-    <div class="hidden-sm col-md-3 text-right">
-        <div style="max-width: 240px; float: right;" class="text-left">
-        {% if importants | length > 0 %}
-            <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
-            {% for i in importants %}
-                <div class="calendar">
-                    <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
-                    <div class="annotate">
-                        {#{{ i.type }}<br />#}
-                        {{ i.title }}
+                        {{ p.created | date('d.m.Y') }}
                     </div>
                 </div>
             {% endfor %}
-        {% endif %}
-        {{ render(controller("AppBundle:Widget:banner" )) }}
+            <div class="text-right">
+                <a href="{{ path('news') }}"><b>Читать все</b></a>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-5">
+            <div class="title"><div>МЕРОПРИЯТИЯ</div></div>
+            {% for e in events %}
+                <div class="index-item row">
+                    <div class="col-xs-4">
+                        <img src="{{ e.preview.path }}" class="img-thumbnail">
+                    </div>
+                    <div class="col-xs-8">
+                        <div class="item-title">
+                            <a href="{{ path('event',{'url' : e.id }) }}" style="color: #222">
+                                {{ e.title }}
+                            </a>
+                        </div>
+                        <div class="item-anons">
+                            {{ e.anons }}
+                        </div>
+                        <div class="item-param">
+                            {{ e.start | date('d.m.Y') }}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="hidden-sm col-md-3 text-right">
+            <div style="max-width: 240px; float: right;" class="text-left">
+                {% if importants | length > 0 %}
+                    <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
+                    {% for i in importants %}
+                        <div class="calendar">
+                            <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
+                            <div class="annotate">
+                                {#{{ i.type }}<br />#}
+                                {{ i.title }}
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                {{ render(controller("AppBundle:Widget:banner" )) }}
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="event-carusel">
+            {% for carusel in carusels %}
+                <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
+            {% endfor %}
+        </div>
+
+        <div class="event-carusel-pages">
+            {% if carusels | length > 4 %}
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            {% else %}
+                <br />
+            {% endif %}
         </div>
     </div>
 {% endblock %}
