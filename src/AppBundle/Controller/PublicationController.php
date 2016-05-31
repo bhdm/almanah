@@ -47,7 +47,8 @@ class PublicationController extends Controller
     public function eventAction(Request $request, $url)
     {
         $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneById($url);
-        return ['event' => $event];
+        $importants =  $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['enabled' => true],['id' => 'DESC'], 3);
+        return ['event' => $event, 'importants' => $importants];
     }
 
     /**

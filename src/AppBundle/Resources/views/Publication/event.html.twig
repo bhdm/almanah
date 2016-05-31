@@ -74,7 +74,21 @@
         </div>
     </div>
     <div class="col-xs-3">
-        {{ render(controller("AppBundle:Widget:banner" )) }}
+        <div style="max-width: 240px; float: right;" class="text-left">
+            {% if importants | length > 0 %}
+                <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
+                {% for i in importants %}
+                    <div class="calendar">
+                        <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
+                        <div class="annotate">
+                            {#{{ i.type }}<br />#}
+                            {{ i.title }}
+                        </div>
+                    </div>
+                {% endfor %}
+            {% endif %}
+            {{ render(controller("AppBundle:Widget:banner" )) }}
+        </div>
     </div>
 
 {% endblock %}
