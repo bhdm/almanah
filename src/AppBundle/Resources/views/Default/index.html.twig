@@ -9,7 +9,9 @@
     <div class="row">
         <div class="event-carusel">
             {% for carusel in carusels %}
-                <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
+                {% if carusel.preview.path is defined %}
+                    <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
+                {% endif %}
             {% endfor %}
         </div>
 
@@ -46,10 +48,16 @@
             <div class="title"><div>МЕРОПРИЯТИЯ</div></div>
             {% for e in events %}
                 <div class="index-item row">
-                    <div class="col-xs-4">
-                        <img src="{{ e.preview.path }}" class="img-thumbnail">
-                    </div>
-                    <div class="col-xs-8">
+                    {% if carusel.preview.path is defined %}
+                        <div class="col-xs-4">
+                            <img src="{{ e.preview.path }}" class="img-thumbnail">
+                        </div>
+                    {% endif %}
+                    {% if carusel.preview.path is defined %}
+                        <div class="col-xs-8">
+                    {% else %}
+                        <div class="col-xs-12">
+                    {% endif %}
                         <div class="item-title">
                             <a href="{{ path('event',{'url' : e.id }) }}" style="color: #222">
                                 {{ e.title }}

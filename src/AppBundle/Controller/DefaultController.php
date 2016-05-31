@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Event;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -71,5 +72,24 @@ class DefaultController extends Controller
         return $this->render('@App/Widget/carusel.html.twig',['carusel' => $carusel]);
     }
 
-
+    /**
+     * @Route("/csv/{url}", name="csv")
+     */
+    public function csvAction($url){
+        $em = $this->getDoctrine()->getManager();
+        $url = 'https://www.evrika.ru/calendar/rss/2016/'.$url;
+        $xml = simplexml_load_string(file_get_contents($url));
+        foreach ($xml->channel->item as $item){
+            $event = new Event();
+            $event->setTitle($item->title);
+            $event->setAnons(strip_tags($item->description));
+            $event->setAdrs($item->address);
+            $event->setBody($item->description);
+            $event->setStart(new \DateTime($item->dateStart));
+            $event->setStart(new \DateTime($item->dateEnd));
+            $em->persist($event);
+            $em->flush($event);
+        }
+        exit;
+    }
 }
