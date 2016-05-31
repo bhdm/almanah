@@ -41,7 +41,7 @@ class EventType extends AbstractType
             ->add('end',  DateType::class, [ 'label' => 'Дата окончания'])
 
             ->add('contacts', TextareaType::class, [ 'label' => 'Контакная информация'])
-            ->add('anons', null, [ 'label' => 'Сайт', 'required' => false ])
+            ->add('source', null, [ 'label' => 'Сайт', 'required' => false ])
             ->add('anons', null, [ 'label' => 'Анонс' ])
             ->add('body', null, [ 'label' => 'Контент', 'attr' => ['class' => 'ckeditor']])
             ->add('main', ChoiceType::class, array(

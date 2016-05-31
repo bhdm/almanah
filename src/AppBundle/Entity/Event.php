@@ -477,8 +477,6 @@ class Event
     {
         $this->source = $source;
     }
-
-    
 }
 
 
