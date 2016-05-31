@@ -52,6 +52,10 @@
                     {% if event.contacts != null %}
                         <li><b>Контактная информация:</b> {{ event.contacts }}</li>
                     {% endif %}
+                    {% if event.source != null %}
+                        <li><b>Сайт:</b> <a href="{{ event.source }}" target="_blank">Перейти</a></li>
+                    {% endif %}
+
                 </ul>
             </div>
         </div>

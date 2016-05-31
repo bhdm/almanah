@@ -128,6 +128,13 @@ class Event
      */
     private $main;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="source", type="string", nullable=true)
+     */
+    private $source;
+
     public function __construct()
     {
         $this->preview = array();
@@ -454,6 +461,24 @@ class Event
     {
         $this->main = $main;
     }
+
+    /**
+     * @return string
+     */
+    public function getSource()
+    {
+        return $this->source;
+    }
+
+    /**
+     * @param string $source
+     */
+    public function setSource($source)
+    {
+        $this->source = $source;
+    }
+
+    
 }
 
 
