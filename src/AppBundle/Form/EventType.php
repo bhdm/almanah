@@ -48,7 +48,7 @@ class EventType extends AbstractType
                     'Да' => true,
                     'Нет' => false
                 ),
-                'required'    => true,
+                'required'    => false,
                 'label' => 'Баннер на главной'
             ))
             ->add('enabled', ChoiceType::class, array(
