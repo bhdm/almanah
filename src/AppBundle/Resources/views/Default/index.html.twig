@@ -7,6 +7,24 @@
 {% endblock %}
 {% block content %}
     <div class="row">
+        <div class="event-carusel">
+            {% for carusel in carusels %}
+                <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
+            {% endfor %}
+        </div>
+
+        <div class="event-carusel-pages">
+            {% if carusels | length > 4 %}
+                <div class="active"></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            {% else %}
+                <br />
+            {% endif %}
+        </div>
+    </div>
+    <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4">
             <div class="title"><div>НОВОСТИ</div></div>
             {% for p in publications %}
@@ -63,25 +81,6 @@
                 {% endif %}
                 {{ render(controller("AppBundle:Widget:banner" )) }}
             </div>
-        </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="event-carusel">
-            {% for carusel in carusels %}
-                <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
-            {% endfor %}
-        </div>
-
-        <div class="event-carusel-pages">
-            {% if carusels | length > 4 %}
-                <div class="active"></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            {% else %}
-                <br />
-            {% endif %}
         </div>
     </div>
 {% endblock %}
