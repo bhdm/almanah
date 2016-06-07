@@ -2,6 +2,9 @@
 <head>
     {% block javascripts %}
         <script src="{{ asset('bundles/admin/js/jquery-1.11.1.min.js') }}"></script>
+        <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+
         <script src="{{ asset('bundles/admin/js/bootstrap.min.js') }}"></script>
         <script src="{{ asset('bundles/admin/ckeditor/ckeditor.js') }}"></script>
         <script src="{{ asset('bundles/admin/translit/jquery.synctranslit.min.js') }}"></script>

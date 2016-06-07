@@ -1,10 +1,11 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "41e616491d5d5f932b6e9b1a2daee16c",
+    "hash": "34389b23db0d2958f21ec34ca88ab651",
+    "content-hash": "b43fa79dba1bba8cc60f5779ce7dfe49",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -839,7 +840,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/8f1fc2273b37c61ddcc1620abf4500320a23763e",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSUserBundle/zipball/d1fccc6335b74beca94525551cacc06b256ed261",
                 "reference": "8f1fc2273b37c61ddcc1620abf4500320a23763e",
                 "shasum": ""
             },

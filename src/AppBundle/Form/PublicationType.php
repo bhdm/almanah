@@ -22,7 +22,7 @@ class PublicationType extends AbstractType
     {
         $builder
             ->add('title', TextType::class, [ 'label' => 'Название'])
-            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
+//            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
 //            ->add('category', null, [ 'label' => 'Категория'])
             ->add('specialties', null, [ 'label' => 'Специальности', 'attr' => ['class' => 'multiselect']])
             ->add('anons', TextareaType::class, [ 'label' => 'Анонс', 'required' => false])
