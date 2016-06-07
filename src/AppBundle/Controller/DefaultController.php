@@ -92,4 +92,14 @@ class DefaultController extends Controller
         }
         exit;
     }
+
+    /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/upcoming-events")
+     */
+    public function getUpcomingEventsAction(){
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],[], 10);
+        
+        return $this->render('AppBundle:Widget:upcomingEvents.html.twig', ['events' => $events]);
+    }
 }
