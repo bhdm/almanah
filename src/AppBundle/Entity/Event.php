@@ -38,6 +38,13 @@ class Event
     private $preview;
 
     /**
+     * @var array
+     *
+     * @ORM\Column(name="slider", type="array", nullable=true)
+     */
+    private $slider;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="body", type="text", nullable=true)
@@ -138,6 +145,7 @@ class Event
     public function __construct()
     {
         $this->preview = array();
+        $this->slider = array();
         $this->important = false;
         $this->specialties = new ArrayCollection();
         $this->enabled = true;
@@ -477,6 +485,23 @@ class Event
     {
         $this->source = $source;
     }
+
+    /**
+     * @return array
+     */
+    public function getSlider()
+    {
+        return $this->slider;
+    }
+
+    /**
+     * @param array $slider
+     */
+    public function setSlider($slider)
+    {
+        $this->slider = $slider;
+    }
+
 }
 
 

@@ -59,6 +59,14 @@ class PublicationController extends Controller
     {
         $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->searchEvents($category, $request->query->get('form'));
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $events,
+            $request->query->get('page', 1),
+            20
+        );
+
 //        $specialt/ies = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findAll();
 
         $form = $this->createFormBuilder()
@@ -79,7 +87,7 @@ class PublicationController extends Controller
         /**
          * @TODO event@medalmanah.ru
          */
-        return ['events' => $events, 'category' => $category, 'form' => $form->createView()];
+        return ['events' => $pagination, 'category' => $category, 'form' => $form->createView()];
     }
 
 
@@ -99,10 +107,15 @@ class PublicationController extends Controller
      * @Route("news", name="news")
      * @Template("AppBundle:Publication:news.html.twig")
      */
-    public function newsAction(){
+    public function newsAction(Request $request){
         $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
-
-        return ['news' => $news];
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $news,
+            $request->query->get('page', 1),
+            20
+        );
+        return ['news' => $pagination];
     }
 
     /**

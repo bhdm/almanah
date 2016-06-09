@@ -61,6 +61,16 @@ class EventController extends Controller{
                     $item->setPreview(['path' => '/upload/event/'.$filename ]);
                 }
 
+                $file = $item->getSlider();
+                if ($file){
+                    $filename = time(). '.'.$file->guessExtension();
+                    $file->move(
+                        __DIR__.'/../../../web/upload/eventslider/',
+                        $filename
+                    );
+                    $item->setSlider(['path' => '/upload/eventslider/'.$filename ]);
+                }
+
                 $em->persist($item);
                 $em->flush();
                 $em->refresh($item);
@@ -79,6 +89,7 @@ class EventController extends Controller{
         $em = $this->getDoctrine()->getManager();
         $item = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->findOneById($id);
         $oldFile = $item->getPreview();
+        $oldFile2 = $item->getSlider();
 
         $form = $this->createForm(EventType::class, $item);
         $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
@@ -98,6 +109,18 @@ class EventController extends Controller{
                         $filename
                     );
                     $item->setPreview(['path' => '/upload/event/'.$filename ]);
+                }
+
+                $file = $item->getSlider();
+                if ($file == null){
+                    $item->setSlider($oldFile2);
+                }else{
+                    $filename = time(). '.'.$file->guessExtension();
+                    $file->move(
+                        __DIR__.'/../../../web/upload/eventslider/',
+                        $filename
+                    );
+                    $item->setSlider(['path' => '/upload/eventslider/'.$filename ]);
                 }
 
                 $em->flush($item);
