@@ -64,7 +64,7 @@ class PublicationController extends Controller
         $pagination = $paginator->paginate(
             $events,
             $request->query->get('page', 1),
-            20
+            15
         );
 
 //        $specialt/ies = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findAll();
@@ -113,7 +113,7 @@ class PublicationController extends Controller
         $pagination = $paginator->paginate(
             $news,
             $request->query->get('page', 1),
-            20
+            15
         );
         return ['news' => $pagination];
     }
