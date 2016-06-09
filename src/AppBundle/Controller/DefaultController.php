@@ -72,34 +72,34 @@ class DefaultController extends Controller
         return $this->render('@App/Widget/carusel.html.twig',['carusel' => $carusel]);
     }
 
-    /**
-     * @Route("/csv/{url}", name="csv")
-     */
-    public function csvAction($url){
-        $em = $this->getDoctrine()->getManager();
-        $url = 'https://www.evrika.ru/calendar/rss/2016/'.$url;
-        $xml = simplexml_load_string(file_get_contents($url));
-        foreach ($xml->channel->item as $item){
-            $event = new Event();
-            $event->setTitle($item->title);
-            $event->setAnons(strip_tags($item->description));
-            $event->setAdrs($item->address);
-            $event->setBody($item->description);
-            $event->setStart(new \DateTime($item->dateStart));
-            $event->setStart(new \DateTime($item->dateEnd));
-            $em->persist($event);
-            $em->flush($event);
-        }
-        exit;
-    }
+//    /**
+//     * @Route("/csv/{url}", name="csv")
+//     */
+//    public function csvAction($url){
+//        $em = $this->getDoctrine()->getManager();
+//        $url = 'https://www.evrika.ru/calendar/rss/2016/'.$url;
+//        $xml = simplexml_load_string(file_get_contents($url));
+//        foreach ($xml->channel->item as $item){
+//            $event = new Event();
+//            $event->setTitle($item->title);
+//            $event->setAnons(strip_tags($item->description));
+//            $event->setAdrs($item->address);
+//            $event->setBody($item->description);
+//            $event->setStart(new \DateTime($item->dateStart));
+//            $event->setStart(new \DateTime($item->dateEnd));
+//            $em->persist($event);
+//            $em->flush($event);
+//        }
+//        exit;
+//    }
 
     /**
      * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/upcoming-events")
      */
     public function getUpcomingEventsAction(){
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],[], 10);
-        
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],[], 5);
+
         return $this->render('AppBundle:Widget:upcomingEvents.html.twig', ['events' => $events]);
     }
 }
