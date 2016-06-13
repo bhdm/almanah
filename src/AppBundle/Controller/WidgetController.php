@@ -45,4 +45,13 @@ class WidgetController extends Controller
         return ['banner' => $banner];
     }
 
+    /**
+     * @param Request $request
+     * @return Response
+     * @Template()
+     */
+    public function importantsAction(Request $request){
+        $importants =  $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['enabled' => true],['id' => 'DESC'], 3);
+        return ['importants' => $importants];
+    }
 }

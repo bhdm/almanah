@@ -22,6 +22,23 @@ body {
   margin: 0;
   overflow-x: hidden;
 }
+.table-layout {
+  display: table;
+  width: 100%;
+}
+.table-layout .table-cell {
+  display: table-cell;
+  vertical-align: top;
+}
+.col-center {
+  padding: 0 20px;
+}
+.col-fixed-300 {
+  width: 240px;
+}
+.col-fixed-240 {
+  width: 240px;
+}
 a {
   cursor: pointer !important;
   color: #fc113c;

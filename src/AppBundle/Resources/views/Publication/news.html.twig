@@ -8,10 +8,9 @@
 {% endblock %}
 
 {% block content %}
-    <div>
         <div class="row">
-            <div class="col-xs-8">
-                <div class="title text-uppercase"><div>НОВОСТИ</div></div>
+            <div class="col-sm-12">
+                <div class="title text-uppercase"><div>НОВОСТИ МЕДИЦИНЫ</div></div>
                 <div style="padding-left: 50px">
                     {% for n in news %}
                         {% if n.preview.path is defined %}
@@ -39,18 +38,10 @@
                             </div>
                         {% endif %}
                     {% endfor %}
-
                     <nav>
                         {{ knp_pagination_render(news) }}
                     </nav>
                 </div>
             </div>
-            <div class="col-xs-3">
-                <br />
-                {{ render(controller("AppBundle:Widget:banner" )) }}
-            </div>
         </div>
-    </div>
-    <br />
-    <br />
 {% endblock %}

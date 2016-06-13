@@ -1,0 +1,12 @@
+{% if importants | length > 0 %}
+    <div class="title text-right"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
+    {% for i in importants %}
+        <div class="calendar">
+            <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
+            <div class="annotate">
+                {#{{ i.type }}<br />#}
+                {{ i.title }}
+            </div>
+        </div>
+    {% endfor %}
+{% endif %}

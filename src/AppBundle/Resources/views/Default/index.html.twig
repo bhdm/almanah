@@ -5,7 +5,8 @@
     <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
     <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
 {% endblock %}
-{% block content %}
+
+{% block topBody %}
     <div class="row">
         <div class="event-carusel">
             {% for carusel in carusels %}
@@ -26,8 +27,11 @@
             {% endif %}
         </div>
     </div>
+{% endblock %}
+
+{% block content %}
     <div class="row">
-        <div class="col-xs-12 col-sm-9 col-md-9">
+        <div class="col-sm-12">
             <div class="title"><div>НОВОСТИ</div></div>
             {% for p in publications %}
                 <div class="index-item">
@@ -42,23 +46,6 @@
             {% endfor %}
             <div class="text-right">
                 <a href="{{ path('news') }}"><b>Читать все</b></a>
-            </div>
-        </div>
-        <div class="hidden-sm col-md-3 text-right">
-            <div style="max-width: 240px; float: right;" class="text-left">
-                {% if importants | length > 0 %}
-                    <div class="title"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
-                    {% for i in importants %}
-                        <div class="calendar">
-                            <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
-                            <div class="annotate">
-                                {#{{ i.type }}<br />#}
-                                {{ i.title }}
-                            </div>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-                {{ render(controller("AppBundle:Widget:banner" )) }}
             </div>
         </div>
     </div>

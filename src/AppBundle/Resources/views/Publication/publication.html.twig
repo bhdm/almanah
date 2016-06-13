@@ -16,7 +16,7 @@
 
 {% block content %}
     <div class="row">
-        <div class="col-xs-8" style="padding-right: 0">
+        <div class="col-sm-12">
             <div>
                 <div class="title"><div>{{ publication.title }}</div></div>
                 {% if publication.preview.path is defined  %}
@@ -69,8 +69,5 @@
                 </div>
             </div>
         </div>
-    <div class="col-xs-3">
-        {{ render(controller("AppBundle:Widget:banner" )) }}
-    </div>
     </div>
 {% endblock %}

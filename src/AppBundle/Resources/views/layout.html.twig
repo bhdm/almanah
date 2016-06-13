@@ -105,22 +105,22 @@
             </div>
         {% endif %}
         {{ include('@App/menu.html.twig') }}
-        <div class="row">
-            <div class="col-sm-3">
-                {{ render(controller('AppBundle:Default:getUpcomingEvents')) }}
-            </div>
-            <div class="col-sm-9">
+
+        {% block topBody%}
+
+        {% endblock %}
+        <div class="table-layout">
+            <div class="table-cell col-fixed-300">{{ render(controller('AppBundle:Default:getUpcomingEvents')) }}</div>
+            <div class="table-cell col-center">
                 <div class="content">
                     {% block content %}
-                        {#<div class="row">#}
-                        {#<div class="col-xs-9">#}
-                        {#{% block content %}{% endblock %}#}
-                        {#</div>#}
-                        {#<div class="col-xs-3 text-right">#}
-                        {#{{ render(controller("AppBundle:Widget:banner" )) }}#}
-                        {#</div>#}
-                        {#</div>#}
                     {% endblock %}
+                </div>
+            </div>
+            <div class="table-cell col-fixed-240 hidden-xs">
+                <div class="text-left">
+                    {{ render(controller("AppBundle:Widget:importants" )) }}
+                    {{ render(controller("AppBundle:Widget:banner" )) }}
                 </div>
             </div>
         </div>
