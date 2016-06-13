@@ -1,0 +1,79 @@
+{% extends layout | default(is_granted('IS_AUTHENTICATED_REMEMBERED') ? 'EvrikaMainBundle::logged_layout.html.twig' : 'EvrikaMainBundle::guest_layout.html.twig') %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        #feed table, #feed table tr, #feed table tr td {
+            border: 1px solid #000000;
+        }
+    </style>
+{% endblock %}
+
+
+{% block body %}
+    {% if standartsCategory is defined %}
+        <h1>Федеральные стандарты</h1>
+        <p>Стандарт оказания медицинской помощи призван указать модель пациента, область и условия применения
+            стандарта, способ лечения с указанием конкретных рекомендаций по использованию технических и
+            медикаментозных средств. Стандарт предназначен для обязательного исполнения в системе здравоохранения.
+            Внедрение Стандартов упорядочивает предоставление лечебной помощи населению, способствует повышению
+            прозрачности затрат на здравоохранение, повышает общий уровень медицинской помощи. Наличие Стандартов,
+            как элементов законодательной базы в сфере медицинских услуг, имеет большое значение в определении прав,
+            а также области ответственности пациентов и врачей.</p>
+
+        <p>Типовой стандарт может включать в себя следующие главы:</p>
+
+        <ul>
+            <li>указание вида медицинской помощи (первичная медико-санитарная, специализированная, скорая), при
+                котором используется Стандарт;
+            </li>
+            <li>перечень диагностических медицинских услуг с указанием количества и частоты их предоставления;</li>
+            <li>перечень лечебных медицинских услуг с указанием количества и частоты их предоставления;</li>
+            <li>перечень используемых лекарственных средств с указанием разовых и курсовых доз;</li>
+            <li>перечень дорогостоящих изделий медицинского назначения (включая импланты, эндопротезы и т. д.);</li>
+            <li>перечень компонентов крови и препаратов с указанием количества и частоты их предоставления;</li>
+            <li>перечень диетического (лечебного и профилактического) питания с указанием количества и частоты его
+                предоставления.
+            </li>
+        </ul>
+
+        <h2>Области применения стандартов:</h2>
+
+
+        <ul>
+            {% for cat in standartsCategory %}
+                <li class="fcategory"
+                    style="color: #00626a; cursor: pointer; list-style-type: none; padding: 10px 20px; border-bottom: 1px solid #00626a; border-collapse: collapse;">
+                    <b>{{ cat.title }}</b>
+                    <ul id="fstands{{ cat.id }}" style="display: none;">
+                        {% if cat.id is defined and cat.id is not null %}
+                            {% if attribute(standarts, cat.id) %}
+                                {% for stand in standarts[cat.id][0] %}
+                                    <li>
+                                        <a href="{{ path('showstandards',{'id': stand['id']}) }}"
+                                           style="text-decoration: none;">{{ stand['title'] | raw }}</a>
+                                    </li>
+                                {% endfor %}
+                            {% endif %}
+                        {% endif %}
+                    </ul>
+                </li>
+            {% endfor %}
+
+        </ul>
+        <br/>
+
+        <script>
+            $('.fcategory').click(function() {
+                if ($(this).children('ul').css('display') == 'none') {
+                    $(this).children('ul').fadeIn();
+                }
+            });
+        </script>
+    {% else %}
+        <h1>{{ standart.title | raw }}</h1>
+        <br/>
+        {{ standart.body | raw }}
+    {% endif %}
+{% endblock %}
