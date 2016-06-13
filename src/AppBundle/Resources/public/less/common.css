@@ -139,11 +139,13 @@ nav.navbar {
   min-height: inherit;
   margin-left: -15px;
   margin-right: -15px;
+  border: 0;
 }
 nav .navbar-nav {
   border-radius: 0;
   width: 100%;
   display: table;
+  background: #EEE;
 }
 nav .navbar-nav li {
   border-bottom: 5px solid #FFF;
@@ -154,6 +156,9 @@ nav .navbar-nav li {
   display: table-cell;
   text-transform: uppercase;
   border-top: 1px solid #FC113C;
+}
+nav .navbar-nav li:hover {
+  background: #DDD;
 }
 nav .navbar-nav li.active a {
   color: #FFFFFF;
@@ -173,14 +178,16 @@ nav .navbar-nav li .submenu {
   visibility: hidden;
   opacity: 0;
   z-index: 55;
-  padding-top: 5px;
+  padding-top: 0px;
+  width: 100%;
 }
 nav .navbar-nav li .submenu .submenu-items {
-  background: #fc113c;
-  padding: 5px 10px;
-  width: 300px;
+  background: #DDD;
+  width: 100%;
 }
 nav .navbar-nav li .submenu .submenu-items li {
+  border-bottom: 0;
+  border-top: 1px solid #FFF;
   text-align: left;
   display: block;
   padding: 5px;
@@ -188,8 +195,13 @@ nav .navbar-nav li .submenu .submenu-items li {
 nav .navbar-nav li .submenu .submenu-items li:last-child {
   border-bottom: 0;
 }
+nav .navbar-nav li .submenu .submenu-items li:hover {
+  background: #CCC;
+}
 nav .navbar-nav li .submenu .submenu-items li a {
-  color: #FFFFFF;
+  display: block;
+  padding: 5px 10px;
+  color: #333;
 }
 nav .navbar-nav li .submenu .submenu-items li a:hover {
   color: #fc113c;

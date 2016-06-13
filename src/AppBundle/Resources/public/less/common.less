@@ -146,11 +146,13 @@ nav{
         min-height: inherit;
         margin-left: -15px;
         margin-right: -15px;
+        border: 0;
     }
     .navbar-nav{
         border-radius: 0;
         width: 100%;
         display:table;
+        background: #EEE;
         //border-bottom: 1px solid #EEEEEE;
         //table-layout:fixed;
         li{
@@ -162,6 +164,9 @@ nav{
             display:table-cell;
             text-transform: @uppercase;
             border-top: 1px solid #FC113C;
+            &:hover{
+                background: #DDD;
+            }
             &.active{
                 //border-bottom: 5px solid #004889;
             }
@@ -184,27 +189,33 @@ nav{
                 visibility: hidden;
                 opacity: 0;
                 z-index: 55;
-                padding-top: 5px;
+                padding-top: 0px;
+                width: 100%;
                 .submenu-items{
-                    background: @color-red;
-                    padding: 5px 10px;
-                    width: 300px;
+                    background: #DDD;
+                    width: 100%;
                     //border-left: 1px solid #F15B23;
                     //border-right: 1px solid #F15B23;
                     //border-bottom: 1px solid #F15B23;
                     li{
+                        border-bottom: 0;
+                        border-top: 1px solid #FFF;
                         &:not(:last-child){
-                            //border-bottom: 1px solid #0b58a2;
                         }
                         &:last-child{
                             border-bottom: 0;
+                        }
+                        &:hover{
+                            background: #CCC;
                         }
                         //background: #004889;
                         text-align: left;
                         display: block;
                         padding: 5px;
                         a{
-                            color: #FFFFFF;
+                            display: block;
+                            padding: 5px 10px;
+                            color: #333;
                             &:hover{
                                 color: @color-red;
                             }
