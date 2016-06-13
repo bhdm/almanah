@@ -46,6 +46,10 @@ a {
 a:hover {
   color: #9b0d27;
 }
+a:hover,
+a:focus {
+  color: #9b0d27;
+}
 .btn-primary {
   background: #383838;
   border: 1px solid #050505;

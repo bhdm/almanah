@@ -32,7 +32,7 @@
 {% block content %}
     <div class="row">
         <div class="col-sm-12">
-            <div class="title"><div>НОВОСТИ</div></div>
+            <div class="title"><div><a href="{{ path('news') }}">НОВОСТИ</a></div></div>
             {% for p in publications %}
                 <div class="index-item">
                     <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
