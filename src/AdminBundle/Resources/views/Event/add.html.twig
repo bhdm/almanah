@@ -16,3 +16,20 @@
         </form>
     </div>
 {% endblock %}
+
+{% block javascripts %}
+    <link href="{{ asset('bundles/admin/tapmodo-Jcrop/css/jquery.Jcrop.min.css') }}" rel="stylesheet" media="all">
+    {{ parent() }}
+
+    <script src="{{ asset('bundles/admin/tapmodo-Jcrop/js/jquery.Jcrop.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('bundles/admin/js/file.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+            $("#event_title").syncTranslit({
+                destination: "event_slug",
+                caseStyle: "lower",
+                urlSeparator: "_"
+            });
+        });
+    </script>
+{% endblock %}

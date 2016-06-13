@@ -40,7 +40,11 @@
                         {#<span style="font-size: 12px">Расказать друзьям&nbsp;&nbsp;</span>#}
                         <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
                         <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
-                        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter="" style="text-align: left; "></div>
+                        <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter="" style="text-align: left; "
+                             data-title="{{ publication.title }}"
+                             data-description="{{ publication.anons is defined ? publication.anons : ''}}"
+                             data-image="{{ publication.preview.path is defined ? publication.preview.path : '' }}"
+                        ></div>
                     </div>
                     <div class="col-xs-5">
                         {% if publication.specialties | length > 0 %}

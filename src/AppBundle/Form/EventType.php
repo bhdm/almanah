@@ -23,6 +23,7 @@ class EventType extends AbstractType
     {
         $builder
             ->add('title', null, [ 'label' => 'Название'])
+            ->add('slug', null, [ 'label' => 'URL'])
             ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
             ->add('slider', FileType::class, [ 'label' => 'Картинка (слайдер)', 'data_class' => null, 'required' => false])
             ->add('important', ChoiceType::class, array(

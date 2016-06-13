@@ -94,6 +94,13 @@ class Publication
      */
     private $digest;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="slug", type="string", length=255)
+     */
+    private $slug;
+
     public function __construct()
     {
         $this->enabled = true;
@@ -290,6 +297,22 @@ class Publication
         $this->digest = $digest;
     }
 
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
 
+    /**
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+    
 }
 
