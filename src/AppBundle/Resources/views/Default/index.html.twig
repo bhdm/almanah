@@ -27,7 +27,7 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4">
+        <div class="col-xs-12 col-sm-9 col-md-9">
             <div class="title"><div>НОВОСТИ</div></div>
             {% for p in publications %}
                 <div class="index-item">
@@ -43,35 +43,6 @@
             <div class="text-right">
                 <a href="{{ path('news') }}"><b>Читать все</b></a>
             </div>
-        </div>
-        <div class="col-xs-12 col-sm-6 col-md-5">
-            <div class="title"><div>МЕРОПРИЯТИЯ</div></div>
-            {% for e in events %}
-                <div class="index-item row">
-                    {% if carusel.preview.path is defined %}
-                        <div class="col-xs-4">
-                            <img src="{{ e.preview.path }}" class="img-thumbnail">
-                        </div>
-                    {% endif %}
-                    {% if carusel.preview.path is defined %}
-                        <div class="col-xs-8">
-                    {% else %}
-                        <div class="col-xs-12">
-                    {% endif %}
-                        <div class="item-title">
-                            <a href="{{ path('event',{'url' : e.id }) }}" style="color: #222">
-                                {{ e.title }}
-                            </a>
-                        </div>
-                        <div class="item-anons">
-                            {{ e.anons }}
-                        </div>
-                        <div class="item-param">
-                            {{ e.start | date('d.m.Y') }}
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
         </div>
         <div class="hidden-sm col-md-3 text-right">
             <div style="max-width: 240px; float: right;" class="text-left">

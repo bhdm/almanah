@@ -55,10 +55,14 @@ class PublicationController extends Controller
      * @Route("events/{url}", name="events")
      * @Template("AppBundle:Publication:eventList.html.twig")
      */
-    public function eventListAction(Request $request, $url)
+    public function eventListAction(Request $request, $url=null)
     {
-        $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->searchEvents($category, $request->query->get('form'));
+        if ($url !== null){
+            $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
+            $events = $this->getDoctrine()->getRepository('AppBundle:Event')->searchEvents($category, $request->query->get('form'));
+        }else{
+            $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],['id'=> 'DESC']);
+        }
 
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(

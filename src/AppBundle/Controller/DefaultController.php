@@ -102,4 +102,12 @@ class DefaultController extends Controller
 
         return $this->render('AppBundle:Widget:upcomingEvents.html.twig', ['events' => $events]);
     }
+
+    /**
+     * @Route("/feedback", name="feedback")
+     * @Template()
+     */
+    public function feedbackAction(Request $request){
+        return [];
+    }
 }
