@@ -52,16 +52,17 @@ class PublicationController extends Controller
     }
 
     /**
-     * @Route("events/{url}", name="events")
+     * @Route("events/{url}", name="events", defaults={"url"=null})
      * @Template("AppBundle:Publication:eventList.html.twig")
      */
-    public function eventListAction(Request $request, $url=null)
+    public function eventListAction(Request $request, $url = null)
     {
         if ($url !== null){
             $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
             $events = $this->getDoctrine()->getRepository('AppBundle:Event')->searchEvents($category, $request->query->get('form'));
         }else{
             $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],['id'=> 'DESC']);
+            $category = "Мероприятия";
         }
 
         $paginator  = $this->get('knp_paginator');

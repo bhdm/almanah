@@ -633,3 +633,28 @@ nav .navbar-nav li.active a:hover {
   margin-top: 2px;
   width: 150px;
 }
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  background-color: #fc113c;
+  border-color: #fc113c;
+}
+.pagination > li > a,
+.pagination > li > span {
+  color: #fc113c;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #fc113c;
+}
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  color: #fc113c;
+}
