@@ -211,7 +211,6 @@ nav .navbar-nav li .submenu .submenu-items li {
   border-top: 1px solid #FFF;
   text-align: left;
   display: block;
-  padding: 5px;
 }
 nav .navbar-nav li .submenu .submenu-items li:last-child {
   border-bottom: 0;
@@ -221,11 +220,13 @@ nav .navbar-nav li .submenu .submenu-items li:hover {
 }
 nav .navbar-nav li .submenu .submenu-items li a {
   display: block;
-  padding: 5px 10px;
+  padding: 10px 15px;
   color: #333;
+  background: #DDD;
 }
 nav .navbar-nav li .submenu .submenu-items li a:hover {
   color: #fc113c;
+  background: #CCC;
 }
 nav .navbar-nav li:hover .submenu {
   visibility: visible;

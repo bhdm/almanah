@@ -22,7 +22,7 @@
                     </ul>
                 </div>
             </li>
-            <li {{ app.request.pathInfo == '/events/russian-events' or app.request.pathInfo == '/events/foreign-events' ? 'class="active"' : ''}} >
+            <li >
                 <a href="{{ path('page',{'url' : 'about'}) }}">Образование</a>
                 <div class="submenu">
                     <ul class="submenu-items">
@@ -32,13 +32,13 @@
                     </ul>
                 </div>
             </li>
-            <li {{ app.request.pathInfo == '/events/russian-events' or app.request.pathInfo == '/events/foreign-events' ? 'class="active"' : ''}} >
+            <li >
                 <a href="{{ path('page',{'url' : 'about'}) }}">Полезная информация</a>
                 <div class="submenu">
                     <ul class="submenu-items">
-                        <li><a href="{{ path('events',{'url': 'russian-events'}) }}">Федеральные стандарты</a></li>
-                        <li><a href="{{ path('events',{'url': 'foreign-events'}) }}">Медицинские сокращения</a></li>
-                        <li><a href="{{ path('events',{'url': 'foreign-events'}) }}">Калькуляторы</a></li>
+                        <li><a href="#">Федеральные стандарты</a></li>
+                        <li><a href="#">Медицинские сокращения</a></li>
+                        <li><a href="#">Калькуляторы</a></li>
                     </ul>
                 </div>
             </li>
