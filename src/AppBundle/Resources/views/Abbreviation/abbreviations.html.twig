@@ -1,0 +1,30 @@
+{% extends '@App/layout.html.twig' %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        #feed table, #feed table tr, #feed table tr td {
+            border: 1px solid #000000;
+        }
+    </style>
+{% endblock %}
+
+
+{% block content %}
+        <div class="title"><div>Медицинские сокращения и термины</div></div>
+    <table class="table">
+        <tr>
+            <th><b>Сокращение</b></th>
+            <th><b>Рашифровка на (англ)</b></th>
+            <th><b>Рашифровка на (рус)</b></th>
+        </tr>
+        {% for a in abbs %}
+            <tr>
+                <td><b>{{ a.name }}</b></td>
+                <td>{{ a.en[0] is defined ? a.en[0] : '-' }}</td>
+                <td>{{ a.ru[0] is defined ? a.ru[0] : '-' }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+{% endblock %}

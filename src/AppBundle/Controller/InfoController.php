@@ -45,4 +45,5 @@ class InfoController extends Controller
             'standarts'         => $standarts,
         ));
     }
+    
 }
