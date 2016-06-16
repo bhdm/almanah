@@ -108,4 +108,13 @@ class DefaultController extends Controller
     public function feedbackAction(Request $request){
         return [];
     }
+
+    /**
+     * @Route("/redirect", name="redirect")
+     */
+    public function redirectAction(Request $request){
+        $url = $request->query->get('url');
+        sleep(2);
+        return $this->redirect($url);
+    }
 }
