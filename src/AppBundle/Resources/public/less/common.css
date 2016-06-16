@@ -585,6 +585,7 @@ th.picker-switch {
 }
 .event-carusel .item div img {
   width: 90%;
+  height: 135px;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -moz-filter: grayscale(100%);
