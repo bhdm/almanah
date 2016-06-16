@@ -34,14 +34,31 @@
         <div class="col-sm-12">
             <div class="title"><div><a href="{{ path('news') }}">НОВОСТИ</a></div></div>
             {% for p in publications %}
-                <div class="index-item">
-                    <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
-                    <div class="item-anons">
-                        {{ p.anons }}
-                    </div>
-                    <div class="item-param">
-                        {{ p.created | date('d.m.Y') }}
-                    </div>
+                <div class="index-item row">
+                    {% if p.preview.path is defined %}
+                        <div class="col-xs-2">
+                            <img src="{{ p.preview.path }}" class="img-thumbnail">
+                        </div>
+                        <div class="col-xs-10">
+                            <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
+                            <div class="item-anons">
+                                {{ p.anons }}
+                            </div>
+                            <div class="item-param">
+                                {{ p.created | date('d.m.Y') }}
+                            </div>
+                        </div>
+                    {% else %}
+                    <div class="col-xs-12">
+                        <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>
+                        <div class="item-anons">
+                            {{ p.anons }}
+                        </div>
+                        <div class="item-param">
+                            {{ p.created | date('d.m.Y') }}
+                        </div>
+
+                        {% endif %}
                 </div>
             {% endfor %}
             <div class="text-left">
