@@ -192,5 +192,12 @@ class PublicationController extends Controller
         return array('form' => $form->createView());
     }
 
+    /**
+     * @Route("/events-map", name="events_map")
+     * @Template()
+     */
+    public function eventsmapAction(){
+        return [];
+    }
 
 }
