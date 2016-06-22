@@ -41,7 +41,7 @@ class CalendarRepository extends EntityRepository
         $calendars = $this->_em->createQuery('
 			SELECT t.id as type, c.id, c.firstName, c.lastName, c.surName, c.title, c.anons, c.text,
 				c.date, c.birthdate, c.gone, c.photo, c.dayNumber, c.dayOfWeek, c.month
-			FROM EvrikaMainBundle:Calendar c
+			FROM AppBundle:Calendar c
 			JOIN c.type t
 			WHERE c.enabled = 1 AND t.id != 4 AND (c.date LIKE :dateFormat
 				OR c.birthdate LIKE :dateFormat
@@ -58,7 +58,7 @@ class CalendarRepository extends EntityRepository
         $liquids = $this->_em->createQuery('
 			SELECT t.id as type, c.id, c.firstName, c.lastName, c.surName, c.title, c.anons, c.text,
 				c.date, c.birthdate, c.gone, c.photo, c.dayNumber, c.dayOfWeek, c.month
-			FROM EvrikaMainBundle:Calendar c
+			FROM AppBundle:Calendar c
 			JOIN c.type t WITH t.id = 4
 			WHERE c.month = :month
 		')->setParameter('month', $date->format('M'))
@@ -125,7 +125,7 @@ class CalendarRepository extends EntityRepository
         # находим праздники, исторические события и по дате рождения/смерти
         $calendars = $this->_em->createQuery('
 			SELECT c
-			FROM EvrikaMainBundle:Calendar c
+			FROM AppBundle:Calendar c
 			JOIN c.type t
 			WHERE (c.date LIKE :dateFormat AND c.month IS NULL)
 				OR c.birthdate LIKE :dateFormat
@@ -136,7 +136,7 @@ class CalendarRepository extends EntityRepository
         # находим плавающие праздники
         $liquids = $this->_em->createQuery('
 			SELECT c
-			FROM EvrikaMainBundle:Calendar c
+			FROM AppBundle:Calendar c
 			JOIN c.type t
 			WHERE c.month = :month
 		')->setParameter('month', $date->format('M'))
@@ -189,7 +189,7 @@ class CalendarRepository extends EntityRepository
 
         $calendars = $this->_em->createQuery("
 			SELECT c
-			FROM EvrikaMainBundle:Calendar c
+			FROM AppBundle:Calendar c
 			WHERE (c.date LIKE '%.$month%' AND c.month IS NULL)
 				OR c.birthdate LIKE '%.$month.%'
 				OR c.gone LIKE '%.$month.%'
@@ -214,4 +214,6 @@ class CalendarRepository extends EntityRepository
 
         return array_unique($days);
     }
+
+    
 }

@@ -49,6 +49,8 @@
         {#{% endif %}#}
 
     {% endblock %}
+
+    {% block seo %}{% endblock %}
 </head>
 <body>
 <div class="body">
@@ -58,7 +60,7 @@
                 <div class="col-xs-3">
                     <div style="width: 250px">
                         <a href="{{ path('homepage') }}">
-                            <img src="{{ asset('bundles/app/images/logo.png') }}" id="logo" style=" float: left">
+                            <img src="{{ asset('bundles/app/images/logo.png') }}" id="logo" style=" float: left" all="Альманах медицинских событий">
                         </a>
                     </div>
                 </div>
@@ -139,15 +141,15 @@
                         {#<a target="_blank" href="https://www.youtube.com/channel/UCgS0JAUqUpDojH6rIDXGfZA"><img src="{{ asset('bundles/app/images/icons/gp.png') }}" class="social-icon"></a>#}
                         {#<a target="_blank" href="http://ok.ru/group/57034519412770"><img src="{{ asset('bundles/app/images/icons/od.png') }}" class="social-icon"></a>#}
                         {#<img src="{{ asset('bundles/app/images/icons/icons.png') }}">#}
-                            <img src="{{ asset('bundles/app/images/icons/icons_1.png') }}">
-                            <img src="{{ asset('bundles/app/images/icons/icons_2.png') }}">
-                            <a href="https://www.facebook.com/medalmanah" target="_blank"><img src="{{ asset('bundles/app/images/icons/icons_3.png') }}"></a>
+                            <img src="{{ asset('bundles/app/images/icons/icons_1.png') }}" alt="ВКонтакте">
+                            <img src="{{ asset('bundles/app/images/icons/icons_2.png') }}" alt="Однокласники">
+                            <a href="https://www.facebook.com/medalmanah" target="_blank"><img src="{{ asset('bundles/app/images/icons/icons_3.png') }}" alt="Facebook"></a>
                     </div>
                 </div>
                 <div class="contacts row">
                     <br /><br />
                     <div class="col-xs-offset-1 col-xs-2">
-                        <img src="{{ asset('bundles/app/images/icons/geo.png') }}" class="contact-icon" style="margin-top: -8px;">
+                        <img src="{{ asset('bundles/app/images/icons/geo.png') }}" class="contact-icon" style="margin-top: -8px;" alt="Контакты">
                     </div>
                     <div class="col-xs-9">
                         <div class="text-uppercase" style="color: #7e7878">

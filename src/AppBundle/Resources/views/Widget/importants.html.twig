@@ -1,12 +1,54 @@
-{% if importants | length > 0 %}
-    <div class="title text-right"><div>ВАЖНЫЕ СОБЫТИЯ</div></div>
-    {% for i in importants %}
-        <div class="calendar">
-            <div class="date">{{ i.datetime | date('d.m.Y') }}</div>
-            <div class="annotate">
-                {#{{ i.type }}<br />#}
-                {{ i.title }}
-            </div>
+<div class="side_menu white-block calend" style="max-width: 225px">
+    <a class="calend-title" href="#">
+        <div>Медицинский календарь</div>
+    </a>
+    <div class="calend-content">
+        сегодня {{ dateStr }}
+        <div class="calendars">
+            {% if calendars.holidays is not empty %}
+                <div>
+                    <span>праздник{{ calendars.holidays|length > 1 ? 'и' }}</span>
+                    <ul>
+                        {% for c in calendars.holidays %}
+                            <li><a href="#">{{ c.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if calendars.events is not empty %}
+                <div>
+                    <span>{{ calendars.events|length == 1 ? 'историческое событие' : 'исторические события' }}</span>
+                    <ul>
+                        {% for c in calendars.events %}
+                            <li><a href="#">{{ c.title }} ({{ c.date|slice(6) }})</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if calendars.births is not empty %}
+                <div>
+                    <span>{{ calendars.births|length == 1 ? 'родился' : 'родились' }} в этот день</span>
+                    <ul>
+                        {% for c in calendars.births %}
+                            <li><a href="#">{{ c.title }} ({{ c.birthdate|slice(6) }})</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
+            {% if calendars.deaths is not empty %}
+                <div>
+                    <span>день памяти</span>
+                    <ul>
+                        {% for c in calendars.deaths %}
+                            <li><a href="#">{{ c.title }} ({{ c.birthdate|slice(6) }})</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
         </div>
-    {% endfor %}
-{% endif %}
+    </div>
+</div>

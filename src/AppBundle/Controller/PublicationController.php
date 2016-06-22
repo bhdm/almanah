@@ -57,11 +57,18 @@ class PublicationController extends Controller
      */
     public function eventListAction(Request $request, $url = null)
     {
+
         if ($url !== null){
             $category = $this->getDoctrine()->getRepository('AppBundle:Category')->findOneBy(['slug' => $url]);
-            $events = $this->getDoctrine()->getRepository('AppBundle:Event')->searchEvents($category, $request->query->get('form'));
         }else{
-            $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],['id'=> 'DESC']);
+            $category = null;
+        }
+        $start = $request->query->get('start');
+        $end = $request->query->get('end');
+        $text = $request->query->get('searchtext');
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text);
+
+        if ($category == null){
             $category = "Мероприятия";
         }
 

@@ -37,7 +37,7 @@
                 <div class="index-item row">
                     {% if p.preview.path is defined %}
                         <div class="col-xs-3" style="padding-right: 0">
-                            <img src="{{ p.preview.path }}" class="img-thumbnail">
+                            <img src="{{ p.preview.path }}" class="img-thumbnail" title="{{ p.title }}"  alt="{{ p.title }}">
                         </div>
                         <div class="col-xs-9">
                             <div class="item-title"><a href="{{ path('publications',{'url' : p.id }) }}" style="color: #222">{{ p.title }}</a></div>

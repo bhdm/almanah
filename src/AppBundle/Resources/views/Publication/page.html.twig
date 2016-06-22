@@ -1,5 +1,11 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
+{% block seo %}
+    <title>{{ page.metaTitle }} </title>
+    <meta name="description" content="{{ page.metaDescription }}"/>
+    <meta name="keywords" content="{{ page.metaKeyword }}"/>
+{% endblock %}
+
 {% block content %}
     <div class="col-sm-12" style="padding-right: 0">
         <div class="title"><div class="text-uppercase">{{ page.title }}</div></div>

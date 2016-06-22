@@ -51,7 +51,18 @@ class WidgetController extends Controller
      * @Template()
      */
     public function importantsAction(Request $request){
-        $importants =  $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['enabled' => true],['id' => 'DESC'], 3);
-        return ['importants' => $importants];
+        $months     = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+        $date       = new \DateTime('now');
+        $dateStr    = intval($date->format('d')) . ' ' . $months[intval($date->format('m'))];
+        $dateFormat = $date->format('d.m');
+
+        $em        = $this->getDoctrine()->getManager();
+        $calendars = $em->getRepository('AppBundle:Calendar')->byDate($dateFormat);
+
+        return [
+            'dateFormat' => $dateFormat,
+            'dateStr'    => $dateStr,
+            'calendars'  => $calendars,
+        ];
     }
 }
