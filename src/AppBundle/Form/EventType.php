@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TimeType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -24,6 +25,8 @@ class EventType extends AbstractType
         $builder
             ->add('title', null, [ 'label' => 'Название'])
             ->add('slug', null, [ 'label' => 'URL'])
+            ->add('metaDescription', TextType::class, [ 'label' => 'SEO описание'])
+            ->add('metaKeyword', TextType::class, [ 'label' => 'SEO ключевые слова'])
             ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
             ->add('slider', FileType::class, [ 'label' => 'Картинка (слайдер)', 'data_class' => null, 'required' => false])
             ->add('important', ChoiceType::class, array(

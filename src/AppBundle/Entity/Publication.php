@@ -101,6 +101,26 @@ class Publication
      */
     private $slug;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="metaDescription", type="string", length=255, nullable=true)
+     */
+    private $metaDescription;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="metaKeyword", type="string", length=255, nullable=true)
+     */
+    private $metaKeyword;
+
+    /**
+     * @var Comment
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Comment", mappedBy="publication")
+     */
+    private $comments;
+
     public function __construct()
     {
         $this->enabled = true;
@@ -108,6 +128,7 @@ class Publication
         $this->preview = array();
         $this->specialties = new ArrayCollection();
         $this->digest = false;
+        $this->comments = new ArrayCollection();
 
     }
 
@@ -313,6 +334,55 @@ class Publication
         $this->slug = $slug;
     }
 
+    /**
+     * @return string
+     */
+    public function getMetaDescription()
+    {
+        return $this->metaDescription;
+    }
+
+    /**
+     * @param string $metaDescription
+     */
+    public function setMetaDescription($metaDescription)
+    {
+        $this->metaDescription = $metaDescription;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMetaKeyword()
+    {
+        return $this->metaKeyword;
+    }
+
+    /**
+     * @param string $metaKeyword
+     */
+    public function setMetaKeyword($metaKeyword)
+    {
+        $this->metaKeyword = $metaKeyword;
+    }
+
+    /**
+     * @return Comment
+     */
+    public function getComments()
+    {
+        return $this->comments;
+    }
+
+    /**
+     * @param Comment $comments
+     */
+    public function setComments($comments)
+    {
+        $this->comments = $comments;
+    }
+
+            
     
 }
 

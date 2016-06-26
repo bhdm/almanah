@@ -19,12 +19,21 @@ use Symfony\Component\HttpFoundation\Request;
 class PublicationController extends Controller
 {
     /**
-     * @Route("/new/{url}", name="publications")
+     * @Route("/news/{url}", name="publications")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function indexAction(Request $request, $url)
     {
-        $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->findOneBy(['id' => $url,'enabled' => true]);
+        $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->findOneBy(['slug' => $url,'enabled' => true]);
+        if (!$publication){
+            $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->findOneBy(['id' => $url,'enabled' => true]);
+            if ($publication === null){
+                return $this->createNotFoundException('Данной страницы не существует');
+            }
+            if ($publication->getSlug()){
+                return $this->redirect($this->generateUrl('publications',['url' => $publication->getSlug()]));
+            }
+        }
         return ['publication' => $publication];
     }
 

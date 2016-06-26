@@ -20,29 +20,51 @@
     <meta name="keywords" content="{{ publication.metaKeyword }}"/>
 {% endblock %}
 
+{% block social %}
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ publication.title }}">
+    {% if publication.preview.path is defined  %}
+        <meta property="og:image" content="http://medalmanah.ru{{ publication.preview.path }}">
+    {% endif %}
+    <meta property="og:description" content="{{ publication.anons }}">
+
+    <meta itemscope itemtype="http://schema.org/Article" />
+    <meta itemprop="headline" content="{{ publication.title }}" />
+    <meta itemprop="description" content="{{ publication.anons }}" />
+    {% if publication.preview.path is defined  %}
+        <meta itemprop="image" content="http://medalmanah.ru{{ publication.preview.path }}" />
+    {% endif %}
+{% endblock %}
+
 {% block content %}
     <div class="row">
         <div class="col-sm-12">
             <div>
-                <div class="title"><div>{{ publication.title }}</div></div>
-                {% if publication.preview.path is defined  %}
-                    <img src="{{ publication.preview.path }}" style="max-width: 250px; float: left; margin: 0 20px 10px 10px" class="img-thumbnail">
-                {% endif %}
-                <div>
-                    {{ publication.anons | raw }}
-                    {{ publication.body | raw }}
-                    {% if publication.video.path is defined %}
-                        <div style="text-align: center">
-                            <video controls style="width: 640px; height: 420px;">
-                                <source src="{{ publication.video.path }}" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
-                        </div>
+                <div class="title"><div itemprop="name">{{ publication.title }}</div></div>
+                <div style="overflow: hidden">
+                    {% if publication.preview.path is defined  %}
+                        <img src="{{ publication.preview.path }}"
+                             style="max-width: 250px; float: left; margin: 0 20px 10px 10px"
+                             class="img-thumbnail"
+                             alt="{{ publication.title }}"
+                             title="{{ publication.title }}"
+                             itemprop="image"
+                        />
                     {% endif %}
+                    <div itemprop="description">
+                        {{ publication.body | raw }}
+                        {% if publication.video.path is defined %}
+                            <div style="text-align: center">
+                                <video controls style="width: 640px; height: 420px;">
+                                    <source src="{{ publication.video.path }}" type="video/mp4">
+                                    Ваш браузер не поддерживает данное видео
+                                </video>
+                            </div>
+                        {% endif %}
+                    </div>
                 </div>
-
                 <div class="row row-params">
-                    <div class="col-xs-4" style="padding-top: 5px;">
+                    <div class="col-sm-5" style="padding-top: 5px;">
                         {#<span style="font-size: 12px">Расказать друзьям&nbsp;&nbsp;</span>#}
                         <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
                         <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
@@ -52,7 +74,7 @@
                              data-image="{{ publication.preview.path is defined ? publication.preview.path : '' }}"
                         ></div>
                     </div>
-                    <div class="col-xs-5">
+                    <div class="col-sm-4 hidden-xs">
                         {% if publication.specialties | length > 0 %}
                             <b>Специальности:</b>
                             {% set ss = '' %}
@@ -67,9 +89,9 @@
                         </span>
                         {% endif %}
                     </div>
-                    <div class="col-xs-3 text-right">
+                    <div class="col-sm-3 text-right">
                         <div style="padding-top: 10px; padding-bottom: 6px">
-                            {{ publication.created | date('d.m.Y') }}
+                            <span class="glyphicon glyphicon-calendar hidden-sm"></span> {{ publication.created | date('d.m.Y') }}
                         </div>
                     </div>
                 </div>
