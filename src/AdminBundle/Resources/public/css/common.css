@@ -4,3 +4,12 @@
 textarea{
     min-height: 100px;
 }
+.fileDoc {
+    text-align: center;
+    border: 1px solid #CCC;
+    padding: 15px;
+}
+.navigateFile{
+    text-align: center;
+    padding: 10px;
+}

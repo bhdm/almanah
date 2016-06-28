@@ -51,16 +51,28 @@ class PublicationController extends Controller{
             if ($formData->isValid()){
                 $item = $formData->getData();
 
-                $file = $item->getPreview();
-                if ($file){
-                    $filename = time(). '.'.$file->guessExtension();
-                    $file->move(
-                        __DIR__.'/../../../web/upload/publication/',
-                        $filename
-                    );
-                    $item->setPreview(['path' => '/upload/publication/'.$filename ]);
+//  Старый вариант закгрузки фото, без оберзания
+//                $file = $item->getPreview();
+//                if ($file){
+//                    $filename = time(). '.'.$file->guessExtension();
+//                    $file->move(
+//                        __DIR__.'/../../../web/upload/publication/',
+//                        $filename
+//                    );
+//                    $item->setPreview(['path' => '/upload/publication/'.$filename ]);
+//                }
+//  Новый вариант загрузки фото
+                if ($request->request->get('thumbail')){
+                    $image = new \Imagick();
+                    $image->readImageBlob($this->convertBase64Image($request->request->get('thumbail')));
+                    $image->setImageFormat('png');
+                    $filename = '/upload/publication/'.time().'.'.$image->getImageFormat();
+                    $image->writeImage(__DIR__.'/../../../web'.$filename);
+                    $item->setPreview(['path' => $filename]);
                 }
 
+
+                $item->setAuthor($this->getUser());
                 $em->persist($item);
                 $em->flush();
                 $em->refresh($item);
@@ -120,5 +132,11 @@ class PublicationController extends Controller{
             $em->flush();
         }
         return $this->redirect($request->headers->get('referer'));
+    }
+
+    private function convertBase64Image($base64_image_string) {
+        $splited = explode(',', substr( $base64_image_string , 5 ) , 2);
+        $data= $splited[1];
+        return base64_decode($data);
     }
 }

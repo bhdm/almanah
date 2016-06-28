@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use AppBundle\Entity\Publication;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -32,6 +33,23 @@ class PublicationType extends AbstractType
             ->add('body', TextareaType::class, [ 'label' => 'Контент', 'attr' => ['class' => 'ckeditor']])
             ->add('source', TextType::class, [ 'label' => 'Источник', 'required' => false])
             ->add('created', null, [ 'label' => 'Дата создания'])
+            ->add('type', ChoiceType::class, array(
+                'choices' => array(
+                    'Публикация' => Publication::PUBLICATIONS,
+                    'Новость' => Publication::NEWS,
+                    'Клиническое иследование' => Publication::CLINIC
+                ),
+                'required'    => true,
+                'label' => 'Тип публикации'
+            ))
+            ->add('public', ChoiceType::class, array(
+                'choices' => array(
+                    'Открытая' => true,
+                    'Закрытая' => false
+                ),
+                'required'    => true,
+                'label' => 'Публичность'
+            ))
             ->add('enabled', ChoiceType::class, array(
                 'choices' => array(
                     'Активная' => true,

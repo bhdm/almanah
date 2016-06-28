@@ -13,6 +13,11 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Publication
 {
+
+    const PUBLICATIONS = 0;
+    const NEWS = 1;
+    const CLINIC = 2;
+
     /**
      * @var int
      *
@@ -121,6 +126,24 @@ class Publication
      */
     private $comments;
 
+    /**
+     * @var boolean
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $public;
+
+    /**
+     * @var integer
+     * @ORM\Column(type="integer")
+     */
+    private $type;
+
+    /**
+     * @var Comment
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="publications")
+     */
+    private $author;
+
     public function __construct()
     {
         $this->enabled = true;
@@ -128,8 +151,9 @@ class Publication
         $this->preview = array();
         $this->specialties = new ArrayCollection();
         $this->digest = false;
+        $this->public = false;
         $this->comments = new ArrayCollection();
-
+        $this->type = self::NEWS;
     }
 
     /**
@@ -382,7 +406,53 @@ class Publication
         $this->comments = $comments;
     }
 
-            
+    /**
+     * @return boolean
+     */
+    public function isPublic()
+    {
+        return $this->public;
+    }
+
+    /**
+     * @param boolean $public
+     */
+    public function setPublic($public)
+    {
+        $this->public = $public;
+    }
+
+    /**
+     * @return int
+     */
+    public function getType()
+    {
+        return $this->type;
+    }
+
+    /**
+     * @param int $type
+     */
+    public function setType($type)
+    {
+        $this->type = $type;
+    }
+
+    /**
+     * @return Comment
+     */
+    public function getAuthor()
+    {
+        return $this->author;
+    }
+
+    /**
+     * @param Comment $author
+     */
+    public function setAuthor($author)
+    {
+        $this->author = $author;
+    }
     
 }
 

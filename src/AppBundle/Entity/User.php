@@ -162,12 +162,18 @@ class User extends BaseUser
      */
     private $diplomNumber;
 
+    /**
+     * @var Comment
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Publication", mappedBy="author")
+     */
+    private $publications;
 
     public function __construct()
     {
         $this->certificate = array();
         $this->courses = new ArrayCollection();
         $this->comments = new ArrayCollection();
+        $this->publications = new ArrayCollection();
         parent::__construct();
     }
 
@@ -547,7 +553,21 @@ class User extends BaseUser
         $this->status = $status;
     }
 
+    /**
+     * @return Comment
+     */
+    public function getPublications()
+    {
+        return $this->publications;
+    }
 
+    /**
+     * @param Comment $publications
+     */
+    public function setPublications($publications)
+    {
+        $this->publications = $publications;
+    }
 
 
 }
