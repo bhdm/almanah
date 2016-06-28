@@ -1,0 +1,141 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="title"><div>Оценка клиренса креатинина (взрослые)</div></div>
+    <br />
+    <br />
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">метод расчета:</label>
+                    <div class="col-sm-9">
+                        <select class="form-control" name="method" onclick="ChangeU(document.getElementsByName('method')[0].selectedIndex);">
+                            <option selected="">по Cockcroft-Gault</option>
+                            <option>по Jelliffe</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Пол:</label>
+                    <div class="col-sm-9">
+                        <select size="1" name="gender" class="form-control">
+                            <option selected="">мужской</option>
+                            <option>женский</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Возраст:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="age" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">вес:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="mass" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">креатинин плазмы:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="sc1" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-primary" onclick="Clear(document.getElementsByName('result')[0]);Clear(document.getElementsByName('age')[0]);Clear(document.getElementsByName('mass')[0]);Clear(document.getElementsByName('sc1')[0]);" >Сброс</button>
+                        <button type="button" class="btn btn-primary" onclick="if (!CheckSc(document.getElementsByName('sc1')[0])) return false; if(!CheckAge(document.getElementsByName('age')[0])) return false;  if (!CheckMass(document.getElementsByName('mass')[0])) return false; document.getElementsByName('result')[0].value=rnd(DoIt(document.getElementsByName('age')[0].value,document.getElementsByName('mass')[0].value,document.getElementsByName('sc1')[0].value,document.getElementsByName('method')[0].selectedIndex,document.getElementsByName('gender')[0].selectedIndex));">Расчитать</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Рузельтат:</label>
+                    <div class="col-sm-9">
+                        <input size="40" readonly="" name="result" class="form-control">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p><strong>Оценка клиренса креатинина:</strong></p>
+
+            <p><br />
+                Следующие формулы позволяют получить приемлемую оценку клиренса креатинина за исключением случаев, когда:</p>
+
+            <ul>
+                <li>Имеет место быстрое изменение уровня креатинина плазмы (как подъем, так и падение).</li>
+                <li>Пациент значительно истощен.</li>
+            </ul>
+
+            <p><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">В этих ситуациях необходимо принять следующие допущения:</span></p>
+
+            <ul>
+                <li>В случае быстрого подъема уровня креатинина плазмы (т.е. более 0.5-0.7 мг/дл&nbsp;в сутки), лучше всего считать, что клиренс креатинина не превышает 10 мл/мин.</li>
+                <li>У истощенных пациентов можно предположить, что фактический клиренс будет меньше оценки, однако точное его значение установить не возможно</li>
+            </ul>
+
+            <p>Используя расчетную формулу следует помнить, что полученное значение клиренса креатинина является оценочным и может отличаться от фактического как в большую, так и в меньшую сторону, поэтому полученную оценку следует принимать во внимание только совместно с другими факторами, выявленными в ходе обследования пациента.&nbsp;
+                </p>
+
+            <div class="alert alert-danger">РЕШЕНИЯ, КАСАЮЩИЕСЯ ЛЕКАРСТВЕННОЙ ТЕРАПИИ И ДОЗИРОВОК ДОЛЖНЫ ОСНОВЫВАТЬСЯ&nbsp; НА ОЦЕНКЕ КЛИНИЧЕСКОЙ КАРТИНЫ.</div>
+
+            <p>Значительное изменение уровня креатинина может быть обусловлено и другими факторами( обезвоживание, применение нефротоксичных препаратов, избыточная продукция креатинина вследствие травмы или чрезмерной физической нагрузки, или сниженная его продукция при заболеваниях почек или истощении).</p>
+
+            <p>С особой осторожностью следует подходить к оценке клиренса креатинина у :</p>
+
+            <ul>
+                <li>Пожилых (старше 90 лет)</li>
+                <li>Пациентов с пониженной массой тела (меньше идеальной)</li>
+                <li>Пациентов после трансплантации печени</li>
+            </ul>
+
+            <div class="alert alert-info"><strong>Замечание:</strong>&nbsp;Использование для расчета клиренса фактической массы тела у пациентов с ожирением (и, возможно, у пациентов с асцитом) может привести к тому, что оценка клиренса креатинина окажется значительно выше его реального значения.&nbsp; Некоторые специалисты предпочитают в таких случаях использовать такой показатель, как &quot;исправленная&nbsp; масса тела&quot; (он может вычисляться, например,&nbsp; по следующей формуле: идеальная масса тела+0.4*[средний вес - идеальная масса тела]). Это особенно актуально в тех случаях, когда оценка клиренса креатинина необходима для расчета доз антибиотиков.</div>
+
+            <p><strong>Формулы по Cockcroft-Gault:</strong></p>
+
+            <ul>
+                <li>Для мужчин: КлКр=((140-возраст)*вес)/(72*КрПл)</li>
+                <li>Для женщин: КлКр=(((140-возраст)*вес)/(72*КрПл))*0.85, где</li>
+            </ul>
+
+            <p><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">КлКр - оценка клиренса креатинина, мл</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">/</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">мин</span><br />
+                <span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">вес - масса тела, кг</span><br />
+                <span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">КрПл - креатинин плазмы, мг</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">/</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">дл</span><br />
+                <br />
+                <strong>Литература (метод Cockroft-Gault):</strong></p>
+
+            <ol>
+                <li>Cockroft DW, Gault MH. Prediction of creatinine clearance from serum creatinine&nbsp;<em>Nephron</em>&nbsp;1976;16:31-41</li>
+                <li>Dionne RE, Bauer LA, Gibson GA, Griffen WO, Blouin RA, Estimating creatinine clearance in morbidly obese patients,&nbsp;<em>Am J Hosp Pharm</em>, 1981, 38:841-4</li>
+                <li>Sawyer WT, Canaday BR, Poe TE, Webb CE, Gal P, Joyner PU, Beny JI, Variables affecting creatinine clearance prediction,&nbsp;<em>Am J. Hosp Pharm</em>, 1983, 40:2175-80</li>
+            </ol>
+
+            <p><strong>Формулы по Jelliffe:</strong></p>
+
+            <ul>
+                <li>Для мужчин: КлКр=(98-0.8*(возраст-20))/КрПл</li>
+                <li>Для женщин: КлКр=((98-0.8*(возраст-20))/КрПл)*0.90, где</li>
+            </ul>
+
+            <p><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">КлКр - оценка клиренса креатинина, мл</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">/</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">мин</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">/1.73</span><span style="color:rgb(0, 0, 0); font-family:times new roman; font-size:medium">&nbsp;кв.м</span></p>
+
+            <p>КрПл - креатинин плазмы мг/дл<br />
+                <br />
+                <strong>Литература (метод Jelliffe):</strong></p>
+
+            <ol>
+                <li>Jelliffe RW,&nbsp;<em>Ann Intern Med</em>, 1973, 79:604</li>
+            </ol>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/js/calcs/jcca.js') }}"></script>
+{% endblock %}

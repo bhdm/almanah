@@ -1,0 +1,25 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="title"><div>Калькуляторы</div></div>
+    <strong>Медицинский калькулятор</strong> – справочный инструмент для поддержки принятия решений
+    <br />
+    <br />
+    {#http://klinrek.ru/calcs/#}
+    <div class="row">
+        <ul class="list-group">
+            <li class="list-group-item">Индекс массы тела</li>
+            <li class="list-group-item">Расчет идеальной массы тела</li>
+            <li class="list-group-item"><a href="{{ path('ocenka_clirensa_creatinina') }}">Оценка клиренса креатинина (взрослые)</a></li>
+            <li class="list-group-item">Оценка клиренса креатинина (дети)</li>
+            <li class="list-group-item">Скорость глубочковой фильтрации по Кокрофту-Гольту (М+Ж)</li>
+            <li class="list-group-item">Скорость глубочковой фильтрации по MDRD</li>
+            <li class="list-group-item">Шкала комы Глазко</li>
+            <li class="list-group-item">Шкала CH2DS2VASc для оценки риска инсульта при мерцательной артимии</li>
+            <li class="list-group-item">Шкала SCORE</li>
+            <li class="list-group-item">Критерий Велла для оценки вероятности ТЭЛА</li>
+        </ul>
+
+    </div>
+{% endblock %}
+
