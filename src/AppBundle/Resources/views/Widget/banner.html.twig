@@ -2,7 +2,7 @@
     {#<br />#}
     {#<a href="{{ banner.url }}"><img src="{{ banner.file.path }}" style="width: 240px" title="{{ banner.title }}" alt="{{ banner.title }}"></a>#}
 {#{% endif %}#}
-{% if banner is defined and banner.file is defined %}
+{% if banner != null and banner.file is defined %}
     {% if banner.file.path is defined %}
         <br />
         <div class="text-right">
