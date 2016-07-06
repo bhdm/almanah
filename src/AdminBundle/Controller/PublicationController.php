@@ -100,16 +100,13 @@ class PublicationController extends Controller{
             if ($formData->isValid()){
                 $item = $formData->getData();
 
-                $file = $item->getPreview();
-                if ($file == null){
-                    $item->setPreview($oldFile);
-                }else{
-                    $filename = time(). '.'.$file->guessExtension();
-                    $file->move(
-                        __DIR__.'/../../../web/upload/publication/',
-                        $filename
-                    );
-                    $item->setPreview(['path' => '/upload/publication/'.$filename ]);
+                if ($request->request->get('thumbail')){
+                    $image = new \Imagick();
+                    $image->readImageBlob($this->convertBase64Image($request->request->get('thumbail')));
+                    $image->setImageFormat('png');
+                    $filename = '/upload/publication/'.time().'.'.$image->getImageFormat();
+                    $image->writeImage(__DIR__.'/../../../web'.$filename);
+                    $item->setPreview(['path' => $filename]);
                 }
 
                 $em->flush($item);

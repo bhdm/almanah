@@ -15,6 +15,7 @@
             <img src="{{ item.preview.path }}" style="max-width: 200px; display: inline-block" class="thumbnail">
             </div>
         {% endif %}
+        {{ form_start(form) }}
         <div class="form-group">
             <label class="col-sm-4 control-label required">Выберите файл</label>
             <div class="col-sm-8">
@@ -23,7 +24,7 @@
                     <br />
                     <br />
                     <div class="fileDoc">
-                        <img src="" brightness="0" contrast="0">
+                        <img src="" brightness="0" contrast="0" style="max-width: 100%;">
                     </div>
                     <div class="navigateFile">
                         <button type="button" class="btn -btn-default rotateLeft"><span class="glyphicon glyphicon-chevron-left"></span></button>
@@ -39,7 +40,6 @@
                 </div>
             </div>
         </div>
-        {{ form_start(form) }}
         {{ form_widget(form) }}
         {{ form_end(form) }}
     </div>
