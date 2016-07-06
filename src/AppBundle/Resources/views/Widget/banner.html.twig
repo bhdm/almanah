@@ -2,9 +2,11 @@
     {#<br />#}
     {#<a href="{{ banner.url }}"><img src="{{ banner.file.path }}" style="width: 240px" title="{{ banner.title }}" alt="{{ banner.title }}"></a>#}
 {#{% endif %}#}
-{% if banner.file.path is defined %}
-<br />
-<div class="text-right">
-    <a href="{{ banner.url }}" target="_blank"><img src="{{ banner.file.path }}" style="max-width: 240px;" title="{{ banner.title }}"/></a>
-</div>
+{% if banner is defined and banner.file is defined %}
+    {% if banner.file.path is defined %}
+        <br />
+        <div class="text-right">
+            <a href="{{ banner.url }}" target="_blank"><img src="{{ banner.file.path }}" style="max-width: 240px;" title="{{ banner.title }}"/></a>
+        </div>
+    {% endif %}
 {% endif %}
