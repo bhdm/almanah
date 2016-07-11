@@ -8,12 +8,25 @@
                 {% for comment in comments  %}
                 <li>
                     <div class="commenterImage">
-                        <img src="{{ asset('bundles/app/images/icons/no_avatar.png') }}" />
+                        {% if comment.owner.avatar.path is defined %}
+                            <img src="{{ comment.owner.avatar.path }}" />
+                        {% else %}
+                            <img src="{{ asset('bundles/app/images/icons/no_avatar.png') }}" />
+                        {% endif %}
                     </div>
                     <div class="commentText">
-                        <div class="commentOwner">{{ comment.owner }}</div>
+                        <div class="commentOwner">
+                            {{ comment.owner.name }}
+                            {#<span style="font-size: 12px; color: #777;">г. {{ comment.owner.city }}</span>#}
+                            <br />
+                            <span style="font-size: 12px; color: #777">{{ comment.owner.specialty }}</span>
+                            {#{% if is_granted('ROLE_ADMIN') %}#}
+                                {#<a href="#" data-href="{{ path('comment_remove',{'id' : comment.id }) }}" class="remove" data-toggle="modal" data-target="#confirm-delete" title="Удалить комментарий">#}
+                                    {#<span class="glyphicon glyphicon-remove"></span>#}
+                                {#</a>#}
+                            {#{% endif %}#}
+                        </div>
                         <p class="">{{ comment.body }}</p> <span class="date sub-text">{{ comment.created | date('d.m.Y') }}</span>
-
                     </div>
                 </li>
                 {% else %}
@@ -24,6 +37,7 @@
                 </li>
                 {% endfor %}
             </ul>
+            {% if is_granted('ROLE_USER') %}
             <form class="form" role="form" method="post" action="{{ path('comment_add', {'id' : id, 'type' : type }) }}">
                 <div class="form-group">
                     {#<input class="form-control" type="text" placeholder="Your comments" />#}
@@ -33,6 +47,9 @@
                     <button class="btn btn-primary">Отпрвить</button>
 
             </form>
+            {% else %}
+                <div class="alert alert-info text-center">Чтобы оставлять комментарии, необходимо <b class="login2" style="cursor: pointer">войти</b>.</div>
+            {% endif %}
         </div>
     </div>
 </div>

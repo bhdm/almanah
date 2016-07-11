@@ -11,7 +11,16 @@
         <div class="event-carusel">
             {% for carusel in carusels %}
                 {% if carusel.preview.path is defined %}
-                    <div class="item"><div><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"><div class="event-date">{{ carusel.start | date('d') }}<br />{{ carusel.start | date('m') | month }}</div></div></div>
+                    <div class="item">
+                        <div>
+                            <img src="{{ carusel.preview.path }}" title="{{ carusel.title }}">
+                            <div class="event-date">
+                                {{ carusel.start | date('d') }}
+                                <br />
+                                {{ carusel.start | date('m') | month }}
+                            </div>
+                        </div>
+                    </div>
                 {% endif %}
             {% endfor %}
         </div>

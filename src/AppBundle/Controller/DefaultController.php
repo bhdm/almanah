@@ -19,7 +19,7 @@ class DefaultController extends Controller
 
         $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC'], 5);
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true],['start' => 'DESC'], 5);
-        $carusels =  $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true,'main' => true],['id' => 'DESC'], 4);
+        $carusels =  $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true,'main' => true],['id' => 'DESC'], 5);
         return [
             'publications' => $publications,
             'events' => $events,

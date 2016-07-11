@@ -52,7 +52,15 @@
                         />
                     {% endif %}
                     <div itemprop="description">
-                        {{ publication.body | raw }}
+                        {{ publication.anons | raw }}
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                            {{ publication.body | raw }}
+                        {% else %}
+                            <br />
+                            <br />
+                            <br />
+                            <div class="alert alert-info text-center">Для доступа к материалу, пожалуйста, <a href="{{ path('fos_user_security_login') }}" style="cursor: pointer">авторизуйтесь</a></div>
+                        {% endif %}
                         {% if publication.video.path is defined %}
                             <div style="text-align: center">
                                 <video controls style="width: 640px; height: 420px;">
@@ -95,6 +103,13 @@
                         </div>
                     </div>
                 </div>
+                {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                    <br />
+                    <br />
+                    {% include '@App/Publication/comments.html.twig'  with {'comments': publication.comments, 'id' : publication.id, 'type': 'publication' } %}
+                    <br />
+                    <br />
+                {% endif %}
             </div>
         </div>
     </div>

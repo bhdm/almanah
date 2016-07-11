@@ -569,5 +569,8 @@ class User extends BaseUser
         $this->publications = $publications;
     }
 
+    public function getName(){
+        return $this->getFirstName().' '.$this->getLastName();
+    }
 
 }
