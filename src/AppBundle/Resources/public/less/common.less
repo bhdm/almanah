@@ -13,7 +13,7 @@
     font-style: normal;
 }
 
-@color-red: #fc113c;
+@color-red: #DD0000;
 @color-white: #FFFFFF;
 @color-black: #383838;
 
@@ -50,7 +50,7 @@ body{
 
 a{
     cursor: pointer !important;
-    color: #fc113c;
+    color: @color-red;
     &:hover{
         color: #9b0d27;
     }
@@ -184,7 +184,7 @@ nav{
             float: none;
             display:table-cell;
             text-transform: @uppercase;
-            border-top: 1px solid #FC113C;
+            border-top: 1px solid @color-red;
             &:hover{
                 background: #DDD;
             }
@@ -677,7 +677,7 @@ th.prev, th.next, th.picker-switch{
 }
 nav .navbar-nav li.active a:hover{
     color: #FFFFFF;
-    background: #fc113c;
+    background: @color-red;
 }
 .ya-share2__list{
     margin-top: 2px;
@@ -686,17 +686,17 @@ nav .navbar-nav li.active a:hover{
 
 //Пагинация
 .pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
-    background-color: #fc113c;
-    border-color: #fc113c;
+    background-color: @color-red;
+    border-color: @color-red;
 }
 .pagination > li > a, .pagination > li > span{
-    color: #fc113c;
+    color: @color-red;
 }
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus{
-    color: #fc113c;
+    color: @color-red;
 }
 .pagination > li > a:hover, .pagination > li > span:hover, .pagination > li > a:focus, .pagination > li > span:focus{
-    color: #fc113c;
+    color: @color-red;
 }
 
 .publication-title a{

@@ -41,7 +41,7 @@ body {
 }
 a {
   cursor: pointer !important;
-  color: #fc113c;
+  color: #DD0000;
 }
 a:hover {
   color: #9b0d27;
@@ -86,13 +86,13 @@ h1.blue-text {
   font-family: 'HelveticaNeue-Light';
 }
 .blue-text {
-  color: #fc113c;
+  color: #DD0000;
 }
 .red {
   color: #CC0000;
 }
 .blue-icon {
-  color: #fc113c;
+  color: #DD0000;
 }
 .body {
   overflow-x: hidden;
@@ -177,14 +177,14 @@ nav .navbar-nav li {
   float: none;
   display: table-cell;
   text-transform: uppercase;
-  border-top: 1px solid #FC113C;
+  border-top: 1px solid #DD0000;
 }
 nav .navbar-nav li:hover {
   background: #DDD;
 }
 nav .navbar-nav li.active a {
   color: #FFFFFF;
-  background: #fc113c;
+  background: #DD0000;
 }
 nav .navbar-nav li a {
   padding-bottom: 8px;
@@ -192,7 +192,7 @@ nav .navbar-nav li a {
 }
 nav .navbar-nav li a:hover {
   background: none;
-  color: #fc113c;
+  color: #DD0000;
 }
 nav .navbar-nav li .submenu {
   transition: visibility 0s, opacity 0.5s ease;
@@ -226,7 +226,7 @@ nav .navbar-nav li .submenu .submenu-items li a {
   background: #DDD;
 }
 nav .navbar-nav li .submenu .submenu-items li a:hover {
-  color: #fc113c;
+  color: #DD0000;
   background: #CCC;
 }
 nav .navbar-nav li:hover .submenu {
@@ -234,10 +234,10 @@ nav .navbar-nav li:hover .submenu {
   opacity: 1;
 }
 nav .navbar-nav li:hover {
-  color: #fc113c;
+  color: #DD0000;
 }
 nav .navbar-nav li:hover a {
-  color: #fc113c;
+  color: #DD0000;
 }
 @media screen and (min-width: 768px) {
   .modal:before {
@@ -254,7 +254,7 @@ nav .navbar-nav li:hover a {
 }
 .title {
   border-bottom: 1px solid #383838;
-  color: #fc113c;
+  color: #DD0000;
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -296,7 +296,7 @@ nav .navbar-nav li:hover a {
 }
 .day.today,
 .day.today > * {
-  background: #fc113c;
+  background: #DD0000;
   color: #FFFFFF;
 }
 .claendar-tabs {
@@ -413,7 +413,7 @@ footer {
   display: inline-block;
 }
 .owl-dots .owl-dot.active {
-  background: #fc113c;
+  background: #DD0000;
 }
 .chosen-container {
   font-size: 14px;
@@ -464,7 +464,7 @@ table.table-th-bold tr th {
   font-size: 18px;
 }
 .edit-title {
-  color: #fc113c;
+  color: #DD0000;
   font-size: 16px;
   padding: 10px;
 }
@@ -503,7 +503,7 @@ th.picker-switch {
 }
 .test-question {
   font-size: 17px;
-  color: #fc113c;
+  color: #DD0000;
   font-weight: bold;
 }
 .test-answer {
@@ -556,7 +556,7 @@ th.picker-switch {
   font-size: 13px;
 }
 .item-param {
-  color: #fc113c;
+  color: #DD0000;
   font-size: 13px;
 }
 .calendar {
@@ -566,7 +566,7 @@ th.picker-switch {
 }
 .calendar .date {
   font-weight: bold;
-  color: #fc113c;
+  color: #DD0000;
   text-align: center;
   padding-bottom: 5px;
 }
@@ -601,7 +601,7 @@ th.picker-switch {
   width: 64px;
   height: 64px;
   padding-top: 15px;
-  background: #fc113c;
+  background: #DD0000;
   border-radius: 50%;
   margin-top: -80px;
   margin-left: 10px;
@@ -634,7 +634,7 @@ th.picker-switch {
 }
 nav .navbar-nav li.active a:hover {
   color: #FFFFFF;
-  background: #fc113c;
+  background: #DD0000;
 }
 .ya-share2__list {
   margin-top: 2px;
@@ -646,24 +646,24 @@ nav .navbar-nav li.active a:hover {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #fc113c;
-  border-color: #fc113c;
+  background-color: #DD0000;
+  border-color: #DD0000;
 }
 .pagination > li > a,
 .pagination > li > span {
-  color: #fc113c;
+  color: #DD0000;
 }
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #fc113c;
+  color: #DD0000;
 }
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #fc113c;
+  color: #DD0000;
 }
 .publication-title a {
   color: #222;
