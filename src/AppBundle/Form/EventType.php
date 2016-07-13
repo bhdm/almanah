@@ -62,7 +62,7 @@ class EventType extends AbstractType
                     'Активная' => true,
                     'Неактивна' => false
                 ),
-                'required'    => true,
+                'required'    => false,
                 'label' => 'Состояние'
             ));
         ;
