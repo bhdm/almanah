@@ -106,7 +106,17 @@ class DefaultController extends Controller
      * @Template()
      */
     public function feedbackAction(Request $request){
-        return [];
+        $post = false;
+        if ($request->getMethod() == 'POST'){
+            $txt = $request->request->get('name').'<br />';
+            $txt.= $request->request->get('email').'<br />';
+            $txt.= $request->request->get('phone').'<br />';
+            $txt.= $request->request->get('type').'<br />';
+            $txt.= $request->request->get('text').'<br />';
+            mail('tulupov.m@gmail.com','Сообщение с сайта', $txt);
+            $post = true;
+        }
+        return ['post' => $post];
     }
 
     /**
