@@ -57,6 +57,8 @@ class PublicationController extends Controller
     {
         $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneById($url);
         $importants =  $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['enabled' => true],['id' => 'DESC'], 3);
+
+
         return ['event' => $event, 'importants' => $importants];
     }
 
@@ -72,10 +74,12 @@ class PublicationController extends Controller
         }else{
             $category = null;
         }
-        $start = $request->query->get('start');
-        $end = $request->query->get('end');
-        $text = $request->query->get('searchtext');
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text);
+        $filter = $request->query->get('form');
+        $start = (isset($filter['start']) ? $filter['start'] : null );
+        $end =   (isset($filter['end']) ? $filter['end'] : null );
+        $text =   (isset($filter['searchtext']) ? $filter['searchtext'] : null );
+        $specialty =   (isset($filter['specialty']) ? $filter['specialty'] : null );
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text, $specialty);
 
         if ($category == null){
             $category = "Мероприятия";

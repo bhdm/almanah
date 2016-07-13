@@ -103,9 +103,10 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getQuery()->getResult();
     }
 
-    public function filter($type,$start,$end,$text){
+    public function filter($type,$start,$end,$text,$specialty){
         $qb = $this->createQueryBuilder('s');
         $qb->select('s');
+        $qb->leftJoin('s.specialties', 'spec');
         $qb->where('s.enabled = 1');
         if ($type != null){
             $qb->andWhere('s.category = :type');
@@ -120,11 +121,16 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
             $qb->andWhere('( s.start <= :dateEnd)')
                 ->setParameter('dateEnd' , $end);
         }
+        if ($specialty != null){
+            $qb->andWhere('(spec.id = :specialty)')
+                ->setParameter('specialty' , $specialty);
+        }
 
         $qb->andWhere("(s.title LIKE '%$text%' OR s.body LIKE '%$text%' OR s.adrs LIKE '%$text%')");
 
 
         $qb->orderBy('s.start', 'DESC');
+        $qb->groupBy('s.id');
         $result = $qb->getQuery()->getResult();
 
         return $result;

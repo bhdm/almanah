@@ -57,16 +57,28 @@
             </form>
         </div>
         {% for p in events %}
-            <div class="new-item">
-                <span style="padding-right: 20px; color: #888">
-                    <span class="glyphicon glyphicon-calendar"></span>
-                    {{ p.start | date('d.m.Y') }}{{ p.end != null ? ' - '~p.end | date('d.m.Y') : '' }}
-                </span>
-                <a href="{{ path('event', {'url' : p.id }) }}"><span class="new-item-title">{{ p.title }}</span></a>
-                <div class="new-item-anons">
-                    {{ p.body | anons | raw }}
+            {% if p.preview.path is defined %}
+                <div class="new-item row">
+                    <div class="col-sm-3 hidden-xs">
+                        <img src="{{ p.preview.path }}" class="img-thumbnail">
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="p-title">
+                            <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
+                        </div>
+                        <div class="new-body">{{ p.anons }}</div>
+                    </div>
                 </div>
-            </div>
+            {% else %}
+                <div class="new-item row">
+                    <div class="col-xs-12">
+                        <div class="p-title">
+                            <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
+                        </div>
+                        <div class="new-body">{{ p.anons }}</div>
+                    </div>
+                </div>
+                {% endif %}
         {% endfor %}
         <nav>
             {{ knp_pagination_render(events) }}
