@@ -27,7 +27,7 @@ class EventType extends AbstractType
             ->add('slug', null, [ 'label' => 'URL'])
             ->add('metaDescription', TextType::class, [ 'label' => 'SEO описание'])
             ->add('metaKeyword', TextType::class, [ 'label' => 'SEO ключевые слова'])
-            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
+//            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
             ->add('slider', FileType::class, [ 'label' => 'Картинка (слайдер)', 'data_class' => null, 'required' => false])
             ->add('important', ChoiceType::class, array(
                 'choices' => array(

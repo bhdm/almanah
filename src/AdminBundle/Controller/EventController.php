@@ -51,14 +51,13 @@ class EventController extends Controller{
             if ($formData->isValid()){
                 $item = $formData->getData();
 
-                $file = $item->getPreview();
-                if ($file){
-                    $filename = time(). '.'.$file->guessExtension();
-                    $file->move(
-                        __DIR__.'/../../../web/upload/event/',
-                        $filename
-                    );
-                    $item->setPreview(['path' => '/upload/event/'.$filename ]);
+                if ($request->request->get('thumbail')){
+                    $image = new \Imagick();
+                    $image->readImageBlob($this->convertBase64Image($request->request->get('thumbail')));
+                    $image->setImageFormat('png');
+                    $filename = '/upload/event/'.time().'.'.$image->getImageFormat();
+                    $image->writeImage(__DIR__.'/../../../web'.$filename);
+                    $item->setPreview(['path' => $filename]);
                 }
 
                 $file = $item->getSlider();
@@ -88,7 +87,6 @@ class EventController extends Controller{
     public function editAction(Request $request, $id){
         $em = $this->getDoctrine()->getManager();
         $item = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->findOneById($id);
-        $oldFile = $item->getPreview();
         $oldFile2 = $item->getSlider();
 
         $form = $this->createForm(EventType::class, $item);
@@ -99,16 +97,13 @@ class EventController extends Controller{
             if ($formData->isValid()){
                 $item = $formData->getData();
 
-                $file = $item->getPreview();
-                if ($file == null){
-                    $item->setPreview($oldFile);
-                }else{
-                    $filename = time(). '.'.$file->guessExtension();
-                    $file->move(
-                        __DIR__.'/../../../web/upload/event/',
-                        $filename
-                    );
-                    $item->setPreview(['path' => '/upload/event/'.$filename ]);
+                if ($request->request->get('thumbail')){
+                    $image = new \Imagick();
+                    $image->readImageBlob($this->convertBase64Image($request->request->get('thumbail')));
+                    $image->setImageFormat('png');
+                    $filename = '/upload/event/'.time().'.'.$image->getImageFormat();
+                    $image->writeImage(__DIR__.'/../../../web'.$filename);
+                    $item->setPreview(['path' => $filename]);
                 }
 
                 $file = $item->getSlider();
@@ -143,5 +138,11 @@ class EventController extends Controller{
             $em->flush();
         }
         return $this->redirect($request->headers->get('referer'));
+    }
+
+    private function convertBase64Image($base64_image_string) {
+        $splited = explode(',', substr( $base64_image_string , 5 ) , 2);
+        $data= $splited[1];
+        return base64_decode($data);
     }
 }

@@ -11,6 +11,30 @@
 {% block content %}
     <div class="well">
         {{ form_start(form) }}
+        <div class="form-group">
+            <label class="col-sm-4 control-label required">Выберите файл</label>
+            <div class="col-sm-8">
+                <div class="file-container">
+                    <input type="file" name="ImageFile" id="ImageFile" class="fileAjax" {{ edit is not defined ? 'required' : '' }} >
+                    <br />
+                    <br />
+                    <div class="fileDoc">
+                        <img src="" brightness="0" contrast="0" style="max-width: 100%;">
+                    </div>
+                    <div class="navigateFile">
+                        <button type="button" class="btn -btn-default rotateLeft"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                        <button type="button" class="btn btn-default cropImage"><span class="glyphicon glyphicon-picture"></span></button>
+                        <button type="button" class="btn -btn-default rotateRight"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                    </div>
+                    <input type="hidden" id="x1" name="x1">
+                    <input type="hidden" id="y1" name="y1">
+                    <input type="hidden" id="x2" name="x2">
+                    <input type="hidden" id="y2" name="y2">
+                    <input type="hidden" id="thumbail" name="thumbail">
+                    <input type="hidden" id="turn" name="turn" value="0">
+                </div>
+            </div>
+        </div>
         {{ form_widget(form) }}
         {{ form_end(form) }}
         </form>
