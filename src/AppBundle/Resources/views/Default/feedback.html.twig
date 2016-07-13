@@ -9,17 +9,17 @@
     {% endif %}
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
-            <form class="form-horizontal" role="form">
+            <form class="form-horizontal" role="form" method="post">
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Ваше имя</label>
                     <div class="col-sm-9">
-                        <input class="form-control" type="text" value="" name="name">
+                        <input class="form-control" type="text" value="" name="name" required>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Ваш email</label>
                     <div class="col-sm-9">
-                        <input class="form-control" type="text" value="" name="email">
+                        <input class="form-control" type="text" value="" name="email" required>
                     </div>
                 </div>
                 <div class="form-group">
@@ -41,7 +41,7 @@
                 <div class="form-group">
                     <label class="col-sm-3 control-label">Сообщение</label>
                     <div class="col-sm-9">
-                        <textarea class="form-control" name="text"></textarea>
+                        <textarea class="form-control" name="text" required></textarea>
                     </div>
                 </div>
                 <div class="form-group">
