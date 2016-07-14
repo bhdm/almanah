@@ -14,6 +14,12 @@
     <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
 {% endblock %}
 
+{% block seo %}
+    <title>{{ event.title }} </title>
+    <meta name="description" content="{{ event.metaDescription }}"/>
+    <meta name="keywords" content="{{ event.metaKeyword }}"/>
+{% endblock %}
+
 {% block content %}
     <div class="col-sm-12">
         <div class="row">
