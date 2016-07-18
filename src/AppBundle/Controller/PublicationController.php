@@ -95,8 +95,8 @@ class PublicationController extends Controller
 //        $specialt/ies = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findAll();
 
         $form = $this->createFormBuilder()
-            ->add('start', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar'],'required' => false])
-            ->add('end', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar'],'required' => false])
+            ->add('start', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата начала'],'required' => false])
+            ->add('end', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата окончания'],'required' => false])
             ->add('specialty', EntityType::class, [
                 'label' => '',
                 'class' => 'AppBundle\Entity\Specialty',
@@ -104,7 +104,7 @@ class PublicationController extends Controller
                 'placeholder' => 'Специальность',
 
             ])
-            ->add('search', TextType::class, ['label' => '', 'required' => false])
+            ->add('search', TextType::class, ['label' => '', 'required' => false, 'attr' => ['placeholder' => 'Строка поиска']])
             ->add('submit', SubmitType::class, ['label' => 'Фильтровать', 'attr' => ['class' => 'btn-primary']])
 //            ->add('button', ButtonType::class, ['label' => 'Добавить событие', 'attr' => ['class' => 'btn-primary']])
             ->getForm();
