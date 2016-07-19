@@ -7,7 +7,7 @@
         <div class="calendars">
             {% if calendars.holidays is not empty %}
                 <div>
-                    <span>праздник{{ calendars.holidays|length > 1 ? 'и' }}</span>
+                    <span>праздник {{ calendars.holidays|length > 1 ? 'и' }}</span>
                     <ul>
                         {% for c in calendars.holidays %}
                             <li><a href="#">{{ c.title }}</a></li>

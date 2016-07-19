@@ -10,6 +10,14 @@
     </style>
 {% endblock %}
 
+{% block seo %}
+    {% if standartsCategory is defined %}
+        <title>Федеральные стандарты</title>
+    {% else %}
+        <title>{{ standart.title | raw }}</title>
+    {% endif %}
+    <meta name="description" content="Все медицинские федеральные стандарты на сайте medalmanah.ru" />
+{% endblock %}
 
 {% block content %}
     {% if standartsCategory is defined %}
