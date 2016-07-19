@@ -1,10 +1,10 @@
-{% extends "FOSUserBundle::layout.html.twig" %}
+{% extends '@FOSUser/fos_layout.html.twig' %}
 
 {% block fos_user_content %}
 	<div class="greenLine"></div>
-	<div class="container forget-password">
+	<div class="panel-tab-body">
 		<div class="row">
-			<div class="col-sm-offset-5 col-sm-3">
+			<div class="col-xs-12 col-sm-8 col-sm-offset-2">
 				<div class="registration" style="margin-top: 20px;">
 					<div class="box-login">
 			            <form action="{{ path('fos_user_resetting_send_email') }}" method="POST" class="fos_user_resetting_request form-horizontal">

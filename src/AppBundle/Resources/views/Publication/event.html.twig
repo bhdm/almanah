@@ -15,8 +15,8 @@
 {% endblock %}
 
 {% block seo %}
-    <title>{{ event.title }} </title>
-    <meta name="description" content="{{ event.metaDescription }}"/>
+    <title>{{ event.start | date('d.m.Y') }}, {{ event.city }}. {{ event.title }} </title>
+    <meta name="description" content="{{ event.metaDescription }}. {{ event.start | date('d.m.Y') }}, {{ event.city }}"/>
     <meta name="keywords" content="{{ event.metaKeyword }}"/>
 {% endblock %}
 
@@ -26,7 +26,6 @@
             <div class="title"><div>{{ event.title }}</div></div>
             {% if event.preview.path is defined %}
                 <div class="col-xs-4">
-                        <img src="{{ event.preview.path }}" class="img-thumbnail">
                 </div>
             {% endif %}
             <div class="col-xs-{{ event.preview.path is defined ? '6' : '10' }}">
