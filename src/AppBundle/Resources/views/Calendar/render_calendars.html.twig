@@ -1,0 +1,119 @@
+{% if calendars.holidays is not empty %}
+    <div>
+        <span>праздник{{ calendars.holidays|length > 1 ? 'и' }}</span>
+        {% for c in calendars.holidays %}
+
+            <div class="event article{{ c.photo ? ' with-photo' }}">
+                {% if is_granted('ROLE_ADMIN') %}
+                    <a class="edit-icon" target="_blank"
+                       href="{{ path('admin_evrika_main_calendar_edit', {'id':c.id}) }}">
+                        <img src="{{ asset('bundles/app/images/icons/edit_yellow.png') }}"/>
+                    </a>
+                {% endif %}
+
+                {% if c.photo %}
+                    <div class="event-photo">
+                        <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}"><img
+                                    src="{{ c.photo.path }}"/></a>
+                    </div>
+                {% endif %}
+                <div class="event-content">
+                    <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">{{ c.title }}</a>
+
+                    {% if c.anons is not empty %}
+                        <span class="event-anons">{{ c.anons|raw }}</span>
+                        <div class="readmore">
+                            <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">[читать далее]</a>
+                        </div>
+                    {% else %}
+                        <div>{{ c.text|truncateHtml(500)|raw }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% if calendars.events is not empty %}
+    <div>
+        <span>{{ calendars.events|length == 1 ? 'историческое событие' : 'исторические события' }}</span>
+        {% for c in calendars.events %}
+
+            <div class="event article{{ c.photo ? ' with-photo' }}">
+
+                {% if c.photo %}
+                    <div class="event-photo">
+                        <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}"><img
+                                    src="{{ c.photo.path }}"/></a>
+                    </div>
+                {% endif %}
+                <div class="event-content">
+                    <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">{{ c.title }}</a>
+
+                    {% if c.anons is not empty %}
+                        <span class="event-anons">{{ c.anons|raw }}</span>
+                        <div class="readmore">
+                            <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">[читать далее]</a>
+                        </div>
+                    {% else %}
+                        <div>{{ c.text| anons | raw }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% if calendars.births is not empty %}
+    <div>
+        <span>{{ calendars.births|length == 1 ? 'родился' : 'родились' }} в этот день</span>
+        {% for c in calendars.births %}
+            <div class="event article{{ c.photo ? ' with-photo' }}">
+                {% if c.photo %}
+                    <div class="event-photo">
+                        <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}"><img
+                                    src="{{ c.photo.path }}"/></a>
+                    </div>
+                {% endif %}
+                <div class="event-content">
+                    <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">{{ c.title }}</a>
+                    {% if c.anons is not empty %}
+                        <span class="event-anons">{{ c.anons|raw }}</span>
+                        <div class="readmore">
+                            <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">[читать далее]</a>
+                        </div>
+                    {% else %}
+                        <div>{{ c.text| anons | raw }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% if calendars.deaths is not empty %}
+    <div>
+        <span>день памяти</span>
+        {% for c in calendars.deaths %}
+            <div class="event article{{ c.photo ? ' with-photo' }}">
+                {% if c.photo %}
+                    <div class="event-photo">
+                        <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}"><img
+                                    src="{{ c.photo.path }}"/></a>
+                    </div>
+                {% endif %}
+                <div class="event-content">
+                    <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">{{ c.title }}</a>
+                    {% if c.anons is not empty %}
+                        <span class="event-anons">{{ c.anons|raw }}</span>
+                        <div class="readmore">
+                            <a href="{{ path('medical_calendar_event', {'dateFormat':dateFormat,'id':c.id}) }}">[читать далее]</a>
+                        </div>
+                    {% else %}
+                        <div>{{ c.text| anons | raw }}</div>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}

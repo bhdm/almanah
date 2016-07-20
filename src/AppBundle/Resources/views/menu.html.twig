@@ -12,7 +12,16 @@
 
     <div class="collapse navbar-collapse" id="menu">
         <ul class="nav navbar-nav">
-            <li {{ app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} ><a href="{{ path('news') }}">НОВОСТИ</a></li>
+            <li {{ app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} >
+                <a href="{{ path('news') }}">ПУБЛИКАЦИИ</a>
+                <div class="submenu">
+                    <ul class="submenu-items">
+                        <li><a href="{{ path('publications_by_category',{'category': '0'}) }}">Статьи</a></li>
+                        <li><a href="{{ path('publications_by_category',{'category': '1'}) }}">Новости</a></li>
+                        <li><a href="{{ path('publications_by_category',{'category': '2'}) }}">Клинические иследования</a></li>
+                    </ul>
+                </div>
+            </li>
             <li {{ app.request.pathInfo == '/events' or app.request.pathInfo == '/events/russian-events' or app.request.pathInfo == '/events/foreign-events' ? 'class="active"' : ''}} >
                 <a href="{{ path('events_map') }}">Мероприятия</a>
                 <div class="submenu">

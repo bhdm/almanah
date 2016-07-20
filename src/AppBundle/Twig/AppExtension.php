@@ -7,11 +7,20 @@ class AppExtension extends \Twig_Extension
     {
         return array(
             new \Twig_SimpleFilter('anons', array($this, 'anonsFilter')),
+            new \Twig_SimpleFilter('truncateHtml', array($this, 'truncateHtmlFilter')),
             new \Twig_SimpleFilter('month', array($this, 'monthFilter')),
         );
     }
 
     public function anonsFilter($text)
+    {
+        mb_internal_encoding("UTF-8");
+        $text = strip_tags($text);
+        $text = mb_substr($text,0,200);
+        return $text.'...';
+    }
+
+    public function truncateHtmlFilter($text)
     {
         mb_internal_encoding("UTF-8");
         $text = strip_tags($text);

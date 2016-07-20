@@ -1,0 +1,33 @@
+<div class="calendar">
+    <div class="calendar-title">
+        <a class="calendar-prev" title="предыдущий месяц"
+           href="{{ path('medical_calendar', {'dateFormat':medcalendar.prev}) }}"><</a>
+        <span>{{ medcalendar.title }}</span>
+        <a class="calendar-next" title="следующий месяц"
+           href="{{ path('medical_calendar', {'dateFormat':medcalendar.next}) }}">></a>
+    </div>
+
+    <table>
+        <tr class="header">
+            <td>Пн</td>
+            <td>Вт</td>
+            <td>Ср</td>
+            <td>Чт</td>
+            <td>Пт</td>
+            <td>Сб</td>
+            <td>Вс</td>
+        </tr>
+        {% for row in medcalendar.days|batch(7) %}
+            <tr>
+                {% for day in row %}
+                    <td>
+                        {% if day %}
+                            <a href="{{ path('medical_calendar', {'dateFormat':medcalendar.formatByDay(day.number)}) }}"
+                               {% if day.classes is not empty %}class="{{ day.classes|join(' ') }}"{% endif %}>{{ day.number }}</a>
+                        {% endif %}
+                    </td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</div>

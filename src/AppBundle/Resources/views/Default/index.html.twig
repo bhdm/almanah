@@ -13,7 +13,7 @@
                 {% if carusel.preview.path is defined %}
                     <div class="item">
                         <div>
-                            <img src="{{ carusel.preview.path }}" title="{{ carusel.title }}">
+                            <a href="{{ path('event',{'url' : carusel.slug }) }}"><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}"></a>
                             <div class="event-date">
                                 {{ carusel.start | date('d') }}
                                 <br />

@@ -38,6 +38,27 @@ class PublicationController extends Controller
     }
 
     /**
+     * @Route("/publications/{category}", name="publications_by_category")
+     * @Template("AppBundle:Publication:news.html.twig")
+     */
+    public function publicationsAction(Request $request, $category){
+        switch ($category){
+            case 0:  $cat = '0'; break;
+            case 1:  $cat = '1'; break;
+            case 2:  $cat = '2'; break;
+            default: $cat = '2'; break;
+        }
+        $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true, 'type' => $cat ],['created' => 'DESC']);
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $news,
+            $request->query->get('page', 1),
+            15
+        );
+        return ['news' => $pagination];
+    }
+
+    /**
      * @Template("AppBundle:Publication:page.html.twig")
      */
     public function pageAction(Request $request, $url)

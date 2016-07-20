@@ -609,6 +609,7 @@ th.picker-switch {
   position: absolute;
   color: #FFF;
   text-align: center;
+  font-size: 12px;
 }
 .event-carusel-pages {
   text-align: center;

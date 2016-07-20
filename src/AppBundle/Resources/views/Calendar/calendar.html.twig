@@ -1,0 +1,43 @@
+{% extends '@App/layout.html.twig' %}
+
+{% block content %}
+    <h1 class="center">Календарь медицинских событий</h1>
+
+    {% include 'AppBundle:Calendar:render.html.twig' %}
+
+    {% if medcalendar.day %}
+        {% if medcalendar.calendars is empty %}
+            <div class="events-empty">Cобытий на этот день не найдено</div>
+        {% else %}
+            <div class="events">
+                {% include 'AppBundle:Calendar:render_calendars.html.twig' with {'calendars':medcalendar.calendars} %}
+            </div>
+        {% endif %}
+    {% endif %}
+
+    <div class="calendar-feedback">
+        Если вы хотите добавить ваше событие в календарь, вы можете
+        <a href="{{ path('feedback') }}">написать нам в редакцию</a>
+    </div>
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {#<link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/stylesheets/calendar.css') }}"/>#}
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('body').on('click', '.linkmore', function() {
+                var $link = $(this);
+                var href = $link.closest('.event-content').find('> a').attr('href');
+                $link.attr('href', href);
+            });
+        });
+    </script>
+{% endblock %}
