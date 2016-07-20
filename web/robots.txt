@@ -1,7 +1,7 @@
 User-agent: Yandex
 Disallow: /app_dev.php
 Disallow: /app.php
-Host: euat.ru
+Host: medalmanah.ru
 
 User-agent: Googlebot
 Disallow: /app_dev.php
