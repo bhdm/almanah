@@ -1,4 +1,18 @@
-# www.robotstxt.org/
-# www.google.com/support/webmasters/bin/answer.py?hl=en&answer=156449
+User-agent: Yandex
+Disallow: /app_dev.php
+Disallow: /app.php
+Host: euat.ru
+
+User-agent: Googlebot
+Disallow: /app_dev.php
+Disallow: /app.php
+
+User-agent: Slurp
+Disallow: /app_dev.php
+Disallow: /app.php
+Crawl-delay: 0.1
 
 User-agent: *
+Disallow: /app_dev.php
+Disallow: /app.php
+Sitemap: http://medalmanah.ru/sitemap.xml
