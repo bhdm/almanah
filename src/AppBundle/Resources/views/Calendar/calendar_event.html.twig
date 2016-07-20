@@ -1,5 +1,9 @@
 {% extends '@App/layout.html.twig' %}
 
+{% block seo %}
+    <title>{{ calendar.title }} | medalmanah.ru</title>
+    <meta name="description" content="{{ calendar.anons|raw }}"/>
+{% endblock %}
 
 {% block content %}
     <h1 class="center">Календарь медицинских событий</h1>

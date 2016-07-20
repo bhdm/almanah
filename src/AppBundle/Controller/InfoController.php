@@ -88,5 +88,17 @@ class InfoController extends Controller
 
         return $this->render('AppBundle:Calendar:calendar_event.html.twig', $params);
     }
-    
+
+    /**
+     * @Route("/ttt")
+     */
+    public function tttAction(){
+        for($i = 4 ; $i <= 515 ; $i ++){
+            echo "<url>\r
+    <loc>http://medalmanah.ru/now/$i</loc>\r
+    <lastmod>2016-07-20T00:00:00+01:00</lastmod>\r
+    <priority>1.0</priority>\r
+</url>\r\n";
+        }
+    }
 }
