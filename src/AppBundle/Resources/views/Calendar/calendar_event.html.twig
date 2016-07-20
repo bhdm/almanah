@@ -5,7 +5,8 @@
     <h1 class="center">Календарь медицинских событий</h1>
 
     {% include 'AppBundle:Calendar:render.html.twig' %}
-
+    <br />
+    <br />
     <div class="event article{{ calendar.photo ? ' with-photo' }}">
 
         <div class="event-header" style="display: inline;">
@@ -49,5 +50,5 @@
 
 {% block stylesheets %}
     {{ parent() }}
-    {#<link rel="stylesheet" type="text/css" href="{{ asset('bundles/evrikamain/stylesheets/calendar.css') }}"/>#}
+    <link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/css/calendar.css') }}"/>
 {% endblock %}

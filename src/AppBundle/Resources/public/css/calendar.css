@@ -1,0 +1,194 @@
+/* calendar */
+.calendar {
+    width:         700px;
+    margin:        0 auto;
+    border:        1px solid #a6c9e2;
+    padding:       3px 4px 2px;
+    border-radius: 4px;
+    font-family:   Arial, Tahoma, sans-serif;
+}
+.calendar table {
+    border-collapse: collapse;
+    width:           100%;
+}
+.calendar td {
+    padding:     1px;
+    text-align:  center;
+    width:       50px;
+    font-weight: bold;
+}
+.calendar tr.header td {
+    padding-bottom: 3px;
+}
+.calendar td a {
+    text-decoration: none;
+    background: #ffe8e8;
+    border:          1px solid #f97460;
+    color:           gray;
+    display:         block;
+    height:          30px;
+    line-height:     30px;
+}
+.calendar td a.today {
+    color: #d00;
+}
+.calendar td a:hover {
+    border: 1px solid #333;
+}
+.calendar tr td a.chosen, .calendar tr td a.chosen:hover {
+    background: #f97460;
+    /*background:   #f97460;*/
+    border-color: #DD0000;
+    color:        white;
+}
+.calendar td a.selected {
+    background: #f97460;
+    color:      #333;
+}
+.calendar-title {
+    background:    #f97460;
+    border-radius: 4px;
+    text-align:    center;
+    font-size:     16px;
+    font-weight:   bold;
+    color:         white;
+    margin-bottom: 5px;
+    word-spacing:  4px;
+    overflow:      hidden;
+    text-align:    center;
+}
+.calendar-title * {
+    height:      30px;
+    line-height: 30px;
+}
+.calendar-prev {
+    float: left;
+}
+.calendar-next {
+    float: right;
+}
+.calendar-prev, .calendar-next {
+    display:          inline-block;
+    text-decoration:  none;
+    font-weight:      bold;
+    color:            white;
+    width:            34px;
+    border-radius:    4px;
+    background-color: #DD0000;
+}
+/* events */
+.events {
+    padding: 0 20px;
+}
+.events-empty {
+    margin-top:  30px;
+    font-size:   16px;
+    font-weight: bold;
+    text-align:  center;
+    color:       gray;
+}
+.events > div {
+    margin-top: 17px;
+}
+.events > div > span {
+    display:        block;
+    color: #8b0000;
+    font-size:      19px;
+    font-weight:    400;
+    border-bottom:  1px dashed #ccc;
+    padding-bottom: 3px;
+}
+h2 {
+    color:      #8b0000;
+    margin-top: 0;
+}
+.with-photo .event-content {
+    margin-left: 0;
+}
+.event {
+    overflow: hidden;
+}
+.event-photo {
+    float:       left;
+    padding-top: 3px;
+}
+.event-photo img {
+    max-width: 130px;
+    border:    1px solid #ddd;
+}
+.event-content > a {
+    font-size:       15px;
+    font-weight:     bold;
+    text-decoration: none;
+}
+.event-table-photo img {
+    max-width: 180px;
+    border:    1px solid #ddd;
+}
+.event-content > a:hover {
+    text-decoration: underline;
+}
+.event-content p {
+    margin:    8px 0;
+    font-size: 13px;
+}
+.event-content p:first-child {
+    margin-top: 5px;
+}
+.event-header {
+    overflow:   hidden;
+    margin-top: 10px;
+}
+.event-header > a {
+    float: left;
+}
+.event-header > a > img {
+    max-width:     190px;
+    border:        1px solid #ddd;
+    margin-right:  30px;
+    margin-bottom: 10px;
+}
+.event-anons p:first-child {
+    /*float: left;*/
+}
+.with-photo .event-content {
+    margin-left: 156px;
+}
+.event-content, .event-content *, .event-text, .event-text * {
+    max-width: 640px !important;
+}
+.event-anons a, .event-text a {
+    color: #DD0000 !important;
+}
+.events .more {
+    text-align: center;
+}
+.event-anons {
+    display:    block;
+    margin-top: 7px;
+}
+/* more */
+.more {
+    text-align: center;
+    margin:     15px 0;
+}
+.linkmore, .readmore a {
+    display:         inline-block;
+    text-decoration: none;
+    font-size:       12px;
+}
+.linkmore:hover, .readmore a:hover {
+    text-decoration: underline;
+}
+.readmore {
+    margin-top: 6px;
+}
+/* feedback */
+.calendar-feedback {
+    margin-top: 20px;
+    text-align: center;
+    background: beige;
+    padding:    8px 0 9px;
+    font-size:  14px;
+    border:     1px solid rgb(213, 213, 185);
+}
