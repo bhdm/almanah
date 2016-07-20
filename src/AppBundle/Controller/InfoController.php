@@ -69,7 +69,7 @@ class InfoController extends Controller
     /** @Route("/medical-calendar/{dateFormat}/{id}", name="medical_calendar_event") */
     public function eventAction($dateFormat, $id)
     {
-        $calendar = $this->getDoctrine()->getRepository('EvrikaMainBundle:Calendar')->findOneById($id);
+        $calendar = $this->getDoctrine()->getRepository('AppBundle:Calendar')->findOneById($id);
 
         if (!$calendar) {
             throw $this->createNotFoundException();

@@ -4,12 +4,6 @@
         {% for c in calendars.holidays %}
 
             <div class="event article{{ c.photo ? ' with-photo' }}">
-                {% if is_granted('ROLE_ADMIN') %}
-                    <a class="edit-icon" target="_blank"
-                       href="{{ path('admin_evrika_main_calendar_edit', {'id':c.id}) }}">
-                        <img src="{{ asset('bundles/app/images/icons/edit_yellow.png') }}"/>
-                    </a>
-                {% endif %}
 
                 {% if c.photo %}
                     <div class="event-photo">

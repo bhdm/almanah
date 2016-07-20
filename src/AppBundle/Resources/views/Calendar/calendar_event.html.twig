@@ -1,0 +1,53 @@
+{% extends '@App/layout.html.twig' %}
+
+
+{% block content %}
+    <h1 class="center">Календарь медицинских событий</h1>
+
+    {% include 'AppBundle:Calendar:render.html.twig' %}
+
+    <div class="event article{{ calendar.photo ? ' with-photo' }}">
+
+        <div class="event-header" style="display: inline;">
+            {% if calendar.photo %}
+                <a href="{{ calendar.photo.path }}"><img src="{{ calendar.photo.path }}" itemprop="image"/></a>
+            {% endif %}
+            <h2 itemprop="name">{{ calendar.title }}</h2>
+            {% if calendar.anons is not empty %}
+                <div class="event-anons">{{ calendar.anons|raw }}</div>
+            {% endif %}
+        </div>
+
+        {% if calendar.text is not empty %}
+            <div class="event-text" itemprop="articleBody">{{ calendar.text|raw }}</div>
+        {% endif %}
+
+        {#<div class="publication_footer show small bright" style="height: 20px !important;">#}
+            {# социальные кнопки #}
+            {#{% set ogTitle = calendar.title %}#}
+            {#{% set ogDescription = calendar.text %}#}
+            {#{% set ogImage = 'http://evrika.ru'~calendar.photo.path %}#}
+            {#{% if ogTitle is defined and ogDescription is defined %}#}
+                {#{% include 'EvrikaMainBundle::share.html.twig' %}#}
+            {#{% endif %}#}
+        {#</div>#}
+    </div>
+
+    <div class="more">
+        <a href="{{ path('medical_calendar', {'dateFormat':medcalendar.date|date('d.m.Y')}) }}" class="btn-blue">
+            Календарь на {{ medcalendar.dayMonth }}
+        </a>
+    </div>
+
+    <div class="calendar-feedback">
+        Если вы хотите добавить ваше событие в календарь, вы можете
+        <a href="{{ path('feedback') }}">написать нам в редакцию</a>
+    </div>
+
+{% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+    {#<link rel="stylesheet" type="text/css" href="{{ asset('bundles/evrikamain/stylesheets/calendar.css') }}"/>#}
+{% endblock %}
