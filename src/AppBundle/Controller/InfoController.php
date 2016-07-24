@@ -2,6 +2,7 @@
 
 namespace AppBundle\Controller;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -90,15 +91,12 @@ class InfoController extends Controller
     }
 
     /**
-     * @Route("/ttt")
+     * @Route("/test-mail", name="test_mail")
+     * @Template("AppBundle:Info:test_mail.html.twig")
      */
-    public function tttAction(){
-        for($i = 4 ; $i <= 515 ; $i ++){
-            echo "<url>\r
-    <loc>http://medalmanah.ru/now/$i</loc>\r
-    <lastmod>2016-07-20T00:00:00+01:00</lastmod>\r
-    <priority>1.0</priority>\r
-</url>\r\n";
-        }
+    public function testMailAction(){
+        return [];
     }
+
+
 }
