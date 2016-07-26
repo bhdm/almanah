@@ -135,4 +135,19 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
 
         return $result;
     }
+
+    public function findImmediate(){
+        $now = new \DateTime();
+        $now = $now->format('Y-m-d').' 23:59:59';
+        $qb = $this->createQueryBuilder('e');
+        $qb->select('e');
+        $qb->where('e.enabled = true');
+        $qb->andWhere('e.start >= :now');
+        $qb->orderBy('e.start', 'ASC');
+        $qb->setMaxResults(5);
+        $qb->setParameter(':now',$now);
+        $result = $qb->getQuery()->getResult();
+
+        return $result;
+    }
 }

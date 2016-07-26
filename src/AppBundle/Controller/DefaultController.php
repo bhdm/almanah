@@ -96,7 +96,7 @@ class DefaultController extends Controller
      * @Route("/upcoming-events")
      */
     public function getUpcomingEventsAction(){
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=> true],[], 5);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findImmediate(5);
 
         return $this->render('AppBundle:Widget:upcomingEvents.html.twig', ['events' => $events]);
     }
