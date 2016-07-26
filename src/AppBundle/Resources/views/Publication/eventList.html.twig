@@ -62,6 +62,7 @@
                         <img src="{{ p.preview.path }}" class="img-thumbnail">
                     </div>
                     <div class="col-xs-12 col-sm-9">
+                        <div class="p-date">{{ p.start | date('d.m.Y') }} - {{ p.end | date('d.m.Y') }}</div>
                         <div class="p-title">
                             <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
                         </div>
