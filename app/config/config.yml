@@ -87,6 +87,9 @@ fos_user:
     db_driver: orm
     firewall_name: main
     user_class: AppBundle\Entity\User
+    from_email:
+        address:        mailer@medalmanah.ru
+        sender_name:    medalmanah.ru
     registration:
         confirmation:
             enabled:    true
