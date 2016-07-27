@@ -103,6 +103,18 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1">
+                        <h3>Интересные публикации:</h3>
+                        <ul>
+                            {% for fp in featuredPublications  %}
+                                <li><a href="{{ path('publications',{'url' : fp.slug }) }}" target="_blank">{{ fp.title }}</a></li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <br />
                     <br />

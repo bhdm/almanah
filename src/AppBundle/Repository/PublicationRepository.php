@@ -72,4 +72,29 @@ class PublicationRepository extends \Doctrine\ORM\EntityRepository
         return $result;
     }
 
+    public function findFeaturedPublications(\DateTime $date, $specialties, $limit){
+        $specialtyFilter = '';
+        foreach ($specialties as $spec){
+            $specialtyFilter .= '( specialties.id =  '.$spec->getId().' )';
+            $specialtyFilter .=  ' OR ';
+        }
+        $specialtyFilter = substr($specialtyFilter, 0, -4);
+
+        $qb = $this->createQueryBuilder('p');
+        $qb->select('p');
+        $qb->leftJoin('p.specialties','specialties');
+        $qb->where('p.enabled = true');
+        $qb->andWhere($specialtyFilter);
+        $qb->andWhere('p.created <= :date');
+
+        $qb->setParameter(':date', $date->format('Y-m-d').' 23:59:59');
+
+        $qb->groupBy('p.id');
+        $qb->orderBy('p.created', 'DESC');
+        $qb->setMaxResults($limit);
+        $result = $qb->getQuery()->getResult();
+
+        return $result;
+    }
+
 }

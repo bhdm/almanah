@@ -34,7 +34,12 @@ class PublicationController extends Controller
                 return $this->redirect($this->generateUrl('publications',['url' => $publication->getSlug()]));
             }
         }
-        return ['publication' => $publication];
+        # Теперь находим 5 последних публикаций той же специальности,
+        # которые были написаны до текущей
+        $date = $publication->getCreated();
+        $featuredPublications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findFeaturedPublications($date, $publication->getSpecialties(), 5);
+
+        return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
     }
 
     /**
