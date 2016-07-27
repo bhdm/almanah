@@ -105,11 +105,15 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xs-10 col-xs-offset-1">
+                    <div class="col-xs-11 col-xs-offset-1">
                         <h3>Интересные публикации:</h3>
                         <ul>
                             {% for fp in featuredPublications  %}
-                                <li><a href="{{ path('publications',{'url' : fp.slug }) }}" target="_blank">{{ fp.title }}</a></li>
+                                {% if fp.slug != null %}
+                                    <li><a href="{{ path('publications',{'url' : fp.slug }) }}" target="_blank">{{ fp.title }}</a></li>
+                                {% else %}
+                                    <li><a href="{{ path('publications',{'url' : fp.id }) }}" target="_blank">{{ fp.title }}</a></li>
+                                {% endif %}
                             {% endfor %}
                         </ul>
                     </div>
