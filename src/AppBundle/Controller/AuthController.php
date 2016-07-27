@@ -137,4 +137,79 @@ class AuthController extends Controller
             'form' => $form->createView()
         ));
     }
+
+    public function registerAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        /** @var $formFactory \FOS\UserBundle\Form\Factory\FactoryInterface */
+        $formFactory = $this->get('fos_user.registration.form.factory');
+        /** @var $userManager \FOS\UserBundle\Model\UserManagerInterface */
+        $userManager = $this->get('fos_user.user_manager');
+        /** @var $dispatcher \Symfony\Component\EventDispatcher\EventDispatcherInterface */
+        $dispatcher = $this->get('event_dispatcher');
+
+        $user = $userManager->createUser();
+        $user->setEnabled(true);
+
+        $event = new GetResponseUserEvent($user, $request);
+        $dispatcher->dispatch(FOSUserEvents::REGISTRATION_INITIALIZE, $event);
+
+        if (null !== $event->getResponse()) {
+            return $event->getResponse();
+        }
+
+        $form = $formFactory->createForm();
+        $form->setData($user);
+
+        $form->handleRequest($request);
+
+        //city
+        if ($user->getCity()) {
+            $cityTitle = $user->getCity();
+            $city = $this->getDoctrine()->getRepository('AppBundle:City')->findOneByTitle($cityTitle);
+            if ($city === null) {
+                $city = new City();
+                $city->setTitle($cityTitle);
+                $city->setCountry($user->getCountry());
+                $em->persist($city);
+                $em->flush($city);
+                $em->refresh($city);
+            }
+            $user->setCity($city);
+
+        }
+// end set city
+        if ($form->isValid()) {
+
+            $event = new FormEvent($form, $request);
+            $dispatcher->dispatch(FOSUserEvents::REGISTRATION_SUCCESS, $event);
+
+            $userManager->updateUser($user);
+
+
+            if (null === $response = $event->getResponse()) {
+                $url = $this->generateUrl('fos_user_registration_confirmed');
+                $response = new RedirectResponse($url);
+            }
+
+            $dispatcher->dispatch(FOSUserEvents::REGISTRATION_COMPLETED, new FilterUserResponseEvent($user, $request, $response));
+
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Пользователь Зарегистрировался')
+                ->setFrom('mailer@medalmanah.ru')
+                ->setTo('tm@medalmanah.ru')
+                ->setBody(
+                    $this->container->get('templating')->render('@App/Mail/setNewRegister.html.twig', array('user' => $user)),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+
+            return $response;
+        }
+
+        return $this->render('FOSUserBundle:Registration:register.html.twig', array(
+            'form' => $form->createView(),
+        ));
+    }
 }

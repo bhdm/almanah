@@ -1,0 +1,14 @@
+Пользователь зарегистрировался на портале
+<br />
+<b><a href="{{ url('admin_user_edit',{'id' : user.id }) }}">{{ user }}</a></b>
+<br />
+<table>
+    <tr><td>ФИО:</td><td>{{ user.lastName }} {{ user.firstName }} {{ user.surName }}</td></tr>
+    <tr><td>Дата рождения:</td><td>{{ user.birthdate|date('d.m.Y') }}</td></tr>
+    <tr><td>Город:</td><td>{{ user.city ? user.city.title : ''}}</td></tr>
+    <tr><td>Специальности:</td><td>{{ user.specialty }}</td></tr>
+    <tr><td>ВУЗ:</td><td>{{ user.university }}</td></tr>
+    <tr><td>Место работы:</td><td>{{ user.workPlaceTitle }}</td></tr>
+    <tr><td>Занимаемая должность:</td><td>{{ user.workPost }}</td></tr>
+    <tr><td>Контактный телефон:</td><td>{{ user.phone }}</td></tr>
+</table>
