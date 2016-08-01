@@ -51,7 +51,8 @@ class DigestCommand extends ContainerAwareCommand
             return;
         }
 
-        $emails = ['tulupov.m@gmail.com'];
+        include 'emails.php';
+//        $emails = ['tulupov.m@gmail.com'];
         $doctors = $emails;
 
         # рассылка по 100 пользователям за цикл
