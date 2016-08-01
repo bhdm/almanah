@@ -104,20 +104,22 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-xs-11 col-xs-offset-1">
-                        <h3>Интересные публикации:</h3>
-                        <ul>
-                            {% for fp in featuredPublications  %}
-                                {% if fp.slug != null %}
-                                    <li><a href="{{ path('publications',{'url' : fp.slug }) }}" target="_blank">{{ fp.title }}</a></li>
-                                {% else %}
-                                    <li><a href="{{ path('publications',{'url' : fp.id }) }}" target="_blank">{{ fp.title }}</a></li>
-                                {% endif %}
-                            {% endfor %}
-                        </ul>
+                {% if featuredPublications != null and featuredPublications  %}
+                    <div class="row">
+                        <div class="col-xs-11 col-xs-offset-1">
+                            <h3>Интересные публикации:</h3>
+                            <ul>
+                                {% for fp in featuredPublications  %}
+                                    {% if fp.slug != null %}
+                                        <li><a href="{{ path('publications',{'url' : fp.slug }) }}" target="_blank">{{ fp.title }}</a></li>
+                                    {% else %}
+                                        <li><a href="{{ path('publications',{'url' : fp.id }) }}" target="_blank">{{ fp.title }}</a></li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
+                        </div>
                     </div>
-                </div>
+                {% endif %}
 
                 {% if is_granted('IS_AUTHENTICATED_FULLY') %}
                     <br />
