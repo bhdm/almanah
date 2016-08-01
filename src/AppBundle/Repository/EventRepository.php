@@ -104,6 +104,14 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
     }
 
     public function filter($type,$start,$end,$text,$specialty){
+        if ($start == null){
+            $start = new \DateTime();
+            $start = $start->format('Y-m-d').' 00:00:00';
+        }
+        if ($end == null){
+            $end = new \DateTime();
+            $end = $end->format('Y-m-d').' 00:00:00';
+        }
         $qb = $this->createQueryBuilder('s');
         $qb->select('s');
         $qb->leftJoin('s.specialties', 'spec');
