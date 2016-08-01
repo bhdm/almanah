@@ -73,6 +73,9 @@ class PublicationRepository extends \Doctrine\ORM\EntityRepository
     }
 
     public function findFeaturedPublications(\DateTime $date, $specialties, $limit){
+        if ($specialties == null){
+            return [];
+        }
         $specialtyFilter = '';
         foreach ($specialties as $spec){
             $specialtyFilter .= '( specialties.id =  '.$spec->getId().' )';
