@@ -10,7 +10,7 @@ class DigestCommand extends ContainerAwareCommand
 {
     protected $sendTo; # doctor # test@test@test.ru
     protected $subject = 'Открытие портала медицинских событий';
-    protected $template = 'AppBundle:Delivery:test.html.twig';
+    protected $template = 'AppBundle:Mail:delivery.html.twig';
     protected $deliveryName = 'Delivery-1';
 
     protected function configure()
@@ -83,7 +83,7 @@ class DigestCommand extends ContainerAwareCommand
         $mail->From     = 'mailer@medalmanah.ru';
         $mail->FromName = 'Альманах медицинских событий';
         $mail->Host     = 'smtp.yandex.ru';
-        $mail->Username = 'mailer@euat.ru';
+        $mail->Username = 'mailer@medalmanah.ru';
         $mail->Password = 'A3245897a';
         $mail->SMTPAuth = true;
         $mail->Port     = 465;

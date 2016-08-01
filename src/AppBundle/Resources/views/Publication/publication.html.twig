@@ -59,7 +59,11 @@
                             <br />
                             <br />
                             <br />
-                            <div class="alert alert-info text-center">Для доступа к материалу, пожалуйста, <a href="{{ path('fos_user_security_login') }}" style="cursor: pointer">авторизуйтесь</a></div>
+                            <div class="alert alert-info text-center">Для доступа к материалу, пожалуйста,
+                                <a href="{{ path('fos_user_security_login') }}" style="cursor: pointer">авторизуйтесь</a>
+                                или
+                                <a href="{{ path('fos_user_registration_register') }}" style="cursor: pointer">зарегистрируйтесь</a>
+                            </div>
                         {% endif %}
                         {% if publication.video.path is defined %}
                             <div style="text-align: center">
