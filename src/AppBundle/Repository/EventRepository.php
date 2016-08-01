@@ -129,7 +129,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         $qb->andWhere("(s.title LIKE '%$text%' OR s.body LIKE '%$text%' OR s.adrs LIKE '%$text%')");
 
 
-        $qb->orderBy('s.start', 'DESC');
+        $qb->orderBy('s.start', 'ASC');
         $qb->groupBy('s.id');
         $result = $qb->getQuery()->getResult();
 
