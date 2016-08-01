@@ -3,9 +3,11 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\City;
+use AppBundle\Entity\Unfollow;
 use AppBundle\Entity\University;
 
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -211,5 +213,20 @@ class AuthController extends Controller
         return $this->render('FOSUserBundle:Registration:register.html.twig', array(
             'form' => $form->createView(),
         ));
+    }
+
+    /**
+     * @Route("/unfollow", name="unfollow")
+     * @Template("")
+     */
+    public function unfollowAction(Request $request){
+        $email = $request->query->get('email');
+
+        $unfollow = new Unfollow();
+        $unfollow->setTitle($email);
+        $this->getDoctrine()->getManager()->persist($unfollow);
+        $this->getDoctrine()->getManager()->flush($unfollow);
+
+        return [];
     }
 }
