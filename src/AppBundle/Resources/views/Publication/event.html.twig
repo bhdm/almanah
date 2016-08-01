@@ -26,11 +26,11 @@
             <div class="title"><div>{{ event.title }}</div></div>
             {% if event.preview.path is defined %}
                 <div class="col-xs-4">
-                    <img src="{{ publication.preview.path }}"
+                    <img src="{{ event.preview.path }}"
                          style="max-width: 250px; float: left; margin: 0 20px 10px 10px"
                          class="img-thumbnail"
-                         alt="{{ publication.title }}"
-                         title="{{ publication.title }}"
+                         alt="{{ event.title }}"
+                         title="{{ event.title }}"
                          itemprop="image"
                     />
                 </div>
