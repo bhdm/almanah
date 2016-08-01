@@ -23,7 +23,7 @@
                 </div>
             </li>
             <li {{ app.request.pathInfo == '/events' or app.request.pathInfo == '/events/russian-events' or app.request.pathInfo == '/events/foreign-events' ? 'class="active"' : ''}} >
-                <a href="{{ path('events_map') }}">Мероприятия</a>
+                <a href="#">Мероприятия</a>
                 <div class="submenu">
                     <ul class="submenu-items">
                         <li><a href="{{ path('events',{'url': 'russian-events'}) }}">Российские</a></li>
