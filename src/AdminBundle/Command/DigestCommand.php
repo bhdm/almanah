@@ -87,7 +87,7 @@ class DigestCommand extends ContainerAwareCommand
         $mail->Username = 'mailer';
         $mail->Password = '3245897';
         $mail->SMTPAuth = true;
-        $mail->Port     = 465;
+        $mail->Port     = 25;
         $mail->Subject  = $subject;
         $mail->Body     = $body;
         $mail->addAddress($email, $to);
