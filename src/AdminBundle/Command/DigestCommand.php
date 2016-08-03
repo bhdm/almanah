@@ -76,7 +76,7 @@ class DigestCommand extends ContainerAwareCommand
     {
         $mail = new \PHPMailer();
 
-//        $mail->isSMTP();
+        $mail->isSMTP();
         $mail->isHTML(true);
         $mail->SMTPDebug = 2;
         $mail->SMTPSecure = 'ssl';
@@ -85,7 +85,7 @@ class DigestCommand extends ContainerAwareCommand
         $mail->FromName = 'Альманах медицинских событий';
         $mail->Host     = '127.0.0.1';
         $mail->Username = 'mailer';
-        $mail->Password = 'A3245897a';
+        $mail->Password = '3245897';
         $mail->SMTPAuth = true;
         $mail->Port     = 25;
         $mail->Subject  = $subject;
