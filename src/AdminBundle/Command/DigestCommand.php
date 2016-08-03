@@ -76,7 +76,7 @@ class DigestCommand extends ContainerAwareCommand
     {
         $mail = new \PHPMailer();
 
-        $mail->isSMTP();
+//        $mail->isSMTP();
         $mail->isHTML(true);
         $mail->SMTPDebug = 2;
         $mail->SMTPSecure = '';
