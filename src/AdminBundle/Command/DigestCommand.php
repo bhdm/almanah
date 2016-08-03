@@ -85,7 +85,7 @@ class DigestCommand extends ContainerAwareCommand
         $mail->FromName = 'Альманах медицинских событий';
         $mail->Host     = '127.0.0.1';
         $mail->Username = 'mailer';
-        $mail->Password = '3245897';
+        $mail->Password = 'A3245897a';
         $mail->SMTPAuth = true;
         $mail->Port     = 25;
         $mail->Subject  = $subject;
