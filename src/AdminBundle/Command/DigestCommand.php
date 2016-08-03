@@ -83,9 +83,9 @@ class DigestCommand extends ContainerAwareCommand
         $mail->CharSet  = 'UTF-8';
         $mail->From     = 'mailer@medalmanah.ru';
         $mail->FromName = 'Альманах медицинских событий';
-        $mail->Host     = 'smtp.yandex.ru';
+        $mail->Host     = '127.0.0.1';
         $mail->Username = 'mailer@medalmanah.ru';
-        $mail->Password = 'A3245897a';
+        $mail->Password = '3245897';
         $mail->SMTPAuth = true;
         $mail->Port     = 465;
         $mail->Subject  = $subject;
