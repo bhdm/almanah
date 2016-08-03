@@ -78,7 +78,7 @@ class DigestCommand extends ContainerAwareCommand
 
         $mail->isSMTP();
         $mail->isHTML(true);
-        $mail->SMTPDebug = 0;
+        $mail->SMTPDebug = 2;
         $mail->SMTPSecure = 'ssl';
         $mail->CharSet  = 'UTF-8';
         $mail->From     = 'mailer@medalmanah.ru';
