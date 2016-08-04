@@ -65,7 +65,7 @@ class DigestCommand extends ContainerAwareCommand
             $error = $this->send($email, $to, $html, $this->subject);
             $output->writeln($error);
             $output->writeln($email);
-            if ($i && ($i % 30) == 0) {
+            if ($i && ($i % 100) == 0) {
                 sleep(random_int(60,180));
             }
         }
@@ -78,7 +78,7 @@ class DigestCommand extends ContainerAwareCommand
 
         $mail->isSMTP();
         $mail->isHTML(true);
-        $mail->SMTPDebug = 2;
+        $mail->SMTPDebug = 0;
         $mail->SMTPSecure = 'tls';
         $mail->CharSet  = 'UTF-8';
         $mail->From     = 'mailer@medalmanah.ru';
