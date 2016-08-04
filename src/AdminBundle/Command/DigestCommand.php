@@ -79,14 +79,14 @@ class DigestCommand extends ContainerAwareCommand
         $mail->isSMTP();
         $mail->isHTML(true);
         $mail->SMTPDebug = 2;
-        $mail->SMTPSecure = 'ssl';
+        $mail->SMTPSecure = 'tls';
         $mail->CharSet  = 'UTF-8';
         $mail->From     = 'mailer@medalmanah.ru';
         $mail->FromName = 'Альманах медицинских событий';
-        $mail->Host     = '127.0.0.1';
+        $mail->Host     = 'localhost';
         $mail->Username = 'mailer';
         $mail->Password = '3245897';
-        $mail->SMTPAuth = true;
+        $mail->SMTPAuth = false;
         $mail->Port     = 25;
         $mail->Subject  = $subject;
         $mail->Body     = $body;
