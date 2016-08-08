@@ -65,9 +65,9 @@ class DigestCommand extends ContainerAwareCommand
 			SELECT e.id, e.email
 			FROM AppBundle:Email e
 			WHERE e.sent = false
-            ORDER BY e.email ASC
-            LIMIT '.$i.', 100  
-		')
+            ORDER BY e.email ASC            
+		')      ->setFirstResult($i)
+                ->setmaxresults(100)
                 ->getResult();
 
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
