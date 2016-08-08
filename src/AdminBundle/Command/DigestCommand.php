@@ -74,9 +74,10 @@ class DigestCommand extends ContainerAwareCommand
                 dump($doctors[$j]);
                 $updateDoctor   = $pdo->prepare('UPDATE email SET sent=1 WHERE id = '.$doctors[$j]['id']);
                 $updateDoctor->execute();
+
                 $html = $templating->render($this->template, array('email' => $doctors[$j]['email'], 'id' => $doctors[$j]['id']));
-                $email = $doctors[$j];
-                $to    = $doctors[$j];
+                $email = $doctors[$j]['email'];
+                $to    = $doctors[$j]['email'];
 
                 $error = $this->send($email, $to, $html, $this->subject);
                 $output->writeln($error);
