@@ -1,20 +1,23 @@
 <?php
-
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\Validator\Constraints as Assert;
 
-/** @ORM\Entity @ORM\Table(name="email") */
+/**
+ * @ORM\Entity
+ * @ORM\Table(name="email")
+ */
 class Email
 {
-    /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue */
+    /**
+     * @ORM\Id @ORM\Column(type="integer")
+     * @ORM\GeneratedValue
+     */
     protected $id;
 
     /**
      * @ORM\Column(type = "string", unique = true)
-     * @Assert\NotBlank(message = "Введите e-mail")
-     * @Assert\Email(message = "Некорректный e-mail")
      */
     protected $email;
 
