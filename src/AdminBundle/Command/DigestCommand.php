@@ -54,7 +54,7 @@ class DigestCommand extends ContainerAwareCommand
 
         $total = $em->createQuery('
 			SELECT COUNT(e.id)
-			FROM AppBundle:Mail e
+			FROM AppBundle:Email e
 			WHERE e.sent = false
 		')->getSingleScalarResult();
 
@@ -63,7 +63,7 @@ class DigestCommand extends ContainerAwareCommand
 
             $doctors = $em->createQuery('
 			SELECT e.id, e.email
-			FROM AppBundle:Mail e
+			FROM AppBundle:Email e
 			WHERE e.sent = false
             ORDER BY email ASC
             
