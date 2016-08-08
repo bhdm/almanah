@@ -41,7 +41,7 @@ class DigestCommand extends ContainerAwareCommand
         # тестовый режим
         if (strpos($this->sendTo, '@') !== false) {
 
-            $html =  $templating->render($this->template, ['email' => $this->sendTo]);
+            $html =  $templating->render($this->template, ['email' => $this->sendTo, 'id' => '2']);
             $email = $this->sendTo;
             $to    = $this->sendTo;
             $error = $this->send($email, $to, $html, $this->subject, true);
@@ -51,23 +51,38 @@ class DigestCommand extends ContainerAwareCommand
             return;
         }
 
-        include 'emails.php';
-//        $emails = ['tulupov.m@gmail.com'];
-        $doctors = $emails;
+
+        $total = $em->createQuery('
+			SELECT COUNT(e.id)
+			FROM AppBundle:Mail e
+			WHERE e.sent = false
+		')->getSingleScalarResult();
 
         # рассылка по 100 пользователям за цикл
-        for ($i = 0, $c = count($doctors); $i < $c; $i++) {
-            $html = $templating->render($this->template, array('email' => $doctors[$i]));
+        for ($i = 0 ; $i < $total; $i+=100) {
 
-            $email = $doctors[$i];
-            $to    = $doctors[$i];
+            $doctors = $em->createQuery('
+			SELECT e.id, e.email
+			FROM AppBundle:Mail e
+			WHERE e.sent = false
+            ORDER BY email ASC
+            
+		')      ->setFirstResult($i)
+                ->setmaxresults(100)
+                ->getResult();
 
-            $error = $this->send($email, $to, $html, $this->subject);
-            $output->writeln($error);
-            $output->writeln($email);
-            if ($i && ($i % 100) == 0) {
-                sleep(random_int(60,180));
+            for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
+                $updateDoctor   = $pdo->prepare('UPDATE email SET sent=1 WHERE id = '.$doctors[$i]['id']);
+                $updateDoctor->execute();
+                $html = $templating->render($this->template, array('email' => $doctors[$i]['email'], 'id' => $doctors[$i]['id']));
+                $email = $doctors[$i];
+                $to    = $doctors[$i];
+
+                $error = $this->send($email, $to, $html, $this->subject);
+                $output->writeln($error);
+                $output->writeln($email);
             }
+            sleep(random_int(60,180));
         }
 
     }
