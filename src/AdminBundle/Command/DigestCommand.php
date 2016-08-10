@@ -59,7 +59,7 @@ class DigestCommand extends ContainerAwareCommand
 		')->getSingleScalarResult();
 
         # рассылка по 100 пользователям за цикл
-        for ($i = 0 ; $i < $total; $i+=100) {
+        for ($i = 0 ; $i < $total; $i+=200) {
 
             $doctors = $em->createQuery('
 			SELECT e.id, e.email
@@ -67,7 +67,7 @@ class DigestCommand extends ContainerAwareCommand
 			WHERE e.sent = false
             ORDER BY e.email ASC            
 		')      ->setFirstResult($i)
-                ->setmaxresults(100)
+                ->setmaxresults(200)
                 ->getResult();
 
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
