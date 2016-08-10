@@ -52,10 +52,10 @@
                         />
                     {% endif %}
                     <div itemprop="description">
-                        {{ publication.anons | raw }}
-                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                        {% if is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true %}
                             {{ publication.body | raw }}
                         {% else %}
+                            {{ publication.anons | raw }}
                             <br />
                             <br />
                             <br />
