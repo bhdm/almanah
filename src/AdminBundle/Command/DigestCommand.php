@@ -54,7 +54,7 @@ class DigestCommand extends ContainerAwareCommand
 
         $total = $em->createQuery('
 			SELECT COUNT(e.id)
-			FROM AppBundle:Email e
+			FROM AppBundle:Email2 e
 			WHERE e.sent = false
 		')->getSingleScalarResult();
 
@@ -63,7 +63,7 @@ class DigestCommand extends ContainerAwareCommand
 
             $doctors = $em->createQuery('
 			SELECT e.id, e.email
-			FROM AppBundle:Email e
+			FROM AppBundle:Email2 e
 			WHERE e.sent = false
             ORDER BY e.email ASC            
 		')      ->setFirstResult($i)
@@ -72,7 +72,7 @@ class DigestCommand extends ContainerAwareCommand
 
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
-                $updateDoctor   = $pdo->prepare('UPDATE email SET sent=1 WHERE id = '.$doctors[$j]['id']);
+                $updateDoctor   = $pdo->prepare('UPDATE email2 SET sent=1 WHERE id = '.$doctors[$j]['id']);
                 $updateDoctor->execute();
 
                 $html = $templating->render($this->template, array('email' => $doctors[$j]['email'], 'id' => $doctors[$j]['id']));
