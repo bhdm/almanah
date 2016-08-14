@@ -717,3 +717,82 @@ nav .navbar-nav li.active a:hover{
     text-decoration: underline;
 }
 
+.navbar-toggle .icon-bar {
+    background: @color-red;
+}
+
+@media screen and (max-width: 991px) {
+    .rightbanner{
+        text-align: center;
+    }
+    .slider{
+        display: none;
+    }
+    .navbar-header{
+        //margin-top: -100px;
+    }
+    #menu{
+        //margin-top: 50px;
+    }
+    nav{
+        padding-left: 20px;
+    }
+    nav .navbar-nav li{
+        display: block;
+    }
+    .navbar-collapse.in{
+        overflow-y: hidden;
+        height: auto;
+        //max-height: 500px;
+    }
+    nav .navbar-nav{
+        border: 0
+    }
+    nav .navbar-nav li:not(:last-child){
+        border: 0;
+    }
+    nav .navbar-nav li{
+        border: 0;
+        a{
+            font-weight: bold;
+            text-align: left;
+            color: @color-red;
+            background: @color-white;
+        }
+        &:hover{
+            color: @color-red;
+            background: @color-white;
+            a{
+                color: @color-red;
+                background: @color-white;
+            }
+        }
+        border: 0;
+        .submunu{
+            background: #FFF;
+            position: relative;
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            border: 0;
+            ul{
+                margin-left: 40px;
+                border: 0;
+                li{
+                    border: 0;
+                    background: #FFF;
+                    a{
+                        color: @color-red;
+                        background: @color-white;
+                        font-weight: normal;
+                    }
+                    a:hover{
+                        color: @color-red;
+                        background: @color-white;
+                    }
+                }
+            }
+        }
+    }
+
+}

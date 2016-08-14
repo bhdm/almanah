@@ -2,6 +2,10 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
+    <meta name="robots" content="index, follow"/>
+    <link rel="canonical" href="http://euat.ru{{ app.request.pathInfo }}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     {% block social %}{% endblock %}
     {% block javascript %}
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
@@ -85,7 +89,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-xs-6 text-right">
+                <div class="col-xs-6 text-right hidden-sm hidden-xs">
                     <form class="navbar-form navbar-right" role="search" action="{{ path('search') }}">
                         <div class="form-group">
                             <input type="text" class="form-control" id="search" placeholder="Поиск событий" name="search">
@@ -93,7 +97,7 @@
                         <button type="submit" class="btn btn-primary" style="margin-left: -4px;">Найти</button>
                     </form>
                 </div>
-                <div class="col-xs-3">
+                <div class="col-xs-3 hidden-sm hidden-xs">
                     {% if app.user != null %}
                         <div class="navbar-form navbar-right">
                             <div class="dropdown">
@@ -124,7 +128,7 @@
             </div>
         </header>
         {% if app.request.attributes.get('_route') == 'homepage' %}
-            <div class="slider ">
+            <div class="slider hidden-sm hidden-xs">
                 {{ render(controller("AppBundle:Default:carusel" )) }}
             </div>
         {% endif %}
@@ -134,14 +138,14 @@
 
         {% endblock %}
         <div class="table-layout">
-            <div class="table-cell col-fixed-300">{{ render(controller('AppBundle:Default:getUpcomingEvents')) }}</div>
+            <div class="table-cell col-fixed-300 hidden-xs hidden-sm">{{ render(controller('AppBundle:Default:getUpcomingEvents')) }}</div>
             <div class="table-cell col-center">
                 <div class="content">
                     {% block content %}
                     {% endblock %}
                 </div>
             </div>
-            <div class="table-cell col-fixed-240 hidden-xs">
+            <div class="table-cell col-fixed-240 hidden-xs hidden-sm">
                 <div class="text-left">
                     {{ render(controller("AppBundle:Widget:importants" )) }}
                     {#{{ render(controller("AppBundle:Widget:banner" )) }}#}
@@ -151,7 +155,7 @@
     </div>
     <footer>
         <div class="row footer1">
-            <div class="col-xs-offset-1 col-xs-5" style="border-right: 1px solid #fc113c ">
+            <div class="col-md-offset-1 col-md-5 col-xs-12" style="border-right: 1px solid #fc113c ">
                 <div class="social text-center">
                     <br />
                     <br />
@@ -169,7 +173,7 @@
                 </div>
                 <div class="contacts row">
                     <br /><br />
-                    <div class="col-xs-offset-1 col-xs-2">
+                    <div class="col-md-offset-1 col-xs-2">
                         <img src="{{ asset('bundles/app/images/icons/geo.png') }}" class="contact-icon" style="margin-top: -8px;" alt="Контакты">
                     </div>
                     <div class="col-xs-9">
@@ -180,8 +184,11 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xs-6" style="padding-left: 65px">
+            <div class="col-md-6 col-xs-12" style="padding-left: 65px">
                 <div>
+                    <div class="hidden-md hidden-lg">
+                        <br />
+                    </div>
                     <ul class="footer-other">
                         <li>
                             <a href="{{ path('page',{'url' : 'about'}) }}">О НАС</a>
@@ -196,10 +203,7 @@
                             <a href="{{ path('page',{'url' : 'partners'}) }}">ПАРТНЕРЫ</a>
                         </li>
                         <li>
-                            <a href="{{ path('page',{'url' : 'contacts'}) }}">КОНТАКТЫ</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('page',{'url' : 'feedback'}) }}">ОБРАТНАЯ СВЯЗЬ</a>
+                            <a href="{{ path('feedback') }}">ОБРАТНАЯ СВЯЗЬ</a>
                         </li>
                     </ul>
                 </div>
