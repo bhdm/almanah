@@ -132,7 +132,7 @@ class DefaultController extends Controller
      * @Route("/getXml")
      */
     public function getXmlAction(){
-        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy([],[],['created' => 'ASC']);
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy([],['created' => 'ASC']);
         foreach ($publications as $publication){
             echo "<url>\n";
             echo "<loc>https://medalmanah.ru/news/".($publication->getSlug() ? $publication->getSlug() : $publication->getId())."</loc>\n";
@@ -141,7 +141,7 @@ class DefaultController extends Controller
             echo "</url>";
         }
 
-        $publications = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy([],[],['created' => 'ASC']);
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy([],['created' => 'ASC']);
         foreach ($publications as $publication){
             echo "<url>\n";
             echo "<loc>https://medalmanah.ru/event/".$publication->getId()."</loc>\n";
