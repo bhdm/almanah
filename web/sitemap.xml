@@ -1,5064 +1,4796 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 		<!--	created with www.mysitemapgenerator.com	-->
-		<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+		<urlset xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9 https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <url>
-	<loc>http://medalmanah.ru/</loc>
+	<loc>https://medalmanah.ru/</loc>
 	<lastmod>2016-07-14T12:24:04+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/news</loc>
+	<loc>https://medalmanah.ru/news</loc>
 	<lastmod>2016-07-14T12:24:07+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/events-map</loc>
+	<loc>https://medalmanah.ru/events-map</loc>
 	<lastmod>2016-07-14T12:24:07+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/events/russian-events</loc>
+	<loc>https://medalmanah.ru/events/russian-events</loc>
 	<lastmod>2016-07-14T12:24:09+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/events/foreign-events</loc>
+	<loc>https://medalmanah.ru/events/foreign-events</loc>
 	<lastmod>2016-07-14T12:24:09+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/about</loc>
+	<loc>https://medalmanah.ru/about</loc>
 	<lastmod>2016-07-14T12:24:09+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/events/fpdo-courses</loc>
+	<loc>https://medalmanah.ru/events/fpdo-courses</loc>
 	<lastmod>2016-07-14T12:24:11+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/events/online-courses</loc>
+	<loc>https://medalmanah.ru/events/online-courses</loc>
 	<lastmod>2016-07-14T12:24:11+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/events/internships</loc>
+	<loc>https://medalmanah.ru/events/internships</loc>
 	<lastmod>2016-07-14T12:24:11+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards</loc>
+	<loc>https://medalmanah.ru/federal-standards</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/abbreviations</loc>
+	<loc>https://medalmanah.ru/abbreviations</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/calculators</loc>
+	<loc>https://medalmanah.ru/calculators</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/feedback</loc>
+	<loc>https://medalmanah.ru/feedback</loc>
+	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
+	<priority>1.0</priority>
+</url>
+
+<url>
+	<loc>https://medalmanah.ru/politicy</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/event/2</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/3</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/4</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/5</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/6</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/okno_v_mozg</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/pit_radi_zdorovja</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/samye_vazhnye_9_mesjatsev</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/sosite_i_gryzite</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/statiny_protiv_raka</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/politicy</loc>
+	<loc>https://medalmanah.ru/eula</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/eula</loc>
+	<loc>https://medalmanah.ru/partners</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/partners</loc>
+	<loc>https://medalmanah.ru/contacts</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>1.0</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/contacts</loc>
+	<loc>https://medalmanah.ru/register/</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/register/</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/luchshij_otvet_u_bolnyh</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/sozdano_pervoe_v_rossii_obschestvo_vzaimnogo_strahovanija_v_sfere_zdravoohranenija</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/globalnaja_problema</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/zhir_ne_greet</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/porjadok_osvidetelstvovanija_nakonets_utverzhden</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/tolko_2_mesjatsa</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/ryba_i_olivkovoe_maslo</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/opredelen_pobeditel_konkursa_%D0%92%C2%ABvrach_goda_2016%D0%92%C2%BB</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/ii_sezd_assotsiatsii_akusherskih_anesteziologov_reanimatologov</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news/o_protivodejstvii_rasprostraneniju_infektsij_peredajuschihsja_s_ukusom_kleschej</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/news?page=2</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>1.0</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/125</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/138</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/156</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/114</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/155</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/113</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/154</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/112</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/153</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/137</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/124</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/111</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/136</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/152</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/101</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/russian-events?page=2</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/russian-events?page=3</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/russian-events?page=4</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/132</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/130</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/117</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/116</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/115</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/event/99</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=2</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=3</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=4</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=5</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=6</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=7</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=8</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=9</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
-	<priority>0.8</priority>
-</url>
-<url>
-	<loc>http://medalmanah.ru/events/fpdo-courses?page=10</loc>
-	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
+
 <url>
-	<loc>http://medalmanah.ru/federal-standards/1</loc>
+	<loc>https://medalmanah.ru/federal-standards/1</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/2</loc>
+	<loc>https://medalmanah.ru/federal-standards/2</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/3</loc>
+	<loc>https://medalmanah.ru/federal-standards/3</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/4</loc>
+	<loc>https://medalmanah.ru/federal-standards/4</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/5</loc>
+	<loc>https://medalmanah.ru/federal-standards/5</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/6</loc>
+	<loc>https://medalmanah.ru/federal-standards/6</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/7</loc>
+	<loc>https://medalmanah.ru/federal-standards/7</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/8</loc>
+	<loc>https://medalmanah.ru/federal-standards/8</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/9</loc>
+	<loc>https://medalmanah.ru/federal-standards/9</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/10</loc>
+	<loc>https://medalmanah.ru/federal-standards/10</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/11</loc>
+	<loc>https://medalmanah.ru/federal-standards/11</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/12</loc>
+	<loc>https://medalmanah.ru/federal-standards/12</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/13</loc>
+	<loc>https://medalmanah.ru/federal-standards/13</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/14</loc>
+	<loc>https://medalmanah.ru/federal-standards/14</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/15</loc>
+	<loc>https://medalmanah.ru/federal-standards/15</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/16</loc>
+	<loc>https://medalmanah.ru/federal-standards/16</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/17</loc>
+	<loc>https://medalmanah.ru/federal-standards/17</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/18</loc>
+	<loc>https://medalmanah.ru/federal-standards/18</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/19</loc>
+	<loc>https://medalmanah.ru/federal-standards/19</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/20</loc>
+	<loc>https://medalmanah.ru/federal-standards/20</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/21</loc>
+	<loc>https://medalmanah.ru/federal-standards/21</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/22</loc>
+	<loc>https://medalmanah.ru/federal-standards/22</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/23</loc>
+	<loc>https://medalmanah.ru/federal-standards/23</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/24</loc>
+	<loc>https://medalmanah.ru/federal-standards/24</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/25</loc>
+	<loc>https://medalmanah.ru/federal-standards/25</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/26</loc>
+	<loc>https://medalmanah.ru/federal-standards/26</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/27</loc>
+	<loc>https://medalmanah.ru/federal-standards/27</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/28</loc>
+	<loc>https://medalmanah.ru/federal-standards/28</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/29</loc>
+	<loc>https://medalmanah.ru/federal-standards/29</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/30</loc>
+	<loc>https://medalmanah.ru/federal-standards/30</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/31</loc>
+	<loc>https://medalmanah.ru/federal-standards/31</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/32</loc>
+	<loc>https://medalmanah.ru/federal-standards/32</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/33</loc>
+	<loc>https://medalmanah.ru/federal-standards/33</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/34</loc>
+	<loc>https://medalmanah.ru/federal-standards/34</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/35</loc>
+	<loc>https://medalmanah.ru/federal-standards/35</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/36</loc>
+	<loc>https://medalmanah.ru/federal-standards/36</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/37</loc>
+	<loc>https://medalmanah.ru/federal-standards/37</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/38</loc>
+	<loc>https://medalmanah.ru/federal-standards/38</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/39</loc>
+	<loc>https://medalmanah.ru/federal-standards/39</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/40</loc>
+	<loc>https://medalmanah.ru/federal-standards/40</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/41</loc>
+	<loc>https://medalmanah.ru/federal-standards/41</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/42</loc>
+	<loc>https://medalmanah.ru/federal-standards/42</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/43</loc>
+	<loc>https://medalmanah.ru/federal-standards/43</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/44</loc>
+	<loc>https://medalmanah.ru/federal-standards/44</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/45</loc>
+	<loc>https://medalmanah.ru/federal-standards/45</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/46</loc>
+	<loc>https://medalmanah.ru/federal-standards/46</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/47</loc>
+	<loc>https://medalmanah.ru/federal-standards/47</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/48</loc>
+	<loc>https://medalmanah.ru/federal-standards/48</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/49</loc>
+	<loc>https://medalmanah.ru/federal-standards/49</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/50</loc>
+	<loc>https://medalmanah.ru/federal-standards/50</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/51</loc>
+	<loc>https://medalmanah.ru/federal-standards/51</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/52</loc>
+	<loc>https://medalmanah.ru/federal-standards/52</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/53</loc>
+	<loc>https://medalmanah.ru/federal-standards/53</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/54</loc>
+	<loc>https://medalmanah.ru/federal-standards/54</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/55</loc>
+	<loc>https://medalmanah.ru/federal-standards/55</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/56</loc>
+	<loc>https://medalmanah.ru/federal-standards/56</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/57</loc>
+	<loc>https://medalmanah.ru/federal-standards/57</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/58</loc>
+	<loc>https://medalmanah.ru/federal-standards/58</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/59</loc>
+	<loc>https://medalmanah.ru/federal-standards/59</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/60</loc>
+	<loc>https://medalmanah.ru/federal-standards/60</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/61</loc>
+	<loc>https://medalmanah.ru/federal-standards/61</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/62</loc>
+	<loc>https://medalmanah.ru/federal-standards/62</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/63</loc>
+	<loc>https://medalmanah.ru/federal-standards/63</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/64</loc>
+	<loc>https://medalmanah.ru/federal-standards/64</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/65</loc>
+	<loc>https://medalmanah.ru/federal-standards/65</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/66</loc>
+	<loc>https://medalmanah.ru/federal-standards/66</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/67</loc>
+	<loc>https://medalmanah.ru/federal-standards/67</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/68</loc>
+	<loc>https://medalmanah.ru/federal-standards/68</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/69</loc>
+	<loc>https://medalmanah.ru/federal-standards/69</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/70</loc>
+	<loc>https://medalmanah.ru/federal-standards/70</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/71</loc>
+	<loc>https://medalmanah.ru/federal-standards/71</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/72</loc>
+	<loc>https://medalmanah.ru/federal-standards/72</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/73</loc>
+	<loc>https://medalmanah.ru/federal-standards/73</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/74</loc>
+	<loc>https://medalmanah.ru/federal-standards/74</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/75</loc>
+	<loc>https://medalmanah.ru/federal-standards/75</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/76</loc>
+	<loc>https://medalmanah.ru/federal-standards/76</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/77</loc>
+	<loc>https://medalmanah.ru/federal-standards/77</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/78</loc>
+	<loc>https://medalmanah.ru/federal-standards/78</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/79</loc>
+	<loc>https://medalmanah.ru/federal-standards/79</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/80</loc>
+	<loc>https://medalmanah.ru/federal-standards/80</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/81</loc>
+	<loc>https://medalmanah.ru/federal-standards/81</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/82</loc>
+	<loc>https://medalmanah.ru/federal-standards/82</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/83</loc>
+	<loc>https://medalmanah.ru/federal-standards/83</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/84</loc>
+	<loc>https://medalmanah.ru/federal-standards/84</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/85</loc>
+	<loc>https://medalmanah.ru/federal-standards/85</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/86</loc>
+	<loc>https://medalmanah.ru/federal-standards/86</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/87</loc>
+	<loc>https://medalmanah.ru/federal-standards/87</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/88</loc>
+	<loc>https://medalmanah.ru/federal-standards/88</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/89</loc>
+	<loc>https://medalmanah.ru/federal-standards/89</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/90</loc>
+	<loc>https://medalmanah.ru/federal-standards/90</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/91</loc>
+	<loc>https://medalmanah.ru/federal-standards/91</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/92</loc>
+	<loc>https://medalmanah.ru/federal-standards/92</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/93</loc>
+	<loc>https://medalmanah.ru/federal-standards/93</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/94</loc>
+	<loc>https://medalmanah.ru/federal-standards/94</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/95</loc>
+	<loc>https://medalmanah.ru/federal-standards/95</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/96</loc>
+	<loc>https://medalmanah.ru/federal-standards/96</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/97</loc>
+	<loc>https://medalmanah.ru/federal-standards/97</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/98</loc>
+	<loc>https://medalmanah.ru/federal-standards/98</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/99</loc>
+	<loc>https://medalmanah.ru/federal-standards/99</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/100</loc>
+	<loc>https://medalmanah.ru/federal-standards/100</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/101</loc>
+	<loc>https://medalmanah.ru/federal-standards/101</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/102</loc>
+	<loc>https://medalmanah.ru/federal-standards/102</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/103</loc>
+	<loc>https://medalmanah.ru/federal-standards/103</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/104</loc>
+	<loc>https://medalmanah.ru/federal-standards/104</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/105</loc>
+	<loc>https://medalmanah.ru/federal-standards/105</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/106</loc>
+	<loc>https://medalmanah.ru/federal-standards/106</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/107</loc>
+	<loc>https://medalmanah.ru/federal-standards/107</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/108</loc>
+	<loc>https://medalmanah.ru/federal-standards/108</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/109</loc>
+	<loc>https://medalmanah.ru/federal-standards/109</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/110</loc>
+	<loc>https://medalmanah.ru/federal-standards/110</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/111</loc>
+	<loc>https://medalmanah.ru/federal-standards/111</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/112</loc>
+	<loc>https://medalmanah.ru/federal-standards/112</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/113</loc>
+	<loc>https://medalmanah.ru/federal-standards/113</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/114</loc>
+	<loc>https://medalmanah.ru/federal-standards/114</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/115</loc>
+	<loc>https://medalmanah.ru/federal-standards/115</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/116</loc>
+	<loc>https://medalmanah.ru/federal-standards/116</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/117</loc>
+	<loc>https://medalmanah.ru/federal-standards/117</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/118</loc>
+	<loc>https://medalmanah.ru/federal-standards/118</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/119</loc>
+	<loc>https://medalmanah.ru/federal-standards/119</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/120</loc>
+	<loc>https://medalmanah.ru/federal-standards/120</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/121</loc>
+	<loc>https://medalmanah.ru/federal-standards/121</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/122</loc>
+	<loc>https://medalmanah.ru/federal-standards/122</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/123</loc>
+	<loc>https://medalmanah.ru/federal-standards/123</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/124</loc>
+	<loc>https://medalmanah.ru/federal-standards/124</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/125</loc>
+	<loc>https://medalmanah.ru/federal-standards/125</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/126</loc>
+	<loc>https://medalmanah.ru/federal-standards/126</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/127</loc>
+	<loc>https://medalmanah.ru/federal-standards/127</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/128</loc>
+	<loc>https://medalmanah.ru/federal-standards/128</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/129</loc>
+	<loc>https://medalmanah.ru/federal-standards/129</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/130</loc>
+	<loc>https://medalmanah.ru/federal-standards/130</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/131</loc>
+	<loc>https://medalmanah.ru/federal-standards/131</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/132</loc>
+	<loc>https://medalmanah.ru/federal-standards/132</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/133</loc>
+	<loc>https://medalmanah.ru/federal-standards/133</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/134</loc>
+	<loc>https://medalmanah.ru/federal-standards/134</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/135</loc>
+	<loc>https://medalmanah.ru/federal-standards/135</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/136</loc>
+	<loc>https://medalmanah.ru/federal-standards/136</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/137</loc>
+	<loc>https://medalmanah.ru/federal-standards/137</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/138</loc>
+	<loc>https://medalmanah.ru/federal-standards/138</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/139</loc>
+	<loc>https://medalmanah.ru/federal-standards/139</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/140</loc>
+	<loc>https://medalmanah.ru/federal-standards/140</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/141</loc>
+	<loc>https://medalmanah.ru/federal-standards/141</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/142</loc>
+	<loc>https://medalmanah.ru/federal-standards/142</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/143</loc>
+	<loc>https://medalmanah.ru/federal-standards/143</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/144</loc>
+	<loc>https://medalmanah.ru/federal-standards/144</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/145</loc>
+	<loc>https://medalmanah.ru/federal-standards/145</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/146</loc>
+	<loc>https://medalmanah.ru/federal-standards/146</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/147</loc>
+	<loc>https://medalmanah.ru/federal-standards/147</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/148</loc>
+	<loc>https://medalmanah.ru/federal-standards/148</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/149</loc>
+	<loc>https://medalmanah.ru/federal-standards/149</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/150</loc>
+	<loc>https://medalmanah.ru/federal-standards/150</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/151</loc>
+	<loc>https://medalmanah.ru/federal-standards/151</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/152</loc>
+	<loc>https://medalmanah.ru/federal-standards/152</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/153</loc>
+	<loc>https://medalmanah.ru/federal-standards/153</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/154</loc>
+	<loc>https://medalmanah.ru/federal-standards/154</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/155</loc>
+	<loc>https://medalmanah.ru/federal-standards/155</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/156</loc>
+	<loc>https://medalmanah.ru/federal-standards/156</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/157</loc>
+	<loc>https://medalmanah.ru/federal-standards/157</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/158</loc>
+	<loc>https://medalmanah.ru/federal-standards/158</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/159</loc>
+	<loc>https://medalmanah.ru/federal-standards/159</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/160</loc>
+	<loc>https://medalmanah.ru/federal-standards/160</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/161</loc>
+	<loc>https://medalmanah.ru/federal-standards/161</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/162</loc>
+	<loc>https://medalmanah.ru/federal-standards/162</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/163</loc>
+	<loc>https://medalmanah.ru/federal-standards/163</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/164</loc>
+	<loc>https://medalmanah.ru/federal-standards/164</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/165</loc>
+	<loc>https://medalmanah.ru/federal-standards/165</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/166</loc>
+	<loc>https://medalmanah.ru/federal-standards/166</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/167</loc>
+	<loc>https://medalmanah.ru/federal-standards/167</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/168</loc>
+	<loc>https://medalmanah.ru/federal-standards/168</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/169</loc>
+	<loc>https://medalmanah.ru/federal-standards/169</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/170</loc>
+	<loc>https://medalmanah.ru/federal-standards/170</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/171</loc>
+	<loc>https://medalmanah.ru/federal-standards/171</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/172</loc>
+	<loc>https://medalmanah.ru/federal-standards/172</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/173</loc>
+	<loc>https://medalmanah.ru/federal-standards/173</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/174</loc>
+	<loc>https://medalmanah.ru/federal-standards/174</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/175</loc>
+	<loc>https://medalmanah.ru/federal-standards/175</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/176</loc>
+	<loc>https://medalmanah.ru/federal-standards/176</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/177</loc>
+	<loc>https://medalmanah.ru/federal-standards/177</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/178</loc>
+	<loc>https://medalmanah.ru/federal-standards/178</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/179</loc>
+	<loc>https://medalmanah.ru/federal-standards/179</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/180</loc>
+	<loc>https://medalmanah.ru/federal-standards/180</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/181</loc>
+	<loc>https://medalmanah.ru/federal-standards/181</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/182</loc>
+	<loc>https://medalmanah.ru/federal-standards/182</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/183</loc>
+	<loc>https://medalmanah.ru/federal-standards/183</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/184</loc>
+	<loc>https://medalmanah.ru/federal-standards/184</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/185</loc>
+	<loc>https://medalmanah.ru/federal-standards/185</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/186</loc>
+	<loc>https://medalmanah.ru/federal-standards/186</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/187</loc>
+	<loc>https://medalmanah.ru/federal-standards/187</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/188</loc>
+	<loc>https://medalmanah.ru/federal-standards/188</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/189</loc>
+	<loc>https://medalmanah.ru/federal-standards/189</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/190</loc>
+	<loc>https://medalmanah.ru/federal-standards/190</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/191</loc>
+	<loc>https://medalmanah.ru/federal-standards/191</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/192</loc>
+	<loc>https://medalmanah.ru/federal-standards/192</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/193</loc>
+	<loc>https://medalmanah.ru/federal-standards/193</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/194</loc>
+	<loc>https://medalmanah.ru/federal-standards/194</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/195</loc>
+	<loc>https://medalmanah.ru/federal-standards/195</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/196</loc>
+	<loc>https://medalmanah.ru/federal-standards/196</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/197</loc>
+	<loc>https://medalmanah.ru/federal-standards/197</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/198</loc>
+	<loc>https://medalmanah.ru/federal-standards/198</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/199</loc>
+	<loc>https://medalmanah.ru/federal-standards/199</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/200</loc>
+	<loc>https://medalmanah.ru/federal-standards/200</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/201</loc>
+	<loc>https://medalmanah.ru/federal-standards/201</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/202</loc>
+	<loc>https://medalmanah.ru/federal-standards/202</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/203</loc>
+	<loc>https://medalmanah.ru/federal-standards/203</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/204</loc>
+	<loc>https://medalmanah.ru/federal-standards/204</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/205</loc>
+	<loc>https://medalmanah.ru/federal-standards/205</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/206</loc>
+	<loc>https://medalmanah.ru/federal-standards/206</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/207</loc>
+	<loc>https://medalmanah.ru/federal-standards/207</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/208</loc>
+	<loc>https://medalmanah.ru/federal-standards/208</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/209</loc>
+	<loc>https://medalmanah.ru/federal-standards/209</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/210</loc>
+	<loc>https://medalmanah.ru/federal-standards/210</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/211</loc>
+	<loc>https://medalmanah.ru/federal-standards/211</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/212</loc>
+	<loc>https://medalmanah.ru/federal-standards/212</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/213</loc>
+	<loc>https://medalmanah.ru/federal-standards/213</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/214</loc>
+	<loc>https://medalmanah.ru/federal-standards/214</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/215</loc>
+	<loc>https://medalmanah.ru/federal-standards/215</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/216</loc>
+	<loc>https://medalmanah.ru/federal-standards/216</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/217</loc>
+	<loc>https://medalmanah.ru/federal-standards/217</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/218</loc>
+	<loc>https://medalmanah.ru/federal-standards/218</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/219</loc>
+	<loc>https://medalmanah.ru/federal-standards/219</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/220</loc>
+	<loc>https://medalmanah.ru/federal-standards/220</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/221</loc>
+	<loc>https://medalmanah.ru/federal-standards/221</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/222</loc>
+	<loc>https://medalmanah.ru/federal-standards/222</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/223</loc>
+	<loc>https://medalmanah.ru/federal-standards/223</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/224</loc>
+	<loc>https://medalmanah.ru/federal-standards/224</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/225</loc>
+	<loc>https://medalmanah.ru/federal-standards/225</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/226</loc>
+	<loc>https://medalmanah.ru/federal-standards/226</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/227</loc>
+	<loc>https://medalmanah.ru/federal-standards/227</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/228</loc>
+	<loc>https://medalmanah.ru/federal-standards/228</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/229</loc>
+	<loc>https://medalmanah.ru/federal-standards/229</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/230</loc>
+	<loc>https://medalmanah.ru/federal-standards/230</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/231</loc>
+	<loc>https://medalmanah.ru/federal-standards/231</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/232</loc>
+	<loc>https://medalmanah.ru/federal-standards/232</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/233</loc>
+	<loc>https://medalmanah.ru/federal-standards/233</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/234</loc>
+	<loc>https://medalmanah.ru/federal-standards/234</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/235</loc>
+	<loc>https://medalmanah.ru/federal-standards/235</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/236</loc>
+	<loc>https://medalmanah.ru/federal-standards/236</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/237</loc>
+	<loc>https://medalmanah.ru/federal-standards/237</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/238</loc>
+	<loc>https://medalmanah.ru/federal-standards/238</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/239</loc>
+	<loc>https://medalmanah.ru/federal-standards/239</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/240</loc>
+	<loc>https://medalmanah.ru/federal-standards/240</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/241</loc>
+	<loc>https://medalmanah.ru/federal-standards/241</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/242</loc>
+	<loc>https://medalmanah.ru/federal-standards/242</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/243</loc>
+	<loc>https://medalmanah.ru/federal-standards/243</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/244</loc>
+	<loc>https://medalmanah.ru/federal-standards/244</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/245</loc>
+	<loc>https://medalmanah.ru/federal-standards/245</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/246</loc>
+	<loc>https://medalmanah.ru/federal-standards/246</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/247</loc>
+	<loc>https://medalmanah.ru/federal-standards/247</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/248</loc>
+	<loc>https://medalmanah.ru/federal-standards/248</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/249</loc>
+	<loc>https://medalmanah.ru/federal-standards/249</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/250</loc>
+	<loc>https://medalmanah.ru/federal-standards/250</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/251</loc>
+	<loc>https://medalmanah.ru/federal-standards/251</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/252</loc>
+	<loc>https://medalmanah.ru/federal-standards/252</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/253</loc>
+	<loc>https://medalmanah.ru/federal-standards/253</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/254</loc>
+	<loc>https://medalmanah.ru/federal-standards/254</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/255</loc>
+	<loc>https://medalmanah.ru/federal-standards/255</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/256</loc>
+	<loc>https://medalmanah.ru/federal-standards/256</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/257</loc>
+	<loc>https://medalmanah.ru/federal-standards/257</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/258</loc>
+	<loc>https://medalmanah.ru/federal-standards/258</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/259</loc>
+	<loc>https://medalmanah.ru/federal-standards/259</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/260</loc>
+	<loc>https://medalmanah.ru/federal-standards/260</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/261</loc>
+	<loc>https://medalmanah.ru/federal-standards/261</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/262</loc>
+	<loc>https://medalmanah.ru/federal-standards/262</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/263</loc>
+	<loc>https://medalmanah.ru/federal-standards/263</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/264</loc>
+	<loc>https://medalmanah.ru/federal-standards/264</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/265</loc>
+	<loc>https://medalmanah.ru/federal-standards/265</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/266</loc>
+	<loc>https://medalmanah.ru/federal-standards/266</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/267</loc>
+	<loc>https://medalmanah.ru/federal-standards/267</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/268</loc>
+	<loc>https://medalmanah.ru/federal-standards/268</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/269</loc>
+	<loc>https://medalmanah.ru/federal-standards/269</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/270</loc>
+	<loc>https://medalmanah.ru/federal-standards/270</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/271</loc>
+	<loc>https://medalmanah.ru/federal-standards/271</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/272</loc>
+	<loc>https://medalmanah.ru/federal-standards/272</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/273</loc>
+	<loc>https://medalmanah.ru/federal-standards/273</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/274</loc>
+	<loc>https://medalmanah.ru/federal-standards/274</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/275</loc>
+	<loc>https://medalmanah.ru/federal-standards/275</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/276</loc>
+	<loc>https://medalmanah.ru/federal-standards/276</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/277</loc>
+	<loc>https://medalmanah.ru/federal-standards/277</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/278</loc>
+	<loc>https://medalmanah.ru/federal-standards/278</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/279</loc>
+	<loc>https://medalmanah.ru/federal-standards/279</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/280</loc>
+	<loc>https://medalmanah.ru/federal-standards/280</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/281</loc>
+	<loc>https://medalmanah.ru/federal-standards/281</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/282</loc>
+	<loc>https://medalmanah.ru/federal-standards/282</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/283</loc>
+	<loc>https://medalmanah.ru/federal-standards/283</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/calculators/ocenka-clirensa-creatinina</loc>
+	<loc>https://medalmanah.ru/calculators/ocenka-clirensa-creatinina</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/284</loc>
+	<loc>https://medalmanah.ru/federal-standards/284</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/285</loc>
+	<loc>https://medalmanah.ru/federal-standards/285</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/286</loc>
+	<loc>https://medalmanah.ru/federal-standards/286</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/287</loc>
+	<loc>https://medalmanah.ru/federal-standards/287</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/288</loc>
+	<loc>https://medalmanah.ru/federal-standards/288</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/289</loc>
+	<loc>https://medalmanah.ru/federal-standards/289</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/290</loc>
+	<loc>https://medalmanah.ru/federal-standards/290</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/291</loc>
+	<loc>https://medalmanah.ru/federal-standards/291</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/292</loc>
+	<loc>https://medalmanah.ru/federal-standards/292</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/293</loc>
+	<loc>https://medalmanah.ru/federal-standards/293</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/294</loc>
+	<loc>https://medalmanah.ru/federal-standards/294</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/295</loc>
+	<loc>https://medalmanah.ru/federal-standards/295</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/296</loc>
+	<loc>https://medalmanah.ru/federal-standards/296</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/297</loc>
+	<loc>https://medalmanah.ru/federal-standards/297</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/298</loc>
+	<loc>https://medalmanah.ru/federal-standards/298</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/299</loc>
+	<loc>https://medalmanah.ru/federal-standards/299</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/300</loc>
+	<loc>https://medalmanah.ru/federal-standards/300</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/301</loc>
+	<loc>https://medalmanah.ru/federal-standards/301</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/302</loc>
+	<loc>https://medalmanah.ru/federal-standards/302</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/303</loc>
+	<loc>https://medalmanah.ru/federal-standards/303</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/304</loc>
+	<loc>https://medalmanah.ru/federal-standards/304</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/305</loc>
+	<loc>https://medalmanah.ru/federal-standards/305</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/306</loc>
+	<loc>https://medalmanah.ru/federal-standards/306</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/307</loc>
+	<loc>https://medalmanah.ru/federal-standards/307</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/308</loc>
+	<loc>https://medalmanah.ru/federal-standards/308</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/309</loc>
+	<loc>https://medalmanah.ru/federal-standards/309</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/310</loc>
+	<loc>https://medalmanah.ru/federal-standards/310</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/311</loc>
+	<loc>https://medalmanah.ru/federal-standards/311</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/312</loc>
+	<loc>https://medalmanah.ru/federal-standards/312</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/313</loc>
+	<loc>https://medalmanah.ru/federal-standards/313</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/314</loc>
+	<loc>https://medalmanah.ru/federal-standards/314</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/315</loc>
+	<loc>https://medalmanah.ru/federal-standards/315</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/316</loc>
+	<loc>https://medalmanah.ru/federal-standards/316</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/317</loc>
+	<loc>https://medalmanah.ru/federal-standards/317</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/318</loc>
+	<loc>https://medalmanah.ru/federal-standards/318</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/319</loc>
+	<loc>https://medalmanah.ru/federal-standards/319</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/320</loc>
+	<loc>https://medalmanah.ru/federal-standards/320</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/321</loc>
+	<loc>https://medalmanah.ru/federal-standards/321</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/322</loc>
+	<loc>https://medalmanah.ru/federal-standards/322</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/323</loc>
+	<loc>https://medalmanah.ru/federal-standards/323</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/324</loc>
+	<loc>https://medalmanah.ru/federal-standards/324</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/325</loc>
+	<loc>https://medalmanah.ru/federal-standards/325</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/326</loc>
+	<loc>https://medalmanah.ru/federal-standards/326</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/327</loc>
+	<loc>https://medalmanah.ru/federal-standards/327</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/328</loc>
+	<loc>https://medalmanah.ru/federal-standards/328</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/329</loc>
+	<loc>https://medalmanah.ru/federal-standards/329</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/330</loc>
+	<loc>https://medalmanah.ru/federal-standards/330</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/331</loc>
+	<loc>https://medalmanah.ru/federal-standards/331</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/332</loc>
+	<loc>https://medalmanah.ru/federal-standards/332</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/333</loc>
+	<loc>https://medalmanah.ru/federal-standards/333</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/334</loc>
+	<loc>https://medalmanah.ru/federal-standards/334</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/335</loc>
+	<loc>https://medalmanah.ru/federal-standards/335</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/336</loc>
+	<loc>https://medalmanah.ru/federal-standards/336</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/337</loc>
+	<loc>https://medalmanah.ru/federal-standards/337</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/338</loc>
+	<loc>https://medalmanah.ru/federal-standards/338</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/339</loc>
+	<loc>https://medalmanah.ru/federal-standards/339</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/340</loc>
+	<loc>https://medalmanah.ru/federal-standards/340</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/341</loc>
+	<loc>https://medalmanah.ru/federal-standards/341</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/342</loc>
+	<loc>https://medalmanah.ru/federal-standards/342</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/343</loc>
+	<loc>https://medalmanah.ru/federal-standards/343</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/344</loc>
+	<loc>https://medalmanah.ru/federal-standards/344</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/345</loc>
+	<loc>https://medalmanah.ru/federal-standards/345</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/346</loc>
+	<loc>https://medalmanah.ru/federal-standards/346</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/347</loc>
+	<loc>https://medalmanah.ru/federal-standards/347</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/348</loc>
+	<loc>https://medalmanah.ru/federal-standards/348</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/349</loc>
+	<loc>https://medalmanah.ru/federal-standards/349</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/350</loc>
+	<loc>https://medalmanah.ru/federal-standards/350</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/351</loc>
+	<loc>https://medalmanah.ru/federal-standards/351</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/352</loc>
+	<loc>https://medalmanah.ru/federal-standards/352</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/353</loc>
+	<loc>https://medalmanah.ru/federal-standards/353</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/354</loc>
+	<loc>https://medalmanah.ru/federal-standards/354</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/355</loc>
+	<loc>https://medalmanah.ru/federal-standards/355</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/356</loc>
+	<loc>https://medalmanah.ru/federal-standards/356</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/357</loc>
+	<loc>https://medalmanah.ru/federal-standards/357</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/358</loc>
+	<loc>https://medalmanah.ru/federal-standards/358</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/359</loc>
+	<loc>https://medalmanah.ru/federal-standards/359</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/360</loc>
+	<loc>https://medalmanah.ru/federal-standards/360</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/361</loc>
+	<loc>https://medalmanah.ru/federal-standards/361</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/362</loc>
+	<loc>https://medalmanah.ru/federal-standards/362</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/368</loc>
+	<loc>https://medalmanah.ru/federal-standards/368</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/363</loc>
+	<loc>https://medalmanah.ru/federal-standards/363</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/364</loc>
+	<loc>https://medalmanah.ru/federal-standards/364</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/365</loc>
+	<loc>https://medalmanah.ru/federal-standards/365</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/366</loc>
+	<loc>https://medalmanah.ru/federal-standards/366</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/367</loc>
+	<loc>https://medalmanah.ru/federal-standards/367</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/369</loc>
+	<loc>https://medalmanah.ru/federal-standards/369</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/370</loc>
+	<loc>https://medalmanah.ru/federal-standards/370</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/371</loc>
+	<loc>https://medalmanah.ru/federal-standards/371</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/372</loc>
+	<loc>https://medalmanah.ru/federal-standards/372</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/373</loc>
+	<loc>https://medalmanah.ru/federal-standards/373</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/374</loc>
+	<loc>https://medalmanah.ru/federal-standards/374</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/375</loc>
+	<loc>https://medalmanah.ru/federal-standards/375</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/376</loc>
+	<loc>https://medalmanah.ru/federal-standards/376</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/377</loc>
+	<loc>https://medalmanah.ru/federal-standards/377</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/378</loc>
+	<loc>https://medalmanah.ru/federal-standards/378</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/379</loc>
+	<loc>https://medalmanah.ru/federal-standards/379</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/380</loc>
+	<loc>https://medalmanah.ru/federal-standards/380</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/381</loc>
+	<loc>https://medalmanah.ru/federal-standards/381</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/382</loc>
+	<loc>https://medalmanah.ru/federal-standards/382</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/383</loc>
+	<loc>https://medalmanah.ru/federal-standards/383</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/384</loc>
+	<loc>https://medalmanah.ru/federal-standards/384</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/385</loc>
+	<loc>https://medalmanah.ru/federal-standards/385</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/386</loc>
+	<loc>https://medalmanah.ru/federal-standards/386</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/387</loc>
+	<loc>https://medalmanah.ru/federal-standards/387</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/388</loc>
+	<loc>https://medalmanah.ru/federal-standards/388</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/389</loc>
+	<loc>https://medalmanah.ru/federal-standards/389</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/390</loc>
+	<loc>https://medalmanah.ru/federal-standards/390</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/391</loc>
+	<loc>https://medalmanah.ru/federal-standards/391</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/392</loc>
+	<loc>https://medalmanah.ru/federal-standards/392</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/393</loc>
+	<loc>https://medalmanah.ru/federal-standards/393</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/394</loc>
+	<loc>https://medalmanah.ru/federal-standards/394</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/395</loc>
+	<loc>https://medalmanah.ru/federal-standards/395</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/396</loc>
+	<loc>https://medalmanah.ru/federal-standards/396</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/397</loc>
+	<loc>https://medalmanah.ru/federal-standards/397</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/398</loc>
+	<loc>https://medalmanah.ru/federal-standards/398</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/399</loc>
+	<loc>https://medalmanah.ru/federal-standards/399</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/400</loc>
+	<loc>https://medalmanah.ru/federal-standards/400</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/401</loc>
+	<loc>https://medalmanah.ru/federal-standards/401</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/402</loc>
+	<loc>https://medalmanah.ru/federal-standards/402</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/403</loc>
+	<loc>https://medalmanah.ru/federal-standards/403</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/404</loc>
+	<loc>https://medalmanah.ru/federal-standards/404</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/405</loc>
+	<loc>https://medalmanah.ru/federal-standards/405</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/406</loc>
+	<loc>https://medalmanah.ru/federal-standards/406</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/407</loc>
+	<loc>https://medalmanah.ru/federal-standards/407</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/408</loc>
+	<loc>https://medalmanah.ru/federal-standards/408</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/409</loc>
+	<loc>https://medalmanah.ru/federal-standards/409</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/410</loc>
+	<loc>https://medalmanah.ru/federal-standards/410</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/411</loc>
+	<loc>https://medalmanah.ru/federal-standards/411</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/412</loc>
+	<loc>https://medalmanah.ru/federal-standards/412</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/413</loc>
+	<loc>https://medalmanah.ru/federal-standards/413</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/414</loc>
+	<loc>https://medalmanah.ru/federal-standards/414</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/415</loc>
+	<loc>https://medalmanah.ru/federal-standards/415</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/416</loc>
+	<loc>https://medalmanah.ru/federal-standards/416</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/417</loc>
+	<loc>https://medalmanah.ru/federal-standards/417</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/418</loc>
+	<loc>https://medalmanah.ru/federal-standards/418</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/419</loc>
+	<loc>https://medalmanah.ru/federal-standards/419</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/420</loc>
+	<loc>https://medalmanah.ru/federal-standards/420</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/421</loc>
+	<loc>https://medalmanah.ru/federal-standards/421</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/422</loc>
+	<loc>https://medalmanah.ru/federal-standards/422</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/423</loc>
+	<loc>https://medalmanah.ru/federal-standards/423</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/424</loc>
+	<loc>https://medalmanah.ru/federal-standards/424</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/425</loc>
+	<loc>https://medalmanah.ru/federal-standards/425</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/426</loc>
+	<loc>https://medalmanah.ru/federal-standards/426</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 <url>
-	<loc>http://medalmanah.ru/federal-standards/427</loc>
+	<loc>https://medalmanah.ru/federal-standards/427</loc>
 	<lastmod>2016-07-14T12:24:14+01:00</lastmod>
 	<priority>0.8</priority>
 </url>
 
 	<url>
-		<loc>http://medalmanah.ru/now/4</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/4</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/5</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/5</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/6</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/6</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/7</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/7</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/8</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/8</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/9</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/9</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/10</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/10</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/11</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/11</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/12</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/12</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/13</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/13</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/14</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/14</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/15</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/15</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/16</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/16</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/17</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/17</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/18</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/18</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/19</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/19</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/20</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/20</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/21</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/21</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/22</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/22</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/23</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/23</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/24</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/24</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/25</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/25</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/26</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/26</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/27</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/27</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/28</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/28</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/29</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/29</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/30</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/30</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/31</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/31</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/32</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/32</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/33</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/33</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/34</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/34</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/35</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/35</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/36</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/36</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/37</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/37</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/38</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/38</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/39</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/39</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/40</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/40</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/41</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/41</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/42</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/42</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/43</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/43</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/44</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/44</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/45</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/45</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/46</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/46</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/47</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/47</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/48</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/48</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/49</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/49</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/50</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/50</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/51</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/51</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/52</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/52</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/53</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/53</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/54</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/54</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/55</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/55</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/56</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/56</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/57</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/57</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/58</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/58</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/59</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/59</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/60</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/60</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/61</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/61</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/62</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/62</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/63</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/63</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/64</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/64</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/65</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/65</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/66</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/66</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/67</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/67</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/68</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/68</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/69</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/69</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/70</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/70</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/71</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/71</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/72</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/72</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/73</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/73</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/74</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/74</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/75</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/75</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/76</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/76</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/77</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/77</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/78</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/78</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/79</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/79</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/80</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/80</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/81</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/81</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/82</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/82</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/83</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/83</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/84</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/84</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/85</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/85</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/86</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/86</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/87</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/87</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/88</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/88</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/89</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/89</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/90</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/90</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/91</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/91</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/92</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/92</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/93</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/93</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/94</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/94</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/95</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/95</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/96</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/96</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/97</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/97</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/98</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/98</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/99</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/99</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/100</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/100</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/101</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/101</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/102</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/102</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/103</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/103</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/104</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/104</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/105</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/105</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/106</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/106</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/107</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/107</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/108</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/108</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/109</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/109</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/110</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/110</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/111</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/111</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/112</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/112</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/113</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/113</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/114</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/114</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/115</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/115</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/116</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/116</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/117</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/117</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/118</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/118</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/119</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/119</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/120</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/120</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/121</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/121</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/122</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/122</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/123</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/123</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/124</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/124</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/125</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/125</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/126</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/126</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/127</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/127</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/128</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/128</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/129</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/129</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/130</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/130</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/131</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/131</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/132</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/132</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/133</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/133</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/134</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/134</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/135</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/135</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/136</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/136</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/137</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/137</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/138</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/138</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/139</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/139</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/140</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/140</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/141</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/141</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/142</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/142</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/143</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/143</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/144</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/144</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/145</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/145</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/146</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/146</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/147</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/147</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/148</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/148</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/149</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/149</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/150</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/150</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/151</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/151</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/152</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/152</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/153</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/153</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/154</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/154</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/155</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/155</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/156</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/156</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/157</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/157</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/158</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/158</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/159</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/159</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/160</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/160</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/161</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/161</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/162</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/162</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/163</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/163</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/164</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/164</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/165</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/165</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/166</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/166</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/167</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/167</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/168</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/168</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/169</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/169</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/170</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/170</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/171</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/171</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/172</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/172</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/173</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/173</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/174</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/174</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/175</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/175</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/176</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/176</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/177</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/177</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/178</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/178</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/179</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/179</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/180</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/180</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/181</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/181</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/182</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/182</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/183</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/183</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/184</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/184</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/185</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/185</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/186</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/186</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/187</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/187</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/188</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/188</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/189</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/189</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/190</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/190</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/191</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/191</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/192</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/192</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/193</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/193</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/194</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/194</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/195</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/195</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/196</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/196</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/197</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/197</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/198</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/198</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/199</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/199</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/200</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/200</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/201</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/201</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/202</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/202</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/203</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/203</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/204</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/204</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/205</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/205</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/206</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/206</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/207</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/207</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/208</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/208</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/209</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/209</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/210</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/210</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/211</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/211</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/212</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/212</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/213</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/213</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/214</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/214</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/215</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/215</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/216</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/216</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/217</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/217</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/218</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/218</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/219</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/219</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/220</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/220</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/221</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/221</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/222</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/222</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/223</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/223</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/224</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/224</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/225</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/225</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/226</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/226</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/227</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/227</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/228</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/228</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/229</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/229</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/230</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/230</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/231</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/231</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/232</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/232</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/233</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/233</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/234</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/234</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/235</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/235</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/236</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/236</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/237</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/237</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/238</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/238</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/239</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/239</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/240</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/240</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/241</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/241</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/242</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/242</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/243</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/243</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/244</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/244</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/245</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/245</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/246</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/246</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/247</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/247</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/248</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/248</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/249</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/249</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/250</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/250</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/251</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/251</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/252</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/252</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/253</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/253</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/254</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/254</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/255</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/255</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/256</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/256</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/257</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/257</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/258</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/258</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/259</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/259</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/260</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/260</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/261</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/261</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/262</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/262</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/263</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/263</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/264</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/264</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/265</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/265</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/266</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/266</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/267</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/267</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/268</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/268</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/269</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/269</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/270</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/270</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/271</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/271</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/272</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/272</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/273</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/273</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/274</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/274</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/275</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/275</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/276</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/276</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/277</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/277</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/278</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/278</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/279</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/279</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/280</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/280</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/281</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/281</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/282</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/282</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/283</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/283</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/284</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/284</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/285</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/285</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/286</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/286</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/287</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/287</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/288</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/288</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/289</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/289</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/290</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/290</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/291</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/291</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/292</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/292</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/293</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/293</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/294</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/294</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/295</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/295</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/296</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/296</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/297</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/297</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/298</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/298</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/299</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/299</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/300</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/300</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/301</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/301</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/302</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/302</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/303</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/303</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/304</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/304</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/305</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/305</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/306</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/306</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/307</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/307</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/308</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/308</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/309</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/309</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/310</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/310</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/311</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/311</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/312</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/312</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/313</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/313</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/314</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/314</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/315</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/315</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/316</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/316</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/317</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/317</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/318</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/318</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/319</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/319</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/320</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/320</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/321</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/321</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/322</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/322</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/323</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/323</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/324</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/324</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/325</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/325</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/326</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/326</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/327</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/327</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/328</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/328</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/329</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/329</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/330</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/330</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/331</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/331</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/332</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/332</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/333</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/333</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/334</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/334</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/335</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/335</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/336</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/336</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/337</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/337</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/338</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/338</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/339</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/339</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/340</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/340</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/341</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/341</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/342</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/342</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/343</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/343</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/344</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/344</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/345</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/345</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/346</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/346</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/347</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/347</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/348</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/348</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/349</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/349</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/350</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/350</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/351</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/351</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/352</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/352</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/353</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/353</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/354</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/354</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/355</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/355</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/356</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/356</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/357</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/357</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/358</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/358</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/359</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/359</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/360</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/360</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/361</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/361</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/362</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/362</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/363</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/363</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/364</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/364</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/365</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/365</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/366</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/366</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/367</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/367</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/368</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/368</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/369</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/369</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/370</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/370</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/371</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/371</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/372</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/372</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/373</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/373</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/374</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/374</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/375</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/375</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/376</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/376</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/377</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/377</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/378</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/378</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/379</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/379</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/380</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/380</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/381</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/381</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/382</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/382</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/383</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/383</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/384</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/384</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/385</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/385</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/386</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/386</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/387</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/387</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/388</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/388</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/389</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/389</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/390</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/390</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/391</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/391</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/392</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/392</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/393</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/393</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/394</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/394</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/395</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/395</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/396</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/396</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/397</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/397</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/398</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/398</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/399</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/399</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/400</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/400</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/401</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/401</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/402</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/402</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/403</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/403</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/404</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/404</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/405</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/405</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/406</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/406</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/407</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/407</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/408</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/408</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/409</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/409</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/410</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/410</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/411</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/411</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/412</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/412</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/413</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/413</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/414</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/414</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/415</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/415</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/416</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/416</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/417</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/417</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/418</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/418</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/419</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/419</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/420</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/420</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/421</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/421</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/422</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/422</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/423</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/423</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/424</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/424</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/425</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/425</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/426</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/426</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/427</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/427</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/428</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/428</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/429</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/429</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/430</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/430</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/431</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/431</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/432</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/432</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/433</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/433</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/434</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/434</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/435</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/435</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/436</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/436</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/437</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/437</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/438</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/438</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/439</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/439</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/440</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/440</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/441</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/441</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/442</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/442</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/443</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/443</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/444</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/444</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/445</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/445</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/446</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/446</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/447</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/447</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/448</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/448</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/449</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/449</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/450</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/450</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/451</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/451</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/452</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/452</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/453</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/453</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/454</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/454</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/455</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/455</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/456</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/456</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/457</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/457</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/458</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/458</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/459</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/459</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/460</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/460</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/461</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/461</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/462</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/462</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/463</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/463</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/464</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/464</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/465</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/465</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/466</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/466</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/467</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/467</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/468</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/468</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/469</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/469</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/470</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/470</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/471</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/471</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/472</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/472</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/473</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/473</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/474</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/474</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/475</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/475</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/476</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/476</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/477</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/477</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/478</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/478</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/479</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/479</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/480</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/480</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/481</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/481</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/482</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/482</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/483</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/483</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/484</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/484</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/485</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/485</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/486</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/486</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/487</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/487</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/488</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/488</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/489</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/489</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/490</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/490</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/491</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/491</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/492</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/492</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/493</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/493</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/494</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/494</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/495</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/495</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/496</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/496</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/497</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/497</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/498</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/498</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/499</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/499</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/500</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/500</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/501</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/501</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/502</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/502</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/503</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/503</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/504</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/504</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/505</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/505</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/506</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/506</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/507</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/507</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/508</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/508</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/509</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/509</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/510</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/510</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/511</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/511</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/512</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/512</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/513</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/513</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/514</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/514</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>
 	<url>
-		<loc>http://medalmanah.ru/now/515</loc>
+		<loc>https://medalmanah.ru/medical-calendar/now/515</loc>
 		<lastmod>2016-07-20T00:00:00+01:00</lastmod>
 		<priority>1.0</priority>
 	</url>

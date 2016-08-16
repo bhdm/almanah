@@ -127,4 +127,29 @@ class DefaultController extends Controller
         sleep(2);
         return $this->redirect($url);
     }
+
+    /**
+     * @Route("/getXml")
+     */
+    public function getXmlAction(){
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy([],[],['created' => 'ASC']);
+        foreach ($publications as $publication){
+            echo "<url>\n";
+            echo "<loc>https://medalmanah.ru/news/".($publication->getSlug() ? $publication->getSlug() : $publication->getId())."</loc>\n";
+            echo "<lastmod>".$publication->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
+            echo "<priority>0.8</priority>\n";
+            echo "</url>";
+        }
+
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy([],[],['created' => 'ASC']);
+        foreach ($publications as $publication){
+            echo "<url>\n";
+            echo "<loc>https://medalmanah.ru/event/".$publication->getId()."</loc>\n";
+            echo "<lastmod>".$publication->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
+            echo "<priority>0.8</priority>\n";
+            echo "</url>";
+        }
+
+        exit;
+    }
 }
