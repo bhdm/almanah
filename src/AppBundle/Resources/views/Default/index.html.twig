@@ -24,30 +24,32 @@
                 {% endif %}
             {% endfor %}
         </div>
-
-        <div class="event-carusel-pages">
-            {% if carusels | length > 4 %}
-                <div class="active"></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            {% else %}
-                <br />
-            {% endif %}
-        </div>
+        <br />
+        <br />
+        <br />
+        {#<div class="event-carusel-pages">#}
+            {#{% if carusels | length > 4 %}#}
+                {#<div class="active"></div>#}
+                {#<div></div>#}
+                {#<div></div>#}
+                {#<div></div>#}
+            {#{% else %}#}
+                {#<br />#}
+            {#{% endif %}#}
+        {#</div>#}
     </div>
 {% endblock %}
 
 {% block content %}
     <div class="row">
         <div class="col-sm-12">
-            <div class="title"><div><a href="{{ path('news') }}">НОВОСТИ</a></div></div>
+            <div class="title"><a href="{{ path('news') }}"><h1>НОВОСТИ</h1></a></div>
             {% for p in publications %}
                 {{ include('@App/Publication/publication.item.html.twig',{'publication' : p }) }}
             {% endfor %}
             <br />
             <div class="text-left">
-                <a href="{{ path('news') }}"><b>Читать все новости медицины</b></a>
+                <a href="{{ path('news') }}" style="font-size: 15px; text-decoration: underline;"><b>Читать все новости медицины</b></a>
             </div>
         </div>
     </div>

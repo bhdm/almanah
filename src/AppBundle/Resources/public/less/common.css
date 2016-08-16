@@ -17,10 +17,14 @@ html {
 }
 body {
   text-align: center;
-  font-family: 'HelveticaNeue-Light';
+  font-family: 'Roboto,Arial,serif;';
   background: url("/bundles/app/images/light_toast.png");
   margin: 0;
   overflow-x: hidden;
+  font-size: 15px;
+}
+h1 {
+  font-family: 'Georgia, serif';
 }
 .table-layout {
   display: table;
@@ -258,10 +262,12 @@ nav .navbar-nav li:hover a {
   font-size: 16px;
   margin-bottom: 20px;
 }
-.title div {
+.title h1 {
   border-bottom: 2px solid #383838;
   display: inline-block;
   padding: 5px 10px;
+  font-size: 18px;
+  margin: 0;
 }
 .new-item {
   padding-bottom: 10px;
@@ -667,8 +673,9 @@ nav .navbar-nav li.active a:hover {
   color: #DD0000;
 }
 .publication-title a {
-  color: #222;
+  color: #DD0000;
   font-weight: bold;
+  font-size: 16px;
 }
 .publication-share,
 .publication-date,

@@ -1,7 +1,9 @@
 {% if publication.preview.path is defined %}
     <div class="new-item row">
         <div class="col-sm-3 hidden-xs">
-            <img src="{{ publication.preview.path }}" class="img-thumbnail">
+            <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}">
+                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}">
+            </a>
         </div>
         <div class="col-xs-12 col-sm-9">
             <div class="publication-title">
@@ -25,10 +27,10 @@
     <div class="col-xs-4 text-left">
         <span class="publication-date"><span class="glyphicon glyphicon-calendar hidden-xs"></span> {{ publication.created | date('d.m.Y') }}</span>
     </div>
-    <div class="col-xs-4 text-center">
-        <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> {{ publication.comments | length }} <span class="hidden-xs">комментариев</span></a>
+    <div class="col-xs-8 text-right">
+        <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">комментарии</span></a>
     </div>
-    <div class="col-xs-4 text-right">
+    {#<div class="col-xs-4 text-right">#}
         {#<span class="publication-share"><span class="hidden-xs">Рассказать</span> <span class="glyphicon glyphicon-share-alt"></span></span>#}
-    </div>
+    {#</div>#}
 </div>

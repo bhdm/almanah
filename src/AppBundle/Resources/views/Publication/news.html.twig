@@ -10,7 +10,7 @@
 {% block content %}
         <div class="row">
             <div class="col-sm-12">
-                <div class="title text-uppercase"><div>НОВОСТИ МЕДИЦИНЫ</div></div>
+                <div class="title text-uppercase"><h1>НОВОСТИ</h1></div>
                 <div style="padding-left: 50px">
                     {% for n in news %}
                         {{ include('@App/Publication/publication.item.html.twig',{'publication' : n}) }}

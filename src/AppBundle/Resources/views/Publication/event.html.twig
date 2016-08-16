@@ -23,7 +23,7 @@
 {% block content %}
     <div class="col-sm-12">
         <div class="row">
-            <div class="title"><div>{{ event.title }}</div></div>
+            <div class="title"><h1>{{ event.title }}</h1></div>
             {% if event.preview.path is defined %}
                 <div class="col-xs-4">
                     <img src="{{ event.preview.path }}"

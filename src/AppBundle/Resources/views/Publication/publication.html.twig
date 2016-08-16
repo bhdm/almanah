@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div>
-                <div class="title"><div itemprop="name">{{ publication.title }}</div></div>
+                <div class="title"><h1 itemprop="name">{{ publication.title }}</h1></div>
                 <div style="overflow: hidden">
                     {% if publication.preview.path is defined  %}
                         <img src="{{ publication.preview.path }}"
@@ -131,6 +131,14 @@
                     {% include '@App/Publication/comments.html.twig'  with {'comments': publication.comments, 'id' : publication.id, 'type': 'publication' } %}
                     <br />
                     <br />
+                {% else %}
+                    <br />
+                    <br />
+                    <div class="alert alert-info text-center">Для доступа к комментариям, пожалуйста,
+                        <a href="{{ path('fos_user_security_login') }}" style="cursor: pointer">авторизуйтесь</a>
+                        или
+                        <a href="{{ path('fos_user_registration_register') }}" style="cursor: pointer">зарегистрируйтесь</a>
+                    </div>
                 {% endif %}
             </div>
         </div>
