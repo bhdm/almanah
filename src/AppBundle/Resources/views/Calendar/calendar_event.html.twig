@@ -3,11 +3,11 @@
 {% block seo %}
     <title>{{ calendar.title }} | medalmanah.ru</title>
     <meta name="description" content="{{ calendar.anons|raw }}"/>
+    <meta name="keywords" content="Исторические медицинские события, празники, дни памяти "/>
 {% endblock %}
 
 {% block content %}
-    <h1 class="center">Календарь медицинских событий</h1>
-
+    <div class="title"><h1 itemprop="name">Календарь медицинских событий</h1></div>
     {% include 'AppBundle:Calendar:render.html.twig' %}
     <br />
     <br />

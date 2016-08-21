@@ -1,7 +1,14 @@
 {% extends '@App/layout.html.twig' %}
 
 {% block content %}
-    <h1 class="center">Календарь медицинских событий</h1>
+
+    <title>Исторические медицинские события</title>
+    <meta name="description" content="Исторические медицинские события, празники, дни памяти на сайте Алманах медицинских событий "/>
+    <meta name="keywords" content="Исторические медицинские события, празники, дни памяти "/>
+{% block seo %}
+
+{% block content %}
+    <div class="title"><h1 itemprop="name">Календарь медицинских событий</h1></div>
 
     {% include 'AppBundle:Calendar:render.html.twig' %}
 
