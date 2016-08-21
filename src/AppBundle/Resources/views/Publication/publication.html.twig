@@ -54,6 +54,11 @@
                     <div itemprop="description">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true %}
                             {{ publication.body | raw }}
+                            {% if publication.source %}
+                                <a href="{{ publication.source }}">Источник</a>
+                                <br />
+                                <br />
+                            {% endif %}
                         {% else %}
                             {{ publication.anons | raw }}
                             <br />
