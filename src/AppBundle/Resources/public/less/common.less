@@ -62,7 +62,10 @@ a{
 a:hover, a:focus{
     color: #9b0d27;
 }
-
+.btn-danger{
+    background: #c9302c;
+    border-color: #ac2925;
+}
 .btn-primary{
     background: #383838;
     border: 1px solid darken(#383838,20%);
@@ -800,6 +803,60 @@ nav .navbar-nav li.active a:hover{
                 }
             }
         }
+    }
+
+}
+.bg-gray{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.5;
+}
+.custom-banner{
+    background: url('/bundles/app/images/custombanner/bg.png') #FFF no-repeat;
+    width: 600px;
+    padding: 15px 20px;
+    position: fixed;
+    left: 50%;
+    margin-left: -300px;
+    top: 120px;
+    border: 1px solid #777;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: 50;
+    .title{
+        text-transform: uppercase;
+        font-weight: bold;
+        color: #000;
+        font-size: 24px;
+        border: 0;
+    }
+    .right{
+        margin-left: 230px;
+    }
+    ul{
+        list-style: disc;
+        color: @color-red;
+        //padding-top: 10px;
+        li{
+            color: @color-red;
+            padding-top: 5px;
+            padding-left: 10px;
+            margin-left: 20px;
+            span{
+                color: @color-black;
+            }
+        }
+    }
+    .firsttxt{
+        font-size: 18px;
+        color: @color-red;
+        text-transform: uppercase;
+        font-weight: bold;
     }
 
 }
