@@ -68,7 +68,16 @@
                 {{ form_start(form, {'action': path('fos_user_registration_register'), 'attr': {'id': 'registration_form'}}) }}
                 {{ form_widget(form) }}
                 <div class="row">
-                    <div class="col-sm-9 col-sm-offset-3 registration-submit-button text-right">
+                    <div class="col-sm-12 ">
+                        <br />
+                        <p style="color: #555; font-size: 12px;" class="text-center">
+                            Нажав кнопку «Зарегистрироваться» вы принимаете условия <br /><a href="{{ path('page',{'url' : 'eula'}) }}">пользовательского соглашения</a>
+                        </p>
+                        <br />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 registration-submit-button text-center">
                         <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
                     </div>
                 </div>
