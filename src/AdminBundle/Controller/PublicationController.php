@@ -1,6 +1,7 @@
 <?php
 namespace AdminBundle\Controller;
 
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -9,6 +10,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Component\HttpFoundation\Request;
 use AppBundle\Entity\Publication;
 use AppBundle\Form\PublicationType;
+use Endroid\Twitter\Twitter;
 
 /**
  * Class PublicationController
@@ -44,6 +46,14 @@ class PublicationController extends Controller{
         $em = $this->getDoctrine()->getManager();
         $item = new Publication();
         $form = $this->createForm(PublicationType::class, $item);
+        $form->add('twitter', CheckboxType::class, array(
+            'mapped' => false,
+            'required'    => false,
+            'label' => 'Сделать пост в twitter',
+            'attr' => [
+                'checked' => true
+            ]
+        ));
         $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
         $formData = $form->handleRequest($request);
 
@@ -51,17 +61,6 @@ class PublicationController extends Controller{
             if ($formData->isValid()){
                 $item = $formData->getData();
 
-//  Старый вариант закгрузки фото, без оберзания
-//                $file = $item->getPreview();
-//                if ($file){
-//                    $filename = time(). '.'.$file->guessExtension();
-//                    $file->move(
-//                        __DIR__.'/../../../web/upload/publication/',
-//                        $filename
-//                    );
-//                    $item->setPreview(['path' => '/upload/publication/'.$filename ]);
-//                }
-//  Новый вариант загрузки фото
                 if ($request->request->get('thumbail')){
                     $image = new \Imagick();
                     $image->readImageBlob($this->convertBase64Image($request->request->get('thumbail')));
@@ -71,11 +70,28 @@ class PublicationController extends Controller{
                     $item->setPreview(['path' => $filename]);
                 }
 
-
                 $item->setAuthor($this->getUser());
                 $em->persist($item);
                 $em->flush();
                 $em->refresh($item);
+
+//                Тут проверяем нужно ли ретвитить, и если да - делаем пост в твиттер
+//                dump($request->request->get('twitter'));
+//                exit;
+                if ($request->request->get('publication')['twitter'] == 1){
+                    $consumerKey = $this->getParameter('twitter_consumer_key');
+                    $consumerSecret = $this->getParameter('twitter_consumer_secret');
+                    $accessToken = $this->getParameter('twitter_access_token');
+                    $accessTokenSecret = $this->getParameter('twitter_access_secret');
+                    $url = 'https://medalmanah.ru'.$this->generateUrl('publications',['url' => $item->getSlug()]);
+                    $delimetr = " : ";
+                    $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+                    $twitter->query('statuses/update', 'POST', 'json', array(
+                        'status' => $item->getTitle() . $delimetr . $url,
+//                        'entities' => array("urls" => ["url" => $url ])
+                    ));
+                }
+
                 return $this->redirect($this->generateUrl('admin_publication_list'));
             }
         }
@@ -136,4 +152,5 @@ class PublicationController extends Controller{
         $data= $splited[1];
         return base64_decode($data);
     }
+
 }
