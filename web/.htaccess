@@ -5,17 +5,19 @@
 # to each configured DirectoryIndex file (e.g. index.php, index.html, index.pl).
 DirectoryIndex app.php
 
-ExpiresActive On
-ExpiresByType image/svg+xml "access 1 month"
-ExpiresByType image/gif "access 1 month"
-ExpiresByType image/svg"access 1 month"
-ExpiresByType image/jpg "access 1 month"
-ExpiresByType image/jpeg "access 1 month"
-ExpiresByType image/png "access 1 month"
-ExpiresByType text/css "access 1 month"
-ExpiresByType text/js "access 1 week"
-ExpiresByType application/javascript "access 1 week"
-ExpiresByType application/x-font-woff "access 1 week"
+<ifModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/svg+xml "access 1 month"
+    ExpiresByType image/gif "access 1 month"
+    ExpiresByType image/svg"access 1 month"
+    ExpiresByType image/jpg "access 1 month"
+    ExpiresByType image/jpeg "access 1 month"
+    ExpiresByType image/png "access 1 month"
+    ExpiresByType text/css "access 1 month"
+    ExpiresByType text/js "access 1 week"
+    ExpiresByType application/javascript "access 1 week"
+    ExpiresByType application/x-font-woff "access 1 week"
+</ifModule>
 
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
