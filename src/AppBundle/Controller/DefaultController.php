@@ -113,7 +113,28 @@ class DefaultController extends Controller
             $txt.= $request->request->get('phone').'<br />';
             $txt.= $request->request->get('type').'<br />';
             $txt.= $request->request->get('text').'<br />';
-            mail('admin@medalmanah.ru','Сообщение с сайта', $txt);
+
+            $mail = new \PHPMailer();
+
+            $mail->isSMTP();
+            $mail->isHTML(true);
+            $mail->SMTPDebug = 0;
+            $mail->SMTPSecure = 'tls';
+            $mail->CharSet  = 'UTF-8';
+            $mail->From     = 'mailer@medalmanah.ru';
+            $mail->FromName = 'Альманах медицинских событий';
+            $mail->Host     = 'localhost';
+            $mail->Username = 'mailer';
+            $mail->Password = '3245897';
+            $mail->SMTPAuth = false;
+            $mail->Port     = 25;
+            $mail->Subject  = 'Сообщение из формы обратной связи';
+            $mail->Body     = $txt;
+            $mail->addAddress('admin@medalmanah.ru');
+            $mail->addCustomHeader('X-Postmaster-Msgtype', "firstDelivery");
+
+            return $mail->send() ? null : $mail->ErrorInfo;
+
             $post = true;
         }
         return ['post' => $post];
