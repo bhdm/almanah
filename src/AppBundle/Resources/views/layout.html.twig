@@ -215,7 +215,9 @@
 </div>
 {% block modal %}{% endblock %}
 {% include "@App/Modal/login.html.twig" %}
-{#{% include "@App/banner.html.twig" %}#}
+<!--noindex-->
+    {% include "@App/banner.html.twig" %}
+<!--/noindex-->
 {% include "@App/counter.html.twig" %}
 </body>
 </html>

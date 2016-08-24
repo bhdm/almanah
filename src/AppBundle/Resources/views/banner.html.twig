@@ -1,32 +1,63 @@
-<div class="bg-gray"></div>
-<div class="custom-banner">
-    <div class="title">Медицинский альманах</div>
-    <div class="right text-left">
-        <div class="firsttxt">
-            <div>Здравствуйте,</div>
-            <div style="text-align: right">уважаемый врач</div>
-        </div>
-        <br />
-        <div style="font-size: 15px;">
-            <div  style="font-size: 18px">
-                <strong style="font-size: 18px;">Представляем Вам новый портал.</strong>
-                <br />
-                Здесь Вы можете увидеть:
+{% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+    <div id="custum-banner" class="hidden-xs hidden-sm">
+        <div class="bg-gray"></div>
+        <div class="custom-banner">
+            <div style="position: absolute; top: -15px; right: -10px; font-size: 24px;">
+                <a href="#" onclick="$('#custum-banner').fadeOut(); return false;"><span class="glyphicon glyphicon-remove-circle" style="color: #232323"> </span></a>
             </div>
-            <ul style="font-size: 18px">
-                <li><span>Календарь медицинских мероприятий, курсов, ФПДО, форумов</span></li>
-                <li><span>Последние новости в сфере медицины</span></li>
-                <li><span>Большое количество инструментов, которые помогут Вам в Вашей работе</span></li>
-            </ul>
+            <div class="title">Медицинский альманах</div>
+            <div class="right text-left">
+                <div class="firsttxt">
+                    <div>Здравствуйте,</div>
+                    <div style="margin-left: 100px">уважаемый врач</div>
+                </div>
+                <br />
+                <div style="font-size: 15px;">
+                    <div  style="font-size: 16px">
+                        <strong style="font-size: 18px;">Представляем Вам новый портал.</strong>
+                        <br />
+                        Здесь Вы можете увидеть:
+                    </div>
+                    <ul style="font-size: 16px">
+                        <li><span>Календарь медицинских мероприятий, курсов, ФПДО, форумов</span></li>
+                        <li><span>Последние новости в сфере медицины</span></li>
+                        <li><span>Большое количество инструментов, которые помогут Вам в Вашей работе</span></li>
+                    </ul>
+                </div>
+                <br />
+                <div class="red text-center">
+                    <b style="font-size: 14px">
+                        Данный сайт предназначен исключительно для работников здравоохранения.
+                        Если Вы не являетесь работником здравоохранения, пожалуйста, закройте страницу сайта.
+                    </b>
+                </div>
+                <br />
+                <a href="{{ path('fos_user_registration_register') }}?banner"><button class="btn btn-danger" style="text-transform: uppercase">Зарегистрироваться</button></a> <a href="#" onclick="$('#custum-banner').fadeOut(); return false;" style="display: inline-block; margin-left: 20px">Закрыть баннер</a>
+            </div>
         </div>
-        <br />
     </div>
-    <div class="red">
-        <b style="font-size: 14px">
-            Наш сайт предназначен исключительно для врачей.<br />
-            Если Вы не являетесь врачем или медицинским представителем, просим Вас покинуть наш сайт.
-        </b>
-    </div>
-    <br />
-    <button class="btn btn-danger" id="login" style="text-transform: uppercase">Зарегистрироваться</button> <a href="#" style="display: inline-block; margin-left: 20px">Закрыть баннер</a>
-</div>
+    <script src="{{ asset('assets/vendor/jquery.cookie/jquery.cookie.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            if ($.cookie('customBannerOne') == undefined){
+                $.cookie('customBannerOne',0, 1);
+            }
+            console.log($.cookie('customBannerOne'));
+            if ($.cookie('customBannerOnePage') == undefined){
+                $.cookie('customBannerOnePage',0, 1);
+            }
+
+            if ($.cookie('customBannerOne') == 0){
+                var page = parseInt($.cookie('customBannerOnePage'))+1;
+                $.cookie('customBannerOnePage', page);
+
+                if (page >= 3){
+                    $.cookie('customBannerOne',1);
+                    $.cookie('customBannerOnePage', 0);
+                    $('#custum-banner').fadeIn();
+                }
+            }
+
+        });
+    </script>
+{% endif %}
