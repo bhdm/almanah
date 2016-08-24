@@ -769,6 +769,7 @@ nav .navbar-nav li.active a:hover {
   bottom: 0;
   background: #000;
   opacity: 0.5;
+  z-index: 48;
 }
 .custom-banner {
   background: url('/bundles/app/images/custombanner/bg.png') #FFF no-repeat;
