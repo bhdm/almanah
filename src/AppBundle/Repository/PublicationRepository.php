@@ -73,7 +73,7 @@ class PublicationRepository extends \Doctrine\ORM\EntityRepository
     }
 
     public function findFeaturedPublications(\DateTime $date, $specialties, $limit){
-        if ($specialties == null){
+        if (count($specialties) == 0){
             return [];
         }
         $specialtyFilter = '';
