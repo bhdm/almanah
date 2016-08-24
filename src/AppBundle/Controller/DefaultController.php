@@ -132,8 +132,7 @@ class DefaultController extends Controller
             $mail->Body     = $txt;
             $mail->addAddress('admin@medalmanah.ru');
             $mail->addCustomHeader('X-Postmaster-Msgtype', "firstDelivery");
-
-            return $mail->send() ? null : $mail->ErrorInfo;
+            $mail->send();
 
             $post = true;
         }
