@@ -40,11 +40,11 @@
     <script>
         $(document).ready(function () {
             if ($.cookie('customBannerOne') == undefined){
-                $.cookie('customBannerOne',0, 1);
+                $.cookie('customBannerOne',0, { expires: 1, path: '/' });
             }
             console.log($.cookie('customBannerOne'));
             if ($.cookie('customBannerOnePage') == undefined){
-                $.cookie('customBannerOnePage',0, 1);
+                $.cookie('customBannerOnePage',0, { expires: 1, path: '/' });
             }
 
             if ($.cookie('customBannerOne') == 0){
