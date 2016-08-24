@@ -15,8 +15,8 @@
 {% endblock %}
 
 {% block seo %}
-    <title>{{ event.start | date('d.m.Y') }}, {{ event.city }}. {{ event.title }} </title>
-    <meta name="description" content="{{ event.metaDescription }}. {{ event.start | date('d.m.Y') }}, {{ event.city }}"/>
+    <title>{{ event.title }}, {{ event.city }}, {{ event.start | date('d.m.Y') }} </title>
+    <meta name="description" content="{{ event.metaDescription ? event.metaDescription : event.anons }}. {{ event.start | date('d.m.Y') }}, {{ event.city }}"/>
     <meta name="keywords" content="{{ event.metaKeyword }}"/>
 {% endblock %}
 

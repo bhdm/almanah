@@ -113,7 +113,7 @@ class DefaultController extends Controller
             $txt.= $request->request->get('phone').'<br />';
             $txt.= $request->request->get('type').'<br />';
             $txt.= $request->request->get('text').'<br />';
-            mail('tulupov.m@gmail.com','Сообщение с сайта', $txt);
+            mail('admin@medalmanah.ru','Сообщение с сайта', $txt);
             $post = true;
         }
         return ['post' => $post];

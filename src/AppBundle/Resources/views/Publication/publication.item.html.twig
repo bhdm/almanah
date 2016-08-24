@@ -2,7 +2,7 @@
     <div class="new-item row">
         <div class="col-sm-3 hidden-xs">
             <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}">
-                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}">
+                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}">
             </a>
         </div>
         <div class="col-xs-12 col-sm-9">
