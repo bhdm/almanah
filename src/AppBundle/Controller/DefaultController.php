@@ -130,7 +130,7 @@ class DefaultController extends Controller
             $mail->Port     = 25;
             $mail->Subject  = 'Сообщение из формы обратной связи';
             $mail->Body     = $txt;
-            $mail->addAddress('admin@medalmanah.ru');
+            $mail->addAddress('bhd.m@ya.ru');
             $mail->addCustomHeader('X-Postmaster-Msgtype', "firstDelivery");
             $mail->send();
 
