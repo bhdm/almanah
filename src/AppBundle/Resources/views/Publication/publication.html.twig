@@ -20,7 +20,7 @@
     <meta name="keywords" content="{{ publication.metaKeyword }}"/>
 {% endblock %}
 
-{% if publication.type == 1 %}
+{% if publication.type == 0 %}
     {% set publicationUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
 {% elseif publication.type == 2 %}
     {% set publicationUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
@@ -127,11 +127,14 @@
                             <h3>Интересные публикации:</h3>
                             <ul>
                                 {% for fp in featuredPublications  %}
-                                    {% if fp.slug != null %}
-                                        <li><a href="{{ publicationUrl }}" target="_blank">{{ fp.title }}</a></li>
+                                    {% if fp.type == 0 %}
+                                        {% set fpnUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+                                    {% elseif fp.type == 2 %}
+                                        {% set fpnUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
                                     {% else %}
-                                        <li><a href="{{ publicationUrl }}" target="_blank">{{ fp.title }}</a></li>
+                                        {% set fpnUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
                                     {% endif %}
+                                    <li><a href="{{ fpnUrl }}" target="_blank">{{ fp.title }}</a></li>
                                 {% endfor %}
                             </ul>
                         </div>
