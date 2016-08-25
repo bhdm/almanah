@@ -7,6 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class DefaultController extends Controller
 {
@@ -149,23 +150,53 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/getXml")
+     * @Route("/sitemap", defaults={"_format"="xml"})
+     * @Template("AppBundle::sitemap.html.twig")
      */
     public function getXmlAction(){
-        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy([],['created' => 'ASC']);
+
+
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled'=>true],['created' => 'ASC']);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=>true],['created' => 'ASC']);
+        $pages = $this->getDoctrine()->getRepository('AppBundle:Page')->findBy(['id' => 'ASC']);
+        $calendar = $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['id' => 'ASC']);
+        $standarts = $this->getDoctrine()->getRepository('AppBundle:Standart')->findBy(['id' => 'ASC']);
+
+        return [
+            'publications'  => $publications,
+            'events'        => $events,
+            'pages'         => $pages,
+            'calendar'      => $calendar,
+            'standarts'     => $standarts,
+        ];
+
+
         foreach ($publications as $publication){
+            if ($publication->getType() == 0){
+                $type = 'article';
+            }elseif ($publication->getType() == 2){
+                $type = 'study';
+            }else{
+                $type = 'new';
+            }
+
             echo "<url>\n";
-            echo "<loc>https://medalmanah.ru/news/".($publication->getSlug() ? $publication->getSlug() : $publication->getId())."</loc>\n";
+            echo "<loc>https://medalmanah.ru/publications/".$type.'/'.($publication->getSlug() ? $publication->getSlug() : $publication->getId())."</loc>\n";
             echo "<lastmod>".$publication->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
             echo "<priority>0.8</priority>\n";
             echo "</url>";
         }
 
-        $publications = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy([],['created' => 'ASC']);
-        foreach ($publications as $publication){
+
+        foreach ($events as $event){
+            if ($event->getCategory()->getId() == 2){
+                $type = 'russian-events';
+            }else{
+                $type = 'foreign-events';
+            }
             echo "<url>\n";
-            echo "<loc>https://medalmanah.ru/event/".$publication->getId()."</loc>\n";
-            echo "<lastmod>".$publication->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
+            echo "<loc>https://medalmanah.ru/event/".$type.'/'.($event->getSlug() ? $event->getSlug() : $event->getId())."</loc>\n";
+            echo "<lastmod>".$event->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
             echo "<priority>0.8</priority>\n";
             echo "</url>";
         }

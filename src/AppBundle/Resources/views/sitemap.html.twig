@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>https://medalmanah.ru</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/publications/news</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/publications/articles</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/publications/study</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/events/russian-events</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/events/foreign-events</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/events/fpdo-courses</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/events/online-courses</loc>
+        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/federal-standards</loc>
+        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/abbreviations</loc>
+        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/calculators</loc>
+        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/calculators/ocenka-clirensa-creatinina</loc>
+        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://medalmanah.ru/feedback</loc>
+        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
+        <priority>1.0</priority>
+    </url>
+    {% for p in pages  %}
+        <url>
+            <loc>https://medalmanah.ru/{{ p.slug }}</loc>
+            <lastmod>2016-07-20T00:00:00+01:00</lastmod>
+            <priority>1.0</priority>
+        </url>
+    {% endfor %}
+    {% for publication in publications  %}
+        {% if publication.type == 0 %}
+            {% set type = 'article' %}
+        {% elseif publication.type == 2 %}
+            {% set type = 'study' %}
+        {% else %}
+            {% set type = 'new' %}
+        {% endif %}
+        <url>
+            <loc>https://medalmanah.ru/publications/{{ type }}/{{ publication.slug ? publication.slug : publication.id }}</loc>
+            <lastmod>{{ publication.created | date('d.m.Y') }}T12:24:14+01:00</lastmod>
+            <priority>0.8</priority>
+        </url>
+    {% endfor %}
+    {% for event in events  %}
+        {#{% if publication.type == 0 %}#}
+            {#{% set type = 'article' %}#}
+        {#{% elseif publication.type == 2 %}#}
+            {#{% set type = 'study' %}#}
+        {#{% else %}#}
+            {#{% set type = 'new' %}#}
+        {#{% endif %}#}
+        <url>
+            <loc>https://medalmanah.ru/event/{{ event.slug ? event.slug : event.id }}</loc>
+            <lastmod>{{ event.created | date('d.m.Y') }}T12:24:14+01:00</lastmod>
+            <priority>0.8</priority>
+        </url>
+    {% endfor %}
+    {% for c in calendar  %}
+        <url>
+            <loc>https://medalmanah.ru/medical-calendar/now/{{ c.id }}</loc>
+            <lastmod>2016-07-20T00:00:00+01:00</lastmod>
+            <priority>1.0</priority>
+        </url>
+    {% endfor %}
+    {% for p in standarts  %}
+        <url>
+            <loc>https://medalmanah.ru/federal-standards/{{ p.id }}</loc>
+            <lastmod>2016-07-20T00:00:00+01:00</lastmod>
+            <priority>1.0</priority>
+        </url>
+    {% endfor %}
+</urlset>
