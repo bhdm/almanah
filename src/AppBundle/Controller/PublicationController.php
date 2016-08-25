@@ -4,6 +4,7 @@ namespace AppBundle\Controller;
 
 use AppBundle\Entity\Comment;
 use AppBundle\Entity\Event;
+use AppBundle\Entity\Publication;
 use AppBundle\Form\EventUserType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -55,32 +56,45 @@ class PublicationController extends Controller
     }
 
     /**
-     * @Route("/new/{url}", name="new")
+     * @Route("/publications/new/{url}", name="new")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function newAction($url){
         $publication = $this->getPublication($url, 1);
-        $featuredPublications = $this->getFeaturedPublications($publication);
-        return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+
+        if ($publication instanceof Publication){
+            $featuredPublications = $this->getFeaturedPublications($publication);
+            return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+        }else{
+            return $publication;
+        }
     }
 
     /**
-     * @Route("/study/{url}", name="study")
+     * @Route("/publications/study/{url}", name="study")
      */
     public function studyAction($url){
         $publication = $this->getPublication($url, 2);
-        $featuredPublications = $this->getFeaturedPublications($publication);
-        return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+        if ($publication instanceof Publication){
+            $featuredPublications = $this->getFeaturedPublications($publication);
+            return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+        }else{
+            return $publication;
+        }
     }
 
     /**
-     * @Route("/article/{url}", name="article")
+     * @Route("/publications/article/{url}", name="article")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function articleAction($url){
         $publication = $this->getPublication($url, 0);
-        $featuredPublications = $this->getFeaturedPublications($publication);
-        return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+        if ($publication instanceof Publication){
+            $featuredPublications = $this->getFeaturedPublications($publication);
+            return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+        }else{
+            return $publication;
+        }
     }
 
     /**
@@ -330,7 +344,7 @@ class PublicationController extends Controller
                 }elseif($publication->getType() == 2){
                     return $this->redirect($this->generateUrl('study',['url' => $publication->getSlug()]));
                 }else{
-                    return $this->createNotFoundException('Данной страницы не существует');
+                    throw $this->createNotFoundException('Данной страницы не существует');
                 }
             }else{
                 if ($publication->getType() == 0){
@@ -340,7 +354,7 @@ class PublicationController extends Controller
                 }elseif($publication->getType() == 2){
                     return $this->redirect($this->generateUrl('study',['url' => $publication->getId()]));
                 }else{
-                    return $this->createNotFoundException('Данной страницы не существует');
+                    throw $this->createNotFoundException('Данной страницы не существует');
                 }
             }
         }
