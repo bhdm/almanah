@@ -2,42 +2,42 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
         <loc>https://medalmanah.ru</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/publications/news</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/publications/articles</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/publications/study</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/russian-events</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/foreign-events</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/fpdo-courses</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/online-courses</loc>
-        <lastmod>{{ 'now' | date('d.m.Y') }}T00:00:00+01:00</lastmod>
+        <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
@@ -82,7 +82,7 @@
         {% endif %}
         <url>
             <loc>https://medalmanah.ru/publications/{{ type }}/{{ publication.slug ? publication.slug : publication.id }}</loc>
-            <lastmod>{{ publication.created | date('d.m.Y') }}T12:24:14+01:00</lastmod>
+            <lastmod>{{ publication.created | date('Y-m-d') }}T12:24:14+01:00</lastmod>
             <priority>0.8</priority>
         </url>
     {% endfor %}
@@ -96,7 +96,7 @@
         {#{% endif %}#}
         <url>
             <loc>https://medalmanah.ru/event/{{ event.slug ? event.slug : event.id }}</loc>
-            <lastmod>{{ event.created | date('d.m.Y') }}T12:24:14+01:00</lastmod>
+            <lastmod>{{ event.created | date('Y-m-d') }}T12:24:14+01:00</lastmod>
             <priority>0.8</priority>
         </url>
     {% endfor %}
