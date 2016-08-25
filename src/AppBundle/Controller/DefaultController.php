@@ -158,9 +158,9 @@ class DefaultController extends Controller
 
         $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled'=>true],['created' => 'ASC']);
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=>true],['created' => 'ASC']);
-        $pages = $this->getDoctrine()->getRepository('AppBundle:Page')->findBy(['id' => 'ASC']);
-        $calendar = $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['id' => 'ASC']);
-        $standarts = $this->getDoctrine()->getRepository('AppBundle:Standart')->findBy(['id' => 'ASC']);
+        $pages = $this->getDoctrine()->getRepository('AppBundle:Page')->findBy([],['id' => 'ASC']);
+        $calendar = $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy([],['id' => 'ASC']);
+        $standarts = $this->getDoctrine()->getRepository('AppBundle:Standart')->findBy([],['id' => 'ASC']);
 
         return [
             'publications'  => $publications,
