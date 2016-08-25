@@ -154,7 +154,7 @@ class DefaultController extends Controller
      * @Template("AppBundle::sitemap.html.twig")
      */
     public function getXmlAction(){
-
+        ini_set('memory_limit', '-1');
 
         $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled'=>true],['created' => 'ASC']);
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled'=>true],['created' => 'ASC']);
