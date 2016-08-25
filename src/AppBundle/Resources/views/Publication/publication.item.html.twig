@@ -1,4 +1,4 @@
-{% if publication.type == 1 %}
+{% if publication.type == 0 %}
     {% set publicationUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
 {% elseif publication.type == 2 %}
     {% set publicationUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
