@@ -72,7 +72,7 @@ class PublicationRepository extends \Doctrine\ORM\EntityRepository
         return $result;
     }
 
-    public function findFeaturedPublications(\DateTime $date, $specialties, $limit){
+    public function findFeaturedPublications(\DateTime $date, $publicationId, $specialties, $type, $limit){
         if (count($specialties) == 0){
             return [];
         }
@@ -89,8 +89,12 @@ class PublicationRepository extends \Doctrine\ORM\EntityRepository
         $qb->where('p.enabled = true');
         $qb->andWhere($specialtyFilter);
         $qb->andWhere('p.created <= :date');
+        $qb->andWhere('p.id != :pId');
+        $qb->andWhere('p.type = :pType');
 
         $qb->setParameter(':date', $date->format('Y-m-d').' 23:59:59');
+        $qb->setParameter(':pId', $publicationId);
+        $qb->setParameter(':pType', $type);
 
         $qb->groupBy('p.id');
         $qb->orderBy('p.created', 'DESC');

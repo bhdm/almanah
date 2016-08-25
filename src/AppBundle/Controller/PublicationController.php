@@ -30,37 +30,86 @@ class PublicationController extends Controller
             if ($publication === null){
                 return $this->createNotFoundException('Данной страницы не существует');
             }
-            if ($publication->getSlug()){
-                return $this->redirect($this->generateUrl('publications',['url' => $publication->getSlug()]));
+        }
+        if ($publication->getSlug()){
+            if ($publication->getType() == 0){
+                return $this->redirect($this->generateUrl('article',['url' => $publication->getSlug()]));
+            }elseif($publication->getType() == 1){
+                return $this->redirect($this->generateUrl('new',['url' => $publication->getSlug()]));
+            }elseif($publication->getType() == 2){
+                return $this->redirect($this->generateUrl('study',['url' => $publication->getSlug()]));
+            }else{
+                return $this->createNotFoundException('Данной страницы не существует');
+            }
+        }else{
+            if ($publication->getType() == 0){
+                return $this->redirect($this->generateUrl('article',['url' => $publication->getId()]));
+            }elseif($publication->getType() == 1){
+                return $this->redirect($this->generateUrl('new',['url' => $publication->getId()]));
+            }elseif($publication->getType() == 2){
+                return $this->redirect($this->generateUrl('study',['url' => $publication->getId()]));
+            }else{
+                return $this->createNotFoundException('Данной страницы не существует');
             }
         }
-        # Теперь находим 5 последних публикаций той же специальности,
-        # которые были написаны до текущей
-        $date = $publication->getCreated();
-        $featuredPublications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findFeaturedPublications($date, $publication->getSpecialties(), 5);
+    }
 
+    /**
+     * @Route("/new/{url}", name="new")
+     * @Template("AppBundle:Publication:publication.html.twig")
+     */
+    public function newAction($url){
+        $publication = $this->getPublication($url);
+        $featuredPublications = $this->getFeaturedPublications($publication);
         return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
     }
 
     /**
-     * @Route("/publications/{category}", name="publications_by_category")
-     * @Template("AppBundle:Publication:news.html.twig")
+     * @Route("/study/{url}", name="study")
      */
-    public function publicationsAction(Request $request, $category){
+    public function studyAction($url){
+        $publication = $this->getPublication($url);
+        $featuredPublications = $this->getFeaturedPublications($publication);
+        return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+    }
+
+    /**
+     * @Route("/article/{url}", name="article")
+     * @Template("AppBundle:Publication:publication.html.twig")
+     */
+    public function articleAction($url){
+        $publication = $this->getPublication($url);
+        $featuredPublications = $this->getFeaturedPublications($publication);
+        return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+    }
+
+    /**
+     * @Route("/publications/{category}", name="publications_by_category", defaults={"category"=null})
+     * @Template("AppBundle:Publication:publications.html.twig")
+     */
+    public function publicationsAction(Request $request, $category = null){
         switch ($category){
-            case 0:  $cat = '0'; break;
-            case 1:  $cat = '1'; break;
-            case 2:  $cat = '2'; break;
-            default: $cat = '2'; break;
+            case '0':  return $this->redirect($this->generateUrl('publications_by_category',['category' => 'articles']),301); break;
+            case '1':  return $this->redirect($this->generateUrl('publications_by_category',['category' => 'news']),301); break;
+            case '2':  return $this->redirect($this->generateUrl('publications_by_category',['category' => 'study']),301); break;
+            case 'articles': $cat = '0'; break;
+            case 'news': $cat = '1'; break;
+            case 'study': $cat = '2'; break;
+            default: $cat = null; break;
         }
-        $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true, 'type' => $cat ],['created' => 'DESC']);
+        if ($cat == null){
+            $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
+        }else{
+            $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true, 'type' => $cat ],['created' => 'DESC']);
+        }
+
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
             $news,
             $request->query->get('page', 1),
             15
         );
-        return ['news' => $pagination];
+        return ['news' => $pagination, 'category' => $category];
     }
 
     /**
@@ -81,11 +130,18 @@ class PublicationController extends Controller
      */
     public function eventAction(Request $request, $url)
     {
-        $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneById($url);
-        $importants =  $this->getDoctrine()->getRepository('AppBundle:Calendar')->findBy(['enabled' => true],['id' => 'DESC'], 3);
+        $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneBy(['slug' => $url,'enabled' => true]);
+        if (!$event){
+            $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneBy(['id' => $url,'enabled' => true]);
+            if ($event === null){
+                return $this->createNotFoundException('Данного события не существует или оно было удалено с сайта');
+            }
+            if ($event->getSlug()){
+                return $this->redirect($this->generateUrl('event',['url' => $event->getSlug()]));
+            }
+        }
 
-
-        return ['event' => $event, 'importants' => $importants];
+        return ['event' => $event];
     }
 
     /**
@@ -155,18 +211,20 @@ class PublicationController extends Controller
 
 
     /**
-     * @Route("news", name="news")
-     * @Template("AppBundle:Publication:news.html.twig")
+     * @Route("/news", name="news")
+     * @Template("AppBundle:Publication:publications.html.twig")
      */
     public function newsAction(Request $request){
-        $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
-        $paginator  = $this->get('knp_paginator');
-        $pagination = $paginator->paginate(
-            $news,
-            $request->query->get('page', 1),
-            15
-        );
-        return ['news' => $pagination];
+        return $this->redirect($this->generateUrl('publications_by_category'));
+
+//        $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
+//        $paginator  = $this->get('knp_paginator');
+//        $pagination = $paginator->paginate(
+//            $news,
+//            $request->query->get('page', 1),
+//            15
+//        );
+//        return ['news' => $pagination];
     }
 
     /**
@@ -244,6 +302,35 @@ class PublicationController extends Controller
      */
     public function eventsmapAction(){
         return [];
+    }
+
+    private function getFeaturedPublications($publication){
+        $date = $publication->getCreated();
+        $featuredPublications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findFeaturedPublications($date, $publication->getId(), $publication->getSpecialties(), $publication->getType(), 5);
+        return $featuredPublications;
+    }
+
+    private function getPublication($url)
+    {
+        $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->findOneBy(['slug' => $url,'enabled' => true]);
+        if (!$publication){
+            $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->findOneBy(['id' => $url,'enabled' => true]);
+            if ($publication === null){
+                return $this->createNotFoundException('Данной страницы не существует');
+            }
+            if ($publication->getSlug()){
+                if ($publication->getType() == 0){
+                    return $this->redirect($this->generateUrl('article',['url' => $publication->getSlug()]));
+                }elseif($publication->getType() == 1){
+                    return $this->redirect($this->generateUrl('new',['url' => $publication->getSlug()]));
+                }elseif($publication->getType() == 2){
+                    return $this->redirect($this->generateUrl('study',['url' => $publication->getSlug()]));
+                }else{
+                    return $this->createNotFoundException('Данной страницы не существует');
+                }
+            }
+        }
+        return $publication;
     }
 
 }

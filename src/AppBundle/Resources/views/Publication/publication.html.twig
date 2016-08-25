@@ -20,6 +20,14 @@
     <meta name="keywords" content="{{ publication.metaKeyword }}"/>
 {% endblock %}
 
+{% if publication.type == 1 %}
+    {% set publicationUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+{% elseif publication.type == 2 %}
+    {% set publicationUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+{% else %}
+    {% set publicationUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+{% endif %}
+
 {% block social %}
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ publication.title }}">
@@ -120,9 +128,9 @@
                             <ul>
                                 {% for fp in featuredPublications  %}
                                     {% if fp.slug != null %}
-                                        <li><a href="{{ path('publications',{'url' : fp.slug }) }}" target="_blank">{{ fp.title }}</a></li>
+                                        <li><a href="{{ publicationUrl }}" target="_blank">{{ fp.title }}</a></li>
                                     {% else %}
-                                        <li><a href="{{ path('publications',{'url' : fp.id }) }}" target="_blank">{{ fp.title }}</a></li>
+                                        <li><a href="{{ publicationUrl }}" target="_blank">{{ fp.title }}</a></li>
                                     {% endif %}
                                 {% endfor %}
                             </ul>

@@ -1,0 +1,42 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% if category is defined and category == 'articles' %}
+    {% set categoryTitle = 'Медицинские публикации' %}
+    {% set categoryDesc = 'Научные статьи медицинских изданий на сайте medalmanah.ru' %}
+{% elseif category is defined and  category == 'study' %}
+    {% set categoryTitle = 'Клинические случаи' %}
+    {% set categoryDesc = 'Клинические случаи заболеваний, описание неожиданных побочных воздействий лекарственных препаратов на сайте Альманах медицинских событий' %}
+{% else %}
+    {% set categoryTitle = 'Новости медицины' %}
+    {% set categoryDesc = 'Последние новости в сфере медицины на сайте Альманах медицинских событий' %}
+{% endif %}
+{% set categoryKeywords = 'Медицинский альманах, Новости медицины, события, медицинские мероприятия, ФПДО, обучение для врачей, клинические случаи' %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% stylesheets "@AppBundle/Resources/public/less/comments.less" %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />
+    {% endstylesheets %}
+{% endblock %}
+
+{% block seo %}
+    <title>{{ categoryTitle }} </title>
+    <meta name="description" content="{{ categoryDesc }}"/>
+    <meta name="keywords" content="{{ categoryKeywords }}"/>
+{% endblock %}
+
+{% block content %}
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="title text-uppercase"><h1>{{ categoryTitle }}</h1></div>
+                <div style="padding-left: 50px">
+                    {% for n in news %}
+                        {{ include('@App/Publication/publication.item.html.twig',{'publication' : n}) }}
+                    {% endfor %}
+                    <nav>
+                        {{ knp_pagination_render(news) }}
+                    </nav>
+                </div>
+            </div>
+        </div>
+{% endblock %}

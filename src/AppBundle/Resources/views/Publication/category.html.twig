@@ -4,8 +4,15 @@
     <div class="title"><div>{{ category.title }}</div></div>
     <div>
         {% for p in publications %}
+            {% if publication.type == 1 %}
+                {% set publicationUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+            {% elseif publication.type == 2 %}
+                {% set publicationUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+            {% else %}
+                {% set publicationUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+            {% endif %}
             <div class="new-item">
-                <a href="{{ path('publications', {'url' : p.id }) }}"><div class="new-item-title">{{ p.title }}</div></a>
+                <a href="{{ publicationUrl }}"><div class="new-item-title">{{ p.title }}</div></a>
                 <div class="new-item-anons">
                     {{ p.body | anons | raw }}
                 </div>

@@ -16,8 +16,8 @@
                 <a href="{{ path('news') }}">ПУБЛИКАЦИИ</a>
                 <div class="submenu">
                     <ul class="submenu-items">
-                        <li><a href="{{ path('publications_by_category',{'category': '0'}) }}">Статьи</a></li>
-                        <li><a href="{{ path('publications_by_category',{'category': '1'}) }}">Новости</a></li>
+                        <li><a href="{{ path('publications_by_category',{'category': 'news'}) }}">Новости</a></li>
+                        <li><a href="{{ path('publications_by_category',{'category': 'articles'}) }}">Статьи</a></li>
                         {#<li><a href="{{ path('publications_by_category',{'category': '2'}) }}">Клинические иследования</a></li>#}
                     </ul>
                 </div>

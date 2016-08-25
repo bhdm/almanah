@@ -1,13 +1,21 @@
+{% if publication.type == 1 %}
+    {% set publicationUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+{% elseif publication.type == 2 %}
+    {% set publicationUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+{% else %}
+    {% set publicationUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+{% endif %}
+
 {% if publication.preview.path is defined %}
     <div class="new-item row">
         <div class="col-sm-3 hidden-xs">
-            <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}">
+            <a href="{{ publicationUrl }}">
                 <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}">
             </a>
         </div>
         <div class="col-xs-12 col-sm-9">
             <div class="publication-title">
-                <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}">{{ publication.title }}</a>
+                <a href="{{ publicationUrl }}">{{ publication.title }}</a>
             </div>
             <div class="new-body">{{ publication.anons }}</div>
         </div>
@@ -16,7 +24,7 @@
     <div class="new-item row">
         <div class="col-xs-12">
             <div class="publication-title">
-                <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}">{{ publication.title }}</a>
+                <a href="{{ publicationUrl }}">{{ publication.title }}</a>
             </div>
             <div class="new-body">{{ publication.anons }}</div>
         </div>
@@ -28,7 +36,7 @@
         <span class="publication-date"><span class="glyphicon glyphicon-calendar hidden-xs"></span> {{ publication.created | date('d.m.Y') }}</span>
     </div>
     <div class="col-xs-8 text-right">
-        <a href="{{ path('publications',{'url' : (publication.slug != null ? publication.slug : publication.id) }) }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">комментарии</span></a>
+        <a href="{{ publicationUrl }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">комментарии</span></a>
     </div>
     {#<div class="col-xs-4 text-right">#}
         {#<span class="publication-share"><span class="hidden-xs">Рассказать</span> <span class="glyphicon glyphicon-share-alt"></span></span>#}
