@@ -59,7 +59,7 @@ class PublicationController extends Controller
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function newAction($url){
-        $publication = $this->getPublication($url);
+        $publication = $this->getPublication($url, 1);
         $featuredPublications = $this->getFeaturedPublications($publication);
         return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
     }
@@ -68,7 +68,7 @@ class PublicationController extends Controller
      * @Route("/study/{url}", name="study")
      */
     public function studyAction($url){
-        $publication = $this->getPublication($url);
+        $publication = $this->getPublication($url, 2);
         $featuredPublications = $this->getFeaturedPublications($publication);
         return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
     }
@@ -78,7 +78,7 @@ class PublicationController extends Controller
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function articleAction($url){
-        $publication = $this->getPublication($url);
+        $publication = $this->getPublication($url, 0);
         $featuredPublications = $this->getFeaturedPublications($publication);
         return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
     }
@@ -310,7 +310,7 @@ class PublicationController extends Controller
         return $featuredPublications;
     }
 
-    private function getPublication($url)
+    private function getPublication($url, $type)
     {
         $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->findOneBy(['slug' => $url,'enabled' => true]);
         if (!$publication){
@@ -318,6 +318,10 @@ class PublicationController extends Controller
             if ($publication === null){
                 return $this->createNotFoundException('Данной страницы не существует');
             }
+        }
+        if ($type === $publication->getType()){
+            return $publication;
+        }else{
             if ($publication->getSlug()){
                 if ($publication->getType() == 0){
                     return $this->redirect($this->generateUrl('article',['url' => $publication->getSlug()]));
@@ -328,9 +332,18 @@ class PublicationController extends Controller
                 }else{
                     return $this->createNotFoundException('Данной страницы не существует');
                 }
+            }else{
+                if ($publication->getType() == 0){
+                    return $this->redirect($this->generateUrl('article',['url' => $publication->getId()]));
+                }elseif($publication->getType() == 1){
+                    return $this->redirect($this->generateUrl('new',['url' => $publication->getId()]));
+                }elseif($publication->getType() == 2){
+                    return $this->redirect($this->generateUrl('study',['url' => $publication->getId()]));
+                }else{
+                    return $this->createNotFoundException('Данной страницы не существует');
+                }
             }
         }
-        return $publication;
     }
 
 }
