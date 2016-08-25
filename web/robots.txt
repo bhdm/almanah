@@ -15,4 +15,4 @@ Crawl-delay: 0.1
 User-agent: *
 Disallow: /app_dev.php
 Disallow: /app.php
-Sitemap: https://medalmanah.ru/sitemap.xml
+Sitemap: https://medalmanah.ru/sitemap

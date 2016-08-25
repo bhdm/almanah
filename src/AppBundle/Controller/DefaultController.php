@@ -150,7 +150,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/sitemap.xml", defaults={"_format"="xml"})
+     * @Route("/sitemap", defaults={"_format"="xml"})
      * @Template("AppBundle::sitemap.html.twig")
      */
     public function getXmlAction(){
