@@ -453,6 +453,17 @@ class Publication
     {
         $this->author = $author;
     }
-    
+
+    public function getTypeStr(){
+        if ($this->type == 0){
+            return 'Статья';
+        }
+        if ($this->type == 1){
+            return 'Новость';
+        }
+        if ($this->type == 2){
+            return 'Исследование';
+        }
+    }
 }
 
