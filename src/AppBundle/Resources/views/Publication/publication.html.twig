@@ -128,11 +128,11 @@
                             <ul>
                                 {% for fp in featuredPublications  %}
                                     {% if fp.type == 0 %}
-                                        {% set fpnUrl = path('article',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+                                        {% set fpnUrl = path('article',{'url' : (fp.slug != null ? fp.slug : fp.id) })  %}
                                     {% elseif fp.type == 2 %}
-                                        {% set fpnUrl = path('study',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+                                        {% set fpnUrl = path('study',{'url' : (fp.slug != null ? fp.slug : fp.id) })  %}
                                     {% else %}
-                                        {% set fpnUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
+                                        {% set fpnUrl = path('new',{'url' : (fp.slug != null ? fp.slug : fp.id) })  %}
                                     {% endif %}
                                     <li><a href="{{ fpnUrl }}" target="_blank">{{ fp.title }}</a></li>
                                 {% endfor %}
