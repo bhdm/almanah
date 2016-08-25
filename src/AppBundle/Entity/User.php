@@ -570,7 +570,7 @@ class User extends BaseUser
     }
 
     public function getName(){
-        return $this->getFirstName().' '.$this->getLastName();
+        return $this->getLastName().' '.$this->getFirstName();
     }
 
 }
