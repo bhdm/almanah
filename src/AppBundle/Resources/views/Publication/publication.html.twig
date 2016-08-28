@@ -54,7 +54,7 @@
                     <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                         <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
 
-                    {% if publication.type == 1 %}
+                    {% if publication.type == 0 %}
                         <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                             <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'articles'}) }}"><span itemprop="title">Медицинские публикации</span></a></li>
                     {% elseif publication.type == 2 %}
