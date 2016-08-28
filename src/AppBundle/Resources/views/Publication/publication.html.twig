@@ -49,6 +49,26 @@
         <div class="col-sm-12">
             <div>
                 <div class="title"><h1 itemprop="name">{{ publication.title }}</h1></div>
+
+                <ol class="breadcrumb">
+                    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+
+                    {% if publication.type == 1 %}
+                        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'articles'}) }}"><span itemprop="title">Медицинские публикации</span></a></li>
+                    {% elseif publication.type == 2 %}
+                        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'study'}) }}"><span itemprop="title">Клинические случаи</span></a></li>
+                    {% else %}
+                        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'news'}) }}"><span itemprop="title">Новости медицины</span></a></li>
+                    {% endif %}
+
+                    <li class="active">{{ publication.title }}</li>
+                </ol>
+
+
                 <div style="overflow: hidden">
                     {% if publication.preview.path is defined  %}
                         <img src="{{ publication.preview.path }}"

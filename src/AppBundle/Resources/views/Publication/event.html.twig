@@ -24,6 +24,18 @@
     <div class="col-sm-12">
         <div class="row">
             <div class="title"><h1>{{ event.title }}</h1></div>
+            <ol class="breadcrumb">
+                <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+
+                    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a itemprop="url" href="{{ path('events',{'category' : event.category.slug }) }}"><span itemprop="title">{{ event.category.title }}</span></a></li>
+
+                <li class="active">{{ event.title }}</li>
+            </ol>
+
+
+
             {% if event.preview.path is defined %}
                 <div class="col-xs-4">
                     <img src="{{ event.preview.path }}"

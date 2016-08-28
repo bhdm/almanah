@@ -2,8 +2,11 @@
 
 {% block content %}
     <div class="title"><div>Связь с администрацией сайта</div></div>
-    <br />
-    <br />
+    <ol class="breadcrumb">
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+        <li class="active">Связаться</li>
+    </ol>
     {% if post == true %}
         <div class="alert alert-success">Ваше сообщение отправлено</div>
     {% endif %}

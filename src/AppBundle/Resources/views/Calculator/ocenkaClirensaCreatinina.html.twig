@@ -6,9 +6,16 @@
 {% endblock %}
 
 {% block content %}
-    <div class="title"><div>Оценка клиренса креатинина (взрослые)</div></div>
-    <br />
-    <br />
+    <div class="title"><h1>Оценка клиренса креатинина (взрослые)</h1></div>
+    <ol class="breadcrumb">
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="{{ path('calculators') }}"><span itemprop="title">Калькуляторы</span></a></li>
+
+        <li class="active">Оценка клиренса креатинина (взрослые)</li>
+    </ol>
     <div class="row">
         <div class="col-md-offset-2 col-md-8">
             <div class="form-horizontal" role="form">

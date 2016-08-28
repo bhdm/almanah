@@ -169,38 +169,5 @@ class DefaultController extends Controller
             'calendar'      => $calendar,
             'standarts'     => $standarts,
         ];
-
-
-        foreach ($publications as $publication){
-            if ($publication->getType() == 0){
-                $type = 'article';
-            }elseif ($publication->getType() == 2){
-                $type = 'study';
-            }else{
-                $type = 'new';
-            }
-
-            echo "<url>\n";
-            echo "<loc>https://medalmanah.ru/publications/".$type.'/'.($publication->getSlug() ? $publication->getSlug() : $publication->getId())."</loc>\n";
-            echo "<lastmod>".$publication->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
-            echo "<priority>0.8</priority>\n";
-            echo "</url>";
-        }
-
-
-        foreach ($events as $event){
-            if ($event->getCategory()->getId() == 2){
-                $type = 'russian-events';
-            }else{
-                $type = 'foreign-events';
-            }
-            echo "<url>\n";
-            echo "<loc>https://medalmanah.ru/event/".$type.'/'.($event->getSlug() ? $event->getSlug() : $event->getId())."</loc>\n";
-            echo "<lastmod>".$event->getCreated()->format('Y-m-d H:i:s')."+01:00</lastmod>\n";
-            echo "<priority>0.8</priority>\n";
-            echo "</url>";
-        }
-
-        exit;
     }
 }

@@ -31,6 +31,13 @@
 {% block content %}
     <div class="col-sm-12">
         <div class="title"><h1>{{ category }}</h1></div>
+        <ol class="breadcrumb">
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/"><span itemprop="title">Главная</span></a>
+            </li>
+                <li class="active" style="">{{ category }}</li>
+        </ol>
+
         <div class="filter">
             <form class="form-vertical">
                 <div class="row">

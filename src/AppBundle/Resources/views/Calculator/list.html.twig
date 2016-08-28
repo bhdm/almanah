@@ -1,7 +1,14 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="title"><div>Калькуляторы</div></div>
+    <div class="title"><h1>Калькуляторы</h1></div>
+
+    <ol class="breadcrumb">
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+        <li class="active">Калькуляторы</li>
+    </ol>
+
     <strong>Медицинский калькулятор</strong> – справочный инструмент для поддержки принятия решений
     <br />
     <br />

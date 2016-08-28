@@ -10,7 +10,7 @@
     {% set categoryTitle = 'Новости медицины' %}
     {% set categoryDesc = 'Последние новости в сфере медицины на сайте Альманах медицинских событий' %}
 {% else %}
-    {% set categoryTitle = 'медицинские публикации' %}
+    {% set categoryTitle = 'Медицинские публикации' %}
     {% set categoryDesc = 'Последние новости в сфере медицины на сайте Альманах медицинских событий' %}
 {% endif %}
 {% set categoryKeywords = 'Медицинский альманах, Новости медицины, события, медицинские мероприятия, ФПДО, обучение для врачей, клинические случаи' %}
@@ -32,6 +32,13 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="title text-uppercase"><h1>{{ categoryTitle }}</h1></div>
+
+                <ol class="breadcrumb">
+                    <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                        <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+                    <li class="active">{{ categoryTitle }}</li>
+                </ol>
+
                 <div style="padding-left: 50px">
                     {% for n in news %}
                         {{ include('@App/Publication/publication.item.html.twig',{'publication' : n}) }}

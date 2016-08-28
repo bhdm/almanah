@@ -21,7 +21,12 @@
 
 {% block content %}
     {% if standartsCategory is defined %}
-        <div class="title"><div>Федеральные стандарты</div></div>
+        <div class="title"><h1>Федеральные стандарты</h1></div>
+        <ol class="breadcrumb">
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+            <li class="active">Федеральные стандарты</li>
+        </ol>
         {#<p>Стандарт оказания медицинской помощи призван указать модель пациента, область и условия применения#}
             {#стандарта, способ лечения с указанием конкретных рекомендаций по использованию технических и#}
             {#медикаментозных средств. Стандарт предназначен для обязательного исполнения в системе здравоохранения.#}
@@ -79,7 +84,17 @@
             });
         </script>
     {% else %}
-        <h1 class="blue-text">{{ standart.title | raw }}</h1>
+        <div class="title"><h1 class="blue-text">{{ standart.title | raw }}</h1></div>
+        <ol class="breadcrumb">
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="{{ path('federal-standards') }}"><span itemprop="title">Федеральные стандарты</span></a></li>
+
+            <li class="active">{{ standart.title }}</li>
+        </ol>
+
         <br/>
         {{ standart.body | raw }}
     {% endif %}

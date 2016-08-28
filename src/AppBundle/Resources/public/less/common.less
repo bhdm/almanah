@@ -864,3 +864,22 @@ nav .navbar-nav li.active a:hover{
 #custum-banner{
     display: none;
 }
+.breadcrumb {
+    background: #FFF;
+    margin-top: -15px;
+    li {
+      display: inline;
+        a{
+            color: #444;
+        }
+    }
+}
+.breadcrumb > li + li:before {
+    content: "\203A";
+    background: #FFF;
+}
+@media screen and (max-width: 992px) {
+    .breadcrumb{
+        display: none;
+    }
+}

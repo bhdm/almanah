@@ -57,7 +57,7 @@ class PublicationController extends Controller
     }
 
     /**
-     * @Route("/publications/new/{url}", name="new")
+     * @Route("/publications/news/{url}", name="new")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function newAction($url){
@@ -85,7 +85,7 @@ class PublicationController extends Controller
     }
 
     /**
-     * @Route("/publications/article/{url}", name="article")
+     * @Route("/publications/articles/{url}", name="article")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function articleAction($url){
