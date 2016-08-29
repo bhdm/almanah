@@ -45,10 +45,12 @@
 {% endblock %}
 
 {% block content %}
-    <div class="row">
+    <article class="row" itemscope itemtype="http://schema.org/Article">
+        <link itemprop="mainEntityOfPage" itemscope href="{{ publicationUrl }}" />
         <div class="col-sm-12">
             <div>
-                <div class="title"><h1 itemprop="name">{{ publication.title }}</h1></div>
+                <div class="title" itemprop="name"><h1 itemprop="name">{{ publication.title }}</h1></div>
+                <meta itemprop="inLanguage" content="ru" />
 
                 <ol class="breadcrumb">
                     <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
@@ -69,7 +71,7 @@
                 </ol>
 
 
-                <div style="overflow: hidden">
+                <section style="overflow: hidden" itemprop="articleBody">
                     {% if publication.preview.path is defined  %}
                         <img src="{{ publication.preview.path }}"
                              style="max-width: 250px; float: left; margin: 0 20px 10px 10px"
@@ -78,6 +80,12 @@
                              title="{{ publication.title }}"
                              itemprop="image"
                         />
+                            <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject" class="hidden">
+                                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}" itemprop="image" >
+                                <meta itemprop="height" content="150">
+                                <meta itemprop="width" content="250">
+                                <meta itemprop="url" content="https://medalmanah.ru{{ publication.preview.path }}">
+                            </div>
                     {% endif %}
                     <div itemprop="description">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true %}
@@ -92,7 +100,7 @@
                             </div>
                         {% endif %}
                     </div>
-                </div>
+                </section>
                 {% if not (is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true) %}
                     {{ publication.anons | raw }}
                     <br />
@@ -104,14 +112,24 @@
                     </div>
                 {% endif %}
 
-                <div class="row">
+                <section class="row">
+                    <div class="hidden">
+                        <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                            <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                                <meta itemprop="url" content="https://medalmanah.ru{{ asset('bundles/app/images/logo.png') }}">
+                                <img src="https://medalmanah.ru{{ asset('bundles/app/images/logo.png') }}" alt="Альманах медицинских событий">
+                            </div>
+                            <span itemprop="name">medalmanah.ru</span>
+                        </div>
+                    </div>
                     <div class="col-sm-6">
-                        <span class="glyphicon glyphicon-calendar hidden-sm"></span> {{ publication.created | date('d.m.Y') }}<br />
+                        <span class="glyphicon glyphicon-calendar hidden-sm"></span><span itemprop="datePublished" content="{{ publication.created | date('Y-m-d') }}">{{ publication.created | date('d.m.Y') }}</span><br />
+                        <span class="hidden" itemprop="dateModified" content="{{ publication.created | date('Y-m-d') }}">{{ publication.created | date('d.m.Y') }}</span>
                         {% if publication.source %}
                             <b><a href="{{ publication.source }}">Источник</a></b><br />
                         {% endif %}
                         <div style="color: #444; font-size: 13px">
-                            <b>Автор</b>: {{ publication.author.name }}<br />
+                            <b>Автор</b>: <span itemprop="author">{{ publication.author.name }}</span><br />
                             <b>Категория: </b>{{ publication.getTypeStr }}<br />
                             {% if publication.specialties | length > 0 and publication.specialties | length != 58 %}
                                 <b>Специальности:</b>
@@ -144,7 +162,7 @@
                     {##}
                     {#</div>#}
                     {#</div>#}
-                </div>
+                </section>
 
                 {% if featuredPublications != null and featuredPublications  %}
                     <div class="row">
@@ -183,5 +201,5 @@
                 {% endif %}
             </div>
         </div>
-    </div>
+    </article>
 {% endblock %}
