@@ -39,9 +39,9 @@
     {#<meta itemscope itemtype="http://schema.org/Article" />#}
     {#<meta itemprop="headline" content="{{ publication.title }}" />#}
 
-    {% if publication.preview.path is defined  %}
-        <meta itemprop="image" content="http://medalmanah.ru{{ publication.preview.path }}" />
-    {% endif %}
+    {#{% if publication.preview.path is defined  %}#}
+        {#<meta itemprop="image" content="http://medalmanah.ru{{ publication.preview.path }}" />#}
+    {#{% endif %}#}
 {% endblock %}
 
 {% block content %}
