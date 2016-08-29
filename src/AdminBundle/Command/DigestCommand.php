@@ -74,7 +74,7 @@ class DigestCommand extends ContainerAwareCommand
 
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
-                $updateDoctor   = $pdo->prepare('UPDATE email2 SET sent=1 WHERE id = '.$doctors[$j]['id']);
+                $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE id = '.$doctors[$j]['id']);
                 $updateDoctor->execute();
 
                 $html = $templating->render($this->template, array('email' => $doctors[$j]['email'], 'id' => $doctors[$j]['id']));
