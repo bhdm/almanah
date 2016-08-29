@@ -24,7 +24,7 @@ class RemoveEmailCommand extends ContainerAwareCommand
         include_once 'emails.php';
 
         foreach ($emails as $mail){
-            $updateDoctor   = $pdo->prepare('DELETE FROM email WHERE email="'.$mail.'"');
+            $updateDoctor   = $pdo->prepare('DELETE FROM email_evrika WHERE email="'.$mail.'"');
             $updateDoctor->execute();
         }
     }

@@ -9,9 +9,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 class DigestCommand extends ContainerAwareCommand
 {
     protected $sendTo; # doctor # test@test@test.ru
-    protected $subject = 'Предстоящие медицинские события';
+    protected $subject = 'Открытие портала медицинских событий';
     protected $template = 'AppBundle:Mail:delivery.html.twig';
-    protected $deliveryName = 'Delivery-1';
+    protected $deliveryName = 'Delivery-2';
 
     protected function configure()
     {
