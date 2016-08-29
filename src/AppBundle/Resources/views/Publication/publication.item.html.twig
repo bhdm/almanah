@@ -7,11 +7,15 @@
 {% endif %}
 
 <article class="new-item row" itemscope itemtype="http://schema.org/NewsArticle">
-    <link itemprop="mainEntityOfPage" itemscope href="{{ publicationUrl }}" />
     {% if publication.preview.path is defined %}
         <div class="col-sm-3 hidden-xs">
             <a href="{{ publicationUrl }}">
-                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}" itemprop="image" >
+                <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+                    <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}" itemprop="image" >
+                    {#<meta itemprop="height" content="">#}
+                    {#<meta itemprop="width" content="">#}
+                    <meta itemprop="url" content="https://medalmanah.ru{{ publication.preview.path }}">
+                </div>
             </a>
         </div>
         <div class="col-xs-12 col-sm-9">
@@ -38,6 +42,14 @@
         </div>
         <div class="hidden">
             Автор: <span itemprop="author">{{ publication.author.name }}</span>
+
+            <div itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+                <div itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
+                    <meta itemprop="url" content="Альманах медицинских событий">
+                    <img src="https://medalmanah.ru{{ asset('bundles/app/images/logo.png') }}" alt="Альманах медицинских событий">
+                </div>
+                <span itemprop="name">medalmanah.ru</span>
+            </div>
         </div>
         {#<div class="col-xs-4 text-right">#}
         {#<span class="publication-share"><span class="hidden-xs">Рассказать</span> <span class="glyphicon glyphicon-share-alt"></span></span>#}
