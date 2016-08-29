@@ -6,39 +6,38 @@
     {% set publicationUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
 {% endif %}
 
-{% if publication.preview.path is defined %}
-    <div class="new-item row">
+<article class="new-item row" itemscope itemtype="http://schema.org/BlogPosting">
+    <link itemprop="mainEntityOfPage" itemscope href="{{ publicationUrl }}" />
+    {% if publication.preview.path is defined %}
         <div class="col-sm-3 hidden-xs">
             <a href="{{ publicationUrl }}">
-                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}">
+                <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}" itemprop="image" >
             </a>
         </div>
-        <div class="col-xs-12 col-sm-9">
-            <div class="publication-title">
-                <a href="{{ publicationUrl }}">{{ publication.title }}</a>
-            </div>
-            <div class="new-body">{{ publication.anons }}</div>
+        <div class="col-xs-12 col-sm-9"  itemprop="articleBody">
+            <a href="{{ publicationUrl }}">
+                <h2 class="publication-title" itemprop="headline">{{ publication.title }}</h2>
+            </a>
+            <p class="new-body" itemprop="description">{{ publication.anons }}</p>
         </div>
-    </div>
-{% else %}
-    <div class="new-item row">
+    {% else %}
         <div class="col-xs-12">
-            <div class="publication-title">
-                <a href="{{ publicationUrl }}">{{ publication.title }}</a>
-            </div>
-            <div class="new-body">{{ publication.anons }}</div>
+            <a href="{{ publicationUrl }}">
+                <h2 class="publication-title" itemprop="headline">{{ publication.title }}</h2>
+            </a>
+            <p class="new-body" itemprop="description">{{ publication.anons }}</p>
         </div>
-    </div>
-{% endif %}
+    {% endif %}
 
-<div class="row publication-footerline">
-    <div class="col-xs-4 text-left">
-        <span class="publication-date"><span class="glyphicon glyphicon-calendar hidden-xs"></span> {{ publication.created | date('d.m.Y') }}</span>
-    </div>
-    <div class="col-xs-8 text-right">
-        <a href="{{ publicationUrl }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">комментарии</span></a>
-    </div>
-    {#<div class="col-xs-4 text-right">#}
+    <div class="row publication-footerline">
+        <div class="col-xs-6 col-md-4 col-md-offset-3 text-left">
+            <span class="publication-date" itemprop="datePublished" content="{{ publication.created | date('Y-m-d') }}"><span class="glyphicon glyphicon-calendar hidden-xs"></span> {{ publication.created | date('d.m.Y') }}</span>
+        </div>
+        <div class="col-xs-6 col-md-5 text-right">
+            <a href="{{ publicationUrl }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">комментарии</span></a>
+        </div>
+        {#<div class="col-xs-4 text-right">#}
         {#<span class="publication-share"><span class="hidden-xs">Рассказать</span> <span class="glyphicon glyphicon-share-alt"></span></span>#}
-    {#</div>#}
-</div>
+        {#</div>#}
+    </div>
+</article>
