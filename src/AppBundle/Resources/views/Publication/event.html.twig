@@ -29,7 +29,7 @@
                     <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
 
                     <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                        <a itemprop="url" href="{{ path('events',{'category' : event.category.slug }) }}"><span itemprop="title">{{ event.category.title }}</span></a></li>
+                        <a itemprop="url" href="{{ path('events',{'url' : event.category.slug }) }}"><span itemprop="title">{{ event.category.title }}</span></a></li>
 
                 <li class="active">{{ event.title }}</li>
             </ol>
