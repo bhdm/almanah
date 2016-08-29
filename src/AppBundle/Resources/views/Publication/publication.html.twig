@@ -36,9 +36,9 @@
     {% endif %}
     <meta property="og:description" content="{{ publication.anons }}">
 
-    <meta itemscope itemtype="http://schema.org/Article" />
-    <meta itemprop="headline" content="{{ publication.title }}" />
-    <meta itemprop="description" content="{{ publication.anons }}" />
+    {#<meta itemscope itemtype="http://schema.org/Article" />#}
+    {#<meta itemprop="headline" content="{{ publication.title }}" />#}
+
     {% if publication.preview.path is defined  %}
         <meta itemprop="image" content="http://medalmanah.ru{{ publication.preview.path }}" />
     {% endif %}
@@ -46,6 +46,7 @@
 
 {% block content %}
     <article class="row" itemscope itemtype="http://schema.org/Article">
+        <meta itemprop="description" content="{{ publication.anons }}" />
         <link itemprop="mainEntityOfPage" itemscope href="{{ publicationUrl }}" />
         <div class="col-sm-12">
             <div>
