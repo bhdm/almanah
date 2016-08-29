@@ -14,7 +14,7 @@
                 <img src="{{ publication.preview.path }}" class="img-thumbnail" title="{{ publication.title }}" alt="{{ publication.title }}" itemprop="image" >
             </a>
         </div>
-        <div class="col-xs-12 col-sm-9"  itemprop="articleBody">
+        <div class="col-xs-12 col-sm-9">
             <a href="{{ publicationUrl }}">
                 <h2 class="publication-title" itemprop="headline">{{ publication.title }}</h2>
             </a>
@@ -35,6 +35,9 @@
         </div>
         <div class="col-xs-6 col-md-5 text-right">
             <a href="{{ publicationUrl }}#comment" class="publication-comment"><span class="glyphicon glyphicon-comment"></span> <span class="hidden-xs">комментарии</span></a>
+        </div>
+        <div class="hidden" itemprop="datePublished">
+            Автор: <span itemprop="author">{{ publication.author.name }}</span>
         </div>
         {#<div class="col-xs-4 text-right">#}
         {#<span class="publication-share"><span class="hidden-xs">Рассказать</span> <span class="glyphicon glyphicon-share-alt"></span></span>#}
