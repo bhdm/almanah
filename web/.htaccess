@@ -6,16 +6,18 @@
 DirectoryIndex app.php
 
 ExpiresActive On
-ExpiresByType image/svg+xml "access 1 month"
-ExpiresByType image/gif "access 1 month"
-ExpiresByType image/svg "access 1 month"
-ExpiresByType image/jpg "access 1 month"
-ExpiresByType image/jpeg "access 1 month"
-ExpiresByType image/png "access 1 month"
-ExpiresByType text/css "access 1 month"
-ExpiresByType text/js "access 1 week"
-ExpiresByType application/javascript "access 1 week"
-ExpiresByType application/x-font-woff "access 1 week"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/svg "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType text/js "access plus 1 week"
+ExpiresByType application/javascript "access plus 1 week"
+ExpiresByType text/x-javascript "access plus 1 week"
+ExpiresByType application/x-javascript "access plus 1 week"
+ExpiresByType application/x-font-woff "access plus 1 week"
 
 
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
