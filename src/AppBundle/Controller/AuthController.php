@@ -142,6 +142,13 @@ class AuthController extends Controller
 
     public function registerAction(Request $request)
     {
+
+        $p = $request->request->get('fos_user_registration_form');
+        $p['username'] = $p['email'];
+        $request->request->set('fos_user_registration_form' , $p);
+//        dump($request);
+//        exit;
+
         $em = $this->getDoctrine()->getManager();
 
         /** @var $formFactory \FOS\UserBundle\Form\Factory\FactoryInterface */
@@ -164,24 +171,27 @@ class AuthController extends Controller
         $form = $formFactory->createForm();
         $form->setData($user);
 
+
         $form->handleRequest($request);
 
         //city
-        if ($user->getCity()) {
-            $cityTitle = $user->getCity();
-            $city = $this->getDoctrine()->getRepository('AppBundle:City')->findOneByTitle($cityTitle);
-            if ($city === null) {
-                $city = new City();
-                $city->setTitle($cityTitle);
-                $city->setCountry($user->getCountry());
-                $em->persist($city);
-                $em->flush($city);
-                $em->refresh($city);
-            }
-            $user->setCity($city);
+//        if ($user->getCity()) {
+//            $cityTitle = $user->getCity();
+//            $city = $this->getDoctrine()->getRepository('AppBundle:City')->findOneByTitle($cityTitle);
+//            if ($city === null) {
+//                $city = new City();
+//                $city->setTitle($cityTitle);
+//                $city->setCountry($user->getCountry());
+//                $em->persist($city);
+//                $em->flush($city);
+//                $em->refresh($city);
+//            }
+//            $user->setCity($city);
+//
+//        }
+        // end set city
+        $user->setUsername($user->getEmail());
 
-        }
-// end set city
         if ($form->isValid()) {
 
             $event = new FormEvent($form, $request);

@@ -17,6 +17,10 @@ fos_user_profile_edit:
     path: '/profile/edit'
     defaults: {_controller : AppBundle:Auth:edit}
 
+fos_user_registration_register:
+    path: '/register'
+    defaults: {_controller : AppBundle:Auth:register}
+
 
 page:
     path:      /{url}
