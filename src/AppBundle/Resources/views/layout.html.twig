@@ -25,7 +25,12 @@
     <meta name="msapplication-TileImage" content="{{ asset('bundles/app/images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
 
-    {% block social %}{% endblock %}
+    {% block social %}
+        <meta property="og:title" content="Медицинский альманах событий">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://medalmanah.ru">
+        <meta property="og:image" content="https://medalmanah.ru/bundles/app/images/logo.png">
+    {% endblock %}
     {% block javascript %}
         <script src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
         <script src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
