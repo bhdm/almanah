@@ -19,6 +19,17 @@
     <meta name="description" content="Все медицинские федеральные стандарты на сайте medalmanah.ru" />
 {% endblock %}
 
+{% block javascript %}
+    {{ parent() }}
+    <script>
+        $('.fcategory').click(function() {
+            if ($(this).children('ul').css('display') == 'none') {
+                $(this).children('ul').fadeIn();
+            }
+        });
+    </script>
+{% endblock %}
+
 {% block content %}
     {% if standartsCategory is defined %}
         <div class="title"><h1>Федеральные стандарты</h1></div>
@@ -76,13 +87,7 @@
         </ul>
         <br/>
 
-        <script>
-            $('.fcategory').click(function() {
-                if ($(this).children('ul').css('display') == 'none') {
-                    $(this).children('ul').fadeIn();
-                }
-            });
-        </script>
+
     {% else %}
         <div class="title"><h1 class="blue-text">{{ standart.title | raw }}</h1></div>
         <ol class="breadcrumb">
