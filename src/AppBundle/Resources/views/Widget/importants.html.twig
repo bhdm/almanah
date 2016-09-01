@@ -1,6 +1,6 @@
 <div class="side_menu white-block calend thumbnail" style="max-width: 225px">
     <a class="calend-title" href="#">
-        <div class="text-center"><a href="{{ path('medical_calendar') }}">Медицинский календарь</a></div>
+        <div class="text-center"><a href="{{ path('medical_calendar') }}"><h3>Медицинский календарь</h3></a></div>
     </a>
     <div class="calend-content">
         <div class="text-center"><b>сегодня {{ dateStr }}</b></div>
@@ -8,7 +8,7 @@
         <div class="calendars text-center">
             {% if calendars.holidays is not empty %}
                 <div>
-                    <span>Праздник {{ calendars.holidays|length > 1 ? 'и' }}</span>
+                    <span><strong>Праздник </strong>{{ calendars.holidays|length > 1 ? 'и' }}</span>
                     <ul>
                         {% for c in calendars.holidays %}
                             <li><a href="{{ path('medical_calendar_event', {'dateFormat': dateFormat, 'id':c.id}) }}">{{ c.title }}</a></li>
@@ -19,7 +19,7 @@
 
             {% if calendars.events is not empty %}
                 <div>
-                    <span>{{ calendars.events|length == 1 ? 'историческое событие' : 'исторические события' }}</span>
+                    <span><strong>{{ calendars.events|length == 1 ? 'историческое событие' : 'исторические события' }}</strong></span>
                     <ul>
                         {% for c in calendars.events %}
                             <li><a href="{{ path('medical_calendar_event', {'dateFormat': dateFormat, 'id':c.id}) }}">{{ c.title }} ({{ c.date|slice(6) }})</a></li>
@@ -30,7 +30,7 @@
 
             {% if calendars.births is not empty %}
                 <div>
-                    <span>{{ calendars.births|length == 1 ? 'Родился' : 'Родились' }} в этот день</span>
+                    <span><strong>{{ calendars.births|length == 1 ? 'Родился' : 'Родились' }} в этот день</strong></span>
                     <ul>
                         {% for c in calendars.births %}
                             <li><a href="{{ path('medical_calendar_event', {'dateFormat': dateFormat, 'id':c.id}) }}">{{ c.title }} ({{ c.birthdate|slice(6) }})</a></li>
@@ -41,7 +41,7 @@
 
             {% if calendars.deaths is not empty %}
                 <div>
-                    <span>День памяти</span>
+                    <span><strong>День памяти</strong></span>
                     <ul>
                         {% for c in calendars.deaths %}
                             <li><a href="#">{{ c.title }} ({{ c.birthdate|slice(6) }})</a></li>
