@@ -78,7 +78,7 @@
                         <li><b>Контактная информация:</b> {{ event.contacts }}</li>
                     {% endif %}
                     {% if event.source != null %}
-                        <li><b>Сайт:</b> <a href="{{ event.source }}" target="_blank">{{ event.source | length > 75 ? (event.source | slice(0,75)~'...') || event.source }}</a></li>
+                        <li><b>Сайт:</b> <a href="{{ event.source }}" target="_blank">{{ event.source | wordwrap(75) }}</a></li>
                     {% endif %}
 
                 </ul>
