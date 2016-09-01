@@ -842,3 +842,6 @@ nav .navbar-nav li.active a:hover {
   margin: 0;
   font-weight: bold;
 }
+.calendars div ul li {
+  margin-bottom: 10px;
+}
