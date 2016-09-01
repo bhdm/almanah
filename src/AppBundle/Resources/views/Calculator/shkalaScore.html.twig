@@ -1,0 +1,147 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block seo %}
+    <title>Шкала SCORE - Медицинские калькуляторы на сайте medalmanah.ru</title>
+    <meta name="description" content="Шкала SCORE - Вычисление оценки суммарного риска смертельного сердечно-сосудистого заболевания - Калькулятор для врачей на сайте medalmanah.ru"/>
+    <meta name="keywords" content="Шкала SCORE, медицинские калькуляторы, риск сердечно-сосудистого заболевания, оценка риска заболевания">
+{% endblock %}
+
+{% block content %}
+    <div class="title"><h1>Шкала SCORE</h1></div>
+    <ol class="breadcrumb">
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="{{ path('calculators') }}"><span itemprop="title">Калькуляторы</span></a></li>
+
+        <li class="active">Шкала SCORE</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="form-horizontal" role="form">
+                <input type="hidden" name="cntry" value="Россия" />
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Пол:</label>
+                    <div class="col-sm-9">
+                        <select size="1" name="gender" class="form-control">
+                            <option selected="">мужской</option>
+                            <option>женский</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Возраст:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="age" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" />
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-6 control-label">Ур. систолического АД:</label>
+                    <div class="col-sm-6">
+                        <input type="text" size="40" name="ad" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" placeholder="от 100 до 180 мм рт.ст."/>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Курение:</label>
+                    <div class="col-sm-9">
+                        <select size="1" name="smoke" class="form-control">
+                            <option selected="">Нет</option>
+                            <option>Да</option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Холестерин плазмы:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="chol" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" placeholder="от 3 о 8 ммоль/л"/>
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-primary" onclick="
+                        Clear(document.getElementsByName('result')[0]);
+                        Clear(document.getElementsByName('gender')[0]);
+                        Clear(document.getElementsByName('age')[0]);
+                        Clear(document.getElementsByName('ad')[0]);
+                        Clear(document.getElementsByName('smoke')[0]);
+                        Clear(document.getElementsByName('chol')[0]);" >Сброс</button>
+                        <button type="button" class="btn btn-primary" onclick="if (!CheckAge(document.getElementsByName('age')[0])) return false;  if (!CheckAD(document.getElementsByName('ad')[0])) return false; if (!CheckChol(document.getElementsByName('chol')[0])) return false; document.getElementsByName('result')[0].value=rnd(DoIt(document.getElementsByName('gender')[0].selectedIndex,document.getElementsByName('age')[0].value,document.getElementsByName('ad')[0].value,document.getElementsByName('smoke')[0].selectedIndex,document.getElementsByName('chol')[0].value));">Расчитать</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Результат:</label>
+                    <div class="col-sm-9">
+                        <div class="input-group">
+                            <input size="40" readonly="" name="result" class="form-control">
+                            <span class="input-group-addon">%</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <h3>Что такое шкала SCORE?</h3>
+            <p>
+                Шкала SCORE (Systematic COronary Risk Evaluation) создана для оценки риска смертельного
+                сердечно-сосудистого заболевания в течение 10 лет. Основными данными для шкалы послужили когортные
+                исследования, проведенные в 12 странах Европы (в т.ч. Россия ), на 205178 человек.
+                Существует два вида шкалы SCORE: для стран с низким риском и стран с высоким риском сердечно-сосудистых
+                заболеваний (к ним относится Россия).
+            </p>
+            <p>
+                Для оценки суммарного риска смертельного сердечно-сосудистого заболевания с помощью данного калькулятора
+                необходимо указать данные в соответствующих полях . ПОлученный результат представляет собой вероятность
+                наступления смертельного исхода от сердечно-сосудистого заболевания в течение ближайших 10 лет, ( в %).
+            </p>
+
+            <p>
+                <strong>В зависимости от полученного результата (в %) следует отнести в одну из следующих категорий:</strong>
+            </p>
+            <ul>
+                <li><span class="text-success">Низкий риск</span> – менее 5%</li>
+                <li><span class="text-danger">Высокий риск</span> – 5% и более</li>
+            </ul>
+
+            <div class="alert alert-info">
+                Необходимо учитывать, что суммарный риск может быть выше, чем рассчитанный с помощью калькулятора SCORE,
+                если имеются следующие признаки:
+                <ul>
+                    <li>Имеются признаки субклинического атеросклероза по данным ультразвукового исследования сонных артерий, электронно-лучевой или мультиспиральной компьютерной томографии</li>
+                    <li>Выявлена гипертрофия левого желудочка (по данным ЭКГ или эхокардиографии)</li>
+                    <li>Раннее развитие сердечно-сосудистых заболеваний у ближайших родственников</li>
+                    <li>Снижен уровень холестерина ЛВП, повышен уровень триглицеридов, нарушена толерантность к глюкозе</li>
+                    <li>Повышены уровни маркеров воспаления (С-реактивного белка и фибриногена)</li>
+                    <li>При ожирении и малоподвижном образе жизни</li>
+                </ul>
+            </div>
+            <div class="alert alert-danger">
+                Следующие категории пациентов по определению относятся к категории высокого риска, и дополнительный расчет суммарного риска по SCORE не нужен:
+                <ul>
+                    <li>Установленный диагноз сердечно-сосудистые заболевания</li>
+                    <li>Сахарный диабет 1 и 2 типа</li>
+                    <li>Повышение уровня общего холестерина выше 8,0 ммоль/л или АД больше 180/110 мм рт.ст.</li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/js/calcs/shkalaSCORE.js') }}"></script>
+{% endblock %}

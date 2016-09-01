@@ -1,0 +1,88 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block seo %}
+    <title>Индекс массы тела</title>
+    <meta name="description" content="Вычисление индекса массы тела - Калькулятор для врачей на сайте medalmanah.ru"/>
+{% endblock %}
+
+{% block content %}
+    <div class="title"><h1>Вычисление индекса массы тела</h1></div>
+    <ol class="breadcrumb">
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="/"><span itemprop="title">Главная</span></a></li>
+
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="{{ path('calculators') }}"><span itemprop="title">Калькуляторы</span></a></li>
+
+        <li class="active">Вычисление индекса массы тела</li>
+    </ol>
+    <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+            <div class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Рост:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="ht" onkeyup="ClrStr();Clear(document.getElementsByName('result')[0]);" class="form-control" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">вес:</label>
+                    <div class="col-sm-9">
+                        <input type="text" size="40" name="mass" onkeyup="Clear(document.getElementsByName('result')[0]);" class="form-control" />
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button type="button" class="btn btn-primary" onclick="Clear(document.getElementsByName('result')[0]);Clear(document.getElementsByName('mass')[0]);Clear(document.getElementsByName('ht')[0]);" >Сброс</button>
+                        <button type="button" class="btn btn-primary" onclick="if (!CheckHt(document.getElementsByName('ht')[0])) return false;  if (!CheckMass(document.getElementsByName('mass')[0])) return false; document.getElementsByName('result')[0].value=rnd(DoIt(document.getElementsByName('ht')[0].value,document.getElementsByName('mass')[0].value))">Расчитать</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Результат:</label>
+                    <div class="col-sm-9">
+                        <input size="40" readonly="" name="result" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-3 control-label">Комментарий:</label>
+                    <div class="col-sm-9">
+                        <div id="resline" style="padding-top: 7px;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <p>
+                Индекс массы тела (ИМТ) с начала 80-х годов применяется в для количественной
+                характеристики ожирения при разработке медицинских стандартов. Индекс массы тела является первоочередным
+                показателем, используемым Всемирной организации здравоохранения для классификации ожирения.
+                <br />
+                Индекс массы тела равен отношению массе тела пациента (в килограммах), к квадрату роста (в метрах).
+            </p>
+
+
+            <div class="alert alert-info"><strong>Формула:</strong> вес/(рост/100)^2</div>
+            <div class="alert alert-info">
+                Значение индекса массы тела у взрослых в диапазоне  18-25 считается нормой.
+                Согласно последнему определению, значение ИМТ между  25 и 29.9 считают показателем "избыточного веса", а 30 и более -
+                "ожирения". Данное определение используется Всемирной организацией здравоохранения (ВОЗ) как
+                международный стандарт. ИМТ не отражает степень развития подкожной жировой клетчатки пациента.
+                В список литературы включены современные определения избыточного веса и ожирения, используемые
+                Центром контроля заболеваемости (Center for Disease Control) и ВОЗ, а также самые последние клинические
+                рекомендации Национального института сердечных, легочных заболеваний и болезней крови (NHLBI).
+            </div>
+
+
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('bundles/app/js/calcs/indexMassyTela.js') }}"></script>
+{% endblock %}

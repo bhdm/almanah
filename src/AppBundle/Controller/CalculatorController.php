@@ -25,4 +25,22 @@ class CalculatorController extends Controller
     {
         return [];
     }
+
+    /**
+     * @Route("/calculators/index-massy-tela", name="index_massy_tela")
+     * @Template()
+     */
+    public function indexMassyTelaAction()
+    {
+        return [];
+    }
+
+    /**
+     * @Route("/calculators/shkala-score", name="shkala_score")
+     * @Template()
+     */
+    public function shkalaScoreAction()
+    {
+        return [];
+    }
 }
