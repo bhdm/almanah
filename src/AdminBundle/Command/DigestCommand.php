@@ -59,18 +59,19 @@ class DigestCommand extends ContainerAwareCommand
 			AND e.id > 10000
 		')->getSingleScalarResult();
 
-        # рассылка по 50 пользователям за цикл
-        for ($i = 0 ; $i < $total; $i+=75) {
+        # рассылка по 75 пользователям за цикл
+//        for ($i = 0 ; $i < $total; $i+=75) {
 
             $doctors = $em->createQuery('
 			SELECT e.id, e.email
 			FROM AppBundle:Email2 e
 			WHERE e.sent = false
-			AND e.id > 20000
+			AND e.id > 10000
             ORDER BY e.id ASC            
-		')      ->setFirstResult($i)
-                ->setmaxresults(75)
+		')      ->setmaxresults(75)
                 ->getResult();
+//                ->setFirstResult($i)
+
 
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
@@ -85,8 +86,8 @@ class DigestCommand extends ContainerAwareCommand
                 $output->writeln($error);
                 $output->writeln($email);
             }
-            sleep(random_int(60,180));
-        }
+//            sleep(random_int(60,180));
+//        }
 
     }
 
