@@ -57,6 +57,13 @@ class PublicationController extends Controller
     }
 
     /**
+     * @Route("/publications/new/{url}")
+     */
+    public function newOldAction($url){
+        return $this->redirectToRoute('new',['url' => $url]);
+    }
+
+    /**
      * @Route("/publications/news/{url}", name="new")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
