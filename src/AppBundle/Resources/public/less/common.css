@@ -847,3 +847,21 @@ nav .navbar-nav li.active a:hover {
   border-bottom: 1px solid #ddd;
   padding-bottom: 10px;
 }
+#submit-new {
+  display: inline-block;
+  float: right;
+  margin-top: 2px;
+}
+#user_new_submit {
+  float: right;
+  margin-right: -15px;
+}
+.navigateFile {
+  margin-top: 10px;
+}
+.froala {
+  height: 350px;
+}
+#user-form-new {
+  display: none;
+}

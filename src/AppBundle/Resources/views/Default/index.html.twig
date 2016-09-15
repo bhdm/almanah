@@ -4,6 +4,52 @@
     <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
     <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
     <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        <script  src="{{ asset('bundles/app/js/file.js') }}"></script>
+        <script  src="{{ asset('bundles/admin/tapmodo-Jcrop/js/jquery.Jcrop.min.js') }}"></script>
+
+
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/froala_editor.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/languages/ru.js') }}"></script>
+
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/align.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/font_size.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/fullscreen.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/image.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/link.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/lists.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/froala-wysiwyg-editor/js/plugins/video.min.js') }}"></script>
+
+
+
+
+        <script>
+            $(function() {
+                $('#submit-new').click(function () {
+                    $('.froala').froalaEditor(
+                            {
+                                height: 300,
+                                placeholderText: 'Текст материала',
+                                imageUploadURL: '{{ path('upload_image') }}',
+                                language: 'ru'
+                            }
+                    );
+                    $('#user-form-new').fadeToggle();
+                    return false;
+                })
+            });
+        </script>
+    {% endif %}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+        <link rel="stylesheet" href="{{ asset('bundles/admin/tapmodo-Jcrop/css/jquery.Jcrop.min.css') }}"/>
+        <link rel="stylesheet" href="{{ asset('assets/vendor/froala-wysiwyg-editor/css/froala_editor.min.css') }}"/>
+    {% endif %}
+
 {% endblock %}
 
 {% block seo %}
@@ -34,14 +80,14 @@
         <br />
         <br />
         {#<div class="event-carusel-pages">#}
-            {#{% if carusels | length > 4 %}#}
-                {#<div class="active"></div>#}
-                {#<div></div>#}
-                {#<div></div>#}
-                {#<div></div>#}
-            {#{% else %}#}
-                {#<br />#}
-            {#{% endif %}#}
+        {#{% if carusels | length > 4 %}#}
+        {#<div class="active"></div>#}
+        {#<div></div>#}
+        {#<div></div>#}
+        {#<div></div>#}
+        {#{% else %}#}
+        {#<br />#}
+        {#{% endif %}#}
         {#</div>#}
     </div>
 {% endblock %}
@@ -49,7 +95,15 @@
 {% block content %}
     <div class="row">
         <div class="col-sm-12">
-            <div class="title"><a href="{{ path('news') }}"><h1>НОВОСТИ</h1></a></div>
+            <div class="title">
+                <a href="{{ path('news') }}"><h1>НОВОСТИ</h1></a>
+                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <a href="#" id="submit-new" class="btn btn-default">Написать новость</a>
+                {% endif %}
+            </div>
+            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                {{ render(controller('AppBundle:Widget:submitNew')) }}
+            {% endif %}
             {% for p in publications %}
                 {{ include('@App/Publication/publication.item.html.twig',{'publication' : p }) }}
             {% endfor %}
