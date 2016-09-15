@@ -2,7 +2,7 @@
 
 {% block seo %}
     <title>{{ calendar.title }} на сайте Альманах медицинских событий</title>
-    <meta name="description" content="{{ calendar.anons | raw }}"/>
+    <meta name="description" content="{{ calendar.title }} {{ calendar.anons | raw }}"/>
     <meta name="keywords" content="Исторические медицинские события, празники, дни памяти "/>
 {% endblock %}
 
