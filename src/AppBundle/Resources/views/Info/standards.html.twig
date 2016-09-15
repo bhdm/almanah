@@ -12,11 +12,12 @@
 
 {% block seo %}
     {% if standartsCategory is defined %}
-        <title>Федеральные стандарты</title>
+        <title>Медицинские федеральные стандарты на сайте medalmanah.ru</title>
+        <meta name="description" content="Все медицинские федеральные стандарты на сайте medalmanah.ru " />
     {% else %}
-        <title>{{ standart.title | raw }}</title>
+        <title>{{ standart.title | raw }} на сайте medalmanah.ru</title>
+        <meta name="description" content="{{ standart.title }}" />
     {% endif %}
-    <meta name="description" content="Все медицинские федеральные стандарты на сайте medalmanah.ru" />
 {% endblock %}
 
 {% block javascript %}
