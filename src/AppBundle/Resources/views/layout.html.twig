@@ -24,7 +24,19 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('bundles/app/images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-
+    <script type="application/ld+json">
+        {
+          "@context" : "http://schema.org",
+          "@type" : "Organization",
+          "name" : "Альманах медицинских событий",
+          "url" : "https://medalmanah.ru",
+          "sameAs" : [
+            "https://vk.com/medalmanah",
+            "https://www.facebook.com/medalmanah",
+            "https://twitter.com/medalmanah_ru",
+          ]
+        }
+    </script>
     {% block social %}
         <meta property="og:title" content="Медицинский альманах событий">
         <meta property="og:type" content="website">
