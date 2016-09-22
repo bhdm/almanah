@@ -144,7 +144,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         return $result;
     }
 
-    public function findImmediate($main = false){
+    public function findImmediate($main = false, $count){
         $now = new \DateTime();
         $now = $now->format('Y-m-d').' 23:59:59';
         $qb = $this->createQueryBuilder('e');
@@ -155,7 +155,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         if ($main == true){
             $qb->andWhere('e.main = true');
         }
-        $qb->setMaxResults(15);
+        $qb->setMaxResults($count);
         $qb->setParameter(':now',$now);
         $result = $qb->getQuery()->getResult();
 

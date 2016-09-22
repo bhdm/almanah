@@ -20,7 +20,7 @@ class DefaultController extends Controller
 
         $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC'], 5);
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findBy(['enabled' => true],['start' => 'DESC'], 5);
-        $carusels =  $this->getDoctrine()->getRepository('AppBundle:Event')->findImmediate(true);
+        $carusels =  $this->getDoctrine()->getRepository('AppBundle:Event')->findImmediate(true,15);
         return [
             'publications' => $publications,
             'events' => $events,
@@ -97,7 +97,7 @@ class DefaultController extends Controller
      * @Route("/upcoming-events")
      */
     public function getUpcomingEventsAction(){
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findImmediate(5);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findImmediate(false, 5);
 
         return $this->render('AppBundle:Widget:upcomingEvents.html.twig', ['events' => $events]);
     }
