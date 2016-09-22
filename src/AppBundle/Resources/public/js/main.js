@@ -7,7 +7,7 @@ $(document).ready(function(){
         $('#enrolmentModal').modal();
     });
 
-    $('.owl-carousel').owlCarousel({
+    $('.slider').owlCarousel({
         loop:true,
         margin:10,
         nav: true,
@@ -24,6 +24,29 @@ $(document).ready(function(){
             }
         }
     });
+
+    $('.event-carusel').owlCarousel({
+        loop:true,
+        margin:10,
+        nav: false,
+        lazyLoad : true,
+        navText: [' ',' '],
+        autoPlay: true,
+        autoplaySpeed: 10,
+        autoplayHoverPause: true,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:4
+            },
+            1000:{
+                items:5
+            }
+        }
+    });
+
 
     //$(".university").chosen({disable_search_threshold: 10});
 
@@ -49,4 +72,6 @@ $(document).ready(function(){
 
 
     $('.phone').mask('+7 (000) 000-00-00');
+
+    // $('.event-carusel').trigger('play.owl.autoplay',5000);
 });

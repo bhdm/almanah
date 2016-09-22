@@ -155,7 +155,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         if ($main == true){
             $qb->andWhere('e.main = true');
         }
-        $qb->setMaxResults(5);
+        $qb->setMaxResults(15);
         $qb->setParameter(':now',$now);
         $result = $qb->getQuery()->getResult();
 

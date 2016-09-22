@@ -586,17 +586,13 @@ th.picker-switch {
 .event-carusel {
   overflow: hidden;
 }
-.event-carusel .item {
-  float: left;
-  width: 20%;
-}
 .event-carusel .item div {
   padding: 0 5px;
   text-align: left;
 }
 .event-carusel .item div img {
-  margin-left: 40px;
   height: 135px;
+  width: auto;
   -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
   -moz-filter: grayscale(100%);

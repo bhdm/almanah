@@ -60,7 +60,7 @@
 
 {% block topBody %}
     <div class="row hidden-sm hidden-xs">
-        <div class="event-carusel">
+        <div class="owl-carousel event-carusel owl-theme">
             {% for carusel in carusels %}
                 {% if carusel.preview.path is defined %}
                     <div class="item">
