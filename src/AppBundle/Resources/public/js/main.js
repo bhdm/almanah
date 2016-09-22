@@ -7,7 +7,7 @@ $(document).ready(function(){
         $('#enrolmentModal').modal();
     });
 
-    $('.slider').owlCarousel({
+    $('.owl-slider').owlCarousel({
         loop:true,
         margin:10,
         nav: true,
