@@ -42,6 +42,7 @@ class EventType extends AbstractType
                 'label' => 'Специальности',
                 'attr' => ['class' => 'multiselect'],
                 'class' => 'AppBundle:Specialty',
+                'multiple' => true,
                 'query_builder' => function (EntityRepository $er) {
                     return $er->createQueryBuilder('s')
                         ->orderBy('s.title', 'ASC');
