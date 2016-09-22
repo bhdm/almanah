@@ -433,11 +433,11 @@ class Event
      */
     public function getCategory()
     {
-        $sort = Criteria::create();
-        $sort->orderBy(Array(
-            'title' => Criteria::ASC
-        ));
-        return $this->category->matching($sort);
+//        $sort = Criteria::create();
+//        $sort->orderBy(Array(
+//            'title' => Criteria::ASC
+//        ));
+        return $this->category;
     }
 
     /**

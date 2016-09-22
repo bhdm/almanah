@@ -2,6 +2,7 @@
 
 namespace AppBundle\Form;
 
+use Doctrine\ORM\EntityRepository;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -37,7 +38,15 @@ class EventType extends AbstractType
                 'required'    => false,
                 'label' => 'Важность'
             ))
-            ->add('specialties', null, [ 'label' => 'Специальности', 'attr' => ['class' => 'multiselect']])
+            ->add('specialties', EntityType::class, [
+                'label' => 'Специальности',
+                'attr' => ['class' => 'multiselect'],
+                'class' => 'AppBundle:Specialty',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('s')
+                        ->orderBy('s.title', 'ASC');
+                },
+            ])
             ->add('category', null, [ 'label' => 'Категория'])
 
             ->add('city', null, [ 'label' => 'Город'])
