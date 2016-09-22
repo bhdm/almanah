@@ -3,6 +3,8 @@
 namespace AppBundle\Form;
 
 use AppBundle\Entity\Publication;
+use Doctrine\ORM\EntityRepository;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
@@ -29,7 +31,16 @@ class PublicationType extends AbstractType
             ->add('metaKeyword', TextType::class, [ 'label' => 'SEO ключевые слова'])
 //            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
 //            ->add('category', null, [ 'label' => 'Категория'])
-            ->add('specialties', null, [ 'label' => 'Специальности', 'attr' => ['class' => 'multiselect']])
+            ->add('specialties', EntityType::class, [
+                'label' => 'Специальности',
+                'attr' => ['class' => 'multiselect'],
+                'class' => 'AppBundle:Specialty',
+                'multiple' => true,
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('s')
+                        ->orderBy('s.title', 'ASC');
+                },
+            ])
             ->add('anons', TextareaType::class, [ 'label' => 'Анонс', 'required' => true])
             ->add('body', TextareaType::class, [ 'label' => 'Контент', 'attr' => ['class' => 'ckeditor']])
             ->add('source', TextType::class, [ 'label' => 'Источник', 'required' => false])
