@@ -73,5 +73,5 @@ $(document).ready(function(){
 
     $('.phone').mask('+7 (000) 000-00-00');
 
-    $('.event-carusel').trigger('play.owl.autoplay',5000);
+    $('.event-carusel').trigger('play.owl.autoplay', 10000);
 });
