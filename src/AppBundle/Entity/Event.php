@@ -3,6 +3,7 @@
 namespace AppBundle\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Criteria;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -432,7 +433,11 @@ class Event
      */
     public function getCategory()
     {
-        return $this->category;
+        $sort = Criteria::create();
+        $sort->orderBy(Array(
+            'title' => Criteria::ASC
+        ));
+        return $this->category->matching($sort);
     }
 
     /**
