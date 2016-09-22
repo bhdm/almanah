@@ -23,7 +23,14 @@ class EventController extends Controller{
      * @Template()
      */
     public function listAction(Request $request){
-        $items = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->findBy([],['start' => 'ASC']);
+
+        $name = $request->query->get('name');
+        $date = new \DateTime($request->query->get('date'));
+        if ($name || $date){
+            $items = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->filter(null,$date,null,$name);
+        }else{
+            $items = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->findBy([],['start' => 'ASC']);
+        }
 
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
