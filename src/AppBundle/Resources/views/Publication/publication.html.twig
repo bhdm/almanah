@@ -127,7 +127,7 @@
                         <span class="glyphicon glyphicon-calendar hidden-sm"></span><span itemprop="datePublished" content="{{ publication.created | date('Y-m-d') }}">{{ publication.created | date('d.m.Y') }}</span><br />
                         <span class="hidden" itemprop="dateModified" content="{{ publication.created | date('Y-m-d') }}">{{ publication.created | date('d.m.Y') }}</span>
                         {% if publication.source %}
-                            <b><a href="{{ publication.source }}">Источник</a></b><br />
+                            <b><noindex><a href="{{ publication.source }}">Источник</a></noindex></b><br />
                         {% endif %}
                         <div style="color: #444; font-size: 13px">
                             <b>Автор</b>: <span itemprop="author">{{ publication.author.name }}</span><br />
