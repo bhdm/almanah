@@ -67,7 +67,7 @@ class DigestCommand extends ContainerAwareCommand
 			WHERE e.sent = false
 			AND e.id > 20000
             ORDER BY e.id ASC            
-		')      ->setmaxresults(200)
+		')      ->setmaxresults(400)
                 ->getResult();
 //                ->setFirstResult($i)
 
