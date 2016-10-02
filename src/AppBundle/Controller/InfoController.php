@@ -95,7 +95,7 @@ class InfoController extends Controller
      * @Template("AppBundle:Info:test_mail.html.twig")
      */
     public function testMailAction(){
-        return ['email' => 'email'];
+        return ['email' => 'email', 'id' => 1 ];
     }
 
 
