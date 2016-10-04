@@ -170,4 +170,13 @@ class DefaultController extends Controller
             'standarts'     => $standarts,
         ];
     }
+
+    /**
+     * @Route("/webinar-test", name="test_webinar")
+     * @Template()
+     */
+    public function testwebinarAction(){
+        return [];
+    }
+
 }
