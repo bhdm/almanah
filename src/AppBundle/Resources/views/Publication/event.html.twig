@@ -5,6 +5,12 @@
     {% stylesheets "@AppBundle/Resources/public/less/comments.less" %}
     <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="all" />
     {% endstylesheets %}
+    <style>
+        .body ol{
+            margin-left: 20px;
+            list-style: circle;
+        }
+    </style>
 {% endblock %}
 
 {% block javascript %}
