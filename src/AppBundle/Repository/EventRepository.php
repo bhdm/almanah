@@ -122,7 +122,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         }
 
         if ($start != null){
-            $qb->andWhere('( s.start >= :dateStart)')
+            $qb->andWhere('( s.start >= :dateStart) OR ( s.end >= :dateStart)')
                 ->setParameter('dateStart' , $start);
         }
 //        if ($end != null){
