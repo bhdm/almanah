@@ -56,14 +56,20 @@
             <div class="col-xs-{{ event.preview.path is defined ? '6' : '10' }}">
                 <ul class="event-params">
                     {% if event.specialties | length > 0 %}
-                        <li><b>Специальности:</b>
-                            {% for s in event.specialties %}
-                                {{ s.title }}
-                                {% if s != event.specialties | last %}
-                                    ,
-                                {% endif %}
-                            {% endfor %}
-                        </li>
+                        {% if publication.specialties | length != 60 %}
+                            <li><b>Специальности:</b>
+                                {% for s in event.specialties %}
+                                    {{ s.title }}
+                                    {% if s != event.specialties | last %}
+                                        ,
+                                    {% endif %}
+                                {% endfor %}
+                            </li>
+                        {% else %}
+                            <li><b>Специальности:</b>
+                                Все
+                            </li>
+                        {% endif %}
                     {% endif %}
 
                     {% if event.start != null %}
