@@ -144,6 +144,22 @@ class Publication
      */
     private $author;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $like;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $dislike;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $statShow;
+
+
     public function __construct()
     {
         $this->enabled = true;
@@ -154,6 +170,10 @@ class Publication
         $this->public = false;
         $this->comments = new ArrayCollection();
         $this->type = self::NEWS;
+
+        $this->like = 0;
+        $this->dislike = 0;
+        $this->statShow = 0;
     }
 
     /**
@@ -465,5 +485,70 @@ class Publication
             return 'Исследование';
         }
     }
+
+    /**
+     * @return mixed
+     */
+    public function getLike()
+    {
+        return $this->like;
+    }
+
+    /**
+     * @param mixed $like
+     */
+    public function setLike($like)
+    {
+        $this->like = $like;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDislike()
+    {
+        return $this->dislike;
+    }
+
+    /**
+     * @param mixed $dislike
+     */
+    public function setDislike($dislike)
+    {
+        $this->dislike = $dislike;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatisticShow()
+    {
+        return $this->statisticShow;
+    }
+
+    /**
+     * @param int $statisticShow
+     */
+    public function setStatisticShow($statisticShow)
+    {
+        $this->statisticShow = $statisticShow;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getShow()
+    {
+        return $this->statShow;
+    }
+
+    /**
+     * @param mixed $statShow
+     */
+    public function setShow($statShow)
+    {
+        $this->statShow = $statShow;
+    }
+
 }
 

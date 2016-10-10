@@ -67,11 +67,21 @@ class PublicationController extends Controller
      * @Route("/publications/news/{url}", name="new")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
-    public function newAction($url){
+    public function newAction(Request $request, $url){
         $publication = $this->getPublication($url, 1);
 
         if ($publication instanceof Publication){
             $featuredPublications = $this->getFeaturedPublications($publication);
+
+            $session = $request->getSession();
+            if ($session->get('show-'.$publication->getId()) === null){
+                $session->set('show-'.$publication->getId(), true);
+                $session->save();
+                $publication->setShow($publication->getShow()+1);
+                $this->getDoctrine()->getManager()->flush($publication);
+                $this->getDoctrine()->getManager()->refresh($publication);
+            }
+
             return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
         }else{
             return $publication;
@@ -81,10 +91,20 @@ class PublicationController extends Controller
     /**
      * @Route("/publications/study/{url}", name="study")
      */
-    public function studyAction($url){
+    public function studyAction(Request $request, $url){
         $publication = $this->getPublication($url, 2);
         if ($publication instanceof Publication){
             $featuredPublications = $this->getFeaturedPublications($publication);
+
+            $session = $request->getSession();
+            if ($session->get('show-'.$publication->getId()) === null){
+                $session->set('show-'.$publication->getId(), true);
+                $session->save();
+                $publication->setShow($publication->getShow()+1);
+                $this->getDoctrine()->getManager()->flush($publication);
+                $this->getDoctrine()->getManager()->refresh($publication);
+            }
+
             return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
         }else{
             return $publication;
@@ -95,10 +115,20 @@ class PublicationController extends Controller
      * @Route("/publications/articles/{url}", name="article")
      * @Template("AppBundle:Publication:publication.html.twig")
      */
-    public function articleAction($url){
+    public function articleAction(Request $request, $url){
         $publication = $this->getPublication($url, 0);
         if ($publication instanceof Publication){
             $featuredPublications = $this->getFeaturedPublications($publication);
+
+            $session = $request->getSession();
+            if ($session->get('show-'.$publication->getId()) === null){
+                $session->set('show-'.$publication->getId(), true);
+                $session->save();
+                $publication->setShow($publication->getShow()+1);
+                $this->getDoctrine()->getManager()->flush($publication);
+                $this->getDoctrine()->getManager()->refresh($publication);
+            }
+
             return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
         }else{
             return $publication;
