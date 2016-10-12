@@ -91,11 +91,11 @@
                     <div itemprop="description">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true %}
                             {{ publication.body | raw }}
-                            <div style="font-size: 16px">
-                                <strong>Оцените, пожалуйста, статью:</strong>
-                                <span class="like text-success">{{ publication.like }}<i class="fa fa-thumbs-o-up" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
-                                <span class="dislike text-danger">{{ publication.dislike }}<i class="fa fa-thumbs-o-down" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
-                            </div>
+                            {#<div style="font-size: 16px">#}
+                                {#<strong>Оцените, пожалуйста, статью:</strong>#}
+                                {#<span class="like text-success">{{ publication.like }}<i class="fa fa-thumbs-o-up" aria-hidden="true" data-id="{{ publication.id }}"></i></span>#}
+                                {#<span class="dislike text-danger">{{ publication.dislike }}<i class="fa fa-thumbs-o-down" aria-hidden="true" data-id="{{ publication.id }}"></i></span>#}
+                            {#</div>#}
                         {% endif %}
                         {% if publication.video.path is defined %}
                             <div style="text-align: center">

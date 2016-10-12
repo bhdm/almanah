@@ -875,3 +875,9 @@ nav .navbar-nav li.active a:hover {
 .dislike i {
   padding-left: 5px;
 }
+.fa-thumbs-o-up:hover :before {
+  content: "\f164";
+}
+.fa-thumbs-o-down:hover :before {
+  content: "\f165";
+}
