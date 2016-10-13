@@ -145,12 +145,12 @@ class Publication
     private $author;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="slike", type="integer")
      */
     private $like;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="sdislike", type="integer")
      */
     private $dislike;
 
