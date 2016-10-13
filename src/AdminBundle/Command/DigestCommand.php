@@ -64,8 +64,7 @@ class DigestCommand extends ContainerAwareCommand
             $doctors = $em->createQuery('
 			SELECT e.id, e.email
 			FROM AppBundle:Email2 e
-			WHERE e.sent = false
-			AND e.id > 20000
+			WHERE e.sent = false			
             ORDER BY e.id ASC            
 		')      ->setmaxresults(500)
                 ->getResult();
