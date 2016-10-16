@@ -99,7 +99,7 @@ class InfoController extends Controller
     }
 
     /**
-     * @Route("/events-map")
+     * @Route("/events-map", name="events_map")
      * @Template("@App/Publication/eventsmap.html.twig")
      */
     public function mapEventAction(){

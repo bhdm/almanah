@@ -1,7 +1,22 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
+{% block seo %}
+    <title>Карта медицинский мероприятий на сайте medalmanah.ru</title>
+    <meta name="description" content="Медицицнские мероприятия, события, форумы на сайте medalamanh.ru"/>
+    <meta name="keywords" content="Карта мероприятий, Медицинские события в моемгороде, Все медицинские события на карте"/>
+{% endblock %}
+
 {% block content %}
     <div class="title"><h1>Карта медицинских событий</h1></div>
+    <ol class="breadcrumb">
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="/"><span itemprop="title">Главная</span></a>
+        </li>
+        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+            <a itemprop="url" href="{{ path('events') }}"><span itemprop="title">Медицинские мероприятия</span></a></li>
+        <li class="active">Карта медицинских мероприятий</li>
+    </ol>
+
     <br />
     <div id="map" style="width: 100%; height: 400px"></div>
     <div class="events" style="margin-top: 20px">
