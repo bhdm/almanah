@@ -1,44 +1,127 @@
 {% extends 'AppBundle::layout.html.twig' %}
 
 {% block content %}
-    <div class="title text-uppercase"><div>КАРТА МЕДИЦИНСКИХ СОБЫТИЙ</div></div>
+    <div class="title"><h1>Карта медицинских событий</h1></div>
     <br />
-    <div id="map" style="width: 100%; height: 500px"></div>
+    <div id="map" style="width: 100%; height: 400px"></div>
+    <div class="events" style="margin-top: 20px">
+        <div class="title"><h4>Выберите город на карте...</h4></div>
+    </div>
 {% endblock %}
 
 {% block javascript %}
     {{ parent() }}
     <script src="//api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
     <script>
-        ymaps.ready(init);
-
-        function init () {
+        ymaps.ready(function () {
             var myMap = new ymaps.Map('map', {
                         center: [61.698653, 99.505405],
-                        zoom: 3
-                    }, {
-//                        searchControlProvider: 'yandex#search'
+                        zoom: 3,
+                        behaviors: ['default', 'scrollZoom']
                     }),
-                    objectManager = new ymaps.ObjectManager({
-                        // Чтобы метки начали кластеризоваться, выставляем опцию.
-                        clusterize: true,
-                        // ObjectManager принимает те же опции, что и кластеризатор.
-                        gridSize: 32
-                    });
+                    clusterer = new ymaps.Clusterer({
 
-            // Чтобы задать опции одиночным объектам и кластерам,
-            // обратимся к дочерним коллекциям ObjectManager.
-            objectManager.objects.options.set('preset', 'islands#redDotIcon');
-            objectManager.clusters.options.set('preset', 'islands#redClusterIcons');
-            myMap.geoObjects.add(objectManager);
+                        preset: 'islands#invertedRedClusterIcons',
 
-//            $.ajax({
-//                url: "data.json"
-//            }).done(function(data) {
-//                objectManager.add(data);
-//            });
+                        groupByCoordinates: false,
 
-        }
+                        clusterDisableClickZoom: true,
+                        clusterHideIconOnBalloonOpen: false,
+                        geoObjectHideIconOnBalloonOpen: false
+                    }),
+                    /**
+                     * Функция возвращает объект, содержащий данные метки.
+                     * Поле данных clusterCaption будет отображено в списке геообъектов в балуне кластера.
+                     * Поле balloonContentBody - источник данных для контента балуна.
+                     * Оба поля поддерживают HTML-разметку.
+                     * Список полей данных, которые используют стандартные макеты содержимого иконки метки
+                     * и балуна геообъектов, можно посмотреть в документации.
+                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/GeoObject.xml
+                     */
+                    getPointData = function (index) {
+                        e = jQuery.parseJSON('{{ events | raw }}').events;
+                        return {
+                            balloonContentBody: 'Город <strong> ' + e[index]['title'] + '</strong><br />'+'Количество мероприятий <strong>' + e[index]['amount'] + '</strong>',
+                            clusterCaption: 'Город <strong> ' + e[index]['title'] + '</strong>',
+                            title: e[index]['title']
+                        };
+                    },
+                    /**
+                     * Функция возвращает объект, содержащий опции метки.
+                     * Все опции, которые поддерживают геообъекты, можно посмотреть в документации.
+                     * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/GeoObject.xml
+                     */
+                    getPointOptions = function () {
+                        return {
+                            preset: 'islands#redIcon'
+                        };
+                    },
+                    geoObjects = [];
+
+            /**
+             * Данные передаются вторым параметром в конструктор метки, опции - третьим.
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Placemark.xml#constructor-summary
+             */
+
+
+            /**
+             * Можно менять опции кластеризатора после создания.
+             */
+            clusterer.options.set({
+                gridSize: 80,
+                clusterDisableClickZoom: false
+            });
+
+//            for(var i = 0, len = points.length; i < len; i++) {
+//                geoObjects[i] = new ymaps.Placemark(points[i], getPointData(i), getPointOptions());
+//            }
+
+            /**
+             * В кластеризатор можно добавить javascript-массив меток (не геоколлекцию) или одну метку.
+             * @see https://api.yandex.ru/maps/doc/jsapi/2.1/ref/reference/Clusterer.xml#add
+             */
+
+            var events = jQuery.parseJSON('{{ events | raw }}');
+            jQuery.each(events.events, function (k, event) {
+                var index = k;
+                link = 'https://geocode-maps.yandex.ru/1.x/?geocode=город+'+event.title+'&kind=locality&format=json&results=1&sco=latlong';
+                jQuery.getJSON(link, function (msg) {
+                    var coords = msg.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(" ");
+                    console.log(event.title+' '+coords);
+                    geoObjects = new ymaps.Placemark([coords[1], coords[0]], getPointData(index), getPointOptions());
+                    clusterer.add(geoObjects);
+                });
+            });
+
+
+
+//
+//            for(var i = 0, len = events.length; i < len; i++) {
+//
+//            }
+
+
+            myMap.geoObjects.add(clusterer);
+            myMap.geoObjects.events.add("click", function (res) {
+                var city = res.get('target').properties.get('title');
+                $.ajax({
+                    url: Routing.generate('get_event_city'),
+                    method: 'post',
+                    data: 'city='+city,
+                    success: function (events) {
+                        $('.events').html(events);
+                    }
+                });
+            });
+
+            /**
+             * Спозиционируем карту так, чтобы на ней были видны все объекты.
+             */
+
+            myMap.setBounds(clusterer.getBounds(), {
+                checkZoomRange: true
+            });
+        });
     </script>
 {% endblock %}
 

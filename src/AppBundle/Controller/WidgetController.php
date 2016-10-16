@@ -18,7 +18,7 @@ use Symfony\Component\HttpFoundation\Response;
 class WidgetController extends Controller
 {
     /**
-     * @Route("/widget-calendar/{year}/{month}", name="widget_calendar", defaults={"year"=null, "month"=null }, options={"exponse" = true})
+     * @Route("/widget-calendar/{year}/{month}", name="widget_calendar", defaults={"year"=null, "month"=null }, options={"expose" = true})
      * @Template("")
      */
     public function calendarAction(Request $request, $year=null, $month=null){
@@ -171,5 +171,17 @@ class WidgetController extends Controller
         }
 
         return $text;
+    }
+
+    /**
+     * @Route("/get-event-city", name="get_event_city", options={"expose" = true})
+     * @Template()
+     */
+    public function getEventsOfCityAction(Request $request){
+        $city = $request->request->get('city');
+        $city = $this->getDoctrine()->getRepository('AppBundle:City')->findOneBy(['title' => $city]);
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findEventByCity($city->getId());
+
+        return ['events' => $events, 'city' => $city ];
     }
 }

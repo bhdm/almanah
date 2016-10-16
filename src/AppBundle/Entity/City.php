@@ -45,6 +45,16 @@ class City
 	 */
 	private $users;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $x;
+
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $y;
+
 	public function __construct()
 	{
 		$this->events = new ArrayCollection();
@@ -127,6 +137,38 @@ class City
 	{
 		$this->users = $users;
 	}
+
+    /**
+     * @return mixed
+     */
+    public function getX()
+    {
+        return $this->x;
+    }
+
+    /**
+     * @param mixed $x
+     */
+    public function setX($x)
+    {
+        $this->x = $x;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getY()
+    {
+        return $this->y;
+    }
+
+    /**
+     * @param mixed $y
+     */
+    public function setY($y)
+    {
+        $this->y = $y;
+    }
 
 
 

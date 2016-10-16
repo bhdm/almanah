@@ -1,0 +1,28 @@
+<div class="title"><h1>События в городе {{ city }}</h1></div>
+
+{% for p in events %}
+    {% if p.preview.path is defined %}
+        <div class="new-item row">
+            <div class="col-sm-3 hidden-xs">
+                <img src="{{ p.preview.path }}" class="img-thumbnail" alt="{{ p.title }}" title="{{ p.title }}">
+            </div>
+            <div class="col-xs-12 col-sm-9">
+                <div class="p-date">{{ p.start | date('d.m.Y') }} - {{ p.end | date('d.m.Y') }}</div>
+                <div class="p-title">
+                    <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
+                </div>
+                <div class="new-body">{{ p.anons }}</div>
+            </div>
+        </div>
+    {% else %}
+        <div class="new-item row">
+            <div class="col-xs-12">
+                <div class="p-date">{{ p.start | date('d.m.Y') }} - {{ p.end | date('d.m.Y') }}</div>
+                <div class="p-title">
+                    <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
+                </div>
+                <div class="new-body">{{ p.anons }}</div>
+            </div>
+        </div>
+    {% endif %}
+{% endfor %}

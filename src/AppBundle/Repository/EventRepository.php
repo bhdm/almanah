@@ -161,4 +161,30 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
 
         return $result;
     }
+
+    public function findCountOfCity(){
+        $date = new \DateTime();
+        $dateStart = $date->format('Y-m-d').'00:00:00';
+        $qb = $this->createQueryBuilder('e')
+            ->select('c.title title, COUNT(e.id) amount')
+            ->leftJoin('e.city','c')
+            ->where('e.end >= :dateStart')
+            ->groupBy('c.id')
+            ->setParameter(':dateStart', $dateStart);
+        return $qb->getQuery()->getResult();
+    }
+
+    public function findEventByCity($cityId){
+        $date = new \DateTime();
+        $dateStart = $date->format('Y-m-d').'00:00:00';
+        $qb = $this->createQueryBuilder('e')
+            ->select('e')
+            ->leftJoin('e.city','c')
+            ->where('e.end >= :dateStart')
+            ->andWhere('c.id = :cityId')
+            ->setParameter(':dateStart', $dateStart)
+            ->setParameter(':cityId', $cityId)
+            ->orderBy('e.start', 'ASC');
+        return $qb->getQuery()->getResult();
+    }
 }
