@@ -100,12 +100,24 @@
             jQuery.each(events.events, function (k, event) {
                 var index = k;
                 link = 'https://geocode-maps.yandex.ru/1.x/?geocode=город+'+event.title+'&kind=locality&format=json&results=1&sco=latlong';
-                jQuery.getJSON(link, function (msg) {
-                    var coords = msg.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(" ");
-                    console.log(event.title+' '+coords);
-                    geoObjects = new ymaps.Placemark([coords[1], coords[0]], getPointData(index), getPointOptions());
-                    clusterer.add(geoObjects);
+
+                $.jsonp({
+                    type: 'GET',
+                    url: link,
+                    callbackParameter: 'callback',
+                    dataType: 'jsonp',
+                    timeout: 500,
+                    success: function(msg){
+                        var coords = msg.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos.split(" ");
+                        console.log(event.title+' '+coords);
+                        geoObjects = new ymaps.Placemark([coords[1], coords[0]], getPointData(index), getPointOptions());
+                        clusterer.add(geoObjects);
+                    },
+                    error: function(){
+                        console.log(event.title);
+                    }
                 });
+
             });
 
 
