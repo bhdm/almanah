@@ -168,7 +168,9 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         $qb = $this->createQueryBuilder('e')
             ->select('c.title title, COUNT(e.id) amount')
             ->leftJoin('e.city','c')
+            ->leftJoin('c.country','country')
             ->where('e.end >= :dateStart')
+            ->andWhere('country.id = 1')
             ->groupBy('c.id')
             ->setParameter(':dateStart', $dateStart);
         return $qb->getQuery()->getResult();
