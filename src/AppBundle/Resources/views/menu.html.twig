@@ -22,12 +22,18 @@
                     </ul>
                 </div>
             </li>
-            <li {{ app.request.pathInfo == '/events' or app.request.pathInfo == '/events/russian-events' or app.request.pathInfo == '/events/foreign-events' ? 'class="active"' : ''}} >
+            <li {{
+                    app.request.pathInfo == '/events' or
+                    app.request.pathInfo == '/events/russian-events' or
+                    app.request.pathInfo == '/events/foreign-events' or
+                    app.request.pathInfo == '/events-map'
+                    ? 'class="active"' : ''}} >
                 <a href="#">Мероприятия</a>
                 <div class="submenu">
                     <ul class="submenu-items">
                         <li><a href="{{ path('events',{'url': 'russian-events'}) }}">Российские</a></li>
                         <li><a href="{{ path('events',{'url': 'foreign-events'}) }}">Зарубежные</a></li>
+                        <li><a href="{{ path('events_map') }}">Карта мероприятий</a></li>
                     </ul>
                 </div>
             </li>

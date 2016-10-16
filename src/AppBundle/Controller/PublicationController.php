@@ -20,6 +20,7 @@ use Symfony\Component\HttpFoundation\Response;
 
 class PublicationController extends Controller
 {
+
     /**
      * @Route("/new/{url}", name="publications")
      * @Route("/news/{url}")
@@ -445,5 +446,15 @@ class PublicationController extends Controller
             return new Response('ok');
         }
         return new Response('error');
+    }
+
+    /**
+     * @Route("/events-map", name="events_map")
+     * @Template("@App/Publication/eventsmap.html.twig")
+     */
+    public function mapEventAction(){
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findCountOfCity();
+        $events = json_encode(['events' => $events]);
+        return ['events' => $events];
     }
 }

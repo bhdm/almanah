@@ -98,21 +98,6 @@ class InfoController extends Controller
         return ['email' => 'email', 'id' => 1 ];
     }
 
-    /**
-     * @Route("/events-map", name="events_map")
-     * @Template("@App/Publication/eventsmap.html.twig")
-     */
-    public function mapEventAction(){
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findCountOfCity();
-        $events = json_encode(['events' => $events]);
-        return ['events' => $events];
-    }
 
-    /**
-     * @Route("/get-coords")
-     */
-    public function getCoordsAction(){
-
-    }
 
 }
