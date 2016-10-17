@@ -86,9 +86,8 @@ class PublicationController extends Controller{
                     $url = 'https://medalmanah.ru'.$this->generateUrl('publications',['url' => $item->getSlug()]);
                     $delimetr = " : ";
                     $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
-                    $twitter->query('statuses/update_with_media ', 'POST', 'json', array(
+                    $twitter->query('statuses/update', 'POST', 'json', array(
                         'status' => $item->getTitle() . $delimetr . $url,
-                        'media' => [$request->request->get('thumbail')]
 //                        'entities' => array("urls" => ["url" => $url ])
                     ));
                 }
