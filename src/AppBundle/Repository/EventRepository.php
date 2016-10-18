@@ -164,6 +164,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
 
     public function findForDigest($count = 4){
         $now = new \DateTime();
+        $now->modify('+1 day');
         $now = $now->format('Y-m-d').' 23:59:59';
         $qb = $this->createQueryBuilder('e');
         $qb->select('e');
