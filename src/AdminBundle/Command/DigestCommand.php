@@ -75,7 +75,7 @@ class DigestCommand extends ContainerAwareCommand
 
             $publications = $em->getRepository('AppBundle:Publication')->findBy(['digest' => true, 'enabled' => true],['id' => 'DESC'],4);
             $events = $em->getRepository('AppBundle:Event')->findForDigest();
-
+            $output->writeln(count($events));
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
                 $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE id = '.$doctors[$j]['id']);
