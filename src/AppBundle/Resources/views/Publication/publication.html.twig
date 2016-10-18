@@ -126,19 +126,20 @@
                     <div itemprop="description">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true %}
                             {{ publication.body | raw }}
+                            {% if publication.video.path is defined %}
+                                <div style="text-align: center">
+                                    <video controls style="width: 640px; height: 420px;">
+                                        <source src="{{ publication.video.path }}" type="video/mp4">
+                                        Ваш браузер не поддерживает данное видео
+                                    </video>
+                                </div>
+                            {% endif %}
                             <div style="font-size: 16px">
                                 <strong>Вы можете оценить статью:</strong>
                                 <span class="like text-success"><span class="count">{{ publication.like }}</span><i class="fa {{ app.session.get('like-'~publication.id) == 1 ? 'fa-thumbs-up' : 'fa-thumbs-o-up' }}" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
                                 <span class="dislike text-danger"><span class="count">{{ publication.dislike }}</span><i class="fa {{ app.session.get('like-'~publication.id) == -1 ? 'fa-thumbs-down' : 'fa-thumbs-o-down' }}" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
                             </div>
-                        {% endif %}
-                        {% if publication.video.path is defined %}
-                            <div style="text-align: center">
-                                <video controls style="width: 640px; height: 420px;">
-                                    <source src="{{ publication.video.path }}" type="video/mp4">
-                                    Ваш браузер не поддерживает данное видео
-                                </video>
-                            </div>
+                            <br />
                         {% endif %}
                     </div>
                 </section>
