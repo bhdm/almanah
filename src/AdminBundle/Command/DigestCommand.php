@@ -38,10 +38,19 @@ class DigestCommand extends ContainerAwareCommand
         $em           = $this->getContainer()->get('doctrine')->getManager();
         $pdo          = $em->getConnection();
 
+
+            $publications = $em->getRepository('AppBundle:Publication')->findBy(['digest' => true, 'enabled' => true],['id' => 'DESC'],4);
+            $events = $em->getRepository('AppBundle:Event')->findForDigest();
+
         # тестовый режим
         if (strpos($this->sendTo, '@') !== false) {
 
-            $html =  $templating->render($this->template, ['email' => $this->sendTo, 'id' => '2']);
+            $html =  $templating->render($this->template, [
+                'email' => $this->sendTo,
+                'id' => '2',
+                'publications' => $publications,
+                'events' => $events,
+            ]);
             $email = $this->sendTo;
             $to    = $this->sendTo;
             $error = $this->send($email, $to, $html, $this->subject, true);
@@ -70,11 +79,7 @@ class DigestCommand extends ContainerAwareCommand
                 ->getResult();
 //                ->setFirstResult($i)
 
-
-//            Находим последние публикации
-
-            $publications = $em->getRepository('AppBundle:Publication')->findBy(['digest' => true, 'enabled' => true],['id' => 'DESC'],4);
-            $events = $em->getRepository('AppBundle:Event')->findForDigest();
+//
             $output->writeln(count($events));
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
