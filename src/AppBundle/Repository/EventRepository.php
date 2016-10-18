@@ -162,6 +162,23 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         return $result;
     }
 
+    public function findForDigest($count = 4){
+        $now = new \DateTime();
+        $now = $now->format('Y-m-d').' 23:59:59';
+        $qb = $this->createQueryBuilder('e');
+        $qb->select('e');
+        $qb->leftJoin('e.category', 'c');
+        $qb->where('e.enabled = true');
+        $qb->andWhere('e.start >= :now');
+        $qb->andWhere('c.id != 3');
+        $qb->orderBy('e.start', 'ASC');
+        $qb->setMaxResults($count);
+        $qb->setParameter(':now',$now);
+        $result = $qb->getQuery()->getResult();
+
+        return $result;
+    }
+
     public function findCountOfCity(){
         $date = new \DateTime();
         $dateStart = $date->format('Y-m-d').'00:00:00';

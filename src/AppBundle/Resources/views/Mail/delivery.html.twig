@@ -12,10 +12,10 @@
             <table cellpadding="0" cellspacing="0" style="width: 100%; padding: 0 30px" width="100%">
                 <tr>
                     <td style="text-align: center; font-size: 20px" align="center">
-                        <a href="https://medalmanah.ru{{ path('homepage') }}?delivery-1" style="color: #444; text-decoration: none">Предстоящие события и последние <br />новости в мире медицины</a>
+                        <a href="https://medalmanah.ru{{ path('homepage') }}?delivery-{{ 'now' | date('dmY') }}" style="color: #444; text-decoration: none">Предстоящие события и последние <br />новости в мире медицины</a>
                     </td>
                     <td style="text-align: right" align="right">
-                        <a href="https://medalmanah.ru{{ path('homepage') }}?delivery-1"><img src="https://medalmanah.ru{{ asset('bundles/app/images/logo.png') }}" style="width: 150px" width="150"></a>
+                        <a href="https://medalmanah.ru{{ path('homepage') }}?delivery-{{ 'now' | date('dmY') }}"><img src="https://medalmanah.ru{{ asset('bundles/app/images/logo.png') }}" style="width: 150px" width="150"></a>
                     </td>
                 </tr>
             </table>
@@ -57,7 +57,7 @@
     </tr>
     <tr>
         <td style="padding-left: 50px; font-size: 24px; color: #555; background: #FFF" colspan="2" bgcolor="#FFF">
-            <a style="color: #555; text-decoration: none" href="https://medalmanah.ru{{ path('events') }}?delivery-1">Ближайшие события</a>
+            <a style="color: #555; text-decoration: none" href="https://medalmanah.ru{{ path('events') }}?delivery-{{ 'now' | date('dmY') }}">Ближайшие события</a>
         </td>
     </tr>
     <tr>
@@ -72,121 +72,29 @@
                 <tr>
                     <td colspan="2" style="font-size: 0px"><br /></td>
                 </tr>
-                <tr style="background: #FFF" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
+
+                {% for e in events %}
+                    <tr style="background: #FFF" bgcolor="#FFF">
+                        <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
                         <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/event/spetsializirovannaja_vystavka_forum_tovarov_i_uslug_dlja_mam_i_detej_materinstvo_i_detstvo_2016?delivery-1" target="_blank" style="color: #f00000">
-                                <img src="https://medalmanah.ru/upload/event/1466490568.jpeg" style="width: 160px">
+                            <a href="https://medalmanah.ru/event/{{ e.slug ? e.slug : e.id }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #f00000">
+                                <img src="https://medalmanah.ru{{ e.preview.path }}" style="width: 160px">
                             </a>
                         </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777; font-size: 15px"><date>13.10.2016 - 16.10.2016</date>, Минск</span><br />
-                        <div><a href="https://medalmanah.ru/event/spetsializirovannaja_vystavka_forum_tovarov_i_uslug_dlja_mam_i_detej_materinstvo_i_detstvo_2016?delivery-1" target="_blank" style="color: #f00000"><strong>Специализированная выставка-форум товаров и услуг для мам и детей Материнство и детство 2016</strong></a></div>
-                        <p style="font-size: 10pt">
-                            <strong>Разделы выставки:</strong><br />
-                            Планирование беременности<br />
-                            Беременность и роды<br />
-                            Товары и услуги для ухода за новорожденными<br />
-                            Товары и услуги для детей дошкольного возраста<br />
-                            Воспитание, образование и развитие<br />
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
+                        </td>
+                        <td style="text-align: left; font-size: 16px" align="left" >
+                            <span style="color: #777; font-size: 15px"><date>{{ e.start | date('d.m.Y') }} - {{ e.end | date('d.m.Y') }}</date>, {{ e.city }}</span><br />
+                            <div><a href="https://medalmanah.ru/event/{{ e.slug ? e.slug : e.id }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #f00000"><strong>{{ e.title }}</strong></a></div>
+                            <p style="font-size: 10pt">
+                                {{ e.anons | raw }}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="font-size: 0px"><br /></td>
+                    </tr>
+                {% endfor %}
 
-
-
-                <tr style="background: #FFF" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
-                        <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/event/59_j_vserossijskij_obrazovatelnyj_forum_%C2%ABteorija_i_praktika_anestezii_i_intensivnoj_terapii_v_akusherstve_i_ginekologii?delivery-1" target="_blank" style="color: #f00000">
-                                <img src="https://medalmanah.ru/upload/event/1473716040.png" style="width: 160px">
-                            </a>
-                        </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777; font-size: 15px"><date>13.10.2016 - 14.10.2016</date>, Красноярск</span><br />
-                        <div><a href="https://medalmanah.ru/event/59_j_vserossijskij_obrazovatelnyj_forum_%C2%ABteorija_i_praktika_anestezii_i_intensivnoj_terapii_v_akusherstve_i_ginekologii?delivery-1" target="_blank" style="color: #f00000"><strong>59 -й Всероссийский образовательный форум «Теория и практика анестезии и интенсивной терапии в акушерстве и гинекологии»</strong></a></div>
-                        <p style="font-size: 10pt">
-                            На Форуме будут обсуждены самые острые и актуальные проблемы анестезии и интенсивной терапии
-                            в акушерстве с учетом современного этапа развития перинатальных центров и внедрения новых
-                            технологий диагностики и лечения, а также: преждевременные роды, профилактика и лечение
-                            послеродовых осложнений, инновации в применении анестезии, методы борьбы с сепсисом в...
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
-
-
-                <tr style="background: #FFF; padding: 10px" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
-                        <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/event/201?delivery-1" target="_blank" style="color: #f00000">
-                                <img src="https://medalmanah.ru/upload/event/1475085241.png" style="width: 160px">
-                            </a>
-                        </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777; font-size: 15px"><date>15.10.2016</date>, Москва</span><br />
-                        <div><a href="https://medalmanah.ru/event/201?delivery-1" target="_blank" style="color: #f00000"><strong>Школа для терапевтов и кардиологов в Москве в октябре 2016 года. Ниша НОАК</strong></a></div>
-                        <p style="font-size: 10pt">
-                            Программа посвящена актуальной проблеме внутренней медицины – контролю и профилактике
-                            внезапных нарушений ритма и коррекции их последствий.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
-
-
-
-
-                <tr style="background: #FFF; padding: 10px" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
-                        <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/event/108?delivery-1" target="_blank" style="color: #f00000">
-                                <img src="https://medalmanah.ru/upload/event/1465558016.jpeg" style="width: 160px">
-                            </a>
-                        </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777; font-size: 15px"><date>19.10.2016</date>, Москва</span><br />
-                        <div><a href="https://medalmanah.ru/event/108?delivery-1" target="_blank" style="color: #f00000"><strong>Научно-практическая конференция Современные вопросы диагностики и лечения острого венозного тромбоза</strong></a></div>
-                        <p style="font-size: 10pt">
-                            Конференция является учебным мероприятием, и соответствует всем требованиям, которые
-                            предъявляются к учебным мероприятиям в рамках Непрерывного медицинского и фармацевтического
-                            образования (НМиФО). Заявка на оценку мероприятий отправлена в Координационный совет по
-                            НМиФО МЗ РФ. Участники получат Свидетельство с индивидуальным кодом и образовательными кредитами (баллами).
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
-                {#<tr style="background: #FFF" bgcolor="#FFF">#}
-                {#<td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >#}
-                {#<span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">#}
-                {#<a href="https://medalmanah.ru/event/mezhdunarodnyj_kongress_i_5_ja_nauchno_prakticheskaja_shkola_iasgo_dostizhenija_sovremennoj_gepatopankreatobiliarnoj_hirurgii_hirurgii_pischevaritelnogo_trakta_i_transplantologii?delivery-1" target="_blank" style="color: #f00000">#}
-                {#<img src="https://medalmanah.ru/upload/event/1468421381.png" style="width: 160px">#}
-                {#</a>#}
-                {#</span>#}
-                {#</td>#}
-                {#<td style="text-align: left; font-size: 16px" align="left" >#}
-                {#<span style="color: #777">23.09.2016 - 24.09.2016</span><br />#}
-                {#<div><a href="https://medalmanah.ru/event/mezhdunarodnyj_kongress_i_5_ja_nauchno_prakticheskaja_shkola_iasgo_dostizhenija_sovremennoj_gepatopankreatobiliarnoj_hirurgii_hirurgii_pischevaritelnogo_trakta_i_transplantologii?delivery-1" target="_blank" style="color: #f00000"><strong>Международный конгресс и 5-я Научно-практическая школа IASGO “Достижения современной гепатопанкреатобилиарной хирургии, хирургии пищеварительного тракта и трансплантологии”</strong></a></div>#}
-                {#<p style="font-size: 10pt">Мероприятие пройдет при поддержке Международной ассоциации хирургов, гастроэнтерологов и онкологов (IASGO) и Министерства здравоохранения Российской Федерации.#}
-                {#Конгресс пройдет при активном участии российских и зарубежных лидеров хирургии, трансплантологии, онкологии, лучевой диагностики, реаниматологии.</p>#}
-                {#</td>#}
-                {#</tr>#}
-                {#<tr>#}
-                {#<td colspan="2" style="font-size: 0px"><br /></td>#}
-                {#</tr>#}
             </table>
         </td>
     </tr>
@@ -198,7 +106,7 @@
         <td style="background: #FFF; font-size: 7px;" bgcolor="#FFF" colspan="2"><br /></td>
     </tr>
     <tr>
-        <td style="padding-left: 50px; font-size: 24px; color: #555; background: #FFF" bgcolor="#FFF" colspan="2"><a style="color: #555; text-decoration: none" href="https://medalmanah.ru{{ path('news') }}?delivery-1">Интересные новости</a></td>
+        <td style="padding-left: 50px; font-size: 24px; color: #555; background: #FFF" bgcolor="#FFF" colspan="2"><a style="color: #555; text-decoration: none" href="https://medalmanah.ru{{ path('news') }}?delivery-{{ 'now' | date('dmY') }}">Интересные новости</a></td>
     </tr>
     <tr>
         <td style="background: #FFF; font-size: 7px;" bgcolor="#FFF" colspan="2"><br /></td>
@@ -213,94 +121,31 @@
                 <tr>
                     <td colspan="2" style="font-size: 0px"><br /></td>
                 </tr>
-                <tr style="background: #FFF" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
+                {% for p in publications %}
+                    <tr style="background: #FFF" bgcolor="#FFF">
+                        <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
                         <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/publications/news/novye_faktory_riskakotorye_vedut_k_dementsii?delivery-1" target="_blank" style="color: #F00000">
-                                <img src="https://medalmanah.ru/upload/publication/1476300004.png" style="width: 160px">
+                            <a href="https://medalmanah.ru/publications/news/{{ p.slug }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #F00000">
+                                <img src="https://medalmanah.ru{{ p.preview.path }}" style="width: 160px">
                             </a>
                         </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777">12.10.2016</span><br />
-                        <div><strong><a href="https://medalmanah.ru/publications/news/novye_faktory_riskakotorye_vedut_k_dementsii?delivery-1" target="_blank" style="color: #F00000">
-                                    Новые факторы риска,которые ведут к деменции</a></strong></div>
-                        <p style="font-size: 10pt">
-                            Эксперты создали краткий перечень экологических факторов, которые могут способствовать риску развития слабоумия.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
-
-                <tr style="background: #FFF" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
-                        <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/publications/news/ultrazvuk_zamedljaet_starenie_mozga?delivery-1" target="_blank" style="color: #F00000">
-                                <img src="https://medalmanah.ru/upload/publication/1476294520.png" style="width: 160px">
-                            </a>
-                        </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-
-                        <span style="color: #777">12.10.2016</span><br />
-                        <div><a href="https://medalmanah.ru/publications/news/ultrazvuk_zamedljaet_starenie_mozga?delivery-1" target="_blank" style="color: #F00000"><strong>
-                                    Ультразвук замедляет старение мозга</strong></a></div>
-                        <p style="font-size: 10pt">
-                            Исследование университета Квинсленда (University of Queensland) доказало, что лечение с
-                            помощью ультразвукового сканирования приводит к регрессии болезни Альцгеймера у мышей,
-                            а также замедляет старение головного мозга у здоровых.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
-
-                <tr style="background: #FFF" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
-                        <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/publications/news/gippokamp_i_gormony?delivery-1" target="_blank" style="color: #F00000">
-                                <img src="https://medalmanah.ru/upload/publication/1476213504.png" style="width: 160px">
-                            </a>
-                        </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777">11.10.2016</span><br />
-                        <div><a href="https://medalmanah.ru/publications/news/gippokamp_i_gormony?delivery-1" target="_blank" style="color: #F00000"><strong>Гиппокамп и гормоны</strong></a></div>
-                        <p style="font-size: 10pt">
-                            Ученые из Института человеческого познания и наук мозга Макса Планка (Max Planck Institute
-                            for Human Cognitive and Brain Sciences ) сделали удивительное открытие: мозг способен
-                            адаптироваться к изменениям условий каждый месяц.
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
-
-                <tr style="background: #FFF" bgcolor="#FFF">
-                    <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
-                        <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/publications/news/najdeny_geny_kotorye_sposobstvujut_agressivnomu_povedeniju_opuholej?delivery-1" target="_blank" style="color: #F00000">
-                                <img src="https://medalmanah.ru/upload/publication/1476213068.png" style="width: 160px">
-                            </a>
-                        </span>
-                    </td>
-                    <td style="text-align: left; font-size: 16px" align="left" >
-                        <span style="color: #777">11.10.2016</span><br />
-                        <div><a href="https://medalmanah.ru/publications/news/najdeny_geny_kotorye_sposobstvujut_agressivnomu_povedeniju_opuholej?delivery-1" target="_blank" style="color: #F00000"><strong>
-                                    Найдены гены, которые способствуют агрессивному поведению опухолей</strong></a></div>
-                        <p style="font-size: 10pt">
-                            Учёные сделали большой прорыв в изучении рака яичников и матки, результаты этого открытия
-                            были опубликованы в Трудах Национальной академии наук (National Academy of Science).
-                        </p>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="font-size: 0px"><br /></td>
-                </tr>
+                        </td>
+                        <td style="text-align: left; font-size: 16px" align="left" >
+                            <span style="color: #777">{{ p.created | date('d.m.Y') }}</span><br />
+                            <div><strong>
+                                    <a href="https://medalmanah.ru/publications/news/{{ p.slug }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #F00000">
+                                        {{ p.title }}
+                                    </a>
+                                </strong></div>
+                            <p style="font-size: 10pt">
+                                {{ p.anons | raw }}
+                            </p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" style="font-size: 0px"><br /></td>
+                    </tr>
+                {% endfor %}
 
             </table>
         </td>

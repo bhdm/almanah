@@ -71,12 +71,22 @@ class DigestCommand extends ContainerAwareCommand
 //                ->setFirstResult($i)
 
 
+//            Находим последние публикации
+
+            $publications = $em->getRepository('AppBundle:Publication')->findBy(['digest' => true, 'enabled' => true],['id' => 'DESC'],4);
+            $events = $em->getRepository('AppBundle:Event')->findForDigest();
+
             for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
                 $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE id = '.$doctors[$j]['id']);
                 $updateDoctor->execute();
 
-                $html = $templating->render($this->template, array('email' => $doctors[$j]['email'], 'id' => $doctors[$j]['id']));
+                $html = $templating->render($this->template, array(
+                    'email' => $doctors[$j]['email'],
+                    'id' => $doctors[$j]['id'],
+                    'publications' => $publications,
+                    'events' => $events,
+                ));
                 $email = $doctors[$j]['email'];
                 $to    = $doctors[$j]['email'];
 
