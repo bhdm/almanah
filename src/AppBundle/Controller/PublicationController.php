@@ -15,6 +15,7 @@ use Symfony\Component\Form\Extension\Core\Type\ButtonType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -410,16 +411,17 @@ class PublicationController extends Controller
         if ($publication){
             if ($session->get('like-'.$publication->getId()) === null){
                 $publication->setLike($publication->getLike()+1);
-            }elseif($session->get('like-'.$publication->getId()) === 1){
-                $publication->setLike($publication->getLike()-1);
-                $session->set('like-'.$publication->getId(), null);
+                $session->set('like-'.$publication->getId(), 1);
             }elseif($session->get('like-'.$publication->getId()) === -1){
                 $publication->setLike($publication->getLike()+1);
                 $publication->setDislike($publication->getDislike()-1);
+                $session->set('like-'.$publication->getId(), 1);
             }
             $session->save();
             $this->getDoctrine()->getManager()->flush($publication);
-            return new Response('ok');
+
+
+            return new JsonResponse(['like' => $publication->getLike(), 'dislike' => $publication->getDislike()]);
         }
         return new Response('error');
     }
@@ -429,21 +431,19 @@ class PublicationController extends Controller
      */
     public function dislikeAction(Request $request, $id){
         $session = $request->getSession();
-
         $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->find($id);
         if ($publication){
-            if ($session->get('show-'.$publication->getId()) === null){
+            if ($session->get('like-'.$publication->getId()) === null){
                 $publication->setLike($publication->getDislike()-1);
-            }elseif($session->get('show-'.$publication->getId()) === 1){
+                $session->set('like-'.$publication->getId(), -1);
+            }elseif($session->get('like-'.$publication->getId()) === 1){
                 $publication->setLike($publication->getLike()-1);
                 $publication->setDislike($publication->getDislike()+1);
-            }elseif($session->get('show-'.$publication->getId()) === -1){
-                $publication->setDislike($publication->getDislike()-1);
-                $session->set('like-'.$publication->getId(), null);
+                $session->set('like-'.$publication->getId(), -1);
             }
             $session->save();
             $this->getDoctrine()->getManager()->flush($publication);
-            return new Response('ok');
+            return new JsonResponse(['like' => $publication->getLike(), 'dislike' => $publication->getDislike()]);
         }
         return new Response('error');
     }

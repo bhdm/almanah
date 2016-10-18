@@ -12,6 +12,41 @@
     <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
     <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
     <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+            $('.like').click(function () {
+                $.ajax({
+                    url: Routing.generate('set_like',{'id' : {{ publication.id }} }),
+                    success: function (msg) {
+                        $('.like i').removeClass('fa-thumbs-o-up');
+                        $('.like i').addClass('fa-thumbs-up');
+
+                        $('.dislike i').removeClass('fa-thumbs-down');
+                        $('.dislike i').addClass('fa-thumbs-o-down');
+
+                        $('.like .count').html(msg.like);
+                        $('.dislike .count').html(msg.dislike);
+
+                    }
+                });
+            });
+            $('.dislike').click(function () {
+                $.ajax({
+                    url: Routing.generate('set_dislike',{'id' : {{ publication.id }} }),
+                    success: function (msg) {
+                        $('.dislike i').removeClass('fa-thumbs-o-down');
+                        $('.dislike i').addClass('fa-thumbs-down');
+
+                        $('.like i').removeClass('fa-thumbs-up');
+                        $('.like i').addClass('fa-thumbs-o-up');
+
+                        $('.like .count').html(msg.like);
+                        $('.dislike .count').html(msg.dislike);
+                    }
+                });
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block seo %}
@@ -91,11 +126,11 @@
                     <div itemprop="description">
                         {% if is_granted('IS_AUTHENTICATED_FULLY') or publication.public == true %}
                             {{ publication.body | raw }}
-                            {#<div style="font-size: 16px">#}
-                                {#<strong>Оцените, пожалуйста, статью:</strong>#}
-                                {#<span class="like text-success">{{ publication.like }}<i class="fa fa-thumbs-o-up" aria-hidden="true" data-id="{{ publication.id }}"></i></span>#}
-                                {#<span class="dislike text-danger">{{ publication.dislike }}<i class="fa fa-thumbs-o-down" aria-hidden="true" data-id="{{ publication.id }}"></i></span>#}
-                            {#</div>#}
+                            <div style="font-size: 16px">
+                                <strong>Вы можете оценить статью:</strong>
+                                <span class="like text-success"><span class="count">{{ publication.like }}</span><i class="fa {{ app.session.get('like-'~publication.id) == 1 ? 'fa-thumbs-up' : 'fa-thumbs-o-up' }}" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
+                                <span class="dislike text-danger"><span class="count">{{ publication.dislike }}</span><i class="fa {{ app.session.get('like-'~publication.id) == -1 ? 'fa-thumbs-down' : 'fa-thumbs-o-down' }}" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
+                            </div>
                         {% endif %}
                         {% if publication.video.path is defined %}
                             <div style="text-align: center">
