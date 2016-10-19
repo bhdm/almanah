@@ -147,6 +147,7 @@
                                     </video>
                                 </div>
                             {% endif %}
+                            {% if poll is defined and poll != null %}
                             <form class="form-horizontal" method="POST" action="{{ path('publication_poll', {'id' : poll.id }) }}">
                                 <hr />
                                 <h4>Опрос:</h4>
@@ -184,6 +185,7 @@
                                         </tbody>
                                     </table>
                                 {% endif %}
+                            {% endif %}
                             <div style="font-size: 16px">
                                 <strong>Вы можете оценить статью:</strong>
                                 <span class="like text-success"><span class="count">{{ publication.like }}</span><i class="fa {{ app.session.get('like-'~publication.id) == 1 ? 'fa-thumbs-up' : 'fa-thumbs-o-up' }}" aria-hidden="true" data-id="{{ publication.id }}"></i></span>
