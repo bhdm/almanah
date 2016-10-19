@@ -20,7 +20,7 @@
 }
 .block-comments .commentBox .form-group:nth-child(2),
 .block-comments .actionBox .form-group:nth-child(2) {
-  width: 18%;
+  width: 100%;
 }
 .block-comments .actionBox .form-group * {
   width: 100%;
