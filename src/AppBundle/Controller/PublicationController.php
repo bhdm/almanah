@@ -85,7 +85,8 @@ class PublicationController extends Controller
                 $this->getDoctrine()->getManager()->refresh($publication);
             }
 
-            return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+            $poll = $publication->getPoll();
+            return ['publication' => $publication, 'featuredPublications' => $featuredPublications , 'poll' => $poll];
         }else{
             return $publication;
         }
@@ -108,7 +109,8 @@ class PublicationController extends Controller
                 $this->getDoctrine()->getManager()->refresh($publication);
             }
 
-            return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+            $poll = $publication->getPoll();
+            return ['publication' => $publication, 'featuredPublications' => $featuredPublications , 'poll' => $poll];
         }else{
             return $publication;
         }
@@ -132,7 +134,8 @@ class PublicationController extends Controller
                 $this->getDoctrine()->getManager()->refresh($publication);
             }
 
-            return ['publication' => $publication, 'featuredPublications' => $featuredPublications ];
+            $poll = $publication->getPoll();
+            return ['publication' => $publication, 'featuredPublications' => $featuredPublications , 'poll' => $poll];
         }else{
             return $publication;
         }
@@ -456,5 +459,22 @@ class PublicationController extends Controller
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->findCountOfCity();
         $events = json_encode(['events' => $events]);
         return ['events' => $events];
+    }
+
+    /**
+     * @Route("/publication/answer/poll/{id}", name="publication_poll")
+     */
+    public function answerPublicationPollAction(Request $request, $id){
+        $session = $request->getSession();
+        $poll = $this->getDoctrine()->getRepository('AppBundle:Poll')->find($id);
+        $answer = $request->request->get('poll')[$id];
+        $question = $this->getDoctrine()->getRepository('AppBundle:PollQuestion')->find($answer);
+        $question->setCount($question->getCount()+1);
+        $this->getDoctrine()->getManager()->flush($question);
+
+        $session->set('poll-'.$poll->getId(), true);
+        $session->getFlashBag()->add('notice', 'Ваш ответ сохранен, спасибо за ваше мнение');
+        $referer = $request->headers->get('referer');
+        return $this->redirect($referer);
     }
 }

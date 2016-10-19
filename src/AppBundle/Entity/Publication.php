@@ -159,6 +159,11 @@ class Publication
      */
     private $statShow;
 
+    /**
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Poll", mappedBy="publication")
+     */
+    private $poll;
+
 
     public function __construct()
     {
@@ -549,6 +554,40 @@ class Publication
     {
         $this->statShow = $statShow;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getStatShow()
+    {
+        return $this->statShow;
+    }
+
+    /**
+     * @param mixed $statShow
+     */
+    public function setStatShow($statShow)
+    {
+        $this->statShow = $statShow;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPoll()
+    {
+        return $this->poll;
+    }
+
+    /**
+     * @param mixed $poll
+     */
+    public function setPoll($poll)
+    {
+        $this->poll = $poll;
+    }
+
+
 
 }
 
