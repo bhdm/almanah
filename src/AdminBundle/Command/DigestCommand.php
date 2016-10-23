@@ -65,6 +65,7 @@ class DigestCommand extends ContainerAwareCommand
 			SELECT COUNT(e.id)
 			FROM AppBundle:Email2 e
 			WHERE e.sent = false
+			AND e.id > 20000
 		')->getSingleScalarResult();
 
         # рассылка по 75 пользователям за цикл
@@ -73,7 +74,8 @@ class DigestCommand extends ContainerAwareCommand
             $doctors = $em->createQuery('
 			SELECT e.id, e.email
 			FROM AppBundle:Email2 e
-			WHERE e.sent = false			
+			WHERE e.sent = false
+            AND e.id > 20000
             ORDER BY e.id ASC            
 		')      ->setmaxresults(500)
                 ->getResult();
