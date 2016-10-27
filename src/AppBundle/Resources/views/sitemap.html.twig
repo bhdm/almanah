@@ -4,31 +4,37 @@
         <loc>https://medalmanah.ru</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/publications/news</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/publications/articles</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/publications/study</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/russian-events</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/foreign-events</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/events/fpdo-courses</loc>
@@ -39,11 +45,13 @@
         <loc>https://medalmanah.ru/events/online-courses</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/federal-standards</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/abbreviations</loc>
@@ -54,32 +62,38 @@
         <loc>https://medalmanah.ru/calculators</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/calculators/ocenka-clirensa-creatinina</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/calculators/shkala-score</loc>
         <lastmod>2016-09-07T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/calculators/index-massy-tela</loc>
         <lastmod>2016-09-07T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     <url>
         <loc>https://medalmanah.ru/feedback</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
+        <changefreq>daily</changefreq>
     </url>
     {% for p in pages  %}
         <url>
             <loc>https://medalmanah.ru/{{ p.slug }}</loc>
             <lastmod>2016-07-20T00:00:00+01:00</lastmod>
             <priority>1.0</priority>
+            <changefreq>daily</changefreq>
         </url>
     {% endfor %}
     {% for publication in publications  %}
@@ -94,6 +108,7 @@
             <loc>https://medalmanah.ru/publications/{{ type }}/{{ publication.slug ? publication.slug : publication.id }}</loc>
             <lastmod>{{ publication.created | date('Y-m-d') }}T12:24:14+01:00</lastmod>
             <priority>0.8</priority>
+            <changefreq>daily</changefreq>
         </url>
     {% endfor %}
     {% for event in events  %}
@@ -108,6 +123,7 @@
             <loc>https://medalmanah.ru/event/{{ event.slug ? event.slug : event.id }}</loc>
             <lastmod>{{ event.created | date('Y-m-d') }}T12:24:14+01:00</lastmod>
             <priority>0.8</priority>
+            <changefreq>daily</changefreq>
         </url>
     {% endfor %}
     {% for c in calendar  %}
@@ -115,6 +131,7 @@
             <loc>https://medalmanah.ru/medical-calendar/now/{{ c.id }}</loc>
             <lastmod>2016-07-20T00:00:00+01:00</lastmod>
             <priority>1.0</priority>
+            <changefreq>daily</changefreq>
         </url>
     {% endfor %}
     {% for s in standarts  %}
@@ -122,6 +139,7 @@
             <loc>https://medalmanah.ru/federal-standards/{{ s.id }}</loc>
             <lastmod>2016-07-20T00:00:00+01:00</lastmod>
             <priority>1.0</priority>
+            <changefreq>daily</changefreq>
         </url>
     {% endfor %}
 </urlset>
