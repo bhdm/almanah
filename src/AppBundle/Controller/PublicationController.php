@@ -60,6 +60,71 @@ class PublicationController extends Controller
     }
 
     /**
+     * @route("/api/publications/{page}", name="api_get_publications", defaults={"page" = 1})
+     */
+    public function getPublicationJson($page = null){
+        $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $news,
+            $page,
+            15
+        );
+        $publications = array();
+        foreach ($pagination->getItems() as $item){
+            $publications[] = array(
+                'id' => $item->getId(),
+                'title' => $item->getTitle(),
+                'anons' => $item->getAnons(),
+                'preview' => $item->getPreview(),
+                'created' => $item->getCreated(),
+                'slug' => $item->getSlug(),
+                'category' => $item->getCategory(),
+                'like' => $item->getLike(),
+                'dislike' => $item->getDislike(),
+            );
+        }
+
+        return new JsonResponse(['publications' => $publications]);
+    }
+
+    /**
+     * @route("/api/events/{page}", name="api_get_events", defaults={"page" = 1})
+     */
+    public function getEventJson(Request $request, $page = null){
+        $category = null;
+        $filter = $request->query->get('form');
+        $start = (isset($filter['start']) ? $filter['start'] : null );
+        $end =   (isset($filter['end']) ? $filter['end'] : null );
+        $text =   (isset($filter['searchtext']) ? $filter['searchtext'] : null );
+        $specialty =   (isset($filter['specialty']) ? $filter['specialty'] : null );
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text, $specialty);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $events,
+            $page,
+            15
+        );
+        $publications = array();
+        foreach ($pagination->getItems() as $item){
+            $publications[] = array(
+                'id' => $item->getId(),
+                'title' => $item->getTitle(),
+                'anons' => $item->getAnons(),
+                'preview' => $item->getPreview(),
+                'start' => $item->getStart(),
+                'end' => $item->getEnd(),
+                'slug' => $item->getSlug(),
+                'category' => $item->getCategory(),
+            );
+        }
+
+        return new JsonResponse(['publications' => $publications]);
+    }
+
+
+    /**
      * @Route("/publications/new/{url}")
      */
     public function newOldAction($url){
