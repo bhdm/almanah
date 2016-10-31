@@ -82,6 +82,9 @@ class PublicationController extends Controller
                 'category' => $item->getCategory(),
                 'like' => $item->getLike(),
                 'dislike' => $item->getDislike(),
+                'commentCount' => count($item->getComments()),
+                'rating' => $item->getShow()*3 + $item->getLike() * 5 + $item->getDislike(),
+
             );
         }
 
@@ -106,9 +109,9 @@ class PublicationController extends Controller
             $page,
             15
         );
-        $publications = array();
+        $events = array();
         foreach ($pagination->getItems() as $item){
-            $publications[] = array(
+            $events[] = array(
                 'id' => $item->getId(),
                 'title' => $item->getTitle(),
                 'anons' => $item->getAnons(),
@@ -120,7 +123,7 @@ class PublicationController extends Controller
             );
         }
 
-        return new JsonResponse(['publications' => $publications]);
+        return new JsonResponse(['events' => $events]);
     }
 
 
