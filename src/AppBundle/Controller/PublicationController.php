@@ -135,6 +135,24 @@ class PublicationController extends Controller
     }
 
     /**
+     * @route("/api/specialty", name="api_get_specialty")
+     */
+    public function getSpecialtyJson(){
+        $specialties = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findBy([],['title','ASC']);
+        $specialtiesJson = array();
+        foreach ($specialties as $item){
+            $specialtiesJson[] = array(
+                'id' => $item->getId(),
+                'title' => $item->getTitle(),
+            );
+        }
+
+        return new JsonResponse(['specialties' => $specialtiesJson]);
+    }
+
+
+
+    /**
      * @route("/api/event/{id}", name="api_get_event")
      */
     public function getEventJson($id){
