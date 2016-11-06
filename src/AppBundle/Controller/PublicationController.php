@@ -115,6 +115,26 @@ class PublicationController extends Controller
     }
 
     /**
+     * @route("/api/publication/{id}/comment", name="api_get_publication_comment")
+     */
+    public function getCommentJson($id){
+        $publication = $this->getDoctrine()->getRepository('AppBundle:Publication')->find($id);
+        $comments = $this->getDoctrine()->getRepository('AppBundle:Comment')->findBy(['publication' => $publication], ['id' => 'ASC']);
+
+        $commentsJson = array();
+        foreach ($comments as $item){
+            $commentsJson[] = array(
+                'id' => $item->getId(),
+                'body' => $item->getBody(),
+                'author' => $item->getOwner(),
+                'created' => $item->getCreated()->format('d.m.Y H:i')
+            );
+        }
+
+        return new JsonResponse(['comments' => $commentsJson]);
+    }
+
+    /**
      * @route("/api/event/{id}", name="api_get_event")
      */
     public function getEventJson($id){
@@ -131,6 +151,8 @@ class PublicationController extends Controller
         );
         return new JsonResponse(['event' => $event]);
     }
+
+
 
 
     /**
