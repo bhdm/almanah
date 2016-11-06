@@ -79,7 +79,7 @@ class PublicationController extends Controller
                 'preview' => (isset($item->getPreview()['path']) ? $item->getPreview()['path'] : ''),
                 'created' => $item->getCreated()->format('d.m.Y'),
                 'slug' => $item->getSlug(),
-                'category' => $item->getCategory(),
+                'category' => ( $item->getCategory() != null  ? $item->getCategory()->getTitle() : null ),
                 'type' => $item->getType(),
                 'like' => $item->getLike(),
                 'dislike' => $item->getDislike(),
@@ -104,7 +104,7 @@ class PublicationController extends Controller
             'preview' => (isset($item->getPreview()['path']) ? $item->getPreview()['path'] : ''),
             'created' => $item->getCreated()->format('d.m.Y'),
             'slug' => $item->getSlug(),
-            'category' => $item->getCategory(),
+            'category' => ( $item->getCategory() != null  ? $item->getCategory()->getTitle() : null ),
             'type' => $item->getType(),
             'like' => $item->getLike(),
             'dislike' => $item->getDislike(),
@@ -165,7 +165,7 @@ class PublicationController extends Controller
             'start' => $item->getStart()->format('d.m.Y'),
             'end' => $item->getEnd()->format('d.m.Y'),
             'slug' => $item->getSlug(),
-            'category' => $item->getCategory(),
+            'category' => ( $item->getCategory() != null  ? $item->getCategory()->getTitle() : null ),
         );
         return new JsonResponse(['event' => $event]);
     }
@@ -201,7 +201,7 @@ class PublicationController extends Controller
                 'start' => $item->getStart()->format('d.m.Y'),
                 'end' => $item->getEnd()->format('d.m.Y'),
                 'slug' => $item->getSlug(),
-                'category' => $item->getCategory(),
+                'category' => ( $item->getCategory() != null  ? $item->getCategory()->getTitle() : null ),
             );
         }
 
