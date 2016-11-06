@@ -73,6 +73,25 @@ class WidgetController extends Controller
     }
 
     /**
+     * @Route("/api/importants")
+     */
+    public function importantsJsonAction(Request $request){
+        $months     = ['', 'января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'];
+        $date       = new \DateTime('now');
+        $dateStr    = intval($date->format('d')) . ' ' . $months[intval($date->format('m'))];
+        $dateFormat = $date->format('d.m');
+
+        $em        = $this->getDoctrine()->getManager();
+        $calendars = $em->getRepository('AppBundle:Calendar')->byDate($dateFormat);
+
+        return New JsonResponse([
+            'dateFormat' => $dateFormat,
+            'dateStr'    => $dateStr,
+            'calendars'  => $calendars,
+        ]);
+    }
+
+    /**
      *
      * @Route("/analytics/getimage/{deliveryname}/{id}")
      */

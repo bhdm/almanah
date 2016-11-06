@@ -364,5 +364,4 @@ class Calendar
         $this->id = $id;
     }
 
-
 }
