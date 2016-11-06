@@ -62,7 +62,7 @@ class PublicationController extends Controller
     /**
      * @route("/api/publications/{page}", name="api_get_publications", defaults={"page" = 1})
      */
-    public function getPublicationJson($page = null){
+    public function getPublicationsJson($page = null){
         $news = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC']);
         $paginator  = $this->get('knp_paginator');
         $pagination = $paginator->paginate(
@@ -76,10 +76,11 @@ class PublicationController extends Controller
                 'id' => $item->getId(),
                 'title' => $item->getTitle(),
                 'anons' => $item->getAnons(),
-                'preview' => $item->getPreview(),
+                'preview' => (isset($item->getPreview()['path']) ? $item->getPreview()['path'] : ''),
                 'created' => $item->getCreated()->format('d.m.Y'),
                 'slug' => $item->getSlug(),
                 'category' => $item->getCategory(),
+                'type' => $item->getType(),
                 'like' => $item->getLike(),
                 'dislike' => $item->getDislike(),
                 'commentCount' => count($item->getComments()),
@@ -92,9 +93,50 @@ class PublicationController extends Controller
     }
 
     /**
+     * @route("/api/publication/{id}", name="api_get_publication")
+     */
+    public function getPublicationJson($id){
+        $item = $this->getDoctrine()->getRepository('AppBundle:Publication')->find($id);
+        $publication = array(
+            'id' => $item->getId(),
+            'title' => $item->getTitle(),
+            'anons' => $item->getAnons(),
+            'preview' => (isset($item->getPreview()['path']) ? $item->getPreview()['path'] : ''),
+            'created' => $item->getCreated()->format('d.m.Y'),
+            'slug' => $item->getSlug(),
+            'category' => $item->getCategory(),
+            'type' => $item->getType(),
+            'like' => $item->getLike(),
+            'dislike' => $item->getDislike(),
+            'commentCount' => count($item->getComments()),
+            'rating' => $item->getShow()*3 + $item->getLike() * 5 + $item->getDislike(),
+        );
+        return new JsonResponse(['publication' => $publication]);
+    }
+
+    /**
+     * @route("/api/event/{id}", name="api_get_event")
+     */
+    public function getEventJson($id){
+        $item = $this->getDoctrine()->getRepository('AppBundle:Event')->find($id);
+        $event = array(
+            'id' => $item->getId(),
+            'title' => $item->getTitle(),
+            'anons' => $item->getAnons(),
+            'preview' => (isset($item->getPreview()['path']) ? $item->getPreview()['path'] : ''),
+            'start' => $item->getStart()->format('d.m.Y'),
+            'end' => $item->getEnd()->format('d.m.Y'),
+            'slug' => $item->getSlug(),
+            'category' => $item->getCategory(),
+        );
+        return new JsonResponse(['event' => $event]);
+    }
+
+
+    /**
      * @route("/api/events/{page}", name="api_get_events", defaults={"page" = 1})
      */
-    public function getEventJson(Request $request, $page = null){
+    public function getEventsJson(Request $request, $page = null){
         $category = null;
         $filter = $request->query->get('form');
         $start = (isset($filter['start']) ? $filter['start'] : null );
@@ -115,7 +157,7 @@ class PublicationController extends Controller
                 'id' => $item->getId(),
                 'title' => $item->getTitle(),
                 'anons' => $item->getAnons(),
-                'preview' => $item->getPreview(),
+                'preview' => (isset($item->getPreview()['path']) ? $item->getPreview()['path'] : ''),
                 'start' => $item->getStart()->format('d.m.Y'),
                 'end' => $item->getEnd()->format('d.m.Y'),
                 'slug' => $item->getSlug(),
