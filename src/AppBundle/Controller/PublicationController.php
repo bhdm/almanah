@@ -138,7 +138,7 @@ class PublicationController extends Controller
      * @route("/api/specialty", name="api_get_specialty")
      */
     public function getSpecialtyJson(){
-        $specialties = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findBy([],['title','ASC']);
+        $specialties = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findBy([],['title' => 'ASC']);
         $specialtiesJson = array();
         foreach ($specialties as $item){
             $specialtiesJson[] = array(
