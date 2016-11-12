@@ -4,9 +4,9 @@
 {#{% endif %}#}
 {% if banner != null and banner.file is defined %}
     {% if banner.file.path is defined %}
-        <br />
         <div class="text-right">
             <a href="{{ banner.url }}" target="_blank"><img src="{{ banner.file.path }}" style="max-width: 240px;" title="{{ banner.title }}"/></a>
         </div>
+        <br />
     {% endif %}
 {% endif %}
