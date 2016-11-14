@@ -1,0 +1,23 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block content %}
+    <br />
+    <br />
+    <div class="title"><h1>Переход на страницу "Конкурс клинических наблюдений" <span id="sec">3</span></h1></div>
+{% endblock %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script>
+        $(document).ready(function () {
+            var sec = 3;
+            var timerId = setInterval(function () {
+                sec = sec - 1;
+                $('#sec').html(sec);
+                if (sec <= 0){
+                    window.location.href = "http://doctor-konkurs.ru/?utm_source=medalmanah.ru&utm_medium=banner&utm_campaign=banner_ad";
+                }
+            }, 1000);
+        })
+    </script>
+{% endblock %}

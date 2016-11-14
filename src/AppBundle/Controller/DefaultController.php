@@ -179,4 +179,12 @@ class DefaultController extends Controller
         return [];
     }
 
+    /**
+     * @Route("/banner-concurs")
+     * @Template()
+     */
+    public function bannerConcursAction(){
+        return [];
+    }
 }
+
