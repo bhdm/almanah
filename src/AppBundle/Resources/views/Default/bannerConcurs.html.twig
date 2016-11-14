@@ -3,14 +3,14 @@
 {% block content %}
     <br />
     <br />
-    <div class="title text-center"><h1>Переход на страницу "Конкурс клинических наблюдений" <br /> произойдет через <span id="sec">3</span> сек.</h1></div>
+    <div class="title text-center"><h1>Переход на страницу "Конкурс клинических наблюдений" <br /> произойдет через <span id="sec">5</span> сек.</h1></div>
 {% endblock %}
 
 {% block javascript %}
     {{ parent() }}
     <script>
         $(document).ready(function () {
-            var sec = 3;
+            var sec = 5;
             var timerId = setInterval(function () {
                 sec = sec - 1;
                 $('#sec').html(sec);
