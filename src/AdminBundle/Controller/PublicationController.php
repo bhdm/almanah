@@ -87,11 +87,11 @@ class PublicationController extends Controller{
                     $delimetr = " : ";
                     $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
-                    $media = $twitter->query('statuses/update', 'POST', 'json', array(
-                        'media' => $image->getImageBlob(),
-                    ));
-                    dump($media);
-                    exit;
+//                    $media = $twitter->query('media/upload', 'POST', 'json', array(
+//                        'media' => $image->getImageBlob(),
+//                    ));
+//                    dump($media);
+//                    exit;
                     $twitter->query('statuses/update', 'POST', 'json', array(
                         'status' => $item->getTitle() . $delimetr . $url,
 //                        'entities' => array("urls" => ["url" => $url ])
