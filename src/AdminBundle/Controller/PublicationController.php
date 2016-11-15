@@ -87,7 +87,7 @@ class PublicationController extends Controller{
                     $delimetr = " : ";
                     $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
-                    $media = $twitter->query('media/upload', 'POST', 'json', array(
+                    $media = $twitter->query('statuses/update', 'POST', 'json', array(
                         'media' => $image->getImageBlob(),
                     ));
                     dump($media);
