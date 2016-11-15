@@ -88,7 +88,7 @@ class PublicationController extends Controller{
                     $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
                     $media = $twitter->query('media/upload', 'POST', 'json', array(
-                        'media_data' => $request->request->get('thumbail'),
+                        'media' => $image->getImageBlob(),
                     ));
                     dump($media);
                     exit;
