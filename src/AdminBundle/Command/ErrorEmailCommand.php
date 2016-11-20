@@ -59,9 +59,9 @@ class ErrorEmailCommand extends ContainerAwareCommand
 
             foreach ($emails as $email) {
                 $output->writeln($email['email'].' - '.$email['error']);
-                $updateDoctor = $pdo->prepare("UPDATE email_evrika SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
+                $updateDoctor = $pdo->prepare("UPDATE email_evrika e SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
                 $updateDoctor->execute();
-                $updateDoctor = $pdo->prepare("UPDATE email SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
+                $updateDoctor = $pdo->prepare("UPDATE email e SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
                 $updateDoctor->execute();
             }
         }
