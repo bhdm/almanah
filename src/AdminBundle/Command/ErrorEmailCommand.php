@@ -43,32 +43,39 @@ class ErrorEmailCommand extends ContainerAwareCommand
                     $matches = array();
 
                     if (preg_match_all('/([^@\s]++@\S++) .*(-53|110|111)/i', $line, $matches)) {
-//                        $email = $matches[1][0];
-//                        $error = $matches[1][1];
+                        $email = $matches[1][0];
+                        $error = $matches[2][0];
 
-                            dump($matches);
-//                        if (strpos($email, '@medalmanah.ru') === false) {
-//                            $emails[] = $email;
-//                        }
-
-//                        $output->writeln('+++' . $email . ' '.$error);
+                        if (strpos($email, '@medalmanah.ru') === false) {
+                            $emails[] = array('email' => $email, 'error' => $error);
+                        }
                     }
                 }
             }
         }
 
-//        if (!empty($emails)) {
-//            $updateQuery = $em->createQuery('
-//				UPDATE EvrikaMainBundle:Doctor d
-//				SET d.subscriber = FALSE
-//				WHERE d.username = :email
-//			');
+        if (!empty($emails)) {
+            $updateQuery = $em->createQuery('
+				UPDATE AppBundle:Email2 e
+				SET e.error = ":error"
+				WHERE e.email = ":email"
+			');
 //
-//            foreach ($emails as $email) {
-//                $updateQuery->setParameter('email', $email)->execute();
-//            }
-//        }
+            foreach ($emails as $email) {
+                $updateQuery->setParameters(['email' => $email['email'], 'error' => $email['error']])->execute();
+            }
 
-//        $output->writeln('+++ evrika:email_not_found unsubscribed ' . count($emails) . ' users');
+            $updateQuery = $em->createQuery('
+				UPDATE AppBundle:Email e
+				SET e.error = ":error"
+				WHERE e.email = ":email"
+			');
+//
+            foreach ($emails as $email) {
+                $updateQuery->setParameters(['email' => $email['email'], 'error' => $email['error']])->execute();
+            }
+        }
+
+        $output->writeln('+++ delivery:error unsubscribed ' . count($emails) . ' users');
     }
 }

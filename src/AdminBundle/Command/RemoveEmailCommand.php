@@ -17,15 +17,17 @@ class RemoveEmailCommand extends ContainerAwareCommand
     protected function execute(InputInterface $input, OutputInterface $output)
     {
 
-
+        $output->writeln('delivery:unsubscribed start');
         $em           = $this->getContainer()->get('doctrine')->getManager();
         $pdo          = $em->getConnection();
 
-        include_once 'emails.php';
+        $emails = $em->getRepository('AppBundle:Unfollow')->findAll();
 
         foreach ($emails as $mail){
-            $updateDoctor   = $pdo->prepare('DELETE FROM email_evrika WHERE email="'.$mail.'"');
+            $updateDoctor   = $pdo->prepare('DELETE FROM email_evrika WHERE email="'.$mail->getTitle().'"');
             $updateDoctor->execute();
         }
+
+        $output->writeln('delivery:unsubscribed end');
     }
 }
