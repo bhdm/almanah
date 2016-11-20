@@ -22,6 +22,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
 
         $container = $this->getContainer();
         $em        = $container->get('doctrine')->getManager();
+        $pdo       = $em->getConnection();
         $emails    = array();
 
         //$dir   = __DIR__;
@@ -55,24 +56,13 @@ class ErrorEmailCommand extends ContainerAwareCommand
         }
 
         if (!empty($emails)) {
-            $updateQuery = $em->createQuery('
-				UPDATE AppBundle:Email2 e
-				SET e.error = :error
-				WHERE e.email = :email
-			');
-//
-            foreach ($emails as $email) {
-                $updateQuery->setParameters(['email' => $email['email'], 'error' => $email['error']])->execute();
-            }
 
-            $updateQuery = $em->createQuery('
-				UPDATE AppBundle:Email e
-				SET e.error = :error
-				WHERE e.email = :email
-			');
-//
             foreach ($emails as $email) {
-                $updateQuery->setParameters(['email' => $email['email'], 'error' => $email['error']])->execute();
+                $output->writeln($email['email'].' - '.$email['error']);
+                $updateDoctor = $pdo->prepare("UPDATE email_evrika SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
+                $updateDoctor->execute();
+                $updateDoctor = $pdo->prepare("UPDATE email SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
+                $updateDoctor->execute();
             }
         }
 
