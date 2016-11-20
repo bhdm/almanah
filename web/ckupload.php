@@ -1,6 +1,6 @@
 <?php
 $callback = $_GET['CKEditorFuncNum'];
-$file_name = $_FILES['upload']['name'];
+$file_name = time().end(explode('.',$_FILES['upload']['name']));
 $file_name_tmp = $_FILES['upload']['tmp_name'];
 $file_new_name = 'upload/publication/';
 $full_path = $file_new_name.$file_name;
