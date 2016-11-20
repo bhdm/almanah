@@ -39,9 +39,9 @@ class TwitterService
             $this->container->getParameter('twitter_access_secret'));
 
         if ($filename){
-            $reply = $cb->media_upload([
-                'media' => 'https:/medalmanah.ru'.$filename
-            ]);
+            $file = ['media' => 'https:/medalmanah.ru'.$filename];
+            $reply = $cb->media_upload($file);
+            var_dump($file);
             var_dump($reply);
             exit;
             // and collect their IDs
