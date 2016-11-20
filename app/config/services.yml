@@ -27,7 +27,7 @@ services:
         arguments: ["@doctrine"]
 
 
-    admin.twitter:
-        class: AdminBundle\Services\TwitterService
-        arguments:
-            container: "@service_container"
+#    admin.twitter:
+#        class: AdminBundle\Services\TwitterService
+#        arguments:
+#            container: "@service_container"

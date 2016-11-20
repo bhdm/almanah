@@ -19,7 +19,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
-            new Codebird\Codebird(),
+//            new Codebird\Codebird(),
 
             new AppBundle\AppBundle(),
             new AdminBundle\AdminBundle(),
