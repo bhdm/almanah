@@ -48,7 +48,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
                         $error = $matches[2][0];
 
                         if (strpos($email, '@medalmanah.ru') === false) {
-                            $emails[] = array('email' => $email, 'error' => $error);
+                            $emails[$email] = array('email' => $email, 'error' => $error);
                         }
                     }
                 }
