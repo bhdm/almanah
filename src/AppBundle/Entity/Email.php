@@ -26,6 +26,12 @@ class Email
      */
     protected $sent = false;
 
+    /**
+     * @ORM\Column(type = "string", nullable=true)
+     */
+    protected $error;
+
+
     /** @ORM\Column(type = "boolean") */
     protected $ru = false;
 
@@ -73,4 +79,38 @@ class Email
     {
         return $this->sent;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * @param mixed $error
+     */
+    public function setError($error)
+    {
+        $this->error = $error;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getRu()
+    {
+        return $this->ru;
+    }
+
+    /**
+     * @param mixed $ru
+     */
+    public function setRu($ru)
+    {
+        $this->ru = $ru;
+    }
+
+
 }
