@@ -70,10 +70,10 @@ class DigestCommand extends ContainerAwareCommand
 //
 //        # рассылка по 350 пользователям базы + 150 базы 2
 //        for ($i = 0 ; $i < $total; $i++) {
-
+            $output->writeln("... Рассылка по базе AppBundle:Email2");
             $doctors = $this->getEmails($em, 1, 350, 'AppBundle:Email2');
             $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
-
+        $output->writeln("... Рассылка по базе AppBundle:Email");
             $doctors = $this->getEmails($em, 1, 150, 'AppBundle:Email');
             $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
 
