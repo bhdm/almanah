@@ -42,6 +42,7 @@ class TwitterService
             $reply = $cb->media_upload([
                 'media' => 'https:/medalmanah.ru'.$filename
             ]);
+            var_dump($reply);
             // and collect their IDs
             $media_ids[] = $reply->media_id_string;
         }
