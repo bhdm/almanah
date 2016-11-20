@@ -43,6 +43,7 @@ class TwitterService
                 'media' => 'https:/medalmanah.ru'.$filename
             ]);
             var_dump($reply);
+            exit;
             // and collect their IDs
             $media_ids[] = $reply->media_id_string;
         }
