@@ -43,14 +43,15 @@ class ErrorEmailCommand extends ContainerAwareCommand
                     $matches = array();
 
                     if (preg_match_all('/([^@\s]++@\S++) .*(-53|110|111)/i', $line, $matches)) {
-                        $email = $matches[1][0];
-                        $error = $matches[1][1];
+//                        $email = $matches[1][0];
+//                        $error = $matches[1][1];
 
+                            dump($matches);
 //                        if (strpos($email, '@medalmanah.ru') === false) {
 //                            $emails[] = $email;
 //                        }
 
-                        $output->writeln('+++' . $email . ' '.$error);
+//                        $output->writeln('+++' . $email . ' '.$error);
                     }
                 }
             }
