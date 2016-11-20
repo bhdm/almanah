@@ -881,3 +881,6 @@ nav .navbar-nav li.active a:hover {
 .fa-thumbs-o-down:hover :before {
   content: "\f165";
 }
+.ya-share2__list.ya-share2__list_direction_horizontal {
+  width: 100%;
+}
