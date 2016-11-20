@@ -37,7 +37,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
         }
 
         foreach ($files as $file) {
-            if ($file == 'mainlog') {
+            if (strpos($file, 'mainlog') !== false) {
                 $lines = file($dir . DIRECTORY_SEPARATOR . $file);
 
                 foreach ($lines as $line) {
