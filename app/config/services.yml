@@ -25,3 +25,9 @@ services:
     app.medcalendar:
         class: AppBundle\Service\MedCalendar
         arguments: ["@doctrine"]
+
+
+    admin.twitter:
+        class: AdminBundle\Services\TwitterService
+        arguments:
+            container: "@service_container"

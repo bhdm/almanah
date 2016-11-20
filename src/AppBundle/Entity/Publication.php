@@ -164,6 +164,10 @@ class Publication
      */
     private $poll;
 
+    /**
+     * @ORM\Column(type="string", nullable=true)
+     */
+    private $twitterHash;
 
     public function __construct()
     {
@@ -587,6 +591,21 @@ class Publication
         $this->poll = $poll;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getTwitterHash()
+    {
+        return $this->twitterHash;
+    }
+
+    /**
+     * @param mixed $twitterHash
+     */
+    public function setTwitterHash($twitterHash)
+    {
+        $this->twitterHash = $twitterHash;
+    }
 
 
 }

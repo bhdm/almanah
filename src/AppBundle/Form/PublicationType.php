@@ -29,6 +29,7 @@ class PublicationType extends AbstractType
             ->add('slug', TextType::class, [ 'label' => 'URL'])
             ->add('metaDescription', TextType::class, [ 'label' => 'SEO описание'])
             ->add('metaKeyword', TextType::class, [ 'label' => 'SEO ключевые слова'])
+            ->add('twitterHash', TextType::class, [ 'label' => 'Ключ. слова (Twitter)'])
 //            ->add('preview', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
 //            ->add('category', null, [ 'label' => 'Категория'])
             ->add('specialties', EntityType::class, [

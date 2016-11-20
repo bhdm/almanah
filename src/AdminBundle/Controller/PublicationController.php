@@ -56,7 +56,7 @@ class PublicationController extends Controller{
         ));
         $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
         $formData = $form->handleRequest($request);
-
+        $filename = null;
         if ($request->getMethod() == 'POST'){
             if ($formData->isValid()){
                 $item = $formData->getData();
@@ -79,23 +79,26 @@ class PublicationController extends Controller{
 //                dump($request->request->get('twitter'));
 //                exit;
                 if ($request->request->get('publication')['twitter'] == 1){
-                    $consumerKey = $this->getParameter('twitter_consumer_key');
-                    $consumerSecret = $this->getParameter('twitter_consumer_secret');
-                    $accessToken = $this->getParameter('twitter_access_token');
-                    $accessTokenSecret = $this->getParameter('twitter_access_secret');
+//                    $consumerKey = $this->getParameter('twitter_consumer_key');
+//                    $consumerSecret = $this->getParameter('twitter_consumer_secret');
+//                    $accessToken = $this->getParameter('twitter_access_token');
+//                    $accessTokenSecret = $this->getParameter('twitter_access_secret');
                     $url = 'https://medalmanah.ru'.$this->generateUrl('publications',['url' => $item->getSlug()]);
                     $delimetr = " : ";
-                    $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
+//                    $twitter = new Twitter($consumerKey, $consumerSecret, $accessToken, $accessTokenSecret);
 
 //                    $media = $twitter->query('media/upload', 'POST', 'json', array(
 //                        'media' => $image->getImageBlob(),
 //                    ));
 //                    dump($media);
 //                    exit;
-                    $twitter->query('statuses/update', 'POST', 'json', array(
-                        'status' => $item->getTitle() . $delimetr . $url,
-//                        'entities' => array("urls" => ["url" => $url ])
-                    ));
+                    $twitterText = $item->getTitle().' '.$item->getTwitterHash() . $delimetr . $url;
+
+                    $result = $this->get('admin.twitter')->postTweet($twitterText, $filename);
+
+//                    $twitter->query('statuses/update', 'POST', 'json', array(
+//                        'status' => $item->getTitle().' '.$item->getTwitterHash() . $delimetr . $url,
+//                    ));
                 }
 
                 return $this->redirect($this->generateUrl('admin_publication_list'));
