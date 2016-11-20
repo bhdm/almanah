@@ -57,8 +57,8 @@ class ErrorEmailCommand extends ContainerAwareCommand
         if (!empty($emails)) {
             $updateQuery = $em->createQuery('
 				UPDATE AppBundle:Email2 e
-				SET e.error = ":error"
-				WHERE e.email = ":email"
+				SET e.error = :error
+				WHERE e.email = :email
 			');
 //
             foreach ($emails as $email) {
@@ -67,8 +67,8 @@ class ErrorEmailCommand extends ContainerAwareCommand
 
             $updateQuery = $em->createQuery('
 				UPDATE AppBundle:Email e
-				SET e.error = ":error"
-				WHERE e.email = ":email"
+				SET e.error = :error
+				WHERE e.email = :email
 			');
 //
             foreach ($emails as $email) {
