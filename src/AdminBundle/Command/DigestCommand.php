@@ -61,49 +61,61 @@ class DigestCommand extends ContainerAwareCommand
         }
 
 
-        $total = $em->createQuery('
-			SELECT COUNT(e.id)
-			FROM AppBundle:Email2 e
-			WHERE e.sent = false
-			AND e.id > 20000
-		')->getSingleScalarResult();
-
-        # рассылка по 75 пользователям за цикл
-//        for ($i = 0 ; $i < $total; $i+=75) {
-
-            $doctors = $em->createQuery('
-			SELECT e.id, e.email
-			FROM AppBundle:Email2 e
-			WHERE e.sent = false
-            AND e.id > 20000
-            ORDER BY e.id ASC            
-		')      ->setmaxresults(500)
-                ->getResult();
-//                ->setFirstResult($i)
-
+//        $total = $em->createQuery('
+//			SELECT COUNT(e.id)
+//			FROM AppBundle:Email2 e
+//			WHERE e.sent = false
+//			AND e.error IS NULL
+//		')->getSingleScalarResult();
 //
-            $output->writeln(count($events));
-            for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
-//                dump($doctors[$j]);
-                $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE id = '.$doctors[$j]['id']);
-                $updateDoctor->execute();
+//        # рассылка по 350 пользователям базы + 150 базы 2
+//        for ($i = 0 ; $i < $total; $i++) {
 
-                $html = $templating->render($this->template, array(
-                    'email' => $doctors[$j]['email'],
-                    'id' => $doctors[$j]['id'],
-                    'publications' => $publications,
-                    'events' => $events,
-                ));
-                $email = $doctors[$j]['email'];
-                $to    = $doctors[$j]['email'];
+            $doctors = $this->getEmails($em, 1, 350, 'AppBundle:Email2');
+            $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
 
-                $error = $this->send($email, $to, $html, $this->subject);
-                $output->writeln($error);
-                $output->writeln($email);
-            }
+            $doctors = $this->getEmails($em, 1, 150, 'AppBundle:Email');
+            $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
+
+
 //            sleep(random_int(60,180));
 //        }
 
+    }
+
+    public function getEmails($em, $first, $max, $entityName){
+        $doctors = $em->createQuery('
+			SELECT e.id, e.email
+			FROM '.$entityName.' e
+			WHERE e.sent = false
+			AND e.error IS NULL
+            ORDER BY e.id ASC            
+		')      ->setMaxResults($max)
+            ->setFirstResult($first*$max)
+            ->getResult();
+        return $doctors;
+
+    }
+
+    public function foreachEmail($pdo, $templating, $events, $publications, $doctors, $output){
+        for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
+//                dump($doctors[$j]);
+            $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE id = '.$doctors[$j]['id']);
+            $updateDoctor->execute();
+
+            $html = $templating->render($this->template, array(
+                'email' => $doctors[$j]['email'],
+                'id' => $doctors[$j]['id'],
+                'publications' => $publications,
+                'events' => $events,
+            ));
+            $email = $doctors[$j]['email'];
+            $to    = $doctors[$j]['email'];
+
+            $error = $this->send($email, $to, $html, $this->subject);
+            $output->writeln($error);
+            $output->writeln($email);
+        }
     }
 
     public function send($email, $to, $body, $subject, $local = false)
