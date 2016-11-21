@@ -41,8 +41,7 @@ class TwitterService
         if ($filename){
             $file = ['media_data' => base64_encode(file_get_contents('/var/www'.$filename))];
             $reply = $cb->media_upload($file);
-            var_dump($reply);
-            exit;
+
             // and collect their IDs
             $media_ids[] = $reply->media_id_string;
         }
