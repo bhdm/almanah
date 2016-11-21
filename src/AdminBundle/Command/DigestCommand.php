@@ -100,9 +100,9 @@ class DigestCommand extends ContainerAwareCommand
     public function foreachEmail($pdo, $templating, $events, $publications, $doctors, $output){
         for ($j = 0 , $countdoctors= count($doctors); $j < $countdoctors; $j++) {
 //                dump($doctors[$j]);
-            $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE email = '.$doctors[$j]['email']);
+            $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE email = "'.$doctors[$j]['email'].'"');
             $updateDoctor->execute();
-            $updateDoctor   = $pdo->prepare('UPDATE email SET sent=1 WHERE email = '.$doctors[$j]['email']);
+            $updateDoctor   = $pdo->prepare('UPDATE email SET sent=1 WHERE email = "'.$doctors[$j]['email'].'"');
             $updateDoctor->execute();
 
             $html = $templating->render($this->template, array(
