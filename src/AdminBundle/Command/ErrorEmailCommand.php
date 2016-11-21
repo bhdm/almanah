@@ -68,7 +68,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
                         $error = 'frozen';
                         if (strpos($email, '@medalmanah.ru') === false) {
                             $emails[$email] = array('email' => $email, 'error' => $error);
-                            $output->writeln($file.' - '.$email['email'].' - '.$email['error']);
+//                            $output->writeln($file.' - '.$email['email'].' - '.$email['error']);
                         }
 
                     }
