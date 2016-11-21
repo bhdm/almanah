@@ -63,7 +63,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
                 foreach ($lines as $line) {
                     $matches = array();
 
-                    if (preg_match_all('/X-Failed-Recipients\: ([^@\s]++@\S++) .*/i', $line, $matches)) {
+                    if (preg_match_all('/X\-Failed\-Recipients\: ([^@\s]++@\S++) .*/i', $line, $matches)) {
                         $email = $matches[1][0];
                         $error = 'frozen';
                         if (strpos($email, '@medalmanah.ru') === false) {
