@@ -27,7 +27,9 @@ class ErrorEmailCommand extends ContainerAwareCommand
 
         //$dir   = __DIR__;
         $dir   = '/var/log/exim4';
+        $dir2   = '/var/spool/exim4/input';
         $files = scandir($dir);
+        $files2 = scandir($dir2);
 
         # unzip mainlog archieves
         foreach ($files as $file) {
@@ -37,7 +39,25 @@ class ErrorEmailCommand extends ContainerAwareCommand
         }
 
         foreach ($files as $file) {
-            if (strpos($file, 'mainlog') !== false) {
+
+                $lines = file($dir . DIRECTORY_SEPARATOR . $file);
+
+                foreach ($lines as $line) {
+                    $matches = array();
+
+                    if (preg_match_all('/([^@\s]++@\S++) .*/i', $line, $matches)) {
+                        $email = $matches[1][0];
+                        $error = 'frozen';
+
+                        if (strpos($email, '@medalmanah.ru') === false) {
+                            $emails[$email] = array('email' => $email, 'error' => $error);
+                        }
+                    }
+                }
+        }
+
+
+        foreach ($files as $file) {
                 $lines = file($dir . DIRECTORY_SEPARATOR . $file);
 
                 foreach ($lines as $line) {
@@ -52,8 +72,8 @@ class ErrorEmailCommand extends ContainerAwareCommand
                         }
                     }
                 }
-            }
         }
+
 
         if (!empty($emails)) {
 
