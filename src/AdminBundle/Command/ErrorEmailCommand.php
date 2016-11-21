@@ -45,7 +45,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
                 foreach ($lines as $line) {
                     $matches = array();
 
-                    if (preg_match_all('/([^@\s]++@\S++) .*/i', $line, $matches)) {
+                    if (preg_match_all('/([^@\s]++@\S++) .*(-53|110|111)/i', $line, $matches)) {
                         $email = $matches[1][0];
                         $error = 'frozen';
 
@@ -63,7 +63,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
                 foreach ($lines as $line) {
                     $matches = array();
 
-                    if (preg_match_all('/([^@\s]++@\S++) .*(-53|110|111)/i', $line, $matches)) {
+                    if (preg_match_all('/X-Failed-Recipients\: ([^@\s]++@\S++) .*/i', $line, $matches)) {
                         $email = $matches[1][0];
                         $error = $matches[2][0];
                         if (strpos($email, '@medalmanah.ru') === false) {
