@@ -57,7 +57,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
         }
 
 
-        foreach ($files as $file) {
+        foreach ($files2 as $file) {
                 $lines = file($dir . DIRECTORY_SEPARATOR . $file);
 
                 foreach ($lines as $line) {
