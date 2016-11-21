@@ -47,7 +47,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
 
                     if (preg_match_all('/([^@\s]++@\S++) .*(-53|110|111)/i', $line, $matches)) {
                         $email = $matches[1][0];
-                        $error = 'frozen';
+                        $error = $matches[2][0];
 
                         if (strpos($email, '@medalmanah.ru') === false) {
                             $emails[$email] = array('email' => $email, 'error' => $error);
@@ -65,7 +65,7 @@ class ErrorEmailCommand extends ContainerAwareCommand
 
                     if (preg_match_all('/X-Failed-Recipients\: ([^@\s]++@\S++) .*/i', $line, $matches)) {
                         $email = $matches[1][0];
-                        $error = $matches[2][0];
+                        $error = 'frozen';
                         if (strpos($email, '@medalmanah.ru') === false) {
                             $emails[$email] = array('email' => $email, 'error' => $error);
                             $output->writeln($file.' - '.$email['email'].' - '.$email['error']);
