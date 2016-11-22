@@ -3,22 +3,83 @@
 {% block javascript %}
     {{ parent() }}
     <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
     <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
-    <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
     <script>
         $(document).ready(function(){
-            $('.form-calendar').datetimepicker({
-                sideBySide: true,
-                format: "DD.MM.YYYY"
+//            $('#form_period').daterangepicker({
+//                locale: {
+//                    format: 'DD.MM.YYYY'
+//                },
+//                startDate: '2015-01-01',
+//                endDate: '2017-12-31'
+//            },
+//            function(start, end, label) {
+//                alert("A new date range was chosen: " + start.format('DD.MM.YYYY') + ' to ' + end.format('DD.MM.YYYY'));
+//            });
+
+            $('#form_period').daterangepicker({
+                locale: {
+                    format: 'DD.MM.YYYY',
+                    cancelLabel: 'Очистить',
+                    applyLabel: 'Выбрать'
+                },
+//                singleDatePicker: true,
+                startDate: moment(),
+                endDate: moment().add('1', 'month'),
+                applyClass: 'btn-primary'
+            });
+
+            $( "#form_city" ).autocomplete({
+                source: function( request, response ) {
+                    $.ajax({
+                        url: Routing.generate('api_get_city'),
+                        dataType: "json",
+                        data: {
+                            title: request.term
+                        },
+                        success: function( data ) {
+                            response( data );
+                        }
+                    });
+                },
+                minLength: 2,
+//                select: function( event, ui ) {
+//                    $( ".brand").val(ui.item);
+//                },
+                open: function() {
+                    $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+                },
+                close: function() {
+                    $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+                }
             });
         });
+
     </script>
+
+
 {% endblock %}
 
 {% block stylesheets %}
     {{ parent() }}
-    <link rel="stylesheet" href="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-daterangepicker/daterangepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/theme.css') }}">
     <style>
+        .ui-autocomplete{
+            font-size: 14px;
+        }
+        .ui-widget-content .ui-state-focus{
+            background: rgba(221, 0, 0, 0.18);
+        }
+        .daterangepicker td.active, .daterangepicker td.active:hover{
+            background-color: #dd0000;
+        }
+        .point{
+            cursor: pointer;
+        }
         #form_start, #form_end{
             /*max-width: 130px;*/
         }
@@ -41,21 +102,21 @@
         <div class="filter">
             <form class="form-vertical">
                 <div class="row">
-                    <div class="form-group col-sm-12">
+                    <div class="form-group col-md-4 col-sm-12">
+                        {{ form_widget(form.specialty) }}
+                    </div>
+                    <div class="form-group col-sm-8">
                         {{ form_widget(form.search) }}
                     </div>
                 </div>
                 <div class="row">
-                    <div class="form-group col-md-5 col-sm-12">
-                        {{ form_widget(form.specialty) }}
+                    <div class="form-group col-sm-4">
+                        {{ form_widget(form.city) }}
                     </div>
-                    <div class="form-group col-md-2 col-sm-12 text-right">
-                        {{ form_widget(form.start) }}
+                    <div class="form-group col-md-4 col-sm-12 text-right">
+                        {{ form_widget(form.period) }} {# ,{'value' : "now" | date('d.m.Y') ~ " - " ~ "+30 days" | date('d.m.Y')} #}
                     </div>
-                    <div class="form-group col-md-2 col-sm-12 text-right">
-                        {{ form_widget(form.end) }}
-                    </div>
-                    <div class="form-group  col-md-3 col-sm-12 text-right">
+                    <div class="form-group  col-md-4 col-sm-12 text-right">
                         {{ form_widget(form.submit) }}
                         {#<a href="{{ path('event_add') }}" style="padding-left: 35px;">Добавить событие</a>#}
                     </div>

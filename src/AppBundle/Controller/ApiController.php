@@ -69,4 +69,17 @@ class ApiController extends Controller
 
         return new JsonResponse(['dates' => $dates]);
     }
+
+    /**
+     * @Route("/api/city", name="api_get_city", options={"expose" = true})
+     */
+    public function getBrandsAction(Request $request){
+        $title = $request->query->get('title');
+        $cities = $this->getDoctrine()->getRepository('AppBundle:City')->findForAutocomplete($title);
+        $us = [];
+        foreach ($cities as $city) {
+            $us[] = $city['title'];
+        }
+        return new JsonResponse($us);
+    }
 }

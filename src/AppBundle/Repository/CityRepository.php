@@ -12,7 +12,7 @@ class CityRepository extends EntityRepository
 			if ($title){
 				$qb->where("c.title LIKE '%$title%'");
 			}
-
+        $qb->setMaxResults(7);
 		return $qb->getQuery()->getResult();
 	}
 }

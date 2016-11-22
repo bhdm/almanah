@@ -10,4 +10,8 @@ namespace AppBundle\Repository;
  */
 class SpecialtyRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function findAll()
+    {
+        return $this->findBy(array(), array('title' => 'ASC'));
+    }
 }

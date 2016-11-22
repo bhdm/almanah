@@ -6,6 +6,7 @@ use AppBundle\Entity\Comment;
 use AppBundle\Entity\Event;
 use AppBundle\Entity\Publication;
 use AppBundle\Form\EventUserType;
+use Doctrine\ORM\EntityRepository;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
@@ -364,12 +365,40 @@ class PublicationController extends Controller
         }else{
             $category = null;
         }
+
+        $form = $this->createFormBuilder()
+            ->add('period', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата'],'required' => false])
+            ->add('specialty', EntityType::class, [
+                'label' => '',
+                'class' => 'AppBundle\Entity\Specialty',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('s')
+                        ->orderBy('s.title', 'ASC');
+                },
+                'required' => false,
+                'placeholder' => 'Специальность',
+
+            ])
+            ->add('city', TextType::class, ['label' => 'Город', 'required'=> false, 'attr' => ['class' => 'format', 'placeholder' => 'Город']])
+            ->add('search', TextType::class, ['label' => '', 'required' => false, 'attr' => ['placeholder' => 'Строка поиска']])
+            ->add('submit', SubmitType::class, ['label' => 'Поиск', 'attr' => ['class' => 'btn-primary']])
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        if ($request->isMethod('POST')) {
+            $form->handleRequest($request);
+
+            $data = $form->getData();
+        }
+
         $filter = $request->query->get('form');
         $start = (isset($filter['start']) ? $filter['start'] : null );
         $end =   (isset($filter['end']) ? $filter['end'] : null );
         $text =   (isset($filter['searchtext']) ? $filter['searchtext'] : null );
         $specialty =   (isset($filter['specialty']) ? $filter['specialty'] : null );
-        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text, $specialty);
+        $city =   (isset($filter['city']) ? $filter['city'] : null );
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text, $specialty, $city);
 
         if ($category == null){
             $category = "Мероприятия";
@@ -382,26 +411,6 @@ class PublicationController extends Controller
             15
         );
 
-//        $specialt/ies = $this->getDoctrine()->getRepository('AppBundle:Specialty')->findAll();
-
-        $form = $this->createFormBuilder()
-            ->add('start', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата начала'],'required' => false])
-            ->add('end', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата окончания'],'required' => false])
-            ->add('specialty', EntityType::class, [
-                'label' => '',
-                'class' => 'AppBundle\Entity\Specialty',
-                'required' => false,
-                'placeholder' => 'Специальность',
-
-            ])
-            ->add('search', TextType::class, ['label' => '', 'required' => false, 'attr' => ['placeholder' => 'Строка поиска']])
-            ->add('submit', SubmitType::class, ['label' => 'Фильтровать', 'attr' => ['class' => 'btn-primary']])
-//            ->add('button', ButtonType::class, ['label' => 'Добавить событие', 'attr' => ['class' => 'btn-primary']])
-            ->getForm();
-        $form->handleRequest($request);
-        /**
-         * @TODO event@medalmanah.ru
-         */
         return ['events' => $pagination, 'category' => $category, 'form' => $form->createView()];
     }
 
