@@ -365,8 +365,8 @@ class PublicationController extends Controller
         }else{
             $category = null;
         }
-
-        $form = $this->createFormBuilder()
+        $data = array();
+        $form = $this->createFormBuilder($data)
             ->add('period', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата'],'required' => false])
             ->add('specialty', EntityType::class, [
                 'label' => '',
@@ -382,22 +382,25 @@ class PublicationController extends Controller
             ->add('city', TextType::class, ['label' => 'Город', 'required'=> false, 'attr' => ['class' => 'format', 'placeholder' => 'Город']])
             ->add('search', TextType::class, ['label' => '', 'required' => false, 'attr' => ['placeholder' => 'Строка поиска']])
             ->add('submit', SubmitType::class, ['label' => 'Поиск', 'attr' => ['class' => 'btn-primary']])
+            ->setMethod('GET')
             ->getForm();
 
         $form->handleRequest($request);
 
-        if ($request->isMethod('POST')) {
-            $form->handleRequest($request);
+        $data = $form->getData();
 
-            $data = $form->getData();
+
+
+        if ($data['period'] != null){
+            $start = $this->redate(explode(' - ',$data['period'])[0]);
+            $end =   $this->redate(explode(' - ',$data['period'])[1]);
+        }else{
+            $start = null;
+            $end = null;
         }
-
-        $filter = $request->query->get('form');
-        $start = (isset($filter['start']) ? $filter['start'] : null );
-        $end =   (isset($filter['end']) ? $filter['end'] : null );
-        $text =   (isset($filter['searchtext']) ? $filter['searchtext'] : null );
-        $specialty =   (isset($filter['specialty']) ? $filter['specialty'] : null );
-        $city =   (isset($filter['city']) ? $filter['city'] : null );
+        $text =   $data['search'];
+        $specialty =   $data['specialty'];
+        $city =   $data['city'];
         $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter($category,$start,$end,$text, $specialty, $city);
 
         if ($category == null){
@@ -635,5 +638,11 @@ class PublicationController extends Controller
         $session->getFlashBag()->add('notice', 'Ваш ответ сохранен, спасибо за ваше мнение');
         $referer = $request->headers->get('referer');
         return $this->redirect($referer);
+    }
+
+    private function redate($str){
+        $str = explode('.',$str);
+        return $str[2].'-'.$str[1].'-'.$str[0].' 00:00:00';
+
     }
 }

@@ -103,7 +103,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         return $qb->getQuery()->getResult();
     }
 
-    public function filter($type,$start,$end,$text,$specialty){
+    public function filter($type,$start,$end,$text,$specialty,$city = null){
         if ($start == null){
             $start = new \DateTime();
             $start = $start->format('Y-m-d').' 00:00:00';
@@ -112,13 +112,19 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
             $end = new \DateTime();
             $end = $end->format('Y-m-d').' 00:00:00';
         }
+
         $qb = $this->createQueryBuilder('s');
         $qb->select('s');
         $qb->leftJoin('s.specialties', 'spec');
+        $qb->leftJoin('s.city', 'city');
         $qb->where('s.enabled = 1');
         if ($type != null){
             $qb->andWhere('s.category = :type');
             $qb->setParameter('type', $type);
+        }
+        if ($city != null){
+            $qb->andWhere('city.title = :city');
+            $qb->setParameter('city', $city);
         }
 
         if ($start != null){
