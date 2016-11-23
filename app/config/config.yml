@@ -107,8 +107,8 @@ fos_user:
     profile:
         form:
             type: AppBundle\Form\Type\ProfileFormType
-            name: fos_user_profile_form
-            validation_groups:  [Profile, Default]
+            name: app_user_profile_edit
+#            validation_groups:  [Profile]
 
 
 knp_paginator:
