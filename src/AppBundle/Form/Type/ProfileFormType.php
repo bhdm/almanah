@@ -49,15 +49,10 @@ class ProfileFormType extends AbstractType
             'required'    => true,
             'label' => 'Статус'
         ));
-
+        $builder->remove('username');
+        $builder->remove('current_password');
     }
 
-    public function setDefaultOptions(OptionsResolverInterface $resolver) {
-        $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\User',
-            'validation_groups' => array('edit'),
-        ));
-    }
 
     public function getParent()
     {
