@@ -1,11 +1,70 @@
 {% extends "AppBundle::layout.html.twig" %}
 
-{% block styles %}
-    {{ parent() }}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/jquery-ui.css') }}">
+	<link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/theme.css') }}">
 {% endblock %}
 
-{% block javascripts %}
-    {{ parent() }}
+{% block javascript %}
+	{{ parent() }}
+	<script src="{{ asset('bundles/app/js/mask.js') }}"></script>
+	<script src="{{ asset('assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+	<script>
+		$(document).ready(function () {
+			$( ".university" ).autocomplete({
+				source: function( request, response ) {
+					$.ajax({
+						url: Routing.generate('get_university'),
+						dataType: "json",
+						data: {
+							title: request.term
+						},
+						success: function( data ) {
+							response( data );
+						}
+					});
+				},
+				minLength: 3,
+				select: function( event, ui ) {
+					$( ".university").val(ui.item);
+				},
+				open: function() {
+					$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+				},
+				close: function() {
+					$( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+				}
+			});
+
+			$( ".city" ).autocomplete({
+				source: function( request, response ) {
+					$.ajax({
+						url: Routing.generate('get_city'),
+						dataType: "json",
+						data: {
+							title: request.term
+						},
+						success: function( data ) {
+							response( data );
+						}
+					});
+				},
+				minLength: 3,
+				select: function( event, ui ) {
+					$( ".city").val(ui.item);
+				},
+				open: function() {
+					$( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+				},
+				close: function() {
+					$( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+				}
+			});
+
+
+		});
+	</script>
 {% endblock %}
 
 {% block content %}
