@@ -103,17 +103,17 @@ class AuthController extends Controller
             $user->setCity($city);
 
             //university
-            $universityTitle = $user->getUniversity();
-            $university = $this->getDoctrine()->getRepository('AppBundle:University')->findOneByTitle($cityTitle);
-            if ($university === null){
-                $university = new University();
-                $university->setTitle($universityTitle);
-                $university->setCountry($user->getCountry());
-                $em->persist($university);
-                $em->flush($university);
-                $em->refresh($university);
-            }
-            $user->setUniversity($university);
+//            $universityTitle = $user->getUniversity();
+//            $university = $this->getDoctrine()->getRepository('AppBundle:University')->findOneByTitle($cityTitle);
+//            if ($university === null){
+//                $university = new University();
+//                $university->setTitle($universityTitle);
+//                $university->setCountry($user->getCountry());
+//                $em->persist($university);
+//                $em->flush($university);
+//                $em->refresh($university);
+//            }
+//            $user->setUniversity($university);
 
             $user->setCertificate([]);
 
@@ -126,7 +126,7 @@ class AuthController extends Controller
             $userManager->updateUser($user);
 
             if (null === $response = $event->getResponse()) {
-                $url = $this->generateUrl('fos_user_profile_show');
+                $url = $this->generateUrl('fos_user_profile_edit');
                 $response = new RedirectResponse($url);
             }
 
