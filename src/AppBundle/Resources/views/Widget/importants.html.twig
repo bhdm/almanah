@@ -44,7 +44,7 @@
                     <span><strong>День памяти</strong></span>
                     <ul>
                         {% for c in calendars.deaths %}
-                            <li><a href="#">{{ c.title }} ({{ c.birthdate|slice(6) }})</a></li>
+                            <li><a href="{{ path('medical_calendar_event', {'dateFormat': dateFormat, 'id':c.id}) }}">{{ c.title }} ({{ c.birthdate|slice(6) }})</a></li>
                         {% endfor %}
                     </ul>
                 </div>
