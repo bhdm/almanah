@@ -168,8 +168,14 @@ class User extends BaseUser
      */
     private $publications;
 
+    /**
+     * @ORM\Column(name="created_at", type="datetime", nullable=true)
+     */
+    private $created;
+
     public function __construct()
     {
+        $this->created = new \DateTime();
         $this->certificate = array();
         $this->courses = new ArrayCollection();
         $this->comments = new ArrayCollection();
@@ -572,5 +578,23 @@ class User extends BaseUser
     public function getName(){
         return $this->getLastName().' '.$this->getFirstName();
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCreated()
+    {
+        return $this->created;
+    }
+
+    /**
+     * @param mixed $created
+     */
+    public function setCreated($created)
+    {
+        $this->created = $created;
+    }
+
+
 
 }
