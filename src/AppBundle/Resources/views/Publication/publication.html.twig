@@ -225,7 +225,7 @@
                         <div style="color: #444; font-size: 13px">
                             <b>Автор</b>: <span itemprop="author">{{ publication.author.name }}</span><br />
                             <b>Категория: </b>{{ publication.getTypeStr }}<br />
-                            {% if publication.specialties | length > 0 and publication.specialties | length != 60 %}
+                            {% if publication.specialties | length > 0 and publication.specialties | length != 59 %}
                                 <b>Специальности:</b>
                                 {% set ss = '' %}
                                 {% for s in publication.specialties  %}

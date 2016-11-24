@@ -56,7 +56,7 @@
             <div class="col-xs-{{ event.preview.path is defined ? '6' : '10' }}">
                 <ul class="event-params">
                     {% if event.specialties | length > 0 %}
-                        {% if event.specialties | length != 60 %}
+                        {% if event.specialties | length != 59 %}
                             <li><b>Специальности:</b>
                                 {% for s in event.specialties %}
                                     {{ s.title }}
