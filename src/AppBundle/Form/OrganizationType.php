@@ -17,9 +17,9 @@ class OrganizationType extends AbstractType
     {
         $builder
             ->add('title', null, ['label' => 'Название'])
-            ->add('country', null, ['label' => 'Страна'])
+            ->add('slug', null, ['label' => 'URL'])
             ->add('descripton', null, ['label' => 'Описание'])
-            ->add('logo', FileType::class, [ 'label' => 'Картинка', 'data_class' => null, 'required' => false])
+            ->add('logo', FileType::class, [ 'label' => 'Логотип', 'data_class' => null, 'required' => false])
             ->add('link', null, ['label' => 'Сайт'])
         ;
     }

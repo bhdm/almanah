@@ -1,0 +1,150 @@
+{% extends 'AppBundle::layout.html.twig' %}
+
+{% block javascript %}
+    {{ parent() }}
+    <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/vendor/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
+    <script src="{{ asset('assets/vendor/jquery-ui/jquery-ui.min.js') }}"></script>
+    <script>
+        $(document).ready(function(){
+//            $('#form_period').daterangepicker({
+//                locale: {
+//                    format: 'DD.MM.YYYY'
+//                },
+//                startDate: '2015-01-01',
+//                endDate: '2017-12-31'
+//            },
+//            function(start, end, label) {
+//                alert("A new date range was chosen: " + start.format('DD.MM.YYYY') + ' to ' + end.format('DD.MM.YYYY'));
+//            });
+
+            $('#form_period').daterangepicker({
+                locale: {
+                    format: 'DD.MM.YYYY',
+                    cancelLabel: 'Очистить',
+                    applyLabel: 'Выбрать'
+                },
+//                singleDatePicker: true,
+//                startDate: moment(),
+//                endDate: moment().add('1', 'month'),
+                applyClass: 'btn-primary'
+            });
+
+            $( "#form_city" ).autocomplete({
+                source: function( request, response ) {
+                    $.ajax({
+                        url: Routing.generate('api_get_city'),
+                        dataType: "json",
+                        data: {
+                            title: request.term
+                        },
+                        success: function( data ) {
+                            response( data );
+                        }
+                    });
+                },
+                minLength: 2,
+//                select: function( event, ui ) {
+//                    $( ".brand").val(ui.item);
+//                },
+                open: function() {
+                    $( this ).removeClass( "ui-corner-all" ).addClass( "ui-corner-top" );
+                },
+                close: function() {
+                    $( this ).removeClass( "ui-corner-top" ).addClass( "ui-corner-all" );
+                }
+            });
+        });
+
+    </script>
+
+
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('assets/vendor/bootstrap-daterangepicker/daterangepicker.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/jquery-ui.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/vendor/jquery-ui/themes/base/theme.css') }}">
+    <style>
+        .point{
+            cursor: pointer;
+        }
+        #form_start, #form_end{
+            /*max-width: 130px;*/
+        }
+        #form_specialty{
+            /*max-width: 250px;*/
+        }
+    </style>
+{% endblock %}
+
+{% block content %}
+    <div class="col-sm-12">
+        <div class="title"><h1>Мероприятия в городе {{ city }}</h1></div>
+        <ol class="breadcrumb">
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="/"><span itemprop="title">Главная</span></a>
+            </li>
+            <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                <a itemprop="url" href="{{ path('events') }}"><span itemprop="title">Мероприятия</span></a>
+            </li>
+                <li class="active" style="">В городе {{ city }}</li>
+        </ol>
+
+        <div class="filter">
+            <form class="form-vertical" action="{{ path('events') }}">
+                <div class="row">
+                    <div class="form-group col-md-4 col-sm-12">
+                        {{ form_widget(form.specialty) }}
+                    </div>
+                    <div class="form-group col-sm-8">
+                        {{ form_widget(form.search) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-sm-4">
+                        {{ form_widget(form.city) }}
+                    </div>
+                    <div class="form-group col-md-4 col-sm-12 text-right">
+                        {{ form_widget(form.period) }} {# ,{'value' : "now" | date('d.m.Y') ~ " - " ~ "+30 days" | date('d.m.Y')} #}
+                    </div>
+                    <div class="form-group  col-md-4 col-sm-12 text-right">
+                        {{ form_widget(form.submit) }}
+                        {#<a href="{{ path('event_add') }}" style="padding-left: 35px;">Добавить событие</a>#}
+                    </div>
+                </div>
+            </form>
+        </div>
+        {% for p in events %}
+            {% if p.preview.path is defined %}
+                <div class="new-item row">
+                    <div class="col-sm-3 hidden-xs">
+                        <img src="{{ p.preview.path }}" class="img-thumbnail" alt="{{ p.title }}" title="{{ p.title }}">
+                    </div>
+                    <div class="col-xs-12 col-sm-9">
+                        <div class="p-date">{{ p.start | date('d.m.Y') }} - {{ p.end | date('d.m.Y') }}</div>
+                        <div class="p-title">
+                            <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
+                        </div>
+                        <div class="new-body">{{ p.anons }}</div>
+                    </div>
+                </div>
+            {% else %}
+                <div class="new-item row">
+                    <div class="col-xs-12">
+                        <div class="p-date">{{ p.start | date('d.m.Y') }} - {{ p.end | date('d.m.Y') }}</div>
+                        <div class="p-title">
+                            <a href="{{ path('event',{'url' : p.id }) }}">{{ p.title }}</a>
+                        </div>
+                        <div class="new-body">{{ p.anons }}</div>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+        <nav>
+            {{ knp_pagination_render(events) }}
+        </nav>
+    </div>
+{% endblock %}

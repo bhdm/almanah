@@ -56,6 +56,15 @@ class EventType extends AbstractType
             ->add('end',  DateType::class, [ 'label' => 'Дата окончания'])
 
             ->add('contacts', TextareaType::class, [ 'label' => 'Контакная информация'])
+            ->add('organization', EntityType::class, [
+                'label' => 'Организация',
+                'class' => 'AppBundle:Organization',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('o')
+                        ->orderBy('o.title', 'ASC');
+                },
+                'required' => false
+            ])
             ->add('source', null, [ 'label' => 'Сайт', 'required' => false ])
             ->add('anons', null, [ 'label' => 'Анонс' ])
             ->add('body', null, [ 'label' => 'Контент', 'attr' => ['class' => 'ckeditor']])

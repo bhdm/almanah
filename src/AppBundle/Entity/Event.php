@@ -164,6 +164,11 @@ class Event
      */
     private $metaKeyword;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Organization", inversedBy="events")
+     */
+    private $organization;
+
     public function __construct()
     {
         $this->preview = array();
@@ -575,7 +580,24 @@ class Event
     {
         $this->metaKeyword = $metaKeyword;
     }
-    
+
+    /**
+     * @return mixed
+     */
+    public function getOrganization()
+    {
+        return $this->organization;
+    }
+
+    /**
+     * @param mixed $organization
+     */
+    public function setOrganization($organization)
+    {
+        $this->organization = $organization;
+    }
+
+
 }
 
 

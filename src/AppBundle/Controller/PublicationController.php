@@ -365,7 +365,7 @@ class PublicationController extends Controller
         }else{
             $category = null;
         }
-        $data = array();
+        $data = array('city' => null, 'period' => null, 'search' => null, 'specialty' => null);
         $form = $this->createFormBuilder($data)
             ->add('period', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата'],'required' => false])
             ->add('specialty', EntityType::class, [
@@ -415,6 +415,62 @@ class PublicationController extends Controller
         );
 
         return ['events' => $pagination, 'category' => $category, 'form' => $form->createView()];
+    }
+
+    /**
+     * @todo Пока что ID потом переделать на title
+     * @Route("/events/city/{cityId}", name="eventsOfCity")
+     * @Template("AppBundle:Publication:eventListOfCity.html.twig")
+     */
+    public function eventListOfCityAction(Request $request, $cityId)
+    {
+
+        $city = $this->getDoctrine()->getRepository('AppBundle:City')->find($cityId);
+        $data = array('city' => $city->getTitle(), 'period' => null, 'search' => null, 'specialty' => null);
+        $form = $this->createFormBuilder($data)
+            ->add('period', TextType::class, ['label' => 'c', 'attr' => ['class' => 'form-calendar', 'placeholder' => 'Дата'],'required' => false])
+            ->add('specialty', EntityType::class, [
+                'label' => '',
+                'class' => 'AppBundle\Entity\Specialty',
+                'query_builder' => function (EntityRepository $er) {
+                    return $er->createQueryBuilder('s')
+                        ->orderBy('s.title', 'ASC');
+                },
+                'required' => false,
+                'placeholder' => 'Специальность',
+
+            ])
+            ->add('city', TextType::class, ['label' => 'Город', 'required'=> false, 'attr' => ['class' => 'format', 'placeholder' => 'Город']])
+            ->add('search', TextType::class, ['label' => '', 'required' => false, 'attr' => ['placeholder' => 'Строка поиска']])
+            ->add('submit', SubmitType::class, ['label' => 'Поиск', 'attr' => ['class' => 'btn-primary']])
+            ->setMethod('GET')
+            ->setAction($this->generateUrl('events'))
+            ->getForm();
+
+        $form->handleRequest($request);
+
+        $data = $form->getData();
+
+
+        if ($data['period'] != null){
+            $start = $this->redate(explode(' - ',$data['period'])[0]);
+            $end =   $this->redate(explode(' - ',$data['period'])[1]);
+        }else{
+            $start = null;
+            $end = null;
+        }
+        $text =   $data['search'];
+        $city =   $data['city'];
+        $events = $this->getDoctrine()->getRepository('AppBundle:Event')->filter(null,$start,$end,$text, null, $city);
+
+        $paginator  = $this->get('knp_paginator');
+        $pagination = $paginator->paginate(
+            $events,
+            $request->query->get('page', 1),
+            15
+        );
+
+        return ['events' => $pagination, 'city' => $city, 'form' => $form->createView()];
     }
 
 

@@ -81,7 +81,9 @@
                         <li><b>Дата окончания:</b>  {{ event.end  | date('d.m.Y') }}</li>
                     {% endif %}
                     {% if event.city != null %}
-                        <li><b>Город:</b>           {{ event.city  }}</li>
+                        <li><b>Город:</b>
+                            <a href="{{ path('eventsOfCity',{'cityId' : event.city.id  }) }}" title="Медицинские мероприятия в городе {{ event.city  }}">{{ event.city  }}</a>
+                        </li>
                     {% endif %}
                     {% if event.adrs != null %}
                         <li><b>Адрес:</b>           {{ event.adrs }}</li>

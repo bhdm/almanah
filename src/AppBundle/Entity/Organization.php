@@ -2,12 +2,13 @@
 
 namespace AppBundle\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * Organizaation
  *
- * @ORM\Table(name="organizaation")
+ * @ORM\Table(name="organization")
  * @ORM\Entity(repositoryClass="AppBundle\Repository\OrganizaationRepository")
  */
 class Organization
@@ -31,14 +32,14 @@ class Organization
     /**
      * @var string
      *
-     * @ORM\Column(name="country", type="string", length=255)
+     * @ORM\Column(name="slug", type="string", length=255)
      */
-    private $country;
+    private $slug;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="descripton", type="text")
+     * @ORM\Column(name="descripton", type="text", nullable=true)
      */
     private $descripton;
 
@@ -56,8 +57,14 @@ class Organization
      */
     private $link;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Organization", mappedBy="organization")
+     */
+    private $events;
+
     public function __construct()
     {
+        $this->events = new ArrayCollection();
         $this->logo = array();
     }
 
@@ -95,29 +102,6 @@ class Organization
         return $this->title;
     }
 
-    /**
-     * Set country
-     *
-     * @param string $country
-     *
-     * @return Organizaation
-     */
-    public function setCountry($country)
-    {
-        $this->country = $country;
-
-        return $this;
-    }
-
-    /**
-     * Get country
-     *
-     * @return string
-     */
-    public function getCountry()
-    {
-        return $this->country;
-    }
 
     /**
      * Set descripton
@@ -190,5 +174,40 @@ class Organization
     {
         return $this->link;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getEvents()
+    {
+        return $this->events;
+    }
+
+    /**
+     * @param mixed $events
+     */
+    public function setEvents($events)
+    {
+        $this->events = $events;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
+    }
+
+    /**
+     * @param string $slug
+     */
+    public function setSlug($slug)
+    {
+        $this->slug = $slug;
+    }
+
+
+
 }
 
