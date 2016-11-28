@@ -62,6 +62,12 @@ class Organization
      */
     private $events;
 
+
+    public function __toString()
+    {
+        return $this->getTitle();
+    }
+
     public function __construct()
     {
         $this->events = new ArrayCollection();
