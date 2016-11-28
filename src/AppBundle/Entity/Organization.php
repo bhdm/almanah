@@ -58,7 +58,7 @@ class Organization
     private $link;
 
     /**
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Organization", mappedBy="organization")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Event", mappedBy="organization")
      */
     private $events;
 
