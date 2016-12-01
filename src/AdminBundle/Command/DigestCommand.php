@@ -88,6 +88,7 @@ class DigestCommand extends ContainerAwareCommand
 			SELECT e.id, e.email
 			FROM '.$entityName.' e
 			WHERE e.sent = false
+			'.($entityName == 'AppBundle:Email2' ? ' AND WHERE e.id >= 20000' : '').'
 			AND e.error IS NULL
             ORDER BY e.id ASC            
 		')      ->setMaxResults($max)
