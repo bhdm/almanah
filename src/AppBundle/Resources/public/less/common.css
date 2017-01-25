@@ -45,7 +45,7 @@ h1 {
 }
 a {
   cursor: pointer !important;
-  color: #DD0000;
+  color: #6dc265;
 }
 a:hover {
   color: #9b0d27;
@@ -94,13 +94,13 @@ h1.blue-text {
   font-family: 'HelveticaNeue-Light';
 }
 .blue-text {
-  color: #DD0000;
+  color: #6dc265;
 }
 .red {
   color: #CC0000;
 }
 .blue-icon {
-  color: #DD0000;
+  color: #6dc265;
 }
 .body {
   overflow-x: hidden;
@@ -128,10 +128,10 @@ h1.blue-text {
   border-radius: 0;
 }
 .form-control:focus {
-  border-color: rgba(252, 17, 60, 0.57);
+  border-color: rgba(80, 135, 91, 0.57);
   outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(252, 17, 60, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(252, 17, 60, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(80, 135, 91, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(80, 135, 91, 0.6);
 }
 .header > div {
   height: 100%;
@@ -185,14 +185,14 @@ nav .navbar-nav li {
   float: none;
   display: table-cell;
   text-transform: uppercase;
-  border-top: 1px solid #DD0000;
+  border-top: 1px solid #6dc265;
 }
 nav .navbar-nav li:hover {
   background: #DDD;
 }
 nav .navbar-nav li.active a {
   color: #FFFFFF;
-  background: #DD0000;
+  background: #6dc265;
 }
 nav .navbar-nav li a {
   padding-bottom: 8px;
@@ -200,7 +200,7 @@ nav .navbar-nav li a {
 }
 nav .navbar-nav li a:hover {
   background: none;
-  color: #DD0000;
+  color: #6dc265;
 }
 nav .navbar-nav li .submenu {
   transition: visibility 0s, opacity 0.5s ease;
@@ -234,7 +234,7 @@ nav .navbar-nav li .submenu .submenu-items li a {
   background: #DDD;
 }
 nav .navbar-nav li .submenu .submenu-items li a:hover {
-  color: #DD0000;
+  color: #6dc265;
   background: #CCC;
 }
 nav .navbar-nav li:hover .submenu {
@@ -242,10 +242,10 @@ nav .navbar-nav li:hover .submenu {
   opacity: 1;
 }
 nav .navbar-nav li:hover {
-  color: #DD0000;
+  color: #6dc265;
 }
 nav .navbar-nav li:hover a {
-  color: #DD0000;
+  color: #6dc265;
 }
 @media screen and (min-width: 768px) {
   .modal:before {
@@ -262,7 +262,7 @@ nav .navbar-nav li:hover a {
 }
 .title {
   border-bottom: 1px solid #383838;
-  color: #DD0000;
+  color: #6dc265;
   font-size: 16px;
   margin-bottom: 20px;
 }
@@ -306,7 +306,7 @@ nav .navbar-nav li:hover a {
 }
 .day.today,
 .day.today > * {
-  background: #DD0000;
+  background: #6dc265;
   color: #FFFFFF;
 }
 .claendar-tabs {
@@ -423,7 +423,7 @@ footer {
   display: inline-block;
 }
 .owl-dots .owl-dot.active {
-  background: #DD0000;
+  background: #6dc265;
 }
 .chosen-container {
   font-size: 14px;
@@ -474,7 +474,7 @@ table.table-th-bold tr th {
   font-size: 18px;
 }
 .edit-title {
-  color: #DD0000;
+  color: #6dc265;
   font-size: 16px;
   padding: 10px;
 }
@@ -513,7 +513,7 @@ th.picker-switch {
 }
 .test-question {
   font-size: 17px;
-  color: #DD0000;
+  color: #6dc265;
   font-weight: bold;
 }
 .test-answer {
@@ -566,7 +566,7 @@ th.picker-switch {
   font-size: 13px;
 }
 .item-param {
-  color: #DD0000;
+  color: #6dc265;
   font-size: 13px;
 }
 .calendar {
@@ -576,7 +576,7 @@ th.picker-switch {
 }
 .calendar .date {
   font-weight: bold;
-  color: #DD0000;
+  color: #6dc265;
   text-align: center;
   padding-bottom: 5px;
 }
@@ -607,7 +607,7 @@ th.picker-switch {
   width: 64px;
   height: 64px;
   padding-top: 15px;
-  background: #DD0000;
+  background: #6dc265;
   border-radius: 50%;
   margin-top: -80px;
   margin-left: 10px;
@@ -641,7 +641,7 @@ th.picker-switch {
 }
 nav .navbar-nav li.active a:hover {
   color: #FFFFFF;
-  background: #DD0000;
+  background: #6dc265;
 }
 .ya-share2__list {
   margin-top: 2px;
@@ -653,27 +653,27 @@ nav .navbar-nav li.active a:hover {
 .pagination > .active > span:hover,
 .pagination > .active > a:focus,
 .pagination > .active > span:focus {
-  background-color: #DD0000;
-  border-color: #DD0000;
+  background-color: #6dc265;
+  border-color: #6dc265;
 }
 .pagination > li > a,
 .pagination > li > span {
-  color: #DD0000;
+  color: #6dc265;
 }
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #DD0000;
+  color: #6dc265;
 }
 .pagination > li > a:hover,
 .pagination > li > span:hover,
 .pagination > li > a:focus,
 .pagination > li > span:focus {
-  color: #DD0000;
+  color: #6dc265;
 }
 .publication-title a {
-  color: #DD0000;
+  color: #6dc265;
   font-weight: bold;
   font-size: 16px;
 }
@@ -689,7 +689,7 @@ nav .navbar-nav li.active a:hover {
   text-decoration: underline;
 }
 .navbar-toggle .icon-bar {
-  background: #DD0000;
+  background: #6dc265;
 }
 @media screen and (max-width: 991px) {
   .rightbanner {
@@ -720,15 +720,15 @@ nav .navbar-nav li.active a:hover {
   nav .navbar-nav li a {
     font-weight: bold;
     text-align: left;
-    color: #DD0000;
+    color: #6dc265;
     background: #FFFFFF;
   }
   nav .navbar-nav li:hover {
-    color: #DD0000;
+    color: #6dc265;
     background: #FFFFFF;
   }
   nav .navbar-nav li:hover a {
-    color: #DD0000;
+    color: #6dc265;
     background: #FFFFFF;
   }
   nav .navbar-nav li .submunu {
@@ -748,12 +748,12 @@ nav .navbar-nav li.active a:hover {
     background: #FFF;
   }
   nav .navbar-nav li .submunu ul li a {
-    color: #DD0000;
+    color: #6dc265;
     background: #FFFFFF;
     font-weight: normal;
   }
   nav .navbar-nav li .submunu ul li a:hover {
-    color: #DD0000;
+    color: #6dc265;
     background: #FFFFFF;
   }
 }
@@ -793,10 +793,10 @@ nav .navbar-nav li.active a:hover {
 }
 .custom-banner ul {
   list-style: disc;
-  color: #DD0000;
+  color: #6dc265;
 }
 .custom-banner ul li {
-  color: #DD0000;
+  color: #6dc265;
   padding-top: 5px;
   padding-left: 10px;
   margin-left: 20px;
@@ -806,7 +806,7 @@ nav .navbar-nav li.active a:hover {
 }
 .custom-banner .firsttxt {
   font-size: 18px;
-  color: #DD0000;
+  color: #6dc265;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -895,5 +895,5 @@ nav .navbar-nav li.active a:hover {
 }
 .daterangepicker td.active,
 .daterangepicker td.active:hover {
-  background-color: #dd0000;
+  background-color: #50875b;
 }
