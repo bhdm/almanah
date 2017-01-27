@@ -76,6 +76,15 @@ class EventType extends AbstractType
                 'required'    => false,
                 'label' => 'Баннер на главной'
             ))
+            ->add('mainSend', ChoiceType::class, array(
+                'choices' => array(
+                    'Да' => true,
+                    'Нет' => false
+                ),
+                'required'    => false,
+                'label' => 'Приоритет в рассылке'
+            ))
+
             ->add('enabled', ChoiceType::class, array(
                 'choices' => array(
                     'Активная' => true,

@@ -137,6 +137,11 @@ class Event
     private $main;
 
     /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $mainSend;
+
+    /**
      * @var string
      *
      * @ORM\Column(name="source", type="string", nullable=true)
@@ -177,6 +182,7 @@ class Event
         $this->specialties = new ArrayCollection();
         $this->enabled = true;
         $this->main = true;
+        $this->mainSend = false;
         $this->created = new \DateTime();
     }
 
@@ -596,6 +602,23 @@ class Event
     {
         $this->organization = $organization;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getMainSend()
+    {
+        return $this->mainSend;
+    }
+
+    /**
+     * @param mixed $mainSend
+     */
+    public function setMainSend($mainSend)
+    {
+        $this->mainSend = $mainSend;
+    }
+
 
 
 }
