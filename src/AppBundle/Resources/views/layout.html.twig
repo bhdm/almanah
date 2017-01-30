@@ -174,7 +174,7 @@
 
         {% endblock %}
         <div class="table-layout">
-            {% if app.request.pathInfo == '/' %}
+            {% if app.request.attributes.get('_route') == 'homepage' %}
                 <div class="table-cell col-fixed-400 hidden-xs hidden-sm">
                     {{ render(controller('AppBundle:Default:getUpcomingNews')) }}
                 </div>
