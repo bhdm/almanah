@@ -1,5 +1,5 @@
 <html>
-<body style="font-family: Arial, Tahoma, sans-serif; background: url('http://medalmanah.ru/bundles/app/images/light_toast.png'); text-align: center" background="http://medalmanah.ru/bundles/app/images/light_toast.png" bgcolor="#EEE">
+<body style="font-family: Arial, Tahoma, sans-serif; background: url('http://agronizer.ru/bundles/app/images/light_toast.png'); text-align: center" background="http://agronizer.ru/bundles/app/images/light_toast.png" bgcolor="#EEE">
 <table style="width: 600px; margin: 0 auto; text-align: left" width="600" cellpadding="0" cellspacing="0">
     <tr>
         <td style="background: #f00000; font-size: 10px" colspan="2"><br /></td>
@@ -12,10 +12,10 @@
             <table cellpadding="0" cellspacing="0" style="width: 100%; padding: 0 30px" width="100%">
                 <tr>
                     <td style="text-align: center; font-size: 20px" align="center">
-                        <a href="https://medalmanah.ru{{ path('homepage') }}?delivery-{{ 'now' | date('dmY') }}" style="color: #444; text-decoration: none">Предстоящие события и последние <br />новости в мире медицины</a>
+                        <a href="https://agronizer.ru{{ path('homepage') }}?delivery-{{ 'now' | date('dmY') }}" style="color: #444; text-decoration: none">Предстоящие события и последние <br />новости в мире медицины</a>
                     </td>
                     <td style="text-align: right" align="right">
-                        <a href="https://medalmanah.ru{{ path('homepage') }}?delivery-{{ 'now' | date('dmY') }}"><img src="https://medalmanah.ru{{ asset('bundles/app/images/logo.png') }}" style="width: 150px" width="150"></a>
+                        <a href="https://agronizer.ru{{ path('homepage') }}?delivery-{{ 'now' | date('dmY') }}"><img src="https://agronizer.ru{{ asset('bundles/app/images/logo.png') }}" style="width: 150px" width="150"></a>
                     </td>
                 </tr>
             </table>
@@ -60,20 +60,20 @@
     {#<tr style="background: #FFF" bgcolor="#FFF">#}
         {#<td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >#}
             {#<span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">#}
-                {#<a href="https://medalmanah.ru/banner-concurs" target="_blank" style="color: #f00000">#}
-                    {#<img src="https://medalmanah.ru/upload/banner/1478873852.jpeg" style="width: 160px" alt="Конкурс клинических наблюдений" title="Конкурс клинических наблюдений">#}
+                {#<a href="https://agronizer.ru/banner-concurs" target="_blank" style="color: #f00000">#}
+                    {#<img src="https://agronizer.ru/upload/banner/1478873852.jpeg" style="width: 160px" alt="Конкурс клинических наблюдений" title="Конкурс клинических наблюдений">#}
                 {#</a>#}
             {#</span>#}
         {#</td>#}
         {#<td style="text-align: left; font-size: 16px" align="left" >#}
-            {#<div><a href="https://medalmanah.ru/banner-concurs" target="_blank" style="color: #f00000"><strong>Конкурс клинических наблюдений!</strong></a></div>#}
+            {#<div><a href="https://agronizer.ru/banner-concurs" target="_blank" style="color: #f00000"><strong>Конкурс клинических наблюдений!</strong></a></div>#}
             {#<p style="font-size: 10pt">#}
                 {#Сроки проведения конкурса 25.05.2016 – 30.05.2017. Работы принимаются с 10.06.2016 по 28.02.2017#}
                 {#<br />#}
                 {#<br />#}
                 {#Награждение победителей состоится на <b>XIХ Международном конгрессе по антимикробной терапии</b>.#}
                 {#<br />#}
-                {#О наградах Вы можете узнать <a href="https://medalmanah.ru/banner-concurs" target="_blank">в Положении о Конкурсе</a>.#}
+                {#О наградах Вы можете узнать <a href="https://agronizer.ru/banner-concurs" target="_blank">в Положении о Конкурсе</a>.#}
             {#</p>#}
         {#</td>#}
     {#</tr>#}
@@ -89,7 +89,7 @@
     </tr>
     <tr>
         <td style="padding-left: 50px; font-size: 24px; color: #555; background: #FFF" colspan="2" bgcolor="#FFF">
-            <a style="color: #555; text-decoration: none" href="https://medalmanah.ru{{ path('events') }}?delivery-{{ 'now' | date('dmY') }}">Ближайшие события</a>
+            <a style="color: #555; text-decoration: none" href="https://agronizer.ru{{ path('events') }}?delivery-{{ 'now' | date('dmY') }}">Ближайшие события</a>
         </td>
     </tr>
     <tr>
@@ -109,14 +109,14 @@
                     <tr style="background: #FFF" bgcolor="#FFF">
                         <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
                         <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/event/{{ e.slug ? e.slug : e.id }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #f00000">
-                                <img src="https://medalmanah.ru{{ e.preview.path }}" style="width: 160px">
+                            <a href="https://agronizer.ru/event/{{ e.slug ? e.slug : e.id }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #f00000">
+                                <img src="https://agronizer.ru{{ e.preview.path }}" style="width: 160px">
                             </a>
                         </span>
                         </td>
                         <td style="text-align: left; font-size: 16px" align="left" >
                             <span style="color: #777; font-size: 15px"><date>{{ e.start | date('d.m.Y') }} - {{ e.end | date('d.m.Y') }}</date>, {{ e.city }}</span><br />
-                            <div><a href="https://medalmanah.ru/event/{{ e.slug ? e.slug : e.id }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #f00000"><strong>{{ e.title }}</strong></a></div>
+                            <div><a href="https://agronizer.ru/event/{{ e.slug ? e.slug : e.id }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #f00000"><strong>{{ e.title }}</strong></a></div>
                             <p style="font-size: 10pt">
                                 {{ e.anons | raw }}
                             </p>
@@ -138,7 +138,7 @@
         <td style="background: #FFF; font-size: 7px;" bgcolor="#FFF" colspan="2"><br /></td>
     </tr>
     <tr>
-        <td style="padding-left: 50px; font-size: 24px; color: #555; background: #FFF" bgcolor="#FFF" colspan="2"><a style="color: #555; text-decoration: none" href="https://medalmanah.ru{{ path('news') }}?delivery-{{ 'now' | date('dmY') }}">Интересные новости</a></td>
+        <td style="padding-left: 50px; font-size: 24px; color: #555; background: #FFF" bgcolor="#FFF" colspan="2"><a style="color: #555; text-decoration: none" href="https://agronizer.ru{{ path('news') }}?delivery-{{ 'now' | date('dmY') }}">Интересные новости</a></td>
     </tr>
     <tr>
         <td style="background: #FFF; font-size: 7px;" bgcolor="#FFF" colspan="2"><br /></td>
@@ -157,15 +157,15 @@
                     <tr style="background: #FFF" bgcolor="#FFF">
                         <td style="text-align: left; width: 200px; vertical-align: top" align="left" valign="top" >
                         <span style="display: inline-block; padding: 3px; border: 1px solid #CCC; border-radius: 3px">
-                            <a href="https://medalmanah.ru/publications/news/{{ p.slug }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #F00000">
-                                <img src="https://medalmanah.ru{{ p.preview.path }}" style="width: 160px">
+                            <a href="https://agronizer.ru/publications/news/{{ p.slug }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #F00000">
+                                <img src="https://agronizer.ru{{ p.preview.path }}" style="width: 160px">
                             </a>
                         </span>
                         </td>
                         <td style="text-align: left; font-size: 16px" align="left" >
                             <span style="color: #777">{{ p.created | date('d.m.Y') }}</span><br />
                             <div><strong>
-                                    <a href="https://medalmanah.ru/publications/news/{{ p.slug }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #F00000">
+                                    <a href="https://agronizer.ru/publications/news/{{ p.slug }}?delivery-{{ 'now' | date('dmY') }}" target="_blank" style="color: #F00000">
                                         {{ p.title }}
                                     </a>
                                 </strong></div>
@@ -194,9 +194,9 @@
     </tr>
     <tr style="background: #FFF" bgcolor="#FFF">
         <td style="text-align: center; font-size: 20px; color: #555" colspan="2">
-            С уважением, служба поддержки <a href="https://medalmanah.ru" target="_blank">medalmanah.ru</a>
+            С уважением, служба поддержки <a href="https://agronizer.ru" target="_blank">agronizer.ru</a>
             <div style="font-size: 13px">
-                Для отмены подписки пройдите пожалуйста по <a href="https://medalmanah.ru{{ path('unfollow') }}?email={{ email }}">ссылке</a>
+                Для отмены подписки пройдите пожалуйста по <a href="https://agronizer.ru{{ path('unfollow') }}?email={{ email }}">ссылке</a>
             </div>
         </td>
     </tr>
@@ -204,6 +204,6 @@
         <td style="background: #FFF; font-size: 7px;" bgcolor="#FFF" colspan="2"><br /></td>
     </tr>
 </table>
-{#<img src="https://medalmanah.ru/analytics/getimage/firstdelivery/{{ id }}"/>#}
+{#<img src="https://agronizer.ru/analytics/getimage/firstdelivery/{{ id }}"/>#}
 </body>
 </html>

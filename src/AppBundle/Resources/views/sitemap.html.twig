@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     <url>
-        <loc>https://medalmanah.ru</loc>
+        <loc>https://agronizer.ru</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/publications/news</loc>
+        <loc>https://agronizer.ru/publications/news</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/publications/articles</loc>
+        <loc>https://agronizer.ru/publications/articles</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/publications/study</loc>
+        <loc>https://agronizer.ru/publications/study</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/events/russian-events</loc>
+        <loc>https://agronizer.ru/events/russian-events</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/events/foreign-events</loc>
+        <loc>https://agronizer.ru/events/foreign-events</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/events/fpdo-courses</loc>
+        <loc>https://agronizer.ru/events/fpdo-courses</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://medalmanah.ru/events/online-courses</loc>
+        <loc>https://agronizer.ru/events/online-courses</loc>
         <lastmod>{{ 'now' | date('Y-m-d') }}T00:00:00+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/federal-standards</loc>
+        <loc>https://agronizer.ru/federal-standards</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/abbreviations</loc>
+        <loc>https://agronizer.ru/abbreviations</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://medalmanah.ru/calculators</loc>
-        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
-        <priority>1.0</priority>
-        <changefreq>daily</changefreq>
-    </url>
-    <url>
-        <loc>https://medalmanah.ru/calculators/ocenka-clirensa-creatinina</loc>
+        <loc>https://agronizer.ru/calculators</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/calculators/shkala-score</loc>
+        <loc>https://agronizer.ru/calculators/ocenka-clirensa-creatinina</loc>
+        <lastmod>2016-07-14T12:24:14+01:00</lastmod>
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+    </url>
+    <url>
+        <loc>https://agronizer.ru/calculators/shkala-score</loc>
         <lastmod>2016-09-07T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/calculators/index-massy-tela</loc>
+        <loc>https://agronizer.ru/calculators/index-massy-tela</loc>
         <lastmod>2016-09-07T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     <url>
-        <loc>https://medalmanah.ru/feedback</loc>
+        <loc>https://agronizer.ru/feedback</loc>
         <lastmod>2016-07-14T12:24:14+01:00</lastmod>
         <priority>1.0</priority>
         <changefreq>daily</changefreq>
     </url>
     {% for p in pages  %}
         <url>
-            <loc>https://medalmanah.ru/{{ p.slug }}</loc>
+            <loc>https://agronizer.ru/{{ p.slug }}</loc>
             <lastmod>2016-07-20T00:00:00+01:00</lastmod>
             <priority>1.0</priority>
             <changefreq>daily</changefreq>
@@ -105,7 +105,7 @@
             {% set type = 'new' %}
         {% endif %}
         <url>
-            <loc>https://medalmanah.ru/publications/{{ type }}/{{ publication.slug ? publication.slug : publication.id }}</loc>
+            <loc>https://agronizer.ru/publications/{{ type }}/{{ publication.slug ? publication.slug : publication.id }}</loc>
             <lastmod>{{ publication.created | date('Y-m-d') }}T12:24:14+01:00</lastmod>
             <priority>0.8</priority>
             <changefreq>daily</changefreq>
@@ -120,7 +120,7 @@
             {#{% set type = 'new' %}#}
         {#{% endif %}#}
         <url>
-            <loc>https://medalmanah.ru/event/{{ event.slug ? event.slug : event.id }}</loc>
+            <loc>https://agronizer.ru/event/{{ event.slug ? event.slug : event.id }}</loc>
             <lastmod>{{ event.created | date('Y-m-d') }}T12:24:14+01:00</lastmod>
             <priority>0.8</priority>
             <changefreq>daily</changefreq>
@@ -128,7 +128,7 @@
     {% endfor %}
     {% for c in calendar  %}
         <url>
-            <loc>https://medalmanah.ru/medical-calendar/now/{{ c.id }}</loc>
+            <loc>https://agronizer.ru/medical-calendar/now/{{ c.id }}</loc>
             <lastmod>2016-07-20T00:00:00+01:00</lastmod>
             <priority>1.0</priority>
             <changefreq>daily</changefreq>
@@ -136,7 +136,7 @@
     {% endfor %}
     {% for s in standarts  %}
         <url>
-            <loc>https://medalmanah.ru/federal-standards/{{ s.id }}</loc>
+            <loc>https://agronizer.ru/federal-standards/{{ s.id }}</loc>
             <lastmod>2016-07-20T00:00:00+01:00</lastmod>
             <priority>1.0</priority>
             <changefreq>daily</changefreq>
