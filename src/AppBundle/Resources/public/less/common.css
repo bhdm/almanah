@@ -913,3 +913,6 @@ nav .navbar-nav li.active a:hover {
 .daterangepicker td.active:hover {
   background-color: #50875b;
 }
+h5 a {
+  font-weight: bold;
+}
