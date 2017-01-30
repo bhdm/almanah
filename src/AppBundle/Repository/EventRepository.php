@@ -42,11 +42,11 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
                 'dateStart' => $dateStart,
                 'dateEnd' => $dateEnd
             ]);
-        if (isset($owner) && $owner === 'Partner'){
-            $qb->andWhere("e.type = 'PARTNER'");
-        }else{
-            $qb->andWhere("e.type != 'PARTNER'");
-        }
+//        if (isset($owner) && $owner === 'Partner'){
+//            $qb->andWhere("e.type = 'PARTNER'");
+//        }else{
+//            $qb->andWhere("e.type != 'PARTNER'");
+//        }
         $qb->orderBy('e.start');
 
 //        $result = $qb->getQuery()->getSQL();

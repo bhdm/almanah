@@ -94,11 +94,11 @@
 
 {% block content %}
     <article class="row" itemscope itemtype="http://schema.org/Article">
+        <div class="title"><h1 itemprop="headline">{{ publication.title }}</h1></div>
         <meta itemprop="description" content="{{ publication.anons }}" />
         <link itemprop="mainEntityOfPage" itemscope href="{{ publicationUrl }}" />
         <div class="col-sm-12">
             <div>
-                <div class="title"><h1 itemprop="headline">{{ publication.title }}</h1></div>
                 <meta itemprop="inLanguage" content="ru" />
 
                 <ol class="breadcrumb">

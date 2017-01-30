@@ -24,19 +24,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="{{ asset('bundles/app/images/favicons/ms-icon-144x144.png') }}">
     <meta name="theme-color" content="#ffffff">
-    <script type="application/ld+json">
-        {
-          "@context" : "http://schema.org",
-          "@type" : "Organization",
-          "name" : "Альманах медицинских событий",
-          "url" : "https://agronizer.ru",
-          "sameAs" : [
-            "https://vk.com/agronizer",
-            "https://www.facebook.com/agronizer",
-            "https://twitter.com/agronizer_ru",
-          ]
-        }
-    </script>
+
     {% block social %}
         <meta property="og:title" content="Медицинский альманах событий">
         <meta property="og:type" content="website">
@@ -65,6 +53,61 @@
         {#{% endif %}#}
 
     {% endblock %}
+    {% block javascript %}
+        <script  src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+        <script  src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
+        <script  src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/owl.carousel/dist/owl.carousel.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/chosen/chosen.jquery.min.js') }}"></script>
+        <script  src="{{ asset('assets/vendor/bootstrap-multiselect/dist/js/bootstrap-multiselect.js') }}"></script>
+
+        <script  src="{{ asset('assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js') }}"></script>
+
+        <script  src="{{ asset('assets/vendor/hinclude/hinclude.js') }}"></script>
+
+        <script  src="{{ asset('bundles/app/js/main.js') }}"></script>
+        <script src="{{ asset('assets/vendor/moment/moment.js') }}"></script>
+        <script src="{{ asset('assets/vendor/moment/locale/ru.js') }}"></script>
+        <script src="{{ asset('assets/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
+
+        <script>
+            $(document).ready(function() {
+                $('.multiselect').multiselect({
+                    maxHeight: 300,
+//                            numberDisplayed: 5,
+                    includeSelectAllOption: true
+                });
+            });
+        </script>
+        {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
+        <script  src="{{ asset('assets/vendor/jquery.cookie/jquery.cookie.js') }}"></script>
+        <script>
+            //        $(document).ready(function () {
+            //            if ($.cookie('customBannerOne') == undefined){
+            //                $.cookie('customBannerOne',0, { expires: 1, path: '/' });
+            //            }
+            //            console.log($.cookie('customBannerOne'));
+            //            if ($.cookie('customBannerOnePage') == undefined){
+            //                $.cookie('customBannerOnePage',0, { expires: 1, path: '/' });
+            //            }
+            //
+            //            if ($.cookie('customBannerOne') == 0){
+            //                var page = parseInt($.cookie('customBannerOnePage'))+1;
+            //                $.cookie('customBannerOnePage', page);
+            //
+            //                if (page >= 3){
+            //                    $.cookie('customBannerOne',1);
+            //                    $.cookie('customBannerOnePage', 0);
+            //                    $('#custum-banner').fadeIn();
+            //                }
+            //            }
+            //
+            //        });
+        </script>
+        {% endif %}
+    {% endblock %}
+
     {% block seo %}
         <title></title>
         {#<meta name="description" content=""/>#}
@@ -131,7 +174,15 @@
 
         {% endblock %}
         <div class="table-layout">
-            <div class="table-cell col-fixed-300 hidden-xs hidden-sm">{{ render(controller('AppBundle:Default:getUpcomingNews')) }}</div>
+            {% if app.request.pathInfo == '/' %}
+                <div class="table-cell col-fixed-400 hidden-xs hidden-sm">
+                    {{ render(controller('AppBundle:Default:getUpcomingNews')) }}
+                </div>
+            {% else %}
+                <div class="table-cell col-fixed-240 hidden-xs hidden-sm">
+                    {{ render(controller('AppBundle:Widget:calendar')) }}
+                </div>
+            {% endif %}
             <div class="table-cell col-center">
                 <div class="content">
                     {% block content %}{% endblock %}
@@ -213,57 +264,5 @@
 {% include "@App/banner.html.twig" %}
 <!--/noindex-->
 {% include "@App/counter.html.twig" %}
-
-{% block javascript %}
-    <script  src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
-    <script  src="{{ path('fos_js_routing_js', {'callback': 'fos.Router.setData'}) }}"></script>
-    <script  src="{{ asset('assets/vendor/jquery/dist/jquery.min.js') }}"></script>
-    <script  src="{{ asset('assets/vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
-    <script  src="{{ asset('assets/vendor/owl.carousel/dist/owl.carousel.min.js') }}"></script>
-    <script  src="{{ asset('assets/vendor/chosen/chosen.jquery.min.js') }}"></script>
-    <script  src="{{ asset('assets/vendor/bootstrap-multiselect/dist/js/bootstrap-multiselect.js') }}"></script>
-
-    <script  src="{{ asset('assets/vendor/jquery-mask-plugin/dist/jquery.mask.min.js') }}"></script>
-
-    <script  src="{{ asset('assets/vendor/hinclude/hinclude.js') }}"></script>
-
-    <script  src="{{ asset('bundles/app/js/main.js') }}"></script>
-
-    <script>
-        $(document).ready(function() {
-            $('.multiselect').multiselect({
-                maxHeight: 300,
-//                            numberDisplayed: 5,
-                includeSelectAllOption: true
-            });
-        });
-    </script>
-    {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
-    <script  src="{{ asset('assets/vendor/jquery.cookie/jquery.cookie.js') }}"></script>
-    <script>
-//        $(document).ready(function () {
-//            if ($.cookie('customBannerOne') == undefined){
-//                $.cookie('customBannerOne',0, { expires: 1, path: '/' });
-//            }
-//            console.log($.cookie('customBannerOne'));
-//            if ($.cookie('customBannerOnePage') == undefined){
-//                $.cookie('customBannerOnePage',0, { expires: 1, path: '/' });
-//            }
-//
-//            if ($.cookie('customBannerOne') == 0){
-//                var page = parseInt($.cookie('customBannerOnePage'))+1;
-//                $.cookie('customBannerOnePage', page);
-//
-//                if (page >= 3){
-//                    $.cookie('customBannerOne',1);
-//                    $.cookie('customBannerOnePage', 0);
-//                    $('#custum-banner').fadeIn();
-//                }
-//            }
-//
-//        });
-    </script>
-    {% endif %}
-{% endblock %}
 </body>
 </html>
