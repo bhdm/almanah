@@ -22,31 +22,31 @@
 }
 .calendar td a {
     text-decoration: none;
-    background: #ffe8e8;
-    border:          1px solid #f97460;
+    background: #e2fff3;
+    border:          1px solid #6dc265;
     color:           gray;
     display:         block;
     height:          30px;
     line-height:     30px;
 }
 .calendar td a.today {
-    color: #d00;
+    color: #48754e;
 }
 .calendar td a:hover {
     border: 1px solid #333;
 }
 .calendar tr td a.chosen, .calendar tr td a.chosen:hover {
-    background: #f97460;
+    background: #6dc265;
     /*background:   #f97460;*/
-    border-color: #DD0000;
+    border-color: #48754e;
     color:        white;
 }
 .calendar td a.selected {
-    background: #f97460;
+    background: #6dc265;
     color:      #333;
 }
 .calendar-title {
-    background:    #f97460;
+    background:    #6dc265;
     border-radius: 4px;
     text-align:    center;
     font-size:     16px;
@@ -74,7 +74,7 @@
     color:            white;
     width:            34px;
     border-radius:    4px;
-    background-color: #DD0000;
+    background-color: #48754e;
 }
 /* events */
 .events {
@@ -92,14 +92,14 @@
 }
 .events > div > span {
     display:        block;
-    color: #8b0000;
+    color: #48754e;
     font-size:      19px;
     font-weight:    400;
     border-bottom:  1px dashed #ccc;
     padding-bottom: 3px;
 }
 h2 {
-    color:      #8b0000;
+    color:      #48754e;
     margin-top: 0;
 }
 .with-photo .event-content {
@@ -158,7 +158,7 @@ h2 {
     max-width: 640px !important;
 }
 .event-anons a, .event-text a {
-    color: #DD0000 !important;
+    color: #48754e !important;
 }
 .events .more {
     text-align: center;
