@@ -107,7 +107,7 @@
 
                     {% if publication.type == 0 %}
                         <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
-                            <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'articles'}) }}"><span itemprop="title">Медицинские публикации</span></a></li>
+                            <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'articles'}) }}"><span itemprop="title">Новости</span></a></li>
                     {% elseif publication.type == 2 %}
                         <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                             <a itemprop="url" href="{{ path('publications_by_category',{'category' : 'study'}) }}"><span itemprop="title">Клинические случаи</span></a></li>
