@@ -241,27 +241,27 @@
     {% if is_granted('IS_AUTHENTICATED_ANONYMOUSLY') %}
     <script  src="{{ asset('assets/vendor/jquery.cookie/jquery.cookie.js') }}"></script>
     <script>
-        $(document).ready(function () {
-            if ($.cookie('customBannerOne') == undefined){
-                $.cookie('customBannerOne',0, { expires: 1, path: '/' });
-            }
-            console.log($.cookie('customBannerOne'));
-            if ($.cookie('customBannerOnePage') == undefined){
-                $.cookie('customBannerOnePage',0, { expires: 1, path: '/' });
-            }
-
-            if ($.cookie('customBannerOne') == 0){
-                var page = parseInt($.cookie('customBannerOnePage'))+1;
-                $.cookie('customBannerOnePage', page);
-
-                if (page >= 3){
-                    $.cookie('customBannerOne',1);
-                    $.cookie('customBannerOnePage', 0);
-                    $('#custum-banner').fadeIn();
-                }
-            }
-
-        });
+//        $(document).ready(function () {
+//            if ($.cookie('customBannerOne') == undefined){
+//                $.cookie('customBannerOne',0, { expires: 1, path: '/' });
+//            }
+//            console.log($.cookie('customBannerOne'));
+//            if ($.cookie('customBannerOnePage') == undefined){
+//                $.cookie('customBannerOnePage',0, { expires: 1, path: '/' });
+//            }
+//
+//            if ($.cookie('customBannerOne') == 0){
+//                var page = parseInt($.cookie('customBannerOnePage'))+1;
+//                $.cookie('customBannerOnePage', page);
+//
+//                if (page >= 3){
+//                    $.cookie('customBannerOne',1);
+//                    $.cookie('customBannerOnePage', 0);
+//                    $('#custum-banner').fadeIn();
+//                }
+//            }
+//
+//        });
     </script>
     {% endif %}
 {% endblock %}
