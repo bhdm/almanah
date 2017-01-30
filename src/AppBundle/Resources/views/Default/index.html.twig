@@ -96,20 +96,20 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="title">
-                <a href="{{ path('news') }}"><h1>НОВОСТИ</h1></a>
-                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <a href="#" id="submit-new" class="btn btn-default">Написать новость</a>
-                {% endif %}
+                <a href="{{ path('news') }}"><h1>МЕРОПРИЯТИЯ</h1></a>
+                {#{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}#}
+                    {#<a href="#" id="submit-new" class="btn btn-default">Написать новость</a>#}
+                {#{% endif %}#}
             </div>
-            {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                {{ render(controller('AppBundle:Widget:submitNew')) }}
-            {% endif %}
-            {% for p in publications %}
-                {{ include('@App/Publication/publication.item.html.twig',{'publication' : p }) }}
+            {#{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}#}
+                {#{{ render(controller('AppBundle:Widget:submitNew')) }}#}
+            {#{% endif %}#}
+            {% for e in events %}
+                {{ include('@App/Publication/event.item.html.twig',{'event' : e }) }}
             {% endfor %}
             <br />
             <div class="text-left">
-                <a href="{{ path('publications_by_category') }}" style="font-size: 15px; text-decoration: underline;"><b>Все новости сельского хозяйства</b></a>
+                <a href="{{ path('publications_by_category') }}" style="font-size: 15px; text-decoration: underline;"><b>Все мероприятия сельского хозяйства</b></a>
             </div>
         </div>
     </div>

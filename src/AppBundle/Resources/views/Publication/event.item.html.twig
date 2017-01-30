@@ -1,0 +1,25 @@
+<div class="row">
+    {% if e.preview.path is defined %}
+    <div class="col-sm-3 hidden-xs">
+        <div itemprop="image" itemscope itemtype="http://schema.org/ImageObject">
+            <img src="{{ e.preview.path }}" class="img-thumbnail" title="{{ e.title }}" alt="{{ e.title }}" itemprop="image" >
+            <meta itemprop="height" content="150">
+            <meta itemprop="width" content="250">
+            <meta itemprop="url" content="https://medalmanah.ru{{ e.preview.path }}">
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-9">
+        <h5 style="margin-top: 0"><a href="{{ path('event',{'url' : e.id}) }}">{{ e.title }}</a></h5>
+        {#<p style="margin: 0; font-size: 13px; color: #555">{{ e.city }}</p>#}
+        <p>{{ e.anons | raw }}</p>
+        <p style="margin-bottom: 10px; font-size: 13px; color: #555">{{ e.start | date('d.m.Y') }} - {{ e.end | date('d.m.Y') }}</p>
+    </div>
+    {% else %}
+    <div class="col-xs-12 col-sm-12">
+        <h5 style="margin-top: 0"><a href="{{ path('event',{'url' : e.id}) }}">{{ e.title }}</a></h5>
+        {#<p style="margin: 0; font-size: 13px; color: #555">{{ e.city }}</p>#}
+        <p>{{ e.anons | raw }}</p>
+        <p style="margin-bottom: 10px; font-size: 13px; color: #555">{{ e.start | date('d.m.Y') }} - {{ e.end | date('d.m.Y') }}</p>
+    </div>
+    {% endif %}
+</div>

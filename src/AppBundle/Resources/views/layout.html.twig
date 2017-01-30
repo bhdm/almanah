@@ -131,11 +131,10 @@
 
         {% endblock %}
         <div class="table-layout">
-            <div class="table-cell col-fixed-300 hidden-xs hidden-sm">{{ render(controller('AppBundle:Default:getUpcomingEvents')) }}</div>
+            <div class="table-cell col-fixed-300 hidden-xs hidden-sm">{{ render(controller('AppBundle:Default:getUpcomingNews')) }}</div>
             <div class="table-cell col-center">
                 <div class="content">
-                    {% block content %}
-                    {% endblock %}
+                    {% block content %}{% endblock %}
                 </div>
             </div>
             <div class="table-cell col-fixed-240 hidden-xs hidden-sm">

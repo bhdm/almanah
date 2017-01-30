@@ -103,6 +103,17 @@ class DefaultController extends Controller
     }
 
     /**
+     * @return \Symfony\Component\HttpFoundation\Response
+     * @Route("/upcoming-news")
+     */
+    public function getUpcomingNewsAction(){
+        $publications = $this->getDoctrine()->getRepository('AppBundle:Publication')->findBy(['enabled' => true],['created' => 'DESC'], 5);
+
+        return $this->render('AppBundle:Widget:upcomingNews.html.twig', ['publications' => $publications]);
+    }
+
+
+    /**
      * @Route("/feedback", name="feedback")
      * @Template()
      */

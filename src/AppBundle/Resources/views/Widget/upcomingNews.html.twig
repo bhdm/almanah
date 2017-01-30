@@ -1,0 +1,12 @@
+<div class="title"><h1>Новости</h1></div>
+<div>
+    {% for e in publications %}
+        <h5 style="margin-top: 0"><a href="{{ path('publications',{'url' : e.id}) }}">{{ e.title }}</a></h5>
+        <p>{{ e.anons | raw }}</p>
+        <p style="margin-bottom: 10px; font-size: 13px; color: #555">{{ e.created | date('d.m.Y') }}</p>
+    {% endfor %}
+        <br />
+        <div class="text-left">
+                <a href="{{ path('publications_by_category') }}" style="font-size: 15px; text-decoration: underline;"><b>Все новости сельского хозяйства</b></a>
+        </div>
+</div>
