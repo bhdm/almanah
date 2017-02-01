@@ -48,7 +48,7 @@ class InfoController extends Controller
     }
 
 
-    /** @Route("/medical-calendar/{dateFormat}", name="medical_calendar") */
+    /** @Route("/agro-calendar/{dateFormat}", name="medical_calendar") */
     public function calendarAction($dateFormat = 'now')
     {
         if ($dateFormat != 'now' && !preg_match('/[0-9\.]/', $dateFormat)) {
@@ -67,7 +67,7 @@ class InfoController extends Controller
         return $this->render('AppBundle:Calendar:calendar.html.twig', $params);
     }
 
-    /** @Route("/medical-calendar/{dateFormat}/{id}", name="medical_calendar_event") */
+    /** @Route("/agro-calendar/{dateFormat}/{id}", name="medical_calendar_event") */
     public function eventAction($dateFormat, $id)
     {
         $calendar = $this->getDoctrine()->getRepository('AppBundle:Calendar')->findOneById($id);

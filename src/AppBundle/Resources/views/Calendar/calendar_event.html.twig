@@ -1,13 +1,13 @@
 {% extends '@App/layout.html.twig' %}
 
 {% block seo %}
-    <title>{{ calendar.title }} на сайте Альманах медицинских событий</title>
+    <title>{{ calendar.title }} на сайте agronizer.ru</title>
     <meta name="description" content="{{ calendar.title }} {{ calendar.anons | raw }}"/>
-    <meta name="keywords" content="Исторические медицинские события, празники, дни памяти "/>
+    <meta name="keywords" content="Исторические события, празники, дни памяти "/>
 {% endblock %}
 
 {% block content %}
-    <div class="title"><h1 itemprop="name">Календарь медицинских событий</h1></div>
+    <div class="title"><h1 itemprop="name">Календарь событий</h1></div>
     {% include 'AppBundle:Calendar:render.html.twig' %}
     <br />
     <br />
