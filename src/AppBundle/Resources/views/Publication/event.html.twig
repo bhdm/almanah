@@ -26,6 +26,22 @@
     <meta name="keywords" content="{{ event.metaKeyword }}"/>
 {% endblock %}
 
+{% block social %}
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ event.title }}">
+    {% if event.preview.path is defined  %}
+        <meta property="og:image" content="http://medalmanah.ru{{ event.preview.path }}">
+    {% endif %}
+    <meta property="og:description" content="{{ event.anons }}">
+
+    {#<meta itemscope itemtype="http://schema.org/Article" />#}
+    {#<meta itemprop="headline" content="{{ publication.title }}" />#}
+
+    {#{% if publication.preview.path is defined  %}#}
+    {#<meta itemprop="image" content="http://medalmanah.ru{{ publication.preview.path }}" />#}
+    {#{% endif %}#}
+{% endblock %}
+
 {% block content %}
     <div class="col-sm-12">
         <div class="row">
@@ -110,7 +126,7 @@
                 <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
                 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter="" style="text-align: left; "
                      data-title="{{ event.title }}"
-                     data-description="{{ event.anons is defined ? event.anons : ''}}"
+                     data-description="{{ event.anons is defined ? event.anons | slice(0,150) : ''}}"
                      data-image="{{ event.preview.path is defined ? event.preview.path : '' }}"
                 >
                 </div>
