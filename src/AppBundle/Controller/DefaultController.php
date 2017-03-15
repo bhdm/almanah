@@ -132,6 +132,7 @@ class DefaultController extends Controller
             $mail->Subject  = 'Сообщение из формы обратной связи';
             $mail->Body     = $txt;
             $mail->addAddress('bhd.m@ya.ru');
+            $mail->addAddress('irs18@yandex.ru');
             $mail->addCustomHeader('X-Postmaster-Msgtype', "firstDelivery");
             $mail->send();
 
