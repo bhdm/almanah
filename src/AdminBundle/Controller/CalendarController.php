@@ -50,13 +50,17 @@ class CalendarController extends Controller{
         if ($request->getMethod() == 'POST'){
             if ($formData->isValid()){
                 $item = $formData->getData();
-                $file = $item->getImage();
-                $filename = time(). '.'.$file->guessExtension();
-                $file->move(
-                    __DIR__.'/../../../web/upload/calendar/',
-                    $filename
-                );
-                $item->setImage(['path' => '/upload/calendar/'.$filename ]);
+                if ($item->getPhoto()){
+                    $file = $item->getPhoto();
+                    $filename = time(). '.'.$file->guessExtension();
+                    $file->move(
+                        __DIR__.'/../../../web/upload/calendar/',
+                        $filename
+                    );
+                    $item->setPhoto(['path' => '/upload/calendar/'.$filename ]);
+                }else{
+                    $item->setPhoto([]);
+                }
                 $em->persist($item);
                 $em->flush();
                 $em->refresh($item);
@@ -78,7 +82,7 @@ class CalendarController extends Controller{
         $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
         $formData = $form->handleRequest($request);
 
-        $olfFile = $item->getImage();
+        $olfFile = $item->getPhoto();
 
 
         if ($request->getMethod() == 'POST'){
@@ -86,14 +90,14 @@ class CalendarController extends Controller{
                 $item = $formData->getData();
                 $file = $item->getImage();
                 if ($file == null){
-                    $item->setImage($olfFile);
+                    $item->setPhoto($olfFile);
                 }else{
                     $filename = time(). '.'.$file->guessExtension();
                     $file->move(
                         __DIR__.'/../../../web/upload/calendar/',
                         $filename
                     );
-                    $item->setImage(['path' => '/upload/calendar/'.$filename ]);
+                    $item->setPhoto(['path' => '/upload/calendar/'.$filename ]);
                 }
 
                 $em->flush($item);

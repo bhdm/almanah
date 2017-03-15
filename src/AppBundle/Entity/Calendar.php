@@ -109,7 +109,12 @@ class Calendar
      */
     public function setBirthdate($birthdate)
     {
-        $this->birthdate = $birthdate;
+        if (is_string($birthdate) || $birthdate == null){
+            $this->birthdate = $birthdate;
+        }else{
+            $this->birthdate = $birthdate->format('d.m.Y');
+        }
+
     }
 
     /**
@@ -157,7 +162,12 @@ class Calendar
      */
     public function setGone($gone)
     {
-        $this->gone = $gone;
+        if (is_string($gone) || $gone == null){
+            $this->gone = $gone;
+        }else{
+            $this->gone = $gone->format('d.m.Y');
+        }
+
     }
 
     /**

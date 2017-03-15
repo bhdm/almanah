@@ -3,7 +3,11 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -16,20 +20,20 @@ class CalendarType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('firstName', null, ['label' => 'Фамилия'])
-            ->add('lastName', null, ['label' => 'Имя'])
-            ->add('surName', null, ['label' => 'Отчество'])
-            ->add('anons', null, ['label' => 'Анонс'])
-            ->add('text', null, ['label' => 'Текст'])
-            ->add('title', null, ['label' => 'Заголовок'])
-            ->add('date', null, ['label' => 'Дата'])
-            ->add('birthdate', null, ['label' => 'Дата рождения'])
-            ->add('gone', null, ['label' => 'Прошло'])
-            ->add('photo', null, ['label' => 'Фото'])
-            ->add('datetime', DateTimeType::class, ['label' => 'Дата'])
-            ->add('dayOfWeek', null, ['label' => 'День недели'])
-            ->add('dayNumber', null, ['label' => 'Номер дня'])
-            ->add('month', null, ['label' => 'Месяц'])
+            ->add('type', null, array('label' => 'Тип', 'required' => true, 'attr' => array('class' => 'calType')))
+            ->add('month', ChoiceType::class, array('label' => 'Месяц', 'required' => false, 'attr' => array('class' => 'month'), 'choices' => array_flip(array('Jan' => 'Январь', 'Feb' => 'Февраль', 'Mar' => 'Март', 'Apr' => 'Апрель', 'May' => 'Май', 'Jun' => 'Июнь', 'Jul' => 'Июль', 'Aug' => 'Август', 'Sep' => 'Сентябрь', 'Oct' => 'Октябрь', 'Nov' => 'Ноябрь', 'Dec' => 'Декабрь'))))
+            ->add('dayOfWeek', ChoiceType::class, array('label' => 'День недели', 'required' => false, 'attr' => array('class' => 'dayOfWeek'), 'choices' => array_flip(array('Monday' => 'Понедельник', 'Tuesday' => 'Вторник', 'Wednesday' => 'Среда', 'Thursday' => 'Четверг', 'Friday' => 'Пятница', 'Saturday' => 'Суббота', 'Sunday' => 'Воскресенье'))))
+            ->add('dayNumber', ChoiceType::class, array('label' => 'Номер недели', 'required' => false, 'attr' => array('class' => 'dayNumber'), 'choices' => array_flip(array('first' => 'Первая', 'second' => 'Вторая', 'third' => 'Третья', 'fourth' => 'Четвертая'))))
+            ->add('date', null, array('label' => 'Дата', 'required' => false, 'attr' => array('class' => 'date')))
+            ->add('birthdate', DateType::class, array('label' => 'Дата рождения', 'required' => false, 'attr' => array('class' => 'birthdate')))
+            ->add('gone', DateType::class, array('label' => 'Дата смерти', 'required' => false, 'attr' => array('class' => 'gone')))
+            ->add('lastName', null, array('label' => 'Фамилия', 'required' => false, 'attr' => array('class' => 'lastName')))
+            ->add('firstName', null, array('label' => 'Имя', 'required' => false, 'attr' => array('class' => 'firstName')))
+            ->add('surName', null, array('label' => 'Отчество', 'required' => false, 'attr' => array('class' => 'surName')))
+            ->add('title', TextareaType::class, array('label' => 'Заголовок', 'required' => false, 'attr' => array('class' => 'title')))
+            ->add('anons', TextareaType::class, array('label' => 'Анонс', 'required' => false, 'attr' => array('class' => 'ckeditor anons')))
+            ->add('text', null, array('label' => 'Описание', 'required' => false, 'attr' => array('class' => 'ckeditor text')))
+            ->add('photo', FileType::class, array('label' => 'Изображение', 'required' => false, 'attr' => array('class' => 'photo')))
         ;
     }
     
