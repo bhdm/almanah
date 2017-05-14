@@ -22,7 +22,7 @@
             {% for item in pagination %}
                 <tr>
                     <td>{{ item.id }}</td>
-                    <td>{{ item.title }}</td>
+                    <td><a href="{{ path('show_rss', {'id' : item.id }) }}">{{ item.title }}</a></td>
                     <td></td>
                     <td class="setting">
                         {% spaceless %}

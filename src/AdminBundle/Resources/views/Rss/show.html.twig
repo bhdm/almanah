@@ -1,0 +1,30 @@
+{% extends "AdminBundle::layout.html.twig" %}
+
+{% block breadcrumb %}
+    <ul class="breadcrumb well">
+        <li><a href="{{ path('admin_main') }}">Домой</a> <span class="divider"></span></li>
+        <li><a href="{{ path('admin_rss_list') }}">Rss</a> <span class="divider"></span></li>
+        <li class="active">{{ site.title }}</li>
+    </ul>
+{% endblock %}
+
+{% block content %}
+    <div class="well">
+        <table class="table">
+            {% for item in rss.channel.item %}
+                <tr>
+                    <td>
+                        {{ item.title }}
+                    </td>
+                    <td><a href="{{ item.link }}">Ссылка</a></td>
+                    <td>
+                        {{ item.pubDate }}
+                    </td>
+                </tr>
+                <tr>
+                    {{ item.description | raw }}
+                </tr>
+            {% endfor%}
+        </table>
+    </div>
+{% endblock %}

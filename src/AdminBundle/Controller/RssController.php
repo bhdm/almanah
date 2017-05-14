@@ -36,6 +36,17 @@ class RssController extends Controller{
     }
 
     /**
+     * @Route("/admin/rss/show/{id}", name="show_rss")
+     * @Template()
+     */
+    public function showAction($id){
+        $site = $this->getDoctrine()->getRepository('AppBundle:Rss')->find($id);
+        $feed_to_array = (array) simplexml_load_file($site->getUrl());
+
+        return ['rss' => $feed_to_array, 'site' => $site];
+    }
+
+    /**
      * @Security("has_role('ROLE_ADMIN')")
      * @Route("/add", name="admin_rss_add")
      * @Template()
