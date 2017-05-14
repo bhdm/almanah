@@ -41,7 +41,7 @@ class RssController extends Controller{
      */
     public function showAction($id){
         $site = $this->getDoctrine()->getRepository('AppBundle:Rss')->find($id);
-        $feed_to_array = (array) simplexml_load_file($site->getUrl());
+        $feed_to_array = simplexml_load_file($site->getUrl());
 
         return ['rss' => $feed_to_array, 'site' => $site];
     }
