@@ -79,6 +79,14 @@ class PublicationType extends AbstractType
                 'required'    => true,
                 'label' => 'Рассылка'
             ))
+            ->add('commercial', ChoiceType::class, array(
+                'choices' => array(
+                    'Стандартная' => false,
+                    'Коммерческая' => true,
+                ),
+                'required'    => true,
+                'label' => 'Рассылка'
+            ))
         ;
     }
 

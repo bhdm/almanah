@@ -6,7 +6,7 @@
     {% set publicationUrl = path('new',{'url' : (publication.slug != null ? publication.slug : publication.id) })  %}
 {% endif %}
 
-<article class="new-item " itemscope itemtype="http://schema.org/NewsArticle">
+<article class="new-item {{ publication.commercial == true ? 'commercial-item'}}" itemscope itemtype="http://schema.org/NewsArticle">
     <div class="row">
         {% if publication.source %}
             <link itemprop="mainEntityOfPage" itemscope href="{{ publicationUrl }}" />

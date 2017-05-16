@@ -169,9 +169,15 @@ class Publication
      */
     private $twitterHash;
 
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $commercial;
+
     public function __construct()
     {
         $this->enabled = true;
+        $this->commercial = false;
         $this->created = new \DateTime();
         $this->preview = array();
         $this->specialties = new ArrayCollection();
@@ -606,6 +612,23 @@ class Publication
     {
         $this->twitterHash = $twitterHash;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCommercial()
+    {
+        return $this->commercial;
+    }
+
+    /**
+     * @param mixed $commercial
+     */
+    public function setCommercial($commercial)
+    {
+        $this->commercial = $commercial;
+    }
+
 
 
 }
