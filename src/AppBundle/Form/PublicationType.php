@@ -84,8 +84,8 @@ class PublicationType extends AbstractType
                     'Стандартная' => false,
                     'Коммерческая' => true,
                 ),
-                'required'    => true,
-                'label' => 'Рассылка'
+                'required'    => false,
+                'label' => 'тип публикации'
             ))
         ;
     }
