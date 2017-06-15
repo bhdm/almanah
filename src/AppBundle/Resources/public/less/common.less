@@ -40,7 +40,9 @@ h1.title{
 
 .table-layout {
     display:table;
-    width:100%;
+
+    padding-bottom: 30px;
+    margin-left: 15px;
 }
 .table-layout .table-cell {
     display:table-cell;
@@ -358,7 +360,7 @@ nav .navbar-nav li:hover{
     border: 1px solid #BDDAEB;
 }
 footer{
-    margin-top: 30px;
+    //margin-top: 30px;
     padding: 0;
     bottom: 0;
     left: 0;
@@ -373,6 +375,7 @@ footer{
 .social-icon {
     width: 42px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 .contact-icon {
@@ -380,12 +383,18 @@ footer{
 }
 .footer-other li{
     padding: 5px;
+    text-align: left;
     a{
         color: #7e7878;
         &:hover{
             color: #FFF;
             text-decoration: none;
         }
+    }
+}
+@media (max-width: 991px) {
+    .footer-other li{
+        text-align: center;
     }
 }
 .contacts{
@@ -993,4 +1002,7 @@ nav .navbar-nav li.active a:hover{
 }
 .owl-event-title{
     font-size: 13px;
+}
+.publication-anons{
+    min-height: 95px;
 }
