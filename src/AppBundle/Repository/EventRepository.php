@@ -160,6 +160,7 @@ class EventRepository extends \Doctrine\ORM\EntityRepository
         $qb->orderBy('e.start', 'ASC');
         if ($main == true){
             $qb->andWhere('e.main = true');
+            $qb->andWhere('e.shortTitle IS NOT null');
         }
         $qb->setMaxResults($count);
         $qb->setParameter(':now',$now);

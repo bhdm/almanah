@@ -27,7 +27,7 @@ class EventController extends Controller{
         $name = $request->query->get('name');
         $date = new \DateTime($request->query->get('date'));
         if ($name || $date){
-            $items = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->filter(null,$date,null,$name);
+            $items = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->filter(null,$date,null,$name, null);
         }else{
             $items = $this->getDoctrine()->getRepository('AppBundle:'.self::ENTITY_NAME)->findBy([],['start' => 'ASC']);
         }

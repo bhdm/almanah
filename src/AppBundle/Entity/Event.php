@@ -30,6 +30,12 @@ class Event
      */
     private $title;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="shortTitle", type="string", length=255, nullable=true)
+     */
+    private $shortTitle;
 
     /**
      * @var array
@@ -617,6 +623,22 @@ class Event
     public function setMainSend($mainSend)
     {
         $this->mainSend = $mainSend;
+    }
+
+    /**
+     * @return string
+     */
+    public function getShortTitle()
+    {
+        return $this->shortTitle;
+    }
+
+    /**
+     * @param string $shortTitle
+     */
+    public function setShortTitle($shortTitle)
+    {
+        $this->shortTitle = $shortTitle;
     }
 
 

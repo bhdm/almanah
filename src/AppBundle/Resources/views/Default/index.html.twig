@@ -59,26 +59,30 @@
 {% endblock %}
 
 {% block topBody %}
-    <div class="row hidden-sm hidden-xs">
-        <div class="owl-carousel event-carusel owl-theme">
+    <div class="row hidden-sm hidden-xs" style="margin: 0">
+        <div class="owl-carousel event-carusel owl-theme owl-events">
             {% for carusel in carusels %}
                 {% if carusel.preview.path is defined %}
-                    <div class="item">
-                        <div>
-                            <a href="{{ path('event',{'url' : carusel.id }) }}"><img src="{{ carusel.preview.path }}" title="{{ carusel.title }}" alt="{{ carusel.title }}"></a>
-                            <div class="event-date">
-                                {{ carusel.start | date('d') }}
-                                <br />
-                                {{ carusel.start | date('m') | month }}
-                            </div>
+                    <div class="item thumbnail">
+                        <a href="{{ path('event',{'url' : carusel.slug }) }}">
+                            <img src="{{ carusel.preview.path }}" title="{{ carusel.title }}" alt="{{ carusel.title }}" class="owl-event-img">
+                        </a>
+                        <div class="owl-event-title">
+                            <a href="{{ path('event',{'url' : carusel.slug }) }}" class="black">{{ carusel.shortTitle }}</a>
+                        </div>
+
+                            
+                            {#<div class="event-date">#}
+                                {#{{ carusel.start | date('d') }}#}
+                                {#<br />#}
+                                {#{{ carusel.start | date('m') | month }}#}
+                            {#</div>#}
                         </div>
                     </div>
                 {% endif %}
             {% endfor %}
         </div>
-        <br />
-        <br />
-        <br />
+
         {#<div class="event-carusel-pages">#}
         {#{% if carusels | length > 4 %}#}
         {#<div class="active"></div>#}
@@ -96,7 +100,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="title">
-                <a href="{{ path('news') }}"><h1>НОВОСТИ</h1></a>
+                <a href="{{ path('news') }}"><h1 class="title">Публикации</h1></a>
                 {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     <a href="#" id="submit-new" class="btn btn-default">Написать новость</a>
                 {% endif %}

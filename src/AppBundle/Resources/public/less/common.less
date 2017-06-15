@@ -24,6 +24,7 @@ html{
 body{
     text-align: center;
     font-family: 'Roboto,Arial,serif;';
+    //font-family: 'Roboto,Arial,serif;';
     background: url("/bundles/app/images/light_toast.png");
     margin: 0;
     overflow-x: hidden;
@@ -31,7 +32,10 @@ body{
 
 }
 h1{
-    font-family: 'Georgia, serif';
+    font-family: 'HelveticaNeue-Light';
+}
+h1.title{
+    text-transform: uppercase;
 }
 
 .table-layout {
@@ -634,18 +638,18 @@ th.prev, th.next, th.picker-switch{
             text-align: left;
             img{
                 //width: 90%;
-                //margin-left: 40px;
-                height: 135px;
-                width: auto;
-                -webkit-filter: grayscale(100%);
-                filter: grayscale(100%);
-                -moz-filter: grayscale(100%);
-                &:hover{
-                    -webkit-filter: grayscale(0%);
-                    filter: grayscale(0%);
-                    -moz-filter: grayscale(0%);
-                    cursor: pointer;
-                }
+                margin: 0;
+                width: 75px;
+                height: auto;
+                //-webkit-filter: grayscale(100%);
+                //filter: grayscale(100%);
+                //-moz-filter: grayscale(100%);
+                //&:hover{
+                //    -webkit-filter: grayscale(0%);
+                //    filter: grayscale(0%);
+                //    -moz-filter: grayscale(0%);
+                //    cursor: pointer;
+                //}
             }
             .event-date{
                 width: 64px;
@@ -957,4 +961,36 @@ nav .navbar-nav li.active a:hover{
     background: rgba(234, 177, 177, 0.34);
     border: 1px solid rgba(221, 0, 0, 0.26);
     padding: 10px 20px;
+}
+.p-city{
+    padding-right: 10px;
+    color: #555;
+    //font-style: italic;
+}
+.p-date{
+    color: #555;
+}
+.caption{
+    a{
+        color: #333;
+    }
+}
+.black{
+    color: #333;
+}
+.owl-events{
+    .item{
+        min-height: 110px;
+        overflow: hidden;
+        min-width: 275px;
+    }
+}
+.owl-carousel .owl-item img.owl-event-img{
+    width: auto;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+.owl-event-title{
+    font-size: 13px;
 }
