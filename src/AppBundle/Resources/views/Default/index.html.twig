@@ -68,6 +68,7 @@
                             <img src="{{ carusel.preview.path }}" title="{{ carusel.title }}" alt="{{ carusel.title }}" class="owl-event-img">
                         </a>
                         <div class="owl-event-title">
+                            <strong>{{ carusel.start | date('d') }} {{ carusel.start | date('m') | month }}</strong><br />
                             <a href="{{ path('event',{'url' : carusel.slug }) }}" class="black">{{ carusel.shortTitle }}</a>
                         </div>
 
