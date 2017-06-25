@@ -26,6 +26,8 @@ class RemoveEmailCommand extends ContainerAwareCommand
         foreach ($emails as $mail){
             $updateDoctor   = $pdo->prepare('DELETE FROM email_evrika WHERE email="'.$mail->getTitle().'"');
             $updateDoctor->execute();
+            $updateDoctor   = $pdo->prepare('DELETE FROM email WHERE email="'.$mail->getTitle().'"');
+            $updateDoctor->execute();
         }
 
         $output->writeln('delivery:unsubscribed end');
