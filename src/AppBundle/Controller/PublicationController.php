@@ -245,6 +245,7 @@ class PublicationController extends Controller
 
     /**
      * @Route("/publications/study/{url}", name="study")
+     * @Template("AppBundle:Publication:publication.html.twig")
      */
     public function studyAction(Request $request, $url){
         $publication = $this->getPublication($url, 2);
