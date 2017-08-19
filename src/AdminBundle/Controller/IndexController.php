@@ -12,6 +12,7 @@ class IndexController extends Controller
 {
     /**
      * @Route("/admin", name="admin_main")
+     * @Route("/admin/", name="admin_main")
      * @Template()
      */
     public function indexAction()
