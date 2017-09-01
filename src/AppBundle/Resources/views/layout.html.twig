@@ -83,12 +83,12 @@
                     </div>
                 </div>
                 <div class="col-xs-6 text-right hidden-sm hidden-xs">
-                    <form class="navbar-form navbar-right" role="search" action="{{ path('search') }}">
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="search" placeholder="Поиск событий" name="search">
-                        </div>
-                        <button type="submit" class="btn btn-primary" style="margin-left: -4px;">Найти</button>
-                    </form>
+                    {#<form class="navbar-form navbar-right" role="search" action="{{ path('search') }}">#}
+                        {#<div class="form-group">#}
+                            {#<input type="text" class="form-control" id="search" placeholder="Поиск событий" name="search">#}
+                        {#</div>#}
+                        {#<button type="submit" class="btn btn-primary" style="margin-left: -4px;">Найти</button>#}
+                    {#</form>#}
                 </div>
                 <div class="col-xs-3 hidden-sm hidden-xs">
                     {% if app.user != null %}
@@ -120,11 +120,11 @@
                 </div>
             </div>
         </header>
-        {% if app.request.attributes.get('_route') == 'homepage' %}
-            <div class="slider hidden-sm hidden-xs">
-                {{ render(controller("AppBundle:Default:carusel" )) }}
-            </div>
-        {% endif %}
+        {#{% if app.request.attributes.get('_route') == 'homepage' %}#}
+            {#<div class="slider hidden-sm hidden-xs">#}
+                {#{{ render(controller("AppBundle:Default:carusel" )) }}#}
+            {#</div>#}
+        {#{% endif %}#}
         {{ include('@App/menu.html.twig') }}
 
         {% block topBody%}

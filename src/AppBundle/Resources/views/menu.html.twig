@@ -1,65 +1,85 @@
-<nav class="navbar navbar-black-default navbar-black">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
-            <span class="sr-only">Навигация</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <!--<a class="navbar-brand" href="/" id="logo2"><img src="images/logo2.png"></a>-->
-    </div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
 
-    <div class="collapse navbar-collapse" id="menu">
-        <ul class="nav navbar-nav">
-            <li {{ app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} >
-                <a href="{{ path('news') }}">ПУБЛИКАЦИИ</a>
-                <div class="submenu">
-                    <ul class="submenu-items">
-                        <li><a href="{{ path('publications_by_category',{'category': 'news'}) }}">Новости</a></li>
-                        <li><a href="{{ path('publications_by_category',{'category': 'articles'}) }}">Статьи</a></li>
-                        {#<li><a href="{{ path('publications_by_category',{'category': '2'}) }}">Клинические иследования</a></li>#}
-                    </ul>
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Навигация</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li {{ app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} >
+                    <a href="{{ path('news') }}">Публикации</a>
+                    <div class="submenu">
+                        <ul class="submenu-items">
+                            <li><a href="{{ path('publications_by_category',{'category': 'news'}) }}">Новости</a></li>
+                            <li><a href="{{ path('publications_by_category',{'category': 'articles'}) }}">Статьи</a></li>
+                            <li><a href="{{ path('publications_by_category',{'category': 'study'}) }}">Исследования</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li {{
+                app.request.pathInfo == '/events' or
+                app.request.pathInfo == '/events/russian-events' or
+                app.request.pathInfo == '/events/foreign-events' or
+                app.request.pathInfo == '/events-map'
+                ? 'class="active"' : ''}} >
+                    <a href="#">Мероприятия</a>
+                    <div class="submenu">
+                        <ul class="submenu-items">
+                            <li><a href="{{ path('events',{'url': 'russian-events'}) }}">Российские</a></li>
+                            <li><a href="{{ path('events',{'url': 'foreign-events'}) }}">Зарубежные</a></li>
+                            <li><a href="{{ path('events_map') }}">Карта мероприятий</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li >
+                    <a href="{{ path('page',{'url' : 'about'}) }}">Образование</a>
+                    <div class="submenu">
+                        <ul class="submenu-items">
+                            <li><a href="{{ path('events',{'url': 'fpdo-courses'}) }}">Курсы ФПДО</a></li>
+                            <li><a href="{{ path('events',{'url': 'online-courses'}) }}">Онлайн обучение</a></li>
+                            <li><a href="{{ path('events',{'url': 'internships'}) }}">Стажировки</a></li>
+                            <li><a href="{{ path('events',{'url': 'school'}) }}">Школы</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li >
+                    <a href="#">Полезная информация</a>
+                    <div class="submenu">
+                        <ul class="submenu-items">
+                            <li><a href="{{ path('federal-standards') }}">Федеральные стандарты</a></li>
+                            <li><a href="{{ path('abbreviations') }}">Медицинские сокращения</a></li>
+                            <li><a href="{{ path('calculators') }}">Калькуляторы</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li {{ app.request.attributes.get('_route') == 'feedback' ? 'class="active"' : ''}} ><a href="{{ path('feedback') }}">Связаться</a></li>
+            </ul>
+            <form class="navbar-form navbar-right" action="{{ path('search') }}">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="search" placeholder="Поиск событий" name="search">
                 </div>
-            </li>
-            <li {{
-                    app.request.pathInfo == '/events' or
-                    app.request.pathInfo == '/events/russian-events' or
-                    app.request.pathInfo == '/events/foreign-events' or
-                    app.request.pathInfo == '/events-map'
-                    ? 'class="active"' : ''}} >
-                <a href="#">Мероприятия</a>
-                <div class="submenu">
-                    <ul class="submenu-items">
-                        <li><a href="{{ path('events',{'url': 'russian-events'}) }}">Российские</a></li>
-                        <li><a href="{{ path('events',{'url': 'foreign-events'}) }}">Зарубежные</a></li>
-                        <li><a href="{{ path('events_map') }}">Карта мероприятий</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li >
-                <a href="{{ path('page',{'url' : 'about'}) }}">Образование</a>
-                <div class="submenu">
-                    <ul class="submenu-items">
-                        <li><a href="{{ path('events',{'url': 'fpdo-courses'}) }}">Курсы ФПДО</a></li>
-                        <li><a href="{{ path('events',{'url': 'online-courses'}) }}">Онлайн обучение</a></li>
-                        <li><a href="{{ path('events',{'url': 'internships'}) }}">Стажировки</a></li>
-                        <li><a href="{{ path('events',{'url': 'school'}) }}">Школы</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li >
-                <a href="#">Полезная информация</a>
-                <div class="submenu">
-                    <ul class="submenu-items">
-                        <li><a href="{{ path('federal-standards') }}">Федеральные стандарты</a></li>
-                        <li><a href="{{ path('abbreviations') }}">Медицинские сокращения</a></li>
-                        <li><a href="{{ path('calculators') }}">Калькуляторы</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li {{ app.request.attributes.get('_route') == 'feedback' ? 'class="active"' : ''}} ><a href="{{ path('feedback') }}">СВЯЗАТЬСЯ</a></li>
-        </ul>
-    </div><!-- /.navbar-collapse -->
+                <button type="submit" class="btn btn-default">Найти</button>
+            </form>
+            {#<ul class="nav navbar-nav navbar-right">#}
+                {#<li><a href="#">Link</a></li>#}
+                {#<li class="dropdown">#}
+                    {#<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>#}
+                    {#<ul class="dropdown-menu">#}
+                        {#<li><a href="#">Action</a></li>#}
+                        {#<li><a href="#">Another action</a></li>#}
+                        {#<li><a href="#">Something else here</a></li>#}
+                        {#<li role="separator" class="divider"></li>#}
+                        {#<li><a href="#">Separated link</a></li>#}
+                    {#</ul>#}
+                {#</li>#}
+            {#</ul>#}
+        </div>
+    </div>
 </nav>
-<br />

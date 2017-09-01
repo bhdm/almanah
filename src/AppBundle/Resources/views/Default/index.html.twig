@@ -71,13 +71,6 @@
                             <strong>{{ carusel.start | date('d') }} {{ carusel.start | date('m') | month }}</strong><br />
                             <a href="{{ path('event',{'url' : carusel.slug }) }}" class="black">{{ carusel.shortTitle }}</a>
                         </div>
-
-                            
-                            {#<div class="event-date">#}
-                                {#{{ carusel.start | date('d') }}#}
-                                {#<br />#}
-                                {#{{ carusel.start | date('m') | month }}#}
-                            {#</div>#}
                         </div>
                     </div>
                 {% endif %}
@@ -102,9 +95,9 @@
         <div class="col-sm-12">
             <div class="title">
                 <a href="{{ path('news') }}"><h1 class="title">Новости медицины</h1></a>
-                {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <a href="#" id="submit-new" class="btn btn-default">Написать новость</a>
-                {% endif %}
+                {#{% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}#}
+                    {#<a href="#" id="submit-new" class="btn btn-default">Написать новость</a>#}
+                {#{% endif %}#}
             </div>
             {% if is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                 {{ render(controller('AppBundle:Widget:submitNew')) }}
