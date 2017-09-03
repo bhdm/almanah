@@ -173,8 +173,19 @@ class User extends BaseUser
      */
     private $created;
 
+    /**
+     * @ORM\Column(type = "boolean")
+     */
+    protected $sent = false;
+
+    /**
+     * @ORM\Column(type = "string", nullable=true)
+     */
+    protected $error;
+
     public function __construct()
     {
+        $this->sent = false;
         $this->created = new \DateTime();
         $this->certificate = array();
         $this->courses = new ArrayCollection();
@@ -594,6 +605,39 @@ class User extends BaseUser
     {
         $this->created = $created;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getSent()
+    {
+        return $this->sent;
+    }
+
+    /**
+     * @param mixed $sent
+     */
+    public function setSent($sent)
+    {
+        $this->sent = $sent;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getError()
+    {
+        return $this->error;
+    }
+
+    /**
+     * @param mixed $error
+     */
+    public function setError($error)
+    {
+        $this->error = $error;
+    }
+
 
 
 

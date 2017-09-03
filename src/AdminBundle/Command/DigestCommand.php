@@ -73,8 +73,13 @@ class DigestCommand extends ContainerAwareCommand
             $output->writeln("... Рассылка по базе AppBundle:Email2");
             $doctors = $this->getEmails($em, 1, 350, 'AppBundle:Email2');
             $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
-        $output->writeln("... Рассылка по базе AppBundle:Email");
+
+            $output->writeln("... Рассылка по базе AppBundle:Email");
             $doctors = $this->getEmails($em, 1, 150, 'AppBundle:Email');
+            $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
+
+            $output->writeln("... Рассылка по базе AppBundle:User");
+            $doctors = $this->getEmails($em, 1, 150, 'AppBundle:User');
             $this->foreachEmail($pdo, $templating, $events, $publications, $doctors, $output);
 
 
@@ -91,7 +96,7 @@ class DigestCommand extends ContainerAwareCommand
 			AND e.error IS NULL
             ORDER BY e.id ASC            
 		')      ->setMaxResults($max)
-            ->setFirstResult($first*$max)
+            ->setFirstResult($first * $max)
             ->getResult();
         return $doctors;
 
@@ -103,6 +108,8 @@ class DigestCommand extends ContainerAwareCommand
             $updateDoctor   = $pdo->prepare('UPDATE email_evrika SET sent=1 WHERE email = "'.$doctors[$j]['email'].'"');
             $updateDoctor->execute();
             $updateDoctor   = $pdo->prepare('UPDATE email SET sent=1 WHERE email = "'.$doctors[$j]['email'].'"');
+            $updateDoctor->execute();
+            $updateDoctor   = $pdo->prepare('UPDATE `user` SET sent=1 WHERE email = "'.$doctors[$j]['email'].'"');
             $updateDoctor->execute();
 
             $html = $templating->render($this->template, array(

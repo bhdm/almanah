@@ -84,6 +84,8 @@ class ErrorEmailCommand extends ContainerAwareCommand
                 $updateDoctor->execute();
                 $updateDoctor = $pdo->prepare("UPDATE email e SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
                 $updateDoctor->execute();
+                $updateDoctor = $pdo->prepare("UPDATE `user` e SET e.error = '".$email['error']."' WHERE e.email = '".$email['email']."'");
+                $updateDoctor->execute();
             }
         }
 
