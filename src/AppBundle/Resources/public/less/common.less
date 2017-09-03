@@ -176,6 +176,7 @@ nav.navbar{
 }
 .navbar-nav{
     font-size: 16px;
+    font-family: Roboto,Arial,serif;;
 }
 .navbar-nav li:hover{
     &>.submenu{
@@ -930,4 +931,34 @@ th.prev, th.next, th.picker-switch{
 }
 .publication-anons{
     min-height: 95px;
+}
+
+#auth-menu{
+    margin-top: 35px;
+    margin-right: 0px;
+}
+@media screen and (max-width: 768px) {
+    #auth-menu{
+        margin-top: 0px;
+        text-align: right;
+    }
+}
+.location{
+    display: inline-block;
+    margin-right: 20px;
+    select{
+        border-top: 0;
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px dashed #CCC;
+        background: #FFF;
+        outline: none;
+        box-sizing: content-box;
+        option:checked {
+            background: #CCC;
+        }
+        option:hover {
+            background: #c9302c !important;
+        }
+    }
 }

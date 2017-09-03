@@ -1,6 +1,8 @@
 <?php
 namespace AdminBundle\Controller;
 
+use AppBundle\Entity\EventPage;
+use AppBundle\Form\EventPageType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
@@ -133,6 +135,77 @@ class EventController extends Controller{
         return array('item' => $item, 'form' => $form->createView());
     }
 
+
+    /**
+     * @Security("has_role('ROLE_ADMIN')")
+     * @Route("/edit/{id}/create-page", name="admin_event_create_page")
+     * @Template()
+     */
+    public function createPageAction(Request $request, $id){
+        $conference = $this->getDoctrine()->getRepository('AppBundle:Conference')->find($id);
+        $em = $this->getDoctrine()->getManager();
+
+        $page = new EventPage();
+
+        $form = $this->createForm(EventPageType::class, $page);
+        $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
+
+        $formData = $form->handleRequest($request);
+
+        if ($formData->isValid()){
+            $page = $formData->getData();
+            $page->setConference($conference);
+            $em->persist($page);
+            $em->flush($page);
+            $em->refresh($page);
+            return $this->redirect($this->generateUrl('admin_event_edit', ['id' => $id]));
+        }else{
+            return $this->redirectToRoute('admin_event_edit',['id' => $id]);
+        }
+    }
+
+    /**
+     * @Security("has_role('ROLE_ADMIN')")
+     * @Route("/edit/{id}/edit-page/{pageId}", name="admin_event_edit_page")
+     * @Template()
+     */
+    public function editPageAction(Request $request, $id, $pageId){
+
+        $em = $this->getDoctrine()->getManager();
+
+        $page = $this->getDoctrine()->getRepository('AppBundle:EventPage')->find($pageId);
+
+        $form = $this->createForm(EventPageType::class, $page);
+        $form->add('submit', SubmitType::class, ['label' => 'Сохранить', 'attr' => ['class' => 'btn-primary']]);
+
+        $formData = $form->handleRequest($request);
+
+        if ($formData->isValid()){
+            $page = $formData->getData();
+            $em->persist($page);
+            $em->flush($page);
+            $em->refresh($page);
+            return $this->redirect($this->generateUrl('admin_event_edit', ['id' => $id]));
+        }else{
+            return $this->redirectToRoute('admin_event_edit',['id' => $id]);
+        }
+    }
+
+    /**
+     * @Security("has_role('ROLE_ADMIN')")
+     * @Route("/edit/{id}/remove-page/{pageId}", name="admin_conference_remove_page")
+     */
+    public function removePageAction(Request $request, $id, $pageId){
+        $em = $this->getDoctrine()->getManager();
+        $item = $em->getRepository('AppBundle:EventPage')->findOneById($pageId);
+        if ($item){
+            $em->remove($item);
+            $em->flush();
+        }
+        return $this->redirect($request->headers->get('referer'));
+    }
+
+
     /**
      * @Security("has_role('ROLE_ADMIN')")
      * @Route("/remove/{id}", name="admin_event_remove")
@@ -152,4 +225,7 @@ class EventController extends Controller{
         $data= $splited[1];
         return base64_decode($data);
     }
+
+
+
 }

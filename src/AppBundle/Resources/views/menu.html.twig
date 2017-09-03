@@ -9,11 +9,9 @@
                 <span class="icon-bar"></span>
             </button>
         </div>
-
-
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li {{ app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} >
+                <li {{ app.request.attributes.get('_route') == 'publications_by_category' or app.request.attributes.get('_route') == 'news' or app.request.attributes.get('_route') == 'homepage' ? 'class="active"' : ''}} >
                     <a href="{{ path('news') }}">Публикации</a>
                     <div class="submenu">
                         <ul class="submenu-items">
@@ -38,8 +36,13 @@
                         </ul>
                     </div>
                 </li>
-                <li >
-                    <a href="{{ path('page',{'url' : 'about'}) }}">Образование</a>
+                <li {{
+                app.request.pathInfo == '/events/fpdo-courses' or
+                app.request.pathInfo == '/events/online-courses' or
+                app.request.pathInfo == '/events/internships' or
+                app.request.pathInfo == '/school'
+                ? 'class="active"' : ''}}>
+                    <a href="#">Образование</a>
                     <div class="submenu">
                         <ul class="submenu-items">
                             <li><a href="{{ path('events',{'url': 'fpdo-courses'}) }}">Курсы ФПДО</a></li>
@@ -49,7 +52,11 @@
                         </ul>
                     </div>
                 </li>
-                <li >
+                <li {{
+                app.request.attributes.get('_route') == 'federal-standards' or
+                app.request.attributes.get('_route') == 'abbreviations' or
+                app.request.attributes.get('_route') == 'calculators'
+                ? 'class="active"' : ''}}>
                     <a href="#">Полезная информация</a>
                     <div class="submenu">
                         <ul class="submenu-items">

@@ -180,12 +180,18 @@ class Event
      */
     private $organization;
 
+    /**
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\EventPage", mappedBy="event")
+     */
+    private $pages;
+
     public function __construct()
     {
         $this->preview = array();
         $this->slider = array();
         $this->important = false;
         $this->specialties = new ArrayCollection();
+        $this->pages = new ArrayCollection();
         $this->enabled = true;
         $this->main = true;
         $this->mainSend = false;
@@ -639,6 +645,22 @@ class Event
     public function setShortTitle($shortTitle)
     {
         $this->shortTitle = $shortTitle;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPages()
+    {
+        return $this->pages;
+    }
+
+    /**
+     * @param mixed $pages
+     */
+    public function setPages($pages)
+    {
+        $this->pages = $pages;
     }
 
 

@@ -133,6 +133,7 @@ class DefaultController extends Controller
             $mail->Body     = $txt;
             $mail->addAddress('bhd.m@ya.ru');
             $mail->addAddress('irs18@yandex.ru');
+            $mail->addAddress('khromov@list.ru');
             $mail->addCustomHeader('X-Postmaster-Msgtype', "firstDelivery");
             $mail->send();
 
