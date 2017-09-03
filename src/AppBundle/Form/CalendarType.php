@@ -3,6 +3,7 @@
 namespace AppBundle\Form;
 
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\BirthdayType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
@@ -25,8 +26,8 @@ class CalendarType extends AbstractType
             ->add('dayOfWeek', ChoiceType::class, array('label' => 'День недели', 'required' => false, 'attr' => array('class' => 'dayOfWeek'), 'choices' => array_flip(array('Monday' => 'Понедельник', 'Tuesday' => 'Вторник', 'Wednesday' => 'Среда', 'Thursday' => 'Четверг', 'Friday' => 'Пятница', 'Saturday' => 'Суббота', 'Sunday' => 'Воскресенье'))))
             ->add('dayNumber', ChoiceType::class, array('label' => 'Номер недели', 'required' => false, 'attr' => array('class' => 'dayNumber'), 'choices' => array_flip(array('first' => 'Первая', 'second' => 'Вторая', 'third' => 'Третья', 'fourth' => 'Четвертая'))))
             ->add('date', null, array('label' => 'Дата', 'required' => false, 'attr' => array('class' => 'date')))
-            ->add('birthdate', DateType::class, array('label' => 'Дата рождения', 'required' => false, 'attr' => array('class' => 'birthdate')))
-            ->add('gone', DateType::class, array('label' => 'Дата смерти', 'required' => false, 'attr' => array('class' => 'gone')))
+            ->add('birthdate', BirthdayType::class, array('label' => 'Дата рождения', 'required' => false, 'attr' => array('class' => 'birthdate')))
+            ->add('gone', BirthdayType::class, array('label' => 'Дата смерти', 'required' => false, 'attr' => array('class' => 'gone')))
             ->add('lastName', null, array('label' => 'Фамилия', 'required' => false, 'attr' => array('class' => 'lastName')))
             ->add('firstName', null, array('label' => 'Имя', 'required' => false, 'attr' => array('class' => 'firstName')))
             ->add('surName', null, array('label' => 'Отчество', 'required' => false, 'attr' => array('class' => 'surName')))
