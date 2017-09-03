@@ -10,6 +10,39 @@
             margin-left: 20px;
             list-style: circle;
         }
+
+        .body{
+            margin-top: 20px;
+        }
+        #event-menu{
+            margin-bottom: 0;
+            font-size: 0;
+        }
+        #event-menu li{
+            display: inline-block;
+            margin: 0;
+            font-size: 17px;
+            /*font-weight: bold;*/
+            font-family: Roboto,Arial,serif;
+        }
+        #event-menu li a{
+            display: block;
+            padding: 5px 10px;
+            text-decoration: none;
+            text-transform: uppercase;
+            border: 1px solid #FFF;
+            border-bottom: 1px solid #CCC;
+            border-radius: 5px 5px 0 0 ;
+        }
+        #event-menu li a:hover{
+            background: #EEE;
+            border: 1px solid #CCC;
+            border-bottom: 1px solid #FFF;
+        }
+        #event-menu li.page-active a{
+            border: 1px solid #CCC;
+            border-bottom: 1px solid #FFF;
+        }
     </style>
 {% endblock %}
 
@@ -53,7 +86,13 @@
                     <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                         <a itemprop="url" href="{{ path('events',{'url' : event.category.slug }) }}"><span itemprop="title">{{ event.category.title }}</span></a></li>
 
-                <li class="active">{{ event.title }}</li>
+                    {% if page != null %}
+                        <li itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                            <a itemprop="url" href="{{ path('event',{'url' : event.slug }) }}"><span itemprop="title">{{ event.title }}</span></a></li>
+                        <li class="active">{{ page.menu }}</li>
+                    {% else %}
+                        <li class="active">{{ event.title }}</li>
+                    {% endif %}
             </ol>
 
 
@@ -115,8 +154,28 @@
             </div>
         </div>
         <hr />
+        {% for flashMessage in app.session.flashbag.get('info') %}
+            <div data-alert class="alert-box-info">
+                {{ flashMessage }}
+            </div>
+        {% endfor %}
+        {% if pages is not empty %}
+            <ul class="tabs" id="event-menu">
+                <li class="tabs-title {{ page == null ? 'page-active' : '' }}"><a href="{{ path('event',{'url' : event.slug }) }}">О мероприятии</a></li>
+                {% for p in pages %}
+                    <li class="tabs-title {{ page.id is defined and page.id == p.id ? 'page-active' : '' }}" >
+                        <a href="{{ path('event',{'url' : event.slug, 'pageUrl' : p.slug}) }}">{{ p.menu }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+
         <div class="body">
-            {{ event.body | raw }}
+            {% if (page == null) %}
+                {{ event.body | raw }}
+            {% else %}
+                {{ page.content | raw }}
+            {% endif %}
         </div>
         <hr />
         <div class="row">

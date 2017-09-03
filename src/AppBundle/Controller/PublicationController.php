@@ -13,12 +13,15 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Form\Extension\Core\Type\ButtonType;
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Validator\Constraints\NotBlank;
 
 class PublicationController extends Controller
 {
@@ -335,10 +338,10 @@ class PublicationController extends Controller
     }
 
     /**
-     * @Route("event/{url}", name="event", options={"expose"=true})
+     * @Route("event/{url}/{pageUrl}", name="event", options={"expose"=true}, defaults={"pageUrl"=null})
      * @Template("AppBundle:Publication:event.html.twig")
      */
-    public function eventAction(Request $request, $url)
+    public function eventAction(Request $request, $url, $pageUrl = null)
     {
         $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneBy(['slug' => $url,'enabled' => true]);
         if (!$event){
@@ -350,8 +353,21 @@ class PublicationController extends Controller
                 return $this->redirect($this->generateUrl('event',['url' => $event->getSlug()]));
             }
         }
+        if ($pageUrl != null){
+            $page = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findOneBy(['slug'=> $pageUrl, 'event' => $event]);
+        }else{
+            $page = null;
+        }
+        $pages = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findBy(['type' => 0]);
+        $modals = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findBy(['type' => 2]);
 
-        return ['event' => $event];
+
+        return [
+            'event' => $event,
+            'page' => $page,
+            'pages' => $pages,
+            'modals' => $modals,
+        ];
     }
 
     /**

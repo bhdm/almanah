@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * EventPage
  *
- * @ORM\Table(name="conference_page")
+ * @ORM\Table(name="event_page")
  * @ORM\Entity()
  */
 class EventPage

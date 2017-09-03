@@ -10,38 +10,80 @@
 
 {% block content %}
     <div class="well">
-        {% if item.preview.path is defined %}
-            <div class="text-right">
-                <img src="{{ item.preview.path }}" style="max-width: 200px; display: inline-block" class="thumbnail">
-            </div>
-        {% endif %}
-        {{ form_start(form) }}
-        <div class="form-group">
-            <label class="col-sm-4 control-label required">Выберите файл</label>
-            <div class="col-sm-8">
-                <div class="file-container">
-                    <input type="file" name="ImageFile" id="ImageFile" class="fileAjax" >
-                    <br />
-                    <br />
-                    <div class="fileDoc">
-                        <img src="" brightness="0" contrast="0" style="max-width: 100%;">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#main" aria-controls="home" role="tab" data-toggle="tab">О мероприятии</a></li>
+            {% for page in item.pages %}
+                <li role="presentation"><a href="#page{{ page.id }}" aria-controls="page{{ page.id }}" role="tab" data-toggle="tab">{{ page.menu }}</a></li>
+            {% endfor %}
+            <li role="presentation" class=""><a href="#new" aria-controls="new" role="tab" data-toggle="tab"><span class="glyphicon glyphicon-plus"></span></a></li>
+        </ul>
+        <br />
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="main">
+                {% if item.preview.path is defined %}
+                    <div class="text-right">
+                        <img src="{{ item.preview.path }}" style="max-width: 200px; display: inline-block" class="thumbnail">
                     </div>
-                    <div class="navigateFile">
-                        <button type="button" class="btn -btn-default rotateLeft"><span class="glyphicon glyphicon-chevron-left"></span></button>
-                        <button type="button" class="btn btn-default cropImage"><span class="glyphicon glyphicon-picture"></span></button>
-                        <button type="button" class="btn -btn-default rotateRight"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                {% endif %}
+                {{ form_start(form) }}
+                <div class="form-group">
+                    <label class="col-sm-4 control-label required">Выберите файл</label>
+                    <div class="col-sm-8">
+                        <div class="file-container">
+                            <input type="file" name="ImageFile" id="ImageFile" class="fileAjax" >
+                            <br />
+                            <br />
+                            <div class="fileDoc">
+                                <img src="" brightness="0" contrast="0" style="max-width: 100%;">
+                            </div>
+                            <div class="navigateFile">
+                                <button type="button" class="btn -btn-default rotateLeft"><span class="glyphicon glyphicon-chevron-left"></span></button>
+                                <button type="button" class="btn btn-default cropImage"><span class="glyphicon glyphicon-picture"></span></button>
+                                <button type="button" class="btn -btn-default rotateRight"><span class="glyphicon glyphicon-chevron-right"></span></button>
+                            </div>
+                            <input type="hidden" id="x1" name="x1">
+                            <input type="hidden" id="y1" name="y1">
+                            <input type="hidden" id="x2" name="x2">
+                            <input type="hidden" id="y2" name="y2">
+                            <input type="hidden" id="thumbail" name="thumbail">
+                            <input type="hidden" id="turn" name="turn" value="0">
+                        </div>
                     </div>
-                    <input type="hidden" id="x1" name="x1">
-                    <input type="hidden" id="y1" name="y1">
-                    <input type="hidden" id="x2" name="x2">
-                    <input type="hidden" id="y2" name="y2">
-                    <input type="hidden" id="thumbail" name="thumbail">
-                    <input type="hidden" id="turn" name="turn" value="0">
                 </div>
+                {{ form_widget(form) }}
+                {{ form_end(form) }}
+            </div>
+
+            {% for key,pageForm in pagesForm %}
+                <div role="tabpanel" class="tab-pane" id="page{{ key }}">
+                    {{ form_start(pageForm,{'action' : path('admin_event_edit_page',{'id' : item.id, 'pageId' : key })}) }}
+                    {{ form_row(pageForm.type) }}
+                    {{ form_row(pageForm.title) }}
+                    {{ form_row(pageForm.slug) }}
+                    {{ form_row(pageForm.menu) }}
+                    {{ form_row(pageForm.form) }}
+                    {{ form_row(pageForm.ord) }}
+                    {{ form_row(pageForm.content) }}
+                    <div class="row">
+                        <div class="col-sm-6">
+                            {{ form_widget(pageForm.submit) }}
+                        </div>
+                        <div class="col-sm-6 text-right">
+                            <br />
+                            <br />
+                            <a href="{{ path('admin_event_remove_page', {'id' : item.id, 'pageId' : key }) }}" class="text-danger">Удалить</a>
+                        </div>
+                    </div>
+                    {{ form_end(pageForm) }}
+                </div>
+            {% endfor %}
+
+            <div role="tabpanel" class="tab-pane" id="new">
+                {{ form_start(newForm,{'action' : path('admin_event_create_page',{'id' : item.id })}) }}
+                {{ form_widget(newForm) }}
+                {{ form_end(newForm) }}
             </div>
         </div>
-        {{ form_widget(form) }}
-        {{ form_end(form) }}
     </div>
 {% endblock %}
 

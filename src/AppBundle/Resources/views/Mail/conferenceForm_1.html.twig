@@ -1,0 +1,21 @@
+<table>
+    <tr>
+        <td><strong>Название конференции:</strong></td>
+        <td><a href="{{ url('conference_page', {'conferenceSlug' : conference.slug }) }}" target="_blank">{{ conference.title }}</a></td>
+    </tr>
+    <tr>
+        <td><strong>Ф.И.О.</strong></td>
+        <td>{{ data.fio }}</td>
+    </tr>
+    <tr>
+        <td><strong>Email</strong></td>
+        <td>{{ data.email }}</td>
+    </tr>
+    <tr>
+        <td><strong>Телефон:</strong></td>
+        <td>{{ data.phone }}</td>
+    </tr>
+    <tr>
+        <td colspan="2">{{ data.question | raw }}</td>
+    </tr>
+</table>
