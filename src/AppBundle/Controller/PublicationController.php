@@ -21,6 +21,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
@@ -361,7 +362,9 @@ class PublicationController extends Controller
                     'text/html'
                 );
             $this->get('mailer')->send($message);
-            $this->addFlash('info', 'Спасибо за Ваш запрос. Вам ответят в ближайшее время');
+
+            $session = new Session();
+            $session->getFlashBag()->add('info', 'Спасибо за Ваш запрос. Вам ответят в ближайшее время');
 
         return $this->redirect($request->headers->get('referer'));
     }
