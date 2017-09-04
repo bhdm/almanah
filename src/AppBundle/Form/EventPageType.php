@@ -22,7 +22,7 @@ class EventPageType extends AbstractType
             ->add('title', TextType::class, ['label' => 'Название'])
             ->add('slug', TextType::class, ['label' => 'URL', 'attr'=>['class' => 'slug'] ])
             ->add('menu', TextType::class, ['label' => 'Название в меню'])
-            ->add('form', ChoiceType::class, ['label' => 'Форма', 'choices' => ['Нет' => 0, 'Форма запроса' => 1, 'Форма подписки'=> 2, 'Форма вопроса'=> 3]])
+            ->add('form', ChoiceType::class, ['label' => 'Форма', 'choices' => ['Нет' => 0, 'Форма вопроса'=> 1]])
             ->add('formEmail', TextType::class, ['label' => 'Email отправки', 'required'=> false])
             ->add('ord', TextType::class, ['label' => 'Приоритет'])
             ->add('content', TextareaType::class, ['label' => 'Контент страницы', 'attr' => ['class' => 'ckeditor']])

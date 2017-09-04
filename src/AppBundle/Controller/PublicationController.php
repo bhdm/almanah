@@ -21,6 +21,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Validator\Constraints\Collection;
 use Symfony\Component\Validator\Constraints\NotBlank;
 
 class PublicationController extends Controller
@@ -338,6 +339,46 @@ class PublicationController extends Controller
     }
 
     /**
+     * @Route("/event/{eventSlug}/send-question", name="event_send_question")
+     * @Method({"POST"})
+     */
+    public function conferenceSendQuestionAction(Request $request, $eventSlug){
+        $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneBy(['slug' => $eventSlug]);
+        $form = $this->createFormBuilder()
+            ->add('fio', TextType::class, ['label'=> 'Фамилия Имя Отчество',  'constraints' => new NotBlank(['message' => 'Поле ФИО обязательно для заполнения'])])
+            ->add('email', TextType::class, ['label' => 'Email',  'constraints' => new NotBlank(['message' => 'Поле Email обязательно для заполнения'])])
+            ->add('phone', TextType::class, ['label'=> 'Контактный телефон', 'required' => false])
+            ->add('question', TextareaType::class, ['label'=> 'Вопрос'])
+//            ->add('submit', SubmitType::class, ['label'=> 'Отправить', 'attr' => ['class' => 'button blue']])
+            ->setAction($this->generateUrl('event_send_question', ['eventSlug' => $eventSlug]))
+            ->getForm();
+
+        $formData = $form->handleRequest($request);
+
+        if ($formData->isValid()){
+            $data = $formData->getData();
+
+            $message = \Swift_Message::newInstance()
+                ->setSubject('Пользователь оставил вопрос')
+                ->setFrom('mailer@medalmanah.ru')
+                ->setTo('bhd.m@ya.ru')
+                ->setBody(
+                    $this->renderView(
+                        '@App/Mail/event_sendQuestion.html.twig',
+                        array('data' => $data, 'event' => $event)
+                    ),
+                    'text/html'
+                );
+            $this->get('mailer')->send($message);
+            $this->addFlash('info', 'Ваш запрос отправлен.');
+        }else{
+            return $this->forward($request->headers->get('referer'));
+        }
+        return $this->redirect($request->headers->get('referer'));
+    }
+
+
+    /**
      * @Route("event/{url}/{pageUrl}", name="event", options={"expose"=true}, defaults={"pageUrl"=null})
      * @Template("AppBundle:Publication:event.html.twig")
      */
@@ -358,15 +399,33 @@ class PublicationController extends Controller
         }else{
             $page = null;
         }
-        $pages = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findBy(['type' => 0]);
-        $modals = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findBy(['type' => 2]);
+        $pages = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findBy(['type' => 0, 'event' => $event]);
+        $modals = $this->getDoctrine()->getRepository('AppBundle:EventPage')->findBy(['type' => 2, 'event' => $event]);
 
+        $session = $request->getSession();
+        if ($session->get('event-'.$event->getId()) === null){
+            $session->set('event-'.$event->getId(), true);
+            $session->save();
+            $event->setShow($event->getShow()+1);
+            $this->getDoctrine()->getManager()->flush($event);
+            $this->getDoctrine()->getManager()->refresh($event);
+        }
+
+        $formQuestion = $this->createFormBuilder()
+            ->add('fio', TextType::class, ['label'=> 'Фамилия Имя Отчество'])
+            ->add('email', TextType::class, ['label' => 'Email'])
+            ->add('phone', TextType::class, ['label'=> 'Контактный телефон', 'required' => false])
+            ->add('question', TextareaType::class, ['label'=> 'Вопрос', 'attr' => ['style' => 'height: 150px']])
+//            ->add('submit', SubmitType::class, ['label'=> 'Отправить', 'attr' => ['class' => 'button btn-primary']])
+            ->setAction($this->generateUrl('event_send_question', ['eventSlug' => $url]))
+            ->getForm();
 
         return [
             'event' => $event,
             'page' => $page,
             'pages' => $pages,
             'modals' => $modals,
+            'formQuestion' => $formQuestion->createView(),
         ];
     }
 

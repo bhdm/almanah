@@ -185,6 +185,11 @@ class Event
      */
     private $pages;
 
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $statShow;
+
     public function __construct()
     {
         $this->preview = array();
@@ -196,6 +201,7 @@ class Event
         $this->main = true;
         $this->mainSend = false;
         $this->created = new \DateTime();
+        $this->statShow = 0;
     }
 
     /**
@@ -663,8 +669,37 @@ class Event
         $this->pages = $pages;
     }
 
+    /**
+     * @return mixed
+     */
+    public function getStatShow()
+    {
+        return $this->statShow;
+    }
 
+    /**
+     * @param mixed $statShow
+     */
+    public function setStatShow($statShow)
+    {
+        $this->statShow = $statShow;
+    }
 
+    /**
+     * @return mixed
+     */
+    public function getShow()
+    {
+        return $this->statShow;
+    }
+
+    /**
+     * @param mixed $statShow
+     */
+    public function setShow($statShow)
+    {
+        $this->statShow = $statShow;
+    }
 }
 
 

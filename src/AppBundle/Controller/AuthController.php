@@ -210,7 +210,7 @@ class AuthController extends Controller
             $message = \Swift_Message::newInstance()
                 ->setSubject('Пользователь Зарегистрировался')
                 ->setFrom('mailer@medalmanah.ru')
-                ->setTo('tm@medalmanah.ru')
+                ->setTo('admin@medalmanah.ru')
                 ->setBody(
                     $this->container->get('templating')->render('@App/Mail/setNewRegister.html.twig', array('user' => $user)),
                     'text/html'

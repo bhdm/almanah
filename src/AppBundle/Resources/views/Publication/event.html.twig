@@ -174,13 +174,36 @@
             {% if (page == null) %}
                 {{ event.body | raw }}
             {% else %}
-                {{ page.content | raw }}
+                {% if page.form == 1 %}
+                    <div class="row">
+                        {{ page.content | raw }}
+
+                        <div class="col-sm-12">
+                            {#<form method="post" action="{{ path('event_send_question', {'eventSlug' : event.slug }) }}" class="form">#}
+                            {% form_theme formQuestion 'bootstrap_3_layout.html.twig' %}
+
+                            {{ form_start(formQuestion) }}
+                            {{ form_widget(formQuestion) }}
+                            <div class="form-group">
+                                {#<div class="col-sm-4"></div>#}
+                                {#<div class="col-sm-8">#}
+                                    <button type="submit" id="form_submit" name="form[submit]" class="button btn-primary btn">Отправить</button>
+                                {#</div>#}
+                            </div>
+                            {{ form_end(formQuestion) }}
+
+                            {#</form>#}
+                        </div>
+                    </div>
+                {% else %}
+                    {{ page.content | raw }}
+                {% endif %}
             {% endif %}
         </div>
         <hr />
         <div class="row">
             <span style="font-size: 14px; float: left;padding-top: 8px;padding-left: 15px;">Расказать друзьям&nbsp;&nbsp;</span>
-            <div class="col-xs-8" style="padding-top: 5px;">
+            <div class="" style="padding-top: 5px;float: left;">
                 <script type="text/javascript" src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js" charset="utf-8"></script>
                 <script type="text/javascript" src="//yastatic.net/share2/share.js" charset="utf-8"></script>
                 <div class="ya-share2" data-services="vkontakte,facebook,odnoklassniki,gplus,twitter" data-counter="" style="text-align: left; "
@@ -190,6 +213,9 @@
                 >
                 </div>
             </div>
+            {% if event.show > 50 %}
+                <span style="font-size: 14px; float: left;padding-top: 8px;padding-left: 15px;"><span class="glyphicon glyphicon-eye-open"></span> {{ event.show * 3 }}</span>
+            {% endif %}
         </div>
     </div>
 
