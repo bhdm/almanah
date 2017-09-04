@@ -344,19 +344,10 @@ class PublicationController extends Controller
      */
     public function conferenceSendQuestionAction(Request $request, $eventSlug){
         $event = $this->getDoctrine()->getRepository('AppBundle:Event')->findOneBy(['slug' => $eventSlug]);
-        $form = $this->createFormBuilder()
-            ->add('fio', TextType::class, ['label'=> 'Фамилия Имя Отчество',  'constraints' => new NotBlank(['message' => 'Поле ФИО обязательно для заполнения'])])
-            ->add('email', TextType::class, ['label' => 'Email',  'constraints' => new NotBlank(['message' => 'Поле Email обязательно для заполнения'])])
-            ->add('phone', TextType::class, ['label'=> 'Контактный телефон', 'required' => false])
-            ->add('question', TextareaType::class, ['label'=> 'Вопрос'])
-//            ->add('submit', SubmitType::class, ['label'=> 'Отправить', 'attr' => ['class' => 'button blue']])
-            ->setAction($this->generateUrl('event_send_question', ['eventSlug' => $eventSlug]))
-            ->getForm();
 
-        $formData = $form->handleRequest($request);
 
-        if ($formData->isValid()){
-            $data = $formData->getData();
+
+            $data = $request->request->get('form');
 
             $message = \Swift_Message::newInstance()
                 ->setSubject('Пользователь оставил вопрос')
@@ -371,9 +362,7 @@ class PublicationController extends Controller
                 );
             $this->get('mailer')->send($message);
             $this->addFlash('info', 'Спасибо за Ваш запрос. Вам ответят в ближайшее время');
-        }else{
-            return $this->redirect($request->headers->get('referer'));
-        }
+
         return $this->redirect($request->headers->get('referer'));
     }
 
