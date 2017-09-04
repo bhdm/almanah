@@ -370,7 +370,7 @@ class PublicationController extends Controller
                     'text/html'
                 );
             $this->get('mailer')->send($message);
-            $this->addFlash('info', 'Ваш запрос отправлен.');
+            $this->addFlash('info', 'Спасибо за Ваш запрос. Вам ответят в ближайшее время');
         }else{
             return $this->redirect($request->headers->get('referer'));
         }
