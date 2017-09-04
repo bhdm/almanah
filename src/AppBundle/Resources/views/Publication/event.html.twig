@@ -155,7 +155,7 @@
         </div>
         <hr />
         {% for flashMessage in app.session.flashbag.get('info') %}
-            <div data-alert class="alert-box-info">
+            <div data-alert class="alert alert-success">
                 {{ flashMessage }}
             </div>
         {% endfor %}
