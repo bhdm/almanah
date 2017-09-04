@@ -372,7 +372,7 @@ class PublicationController extends Controller
             $this->get('mailer')->send($message);
             $this->addFlash('info', 'Ваш запрос отправлен.');
         }else{
-            return $this->forward($request->headers->get('referer'));
+            return $this->redirect($request->headers->get('referer'));
         }
         return $this->redirect($request->headers->get('referer'));
     }
