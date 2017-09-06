@@ -25,6 +25,7 @@ class EventType extends AbstractType
     {
         $builder
             ->add('title', null, [ 'label' => 'Название'])
+            ->add('shortTitle', null, [ 'label' => 'Название для баннера'])
             ->add('slug', null, [ 'label' => 'URL'])
             ->add('metaDescription', TextType::class, [ 'label' => 'SEO описание'])
             ->add('metaKeyword', TextType::class, [ 'label' => 'SEO ключевые слова'])
