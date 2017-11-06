@@ -34,7 +34,7 @@ class DefaultController extends Controller
      */
     public function manualAction($t1='', $t2=null, $t3=null, $t4=null, $t5=null, $t6=null, $t7=null, $t8=null, $t9=null, $t10=null)
     {
-        return $this->redirectToRoute('homepage', 301);
+        return $this->redirectToRoute('homepage', [],301);
     }
 
     /**
