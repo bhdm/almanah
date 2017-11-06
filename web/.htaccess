@@ -20,9 +20,6 @@ ExpiresByType application/x-javascript "access plus 1 week"
 ExpiresByType application/x-font-woff "access plus 1 week"
 
 
-
-#Redirect 301 /manual/(.*)/ https://medalmanah.ru/
-
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
@@ -40,9 +37,6 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 
 <IfModule mod_rewrite.c>
     RewriteEngine On
-
-    RewriteCond ^medalmanah.ru/manual$ [NC]
-    RewriteRule ^(.*)$ http://medalmanah.ru/ [R=301,L]
 
     RewriteCond %{HTTP_HOST} ^www.medalmanah.ru$ [NC]
     RewriteRule ^(.*)$ http://medalmanah.ru/$1 [R=301,L]
