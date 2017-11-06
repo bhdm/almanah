@@ -1,18 +1,22 @@
 User-agent: Yandex
 Disallow: /app_dev.php
 Disallow: /app.php
+Disallow: /ckupload.php
 Host: medalmanah.ru
 
 User-agent: Googlebot
 Disallow: /app_dev.php
 Disallow: /app.php
+Disallow: /ckupload.php
 
 User-agent: Slurp
 Disallow: /app_dev.php
 Disallow: /app.php
+Disallow: /ckupload.php
 Crawl-delay: 0.1
 
 User-agent: *
 Disallow: /app_dev.php
 Disallow: /app.php
+Disallow: /ckupload.php
 Sitemap: https://medalmanah.ru/sitemap
