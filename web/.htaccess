@@ -21,7 +21,7 @@ ExpiresByType application/x-font-woff "access plus 1 week"
 
 
 
-Redirect 301 /manual/(.*) https://medalmanah.ru/
+Redirect 301 /manual/(.*)/ https://medalmanah.ru/
 
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
