@@ -30,9 +30,9 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/manual/{t1}/{t2}/{t3}/{t4}/{t5}/{t6}/{t7}/{t8}/{t9}/{t10}", requirements={"t1"=null, "t2"=null, "t3"=null, "t4"=null, "t5"=null, "t6"=null, "t7"=null, "t8"=null, "t9"=null, "t10"=null})
+     * @Route("/manual/{t1}/{t2}/{t3}/{t4}/{t5}/{t6}/{t7}/{t8}/{t9}/{t10}", defaults={"t1"=null, "t2"=null, "t3"=null, "t4"=null, "t5"=null, "t6"=null, "t7"=null, "t8"=null, "t9"=null, "t10"=null})
      */
-    public function manualAction($t1=null, $t2=null, $t3=null, $t4=null, $t5=null, $t6=null, $t7=null, $t8=null, $t9=null, $t10=null)
+    public function manualAction($t1='', $t2=null, $t3=null, $t4=null, $t5=null, $t6=null, $t7=null, $t8=null, $t9=null, $t10=null)
     {
         return $this->redirectToRoute('homepage', 301);
     }
