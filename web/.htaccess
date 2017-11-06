@@ -41,6 +41,9 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 <IfModule mod_rewrite.c>
     RewriteEngine On
 
+    RewriteCond ^medalmanah.ru/manual$ [NC]
+    RewriteRule ^(.*)$ http://medalmanah.ru/ [R=301,L]
+
     RewriteCond %{HTTP_HOST} ^www.medalmanah.ru$ [NC]
     RewriteRule ^(.*)$ http://medalmanah.ru/$1 [R=301,L]
 
